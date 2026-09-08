@@ -1,0 +1,1 @@
+select kilvet.lisaa_osoite({{kilpiTaulu.selectedRow.taloyhtio_id}}, {{tKatu.text}}, {{tNumero.text}}, {{tPostinumero.text}}, {{tKaupunki.text}}, false, 'lisatty kayttoliittymasta') as osoite_id;

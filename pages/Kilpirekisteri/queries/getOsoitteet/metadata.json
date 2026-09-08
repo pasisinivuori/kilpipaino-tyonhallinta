@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a6b786a4fdae71c0c5a3144_98b8ce22-c9e6-4062-ae79-f08dbc4228d7",
-  "id": "Kilpirekisteri_paivitaKilpi",
+  "gitSyncId": "6a6b786a4fdae71c0c5a3144_116d9687-61df-4d1d-9fd6-f1da8909bae4",
+  "id": "Kilpirekisteri_getOsoitteet",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "select kilvet.paivita_kilpi({{kilpiTaulu.selectedRow.id}}, {{mTyyppi.selectedOptionValue}}, {{mKoko.text}}, {{mVari.text}}, {{mMateriaali.selectedOptionValue}}, {{mKiinnitys.selectedOptionValue}}, {{mPintakasittely.text}}, {{mMalliTiedosto.text}}, {{mMuistiinpano.text}}, {{mTarkistettava.isSwitchedOn}}, {{mTarkistuksenSyy.text}}) as tulos;",
+      "body": "select o.id, o.katu, o.katunumero, o.postinumero, o.kaupunki, o.paaosoite from kilvet.osoite o where o.taloyhtio_id = {{kilpiTaulu.selectedRow.taloyhtio_id}} order by o.jarjestys, o.id;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,9 +27,9 @@
         "key": "body"
       }
     ],
-    "name": "paivitaKilpi",
+    "name": "getOsoitteet",
     "pageId": "Kilpirekisteri",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }

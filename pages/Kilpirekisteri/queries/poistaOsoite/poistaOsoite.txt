@@ -1,0 +1,1 @@
+select kilvet.poista_osoite({{tOsoitteet.selectedRow.id}}) as tulos;

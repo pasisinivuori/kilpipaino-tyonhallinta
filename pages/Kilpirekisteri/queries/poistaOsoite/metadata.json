@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a6b786a4fdae71c0c5a3144_98b8ce22-c9e6-4062-ae79-f08dbc4228d7",
-  "id": "Kilpirekisteri_paivitaKilpi",
+  "gitSyncId": "6a6b786a4fdae71c0c5a3144_74681639-133f-4b80-9899-c7135d7a2b2c",
+  "id": "Kilpirekisteri_poistaOsoite",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "select kilvet.paivita_kilpi({{kilpiTaulu.selectedRow.id}}, {{mTyyppi.selectedOptionValue}}, {{mKoko.text}}, {{mVari.text}}, {{mMateriaali.selectedOptionValue}}, {{mKiinnitys.selectedOptionValue}}, {{mPintakasittely.text}}, {{mMalliTiedosto.text}}, {{mMuistiinpano.text}}, {{mTarkistettava.isSwitchedOn}}, {{mTarkistuksenSyy.text}}) as tulos;",
+      "body": "select kilvet.poista_osoite({{tOsoitteet.selectedRow.id}}) as tulos;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,7 +27,7 @@
         "key": "body"
       }
     ],
-    "name": "paivitaKilpi",
+    "name": "poistaOsoite",
     "pageId": "Kilpirekisteri",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
