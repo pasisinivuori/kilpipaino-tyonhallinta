@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 80,
+  "bottomRow": 82,
   "boxShadow": "none",
   "defaultText": "{{kilpiTaulu.selectedRow.muistiinpano || \"\"}}",
   "dynamicBindingPathList": [

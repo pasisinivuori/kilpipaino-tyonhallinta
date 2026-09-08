@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 97,
+  "bottomRow": 99,
   "boxShadow": "none",
   "defaultText": "{{kilpiTaulu.selectedRow.tarkistuksen_syy || \"\"}}",
   "dynamicBindingPathList": [
@@ -51,7 +51,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 5,
   "showStepArrows": false,
-  "topRow": 90,
+  "topRow": 92,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "n1fptzlwo1",
