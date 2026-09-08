@@ -1,0 +1,4 @@
+SELECT tiedostonimi, mime, koko_tavua, storage_path
+FROM public.liitteet
+WHERE toimeksianto_id = {{this.params.id}}::uuid
+ORDER BY created_at ASC;

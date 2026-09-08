@@ -1,0 +1,1 @@
+UPDATE public.toimeksiannot SET arkistoitu = true WHERE id = {{Table1.selectedRow.id}}::uuid;

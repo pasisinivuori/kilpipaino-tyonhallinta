@@ -1,0 +1,1 @@
+SELECT round(avg(extract(epoch from (v.eka_vastaus - t.created_at))/86400)::numeric, 1) AS keskiarvo_pv, count(*)::int AS n FROM public.toimeksiannot t JOIN (SELECT toimeksianto_id, min(coalesce(sent_at, created_at)) AS eka_vastaus FROM public.viestit WHERE suunta = 'lahteva' GROUP BY toimeksianto_id) v ON v.toimeksianto_id = t.id WHERE t.tyyppi = 'tarjouspyynto';

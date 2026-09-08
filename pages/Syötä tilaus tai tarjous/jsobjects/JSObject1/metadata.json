@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6a6b786a4fdae71c0c5a3144_cac42373-d0d7-460d-8767-5c60572b6d7b",
+  "id": "Syötä tilaus tai tarjous_JSObject1",
+  "unpublishedCollection": {
+    "name": "JSObject1",
+    "pageId": "Syötä tilaus tai tarjous",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

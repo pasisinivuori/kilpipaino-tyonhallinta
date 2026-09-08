@@ -1,0 +1,1 @@
+UPDATE public.toimeksiannot SET status = {{statusSelect.selectedOptionValue}}::toimeksianto_status, omistaja = {{vastuuhenkiloSelect.selectedOptionValue}} WHERE id = {{appsmith.URL.queryParams.id}}::uuid;

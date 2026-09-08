@@ -1,0 +1,1 @@
+SELECT COALESCE(NULLIF(btrim(asiakas_yritys),''), NULLIF(btrim(asiakas_nimi),''), '(tuntematon)') AS asiakas, count(*)::int AS toimeksiantoja, count(*) FILTER (WHERE tyyppi='tarjouspyynto')::int AS tarjoukset, count(*) FILTER (WHERE tyyppi='tilaus')::int AS tilaukset FROM public.toimeksiannot GROUP BY 1 ORDER BY toimeksiantoja DESC, asiakas LIMIT 10;

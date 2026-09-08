@@ -1,0 +1,1 @@
+SELECT asiakas_yritys, asiakas_nimi, asiakas_email, asiakas_puhelin, asiakas_toimitusosoite FROM public.toimeksiannot WHERE id = {{appsmith.URL.queryParams.id}}::uuid;

@@ -1,0 +1,1 @@
+{"toimeksianto_id":"{{appsmith.URL.queryParams.id}}","tiedostonimi":"{{this.params.nimi}}","mime":"{{this.params.mime}}","data":"{{this.params.data}}"}

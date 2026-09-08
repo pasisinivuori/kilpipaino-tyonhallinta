@@ -1,0 +1,5 @@
+SELECT l.tiedostonimi, l.mime, l.koko_tavua, l.storage_path
+FROM public.liitteet l
+WHERE l.toimeksianto_id = {{appsmith.URL.queryParams.id}}::uuid
+   OR l.viesti_id IN (SELECT id FROM public.viestit WHERE toimeksianto_id = {{appsmith.URL.queryParams.id}}::uuid)
+ORDER BY l.created_at ASC;

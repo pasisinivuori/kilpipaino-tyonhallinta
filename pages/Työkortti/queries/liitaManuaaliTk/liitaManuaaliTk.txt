@@ -1,0 +1,4 @@
+{
+  "toimeksianto_id": "{{appsmith.URL.queryParams.id}}",
+  "files": {{FilePicker2.files}}
+}

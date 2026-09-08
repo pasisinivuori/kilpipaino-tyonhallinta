@@ -1,0 +1,1 @@
+SELECT suunta, lahettaja, aihe, body_text, sent_at FROM public.viestit WHERE toimeksianto_id = {{Table1.selectedRow.id}}::uuid ORDER BY sent_at ASC;

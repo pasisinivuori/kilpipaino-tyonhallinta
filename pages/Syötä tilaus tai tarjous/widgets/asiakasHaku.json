@@ -1,0 +1,78 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 68,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "optionLabel"
+    },
+    {
+      "key": "optionValue"
+    },
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "eek18618ep",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Hae asiakas rekisteristä",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 60,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 21,
+  "mobileTopRow": 53,
+  "needsErrorInfo": false,
+  "onOptionChange": "{{ (() => { const c = hakuAsiakkaat.data.find(r => r.id === asiakasHaku.selectedOptionValue); if(!c){ return; } Input1.setValue(c.nimi || ''); Input2.setValue(c.yritys || ''); Input3.setValue(c.email || ''); Input4.setValue(c.puhelin || ''); Input5.setValue(c.osoite || ''); })() }}",
+  "optionLabel": "nayttonimi",
+  "optionValue": "id",
+  "originalBottomRow": 68,
+  "originalTopRow": 61,
+  "parentColumnSpace": 17.28125,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 21,
+  "serverSideFiltering": false,
+  "sourceData": "{{hakuAsiakkaat.data}}",
+  "topRow": 61,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "fif7hlrh37",
+  "widgetName": "asiakasHaku"
+}

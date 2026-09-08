@@ -1,0 +1,1 @@
+SELECT count(*)::int AS n FROM public.toimeksiannot t WHERE t.arkistoitu=false AND COALESCE((SELECT v.suunta='saapuva' FROM public.viestit v WHERE v.toimeksianto_id=t.id ORDER BY v.sent_at DESC NULLS LAST, v.created_at DESC LIMIT 1), false);

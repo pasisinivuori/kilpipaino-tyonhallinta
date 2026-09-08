@@ -1,0 +1,60 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 127,
+  "boxShadow": "none",
+  "buttonColor": "#fddb30",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    },
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": "{{RadioGroup1.selectedOptionValue === 'tarjouspyynto'}}",
+  "key": "hnqpzowff7",
+  "leftColumn": 18,
+  "minWidth": 120,
+  "mobileBottomRow": 101,
+  "mobileLeftColumn": 18,
+  "mobileRightColumn": 34,
+  "mobileTopRow": 97,
+  "needsErrorInfo": false,
+  "onClick": "{{JSObject1.tallennaTarjous()}}",
+  "originalBottomRow": 100,
+  "originalTopRow": 96,
+  "parentColumnSpace": 17.28125,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 34,
+  "text": "Tallenna",
+  "topRow": 123,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "uz4hq9fbxa",
+  "widgetName": "Button1"
+}

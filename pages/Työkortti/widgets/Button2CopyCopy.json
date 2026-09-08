@@ -1,0 +1,60 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 220,
+  "boxShadow": "none",
+  "buttonColor": "#fde047",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": "{{!['uusi','tarjous_lahetetty','hylatty'].includes(getTk.data[0].status)}}",
+  "key": "wdrmrlxanm",
+  "leftColumn": 13,
+  "minWidth": 120,
+  "mobileBottomRow": 178,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 3,
+  "mobileTopRow": 174,
+  "needsErrorInfo": false,
+  "onClick": "{{paivitaTilaus.run().then(() => getTk.run()).then(() => showAlert('Tilaustiedot tallennettu', 'success'))}}",
+  "originalBottomRow": 220,
+  "originalTopRow": 216,
+  "parentColumnSpace": 17.28125,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 22,
+  "text": "Tallenna tilaustiedot",
+  "topRow": 216,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "ucrnqvnhc3",
+  "widgetName": "Button2CopyCopy"
+}

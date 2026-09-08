@@ -1,0 +1,35 @@
+{
+  "appIsExample": false,
+  "appLayout": {
+    "type": "FLUID"
+  },
+  "applicationVersion": 2,
+  "collapseInvisibleWidgets": true,
+  "color": "#ECECEC",
+  "evaluationVersion": 2,
+  "pages": [
+    {
+      "id": "Etusivu",
+      "isDefault": true
+    },
+    {
+      "id": "Työkortti",
+      "isDefault": false
+    },
+    {
+      "id": "Syötä tilaus tai tarjous",
+      "isDefault": false
+    },
+    {
+      "id": "Materiaalitilaukset",
+      "isDefault": false
+    },
+    {
+      "id": "Tilastot",
+      "isDefault": false
+    }
+  ],
+  "unpublishedAppLayout": {
+    "type": "FLUID"
+  }
+}

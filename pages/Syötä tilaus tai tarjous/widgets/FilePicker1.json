@@ -1,0 +1,55 @@
+{
+  "allowedFileTypes": [],
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 127,
+  "boxShadow": "none",
+  "buttonColor": "#3b82f6",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "dynamicTyping": true,
+  "fileDataType": "Base64",
+  "files": [],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": "{{RadioGroup1.selectedOptionValue === 'tarjouspyynto'}}",
+  "key": "b4hye4s2gz",
+  "label": "Liitä tiedostoja",
+  "leftColumn": 1,
+  "maxFileSize": 5,
+  "maxNumFiles": "10",
+  "minWidth": 120,
+  "mobileBottomRow": 100,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 17,
+  "mobileTopRow": 96,
+  "needsErrorInfo": false,
+  "originalBottomRow": 100,
+  "originalTopRow": 96,
+  "parentColumnSpace": 17.28125,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 17,
+  "selectedFiles": [],
+  "topRow": 123,
+  "type": "FILE_PICKER_WIDGET_V2",
+  "version": 1,
+  "widgetId": "38hyum65wf",
+  "widgetName": "FilePicker1"
+}

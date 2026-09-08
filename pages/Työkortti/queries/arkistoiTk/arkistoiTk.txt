@@ -1,0 +1,1 @@
+UPDATE public.toimeksiannot SET arkistoitu = true WHERE id = {{appsmith.URL.queryParams.id}}::uuid;

@@ -1,0 +1,8 @@
+INSERT INTO public.toimeksiannot
+  (tyyppi, status, asiakas_nimi, asiakas_yritys, asiakas_email, asiakas_puhelin, asiakas_toimitusosoite, omistaja, aihe, vastaus_luonnos, tilaus_lisatiedot)
+VALUES
+  ('tarjouspyynto', 'uusi',
+   {{Input1.text || null}}, {{Input2.text || null}}, {{Input3.text || null}}, {{Input4.text || null}}, {{Input5.text || null}},
+   {{Select1.selectedOptionValue}}, {{Input6.text || null}},
+   {{RichTextEditor1.text || null}}, {{RichTextEditor2.text || null}})
+RETURNING id, tp_numero;

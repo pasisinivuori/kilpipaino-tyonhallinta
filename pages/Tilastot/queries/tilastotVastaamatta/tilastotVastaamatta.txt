@@ -1,0 +1,1 @@
+SELECT d.paivia || ' pv' AS x, d.kpl AS y FROM (SELECT (floor(extract(epoch from (now() - t.created_at))/86400))::int AS paivia, COUNT(*)::int AS kpl FROM public.toimeksiannot t WHERE t.arkistoitu = false AND t.tyyppi = 'tarjouspyynto' AND t.status = 'uusi' GROUP BY 1) d ORDER BY d.paivia;

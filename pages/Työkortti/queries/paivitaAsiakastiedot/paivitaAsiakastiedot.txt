@@ -1,0 +1,1 @@
+UPDATE public.toimeksiannot SET asiakas_yritys = {{this.params.yritys}}, asiakas_nimi = {{this.params.nimi}}, asiakas_email = {{this.params.email}}, asiakas_puhelin = {{this.params.puhelin}}, asiakas_toimitusosoite = {{this.params.osoite}} WHERE id = {{appsmith.URL.queryParams.id}}::uuid;

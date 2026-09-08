@@ -1,0 +1,1 @@
+SELECT to_char(date_trunc('month', created_at), 'MM/YYYY') AS x, count(*) FILTER (WHERE tyyppi='tarjouspyynto')::int AS tarjoukset, count(*) FILTER (WHERE tyyppi='tilaus')::int AS tilaukset FROM public.toimeksiannot GROUP BY date_trunc('month', created_at) ORDER BY date_trunc('month', created_at);

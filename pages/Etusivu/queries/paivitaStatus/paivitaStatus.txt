@@ -1,0 +1,1 @@
+UPDATE public.toimeksiannot SET status = COALESCE(NULLIF({{statusSelect.selectedOptionValue || ''}}, '')::toimeksianto_status, status), omistaja = COALESCE(NULLIF({{vastuuhenkiloSelect.selectedOptionValue || ''}}, ''), omistaja) WHERE id = {{Table1.selectedRow.id}}::uuid;

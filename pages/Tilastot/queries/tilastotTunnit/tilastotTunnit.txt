@@ -1,0 +1,1 @@
+SELECT round(avg(suunnitellut_tunnit)::numeric, 1) AS suun_ka, round(avg(toteutuneet_tunnit)::numeric, 1) AS tot_ka, count(*) FILTER (WHERE suunnitellut_tunnit IS NOT NULL AND toteutuneet_tunnit IS NOT NULL)::int AS n FROM public.toimeksiannot WHERE tyyppi='tilaus';

@@ -1,0 +1,1 @@
+SELECT COALESCE(NULLIF(btrim(omistaja),''),'Ei vastuuhenkilöä') AS x, count(*)::int AS y FROM public.toimeksiannot WHERE arkistoitu=false AND status NOT IN ('valmis','toimitettu','laskutettu') GROUP BY 1 ORDER BY y DESC;

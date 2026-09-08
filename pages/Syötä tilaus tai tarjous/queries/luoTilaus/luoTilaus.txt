@@ -1,0 +1,10 @@
+INSERT INTO public.toimeksiannot
+  (tyyppi, status, asiakas_nimi, asiakas_yritys, asiakas_email, asiakas_puhelin, asiakas_toimitusosoite, omistaja, aihe, tyon_kuvaus, tilaus_lisatiedot, valmistumispaiva, suunnitellut_tunnit, hinta_yhteensa, asennus_sisaltyy, asennuspaiva)
+VALUES
+  ('tilaus', 'tilaus_vastaanotettu',
+   {{Input1.text || null}}, {{Input2.text || null}}, {{Input3.text || null}}, {{Input4.text || null}}, {{Input5.text || null}},
+   {{Select1.selectedOptionValue}}, {{Input6.text || null}},
+   {{RichTextEditor3.text || null}}, {{RichTextEditor4.text || null}},
+   {{DatePicker1.formattedDate || null}}, {{Input7.text || null}}, {{CurrencyInput1.value || null}},
+   {{Switch2.isSwitchedOn}}, {{Switch2.isSwitchedOn ? (DatePicker2.formattedDate || null) : null}})
+RETURNING id, tp_numero;

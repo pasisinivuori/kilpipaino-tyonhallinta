@@ -1,0 +1,1 @@
+UPDATE public.toimeksiannot SET vastaus_luonnos = NULL WHERE id = {{appsmith.URL.queryParams.id}}::uuid;
