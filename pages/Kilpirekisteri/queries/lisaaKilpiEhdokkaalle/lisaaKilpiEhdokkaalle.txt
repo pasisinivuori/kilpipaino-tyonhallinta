@@ -1,0 +1,1 @@
+select kilvet.lisaa_kilpi({{uEhdokkaat.selectedRow ? uEhdokkaat.selectedRow.taloyhtio_id : null}}, {{uTuotelaji.selectedOptionValue}}, {{uKoko.text}}, {{uVari.text}}, {{uMateriaali.selectedOptionValue}}, {{uKiinnitys.selectedOptionValue}}, {{uTyyppi.selectedOptionValue}}, {{uPintakasittely.text}}, {{uMalliTiedosto.text}}, {{uMuistiinpano.text}}) as kilpi_id;

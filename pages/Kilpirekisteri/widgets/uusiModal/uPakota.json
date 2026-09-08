@@ -1,9 +1,11 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 32,
+  "bottomRow": 22,
+  "bottomRowBeforeCollapse": 22,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonStyle": "PRIMARY_BUTTON",
   "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
@@ -14,7 +16,7 @@
       "key": "borderRadius"
     },
     {
-      "key": "isDisabled"
+      "key": "isVisible"
     }
   ],
   "dynamicPropertyPathList": [
@@ -22,7 +24,7 @@
       "key": "onClick"
     },
     {
-      "key": "isDisabled"
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [
@@ -31,31 +33,32 @@
     }
   ],
   "isDefaultClickDisabled": true,
-  "isDisabled": "{{!(tOsoitteet.selectedRow && tOsoitteet.selectedRow.id)}}",
+  "isDisabled": false,
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": "{{!!(lisaaKohde.data && lisaaKohde.data[0] && lisaaKohde.data[0].tulos.tila === 'epailty_duplikaatti')}}",
   "key": "gy87wmut6j",
-  "leftColumn": 38,
+  "leftColumn": 47,
   "minWidth": 120,
-  "mobileBottomRow": 32,
-  "mobileLeftColumn": 38,
-  "mobileRightColumn": 54,
-  "mobileTopRow": 28,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{poistaOsoite.run().then(() => getOsoitteet.run()).then(() => hakuKilvet.run()).then(() => showAlert('Osoite poistettu', 'success'))}}",
-  "parentColumnSpace": 15.96875,
-  "parentId": "cr64p17pp8",
-  "parentRowSpace": 10,
+  "onClick": "{{JSObject1.pakota()}}",
+  "originalBottomRow": 22,
+  "originalTopRow": 18,
+  "parentId": "ee8rhvu3zz",
   "placement": "CENTER",
   "recaptchaType": "V3",
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 54,
-  "text": "Poista valittu osoite",
-  "topRow": 28,
+  "rightColumn": 63,
+  "text": "Eri kohde - lisää silti uutena",
+  "topRow": 18,
+  "topRowBeforeCollapse": 18,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "j7ys6qb57j",
-  "widgetName": "tPoistaOsoite"
+  "widgetId": "b0c3nkdr3j",
+  "widgetName": "uPakota"
 }
