@@ -1,0 +1,59 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 36,
+  "boxShadow": "none",
+  "defaultOptionValue": "kaikki",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "equl0tie93",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Tuotelaji",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 31,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 15,
+  "mobileTopRow": 24,
+  "needsErrorInfo": false,
+  "optionLabel": "name",
+  "optionValue": "code",
+  "parentColumnSpace": 30.40625,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 17,
+  "serverSideFiltering": false,
+  "sourceData": "[{\"name\":\"Kaikki\",\"code\":\"kaikki\"},{\"name\":\"Postilaatikkokilpi\",\"code\":\"postilaatikkokilpi\"},{\"name\":\"Ovikilpi\",\"code\":\"ovikilpi\"},{\"name\":\"Ovipuhelinkalvo\",\"code\":\"ovipuhelinkalvo\"}]",
+  "topRow": 29,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "nrkxi3243c",
+  "widgetName": "suodatinTuotelaji"
+}
