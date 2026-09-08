@@ -51,7 +51,15 @@
     "excel_rivi"
   ],
   "columnUpdatedAt": 1788865776607,
-  "columnWidthMap": {},
+  "columnWidthMap": {
+    "kilpi": 110,
+    "malli_tiedosto": 212,
+    "materiaali": 107,
+    "osoite": 211,
+    "pintakasittely": 137,
+    "taloyhtio": 239,
+    "vari": 113
+  },
   "customIsLoading": false,
   "customIsLoadingValue": "",
   "defaultPageSize": 0,
