@@ -1,0 +1,1 @@
+select kilvet.paivita_tilausrivi(nullif(({{tilausTaulu.selectedRow?.id}})::text,'')::bigint, {{rTeksti.text}}, nullif(({{rTaloyhtio.selectedOptionValue}})::text,'')::bigint, nullif(({{rKilpi.selectedOptionValue}})::text,'')::bigint, {{rVanhaTeksti.text}}, {{rHuoneisto.text}}, {{rTilattuKoko.text}}, {{rToimitusosoite.text}}, {{rMaksaja.text}}, {{rMuistiinpano.text}}) as tulos;

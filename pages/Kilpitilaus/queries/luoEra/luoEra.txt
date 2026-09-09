@@ -1,0 +1,1 @@
+select kilvet.luo_era(null) as tulos;

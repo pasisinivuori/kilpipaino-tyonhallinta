@@ -1,0 +1,1 @@
+select t.id, coalesce(t.tp_numero,'') || ' ' || coalesce(t.asiakas_yritys, t.asiakas_nimi, '(ei nimea)') || coalesce(' - ' || t.aihe, '') as nimi from public.toimeksiannot t where not t.arkistoitu order by t.created_at desc limit 200;

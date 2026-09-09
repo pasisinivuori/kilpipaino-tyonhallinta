@@ -1,0 +1,1 @@
+select * from kilvet.tilausrivi_nakyma where tila <> 'valmistettu' order by case tila when 'odottaa_tietoja' then 0 when 'valmis' then 1 else 2 end, taloyhtio nulls last, jarjestys;

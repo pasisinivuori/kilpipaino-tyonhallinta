@@ -1,0 +1,1 @@
+select kilvet.poista_tilausrivi(nullif(({{tilausTaulu.selectedRow?.id}})::text,'')::bigint) as tulos;

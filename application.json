@@ -31,6 +31,10 @@
     {
       "id": "Kilpirekisteri",
       "isDefault": false
+    },
+    {
+      "id": "Kilpitilaus",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

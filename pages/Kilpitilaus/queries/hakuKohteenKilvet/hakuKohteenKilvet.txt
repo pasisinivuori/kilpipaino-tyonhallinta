@@ -1,0 +1,1 @@
+select k.id, k.tuotelaji || ': ' || coalesce(k.tyyppi, k.koko, k.malli_tiedosto, '(koko puuttuu)') || coalesce(' / ' || k.vari, '') || coalesce(' / ' || k.kiinnitys, '') as nimi from kilvet.kilpi k where k.taloyhtio_id = nullif(({{rTaloyhtio.selectedOptionValue}})::text,'')::bigint order by k.tuotelaji, k.id;

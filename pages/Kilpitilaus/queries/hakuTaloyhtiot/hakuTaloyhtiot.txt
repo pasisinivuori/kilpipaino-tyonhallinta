@@ -1,0 +1,1 @@
+select t.id, t.nimi || coalesce(' - ' || (select trim(concat_ws(' ', o.katu, o.katunumero)) from kilvet.osoite o where o.taloyhtio_id = t.id order by o.jarjestys, o.id limit 1), '') as nimi from kilvet.taloyhtio t order by t.nimi;
