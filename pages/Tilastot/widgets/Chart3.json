@@ -100,7 +100,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 26,
+  "rightColumn": 31,
   "showDataPointLabel": false,
   "topRow": 47,
   "type": "CHART_WIDGET",

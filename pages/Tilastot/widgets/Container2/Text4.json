@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 9,
+  "bottomRow": 7,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -24,7 +24,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "jrhf5bm74o",
-  "leftColumn": 38,
+  "leftColumn": 31,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -33,7 +33,7 @@
   "mobileRightColumn": 26,
   "mobileTopRow": 2,
   "needsErrorInfo": false,
-  "originalBottomRow": 9,
+  "originalBottomRow": 7,
   "originalTopRow": 2,
   "overflow": "NONE",
   "parentColumnSpace": 15.07861328125,
@@ -41,7 +41,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 54,
+  "rightColumn": 61,
   "shouldTruncate": false,
   "text": "Keskim. läpimenoaika: {{tilastotLapimenoaika.data[0].keskiarvo_pv || '–'}} pv ({{tilastotLapimenoaika.data[0].n}} valmista työtä)\nTyötunnit (suun. / tot.): {{tilastotTunnit.data[0].suun_ka || '–'}} / {{tilastotTunnit.data[0].tot_ka || '–'}} h",
   "textAlign": "LEFT",
