@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 29,
+  "bottomRow": 18,
   "boxShadow": "none",
   "defaultOptionValue": "kaikki",
   "dynamicBindingPathList": [
@@ -53,7 +53,7 @@
   "rightColumn": 17,
   "serverSideFiltering": false,
   "sourceData": "[{\"name\":\"Kaikki\",\"code\":\"kaikki\"},{\"name\":\"Käytettävissä\",\"code\":\"Kaytettavissa\"},{\"name\":\"Tarkistettava\",\"code\":\"Tarkistettava\"},{\"name\":\"Täydennetään tilattaessa\",\"code\":\"Taydennetaan tilattaessa\"}]",
-  "topRow": 22,
+  "topRow": 11,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "u5irnb9oar",

@@ -47,7 +47,7 @@
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 21,
+  "rightColumn": 26,
   "showStepArrows": false,
   "topRow": 7,
   "type": "INPUT_WIDGET_V2",

@@ -51,7 +51,7 @@
   "placeholderText": "Select option",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 6,
+  "rightColumn": 10,
   "serverSideFiltering": false,
   "sourceData": "[{\"name\":\"(ei tietoa)\",\"code\":\"\"},{\"name\":\"muovi\",\"code\":\"muovi\"},{\"name\":\"alumiini\",\"code\":\"alumiini\"},{\"name\":\"messinki\",\"code\":\"messinki\"},{\"name\":\"dymo-nauha\",\"code\":\"dymo-nauha\"},{\"name\":\"teippikirjaimet\",\"code\":\"teippikirjaimet\"},{\"name\":\"pahvi\",\"code\":\"pahvi\"}]",
   "topRow": 46,

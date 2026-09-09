@@ -51,7 +51,7 @@
   "placeholderText": "Select option",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 9,
+  "rightColumn": 10,
   "serverSideFiltering": false,
   "sourceData": "[{\"name\":\"(ei tietoa)\",\"code\":\"\"},{\"name\":\"tarra\",\"code\":\"tarra\"},{\"name\":\"ei tarraa\",\"code\":\"ei tarraa\"},{\"name\":\"reiät\",\"code\":\"reiät\"},{\"name\":\"kehykseen\",\"code\":\"kehykseen\"},{\"name\":\"ruuvi\",\"code\":\"ruuvi\"},{\"name\":\"vhb-teippi\",\"code\":\"vhb-teippi\"},{\"name\":\"siirtokalvo\",\"code\":\"siirtokalvo\"}]",
   "topRow": 37,

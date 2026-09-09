@@ -302,7 +302,7 @@
   },
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 26,
+  "rightColumn": 37,
   "searchKey": "",
   "tableData": "{{getOsoitteet.data}}",
   "textSize": "0.875rem",
