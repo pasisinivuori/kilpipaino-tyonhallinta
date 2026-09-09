@@ -3,14 +3,11 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 102,
   "boxShadow": "none",
-  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonColor": "#fde047",
   "buttonStyle": "PRIMARY_BUTTON",
   "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
-    {
-      "key": "buttonColor"
-    },
     {
       "key": "borderRadius"
     }
@@ -38,6 +35,8 @@
   "mobileTopRow": 18,
   "needsErrorInfo": false,
   "onClick": "{{paivitaKilpi.run().then(() => hakuKilvet.run()).then(() => closeModal('kohdeModal')).then(() => showAlert('Kilpi tallennettu', 'success')).catch(() => showAlert('Tallennus epaonnistui', 'error'))}}",
+  "originalBottomRow": 102,
+  "originalTopRow": 98,
   "parentId": "tzt5iq159q",
   "placement": "CENTER",
   "recaptchaType": "V3",

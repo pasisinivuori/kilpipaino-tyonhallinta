@@ -3,13 +3,10 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 102,
   "boxShadow": "none",
-  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonColor": "#e0dede",
   "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
-    {
-      "key": "buttonColor"
-    },
     {
       "key": "borderRadius"
     }
@@ -37,6 +34,8 @@
   "mobileTopRow": 25,
   "needsErrorInfo": false,
   "onClick": "{{getOsoitteet.run().then(() => showModal('taloyhtioModal'))}}",
+  "originalBottomRow": 102,
+  "originalTopRow": 98,
   "parentColumnSpace": 16.4078125,
   "parentId": "tzt5iq159q",
   "parentRowSpace": 10,
