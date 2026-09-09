@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 24,
+  "bottomRow": 16,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -33,7 +33,7 @@
   "mobileRightColumn": 12,
   "mobileTopRow": 7,
   "needsErrorInfo": false,
-  "originalBottomRow": 24,
+  "originalBottomRow": 26,
   "originalTopRow": 19,
   "overflow": "NONE",
   "parentColumnSpace": 30.25,
@@ -41,12 +41,12 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 12,
+  "rightColumn": 25,
   "shouldTruncate": false,
   "text": "{{(hakuTilausrivit.data || []).filter(r => r.tila === 'valmis').length + ' riviä valmiina valmistukseen, ' + (hakuTilausrivit.data || []).filter(r => r.tila === 'odottaa_tietoja').length + ' odottaa tietoja.'}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 19,
+  "topRow": 12,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

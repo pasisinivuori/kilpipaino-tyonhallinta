@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 93,
+  "bottomRow": 79,
   "boxShadow": "none",
   "defaultText": "{{appsmith.store.rivimuokkaus ? tilausTaulu.selectedRow.maksaja : ''}}",
   "dynamicBindingPathList": [
@@ -51,7 +51,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 21,
   "showStepArrows": false,
-  "topRow": 86,
+  "topRow": 72,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "8lsypzl6xj",

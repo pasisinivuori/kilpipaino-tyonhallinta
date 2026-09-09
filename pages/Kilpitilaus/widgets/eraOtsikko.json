@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 77,
+  "bottomRow": 70,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -30,8 +30,8 @@
   "mobileRightColumn": 13,
   "mobileTopRow": 75,
   "needsErrorInfo": false,
-  "originalBottomRow": 77,
-  "originalTopRow": 73,
+  "originalBottomRow": 79,
+  "originalTopRow": 75,
   "overflow": "NONE",
   "parentColumnSpace": 14.75,
   "parentId": "0",
@@ -43,7 +43,7 @@
   "text": "Valmistetut erät",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 73,
+  "topRow": 66,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
