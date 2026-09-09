@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "select kilvet.paivita_tilausrivi(nullif(({{tilausTaulu.selectedRow?.id}})::text,'')::bigint, {{rTeksti.text}}, nullif(({{rTaloyhtio.selectedOptionValue}})::text,'')::bigint, nullif(({{rKilpi.selectedOptionValue}})::text,'')::bigint, {{rVanhaTeksti.text}}, {{rHuoneisto.text}}, {{rTilattuKoko.text}}, {{rToimitusosoite.text}}, {{rMaksaja.text}}, {{rMuistiinpano.text}}) as tulos;",
+      "body": "select kilvet.paivita_tilausrivi(nullif(({{tilausTaulu.selectedRow?.id}})::text,'')::bigint, {{rTeksti.text}}, nullif(({{rTaloyhtio.selectedOptionValue}})::text,'')::bigint, nullif(({{rKilpi.selectedOptionValue}})::text,'')::bigint, {{rHuoneisto.text}}, {{rTilattuKoko.text}}, {{rToimitusosoite.text}}, {{rMaksaja.text}}, {{rMuistiinpano.text}}) as tulos;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

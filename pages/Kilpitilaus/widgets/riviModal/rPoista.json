@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 18,
+  "bottomRow": 22,
   "bottomRowBeforeCollapse": 22,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -45,7 +45,7 @@
   "mobileTopRow": 18,
   "needsErrorInfo": false,
   "onClick": "{{JSObject1.poista()}}",
-  "originalBottomRow": 22,
+  "originalBottomRow": 18,
   "originalTopRow": 18,
   "parentId": "vk3b05g6wj",
   "placement": "CENTER",
