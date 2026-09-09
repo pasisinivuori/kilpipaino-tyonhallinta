@@ -39,6 +39,8 @@
   "isLoading": false,
   "isVisible": "{{!!(lisaaKohde.data && lisaaKohde.data[0] && lisaaKohde.data[0].tulos.tila === 'epailty_duplikaatti')}}",
   "key": "gy87wmut6j",
+  "labelStyle": "",
+  "labelTextColor": "",
   "leftColumn": 35,
   "minWidth": 120,
   "mobileBottomRow": 29,
