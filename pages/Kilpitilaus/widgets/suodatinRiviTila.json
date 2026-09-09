@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 35,
+  "bottomRow": 33,
   "boxShadow": "none",
   "defaultOptionValue": "kaikki",
   "dynamicBindingPathList": [
@@ -53,7 +53,7 @@
   "rightColumn": 12,
   "serverSideFiltering": false,
   "sourceData": "[{\"name\":\"Kaikki\",\"code\":\"kaikki\"},{\"name\":\"Odottaa tietoja\",\"code\":\"odottaa_tietoja\"},{\"name\":\"Valmis valmistukseen\",\"code\":\"valmis\"}]",
-  "topRow": 28,
+  "topRow": 26,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "ubq5a03nty",

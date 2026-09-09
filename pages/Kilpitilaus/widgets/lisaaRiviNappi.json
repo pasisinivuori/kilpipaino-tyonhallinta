@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 41,
+  "bottomRow": 39,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonVariant": "PRIMARY",
@@ -49,7 +49,7 @@
   "responsiveBehavior": "hug",
   "rightColumn": 5,
   "text": "Lisää rivi",
-  "topRow": 37,
+  "topRow": 35,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "bn2p36bm4m",

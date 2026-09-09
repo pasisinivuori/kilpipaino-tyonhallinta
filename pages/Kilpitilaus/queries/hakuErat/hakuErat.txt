@@ -1,0 +1,1 @@
+select id, eranumero, to_char(luotu, 'DD.MM.YYYY HH24:MI') as luotu, kilpia, ajoja, peruttu, perumisen_syy, muistiinpano from kilvet.era_nakyma order by id desc limit 20;

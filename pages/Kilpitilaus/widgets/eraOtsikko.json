@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 24,
+  "bottomRow": 77,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -11,9 +11,6 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
@@ -23,33 +20,33 @@
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
-  "key": "a7qfwau638",
+  "key": "emfj05oeif",
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 11,
+  "mobileBottomRow": 79,
   "mobileLeftColumn": 0,
-  "mobileRightColumn": 12,
-  "mobileTopRow": 7,
+  "mobileRightColumn": 13,
+  "mobileTopRow": 75,
   "needsErrorInfo": false,
-  "originalBottomRow": 26,
-  "originalTopRow": 19,
+  "originalBottomRow": 82,
+  "originalTopRow": 75,
   "overflow": "NONE",
-  "parentColumnSpace": 30.25,
+  "parentColumnSpace": 14.75,
   "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 12,
+  "rightColumn": 13,
   "shouldTruncate": false,
-  "text": "{{(hakuTilausrivit.data || []).filter(r => r.tila === 'valmis').length + ' riviä valmiina valmistukseen, ' + (hakuTilausrivit.data || []).filter(r => r.tila === 'odottaa_tietoja').length + ' odottaa tietoja.'}}",
+  "text": "Valmistetut erät",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 19,
+  "topRow": 73,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "lgx5p9g9kr",
-  "widgetName": "tilanneTeksti"
+  "widgetId": "x0er0mch7o",
+  "widgetName": "eraOtsikko"
 }

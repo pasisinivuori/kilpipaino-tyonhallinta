@@ -1,0 +1,1 @@
+select v.*, to_char(e.luotu, 'DD.MM.YYYY HH24:MI') as eran_pvm from kilvet.tilausrivi_nakyma v join kilvet.era e on e.id = v.era_id where v.era_id = nullif(({{appsmith.store.pdfEraId}})::text,'')::bigint order by v.materiaali, v.vari, v.pintakasittely, v.taloyhtio nulls last, v.huoneisto nulls last, v.id;
