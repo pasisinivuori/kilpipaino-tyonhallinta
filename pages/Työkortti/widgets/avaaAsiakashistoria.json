@@ -1,15 +1,12 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 202,
+  "bottomRow": 23,
   "boxShadow": "none",
-  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonColor": "#e0dede",
   "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
-    {
-      "key": "buttonColor"
-    },
     {
       "key": "borderRadius"
     }
@@ -28,17 +25,17 @@
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "wdrmrlxanm",
-  "leftColumn": 12,
+  "key": "b2gun4kufe",
+  "leftColumn": 41,
   "minWidth": 120,
-  "mobileBottomRow": 178,
-  "mobileLeftColumn": 0,
-  "mobileRightColumn": 3,
-  "mobileTopRow": 174,
+  "mobileBottomRow": 45,
+  "mobileLeftColumn": 41,
+  "mobileRightColumn": 57,
+  "mobileTopRow": 41,
   "needsErrorInfo": false,
-  "onClick": "{{JSObject1.tallennaAsiakastiedot()}}",
-  "originalBottomRow": 202,
-  "originalTopRow": 198,
+  "onClick": "{{resetWidget('ahTaulu'); hakuAsiakasHistoria.run().then(() => showModal('asiakasModal'));}}",
+  "originalBottomRow": 23,
+  "originalTopRow": 19,
   "parentColumnSpace": 17.28125,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -47,11 +44,11 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 21,
-  "text": "Päivitä",
-  "topRow": 198,
+  "rightColumn": 57,
+  "text": "Avaa asiakashistoria",
+  "topRow": 19,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "any71e34h0",
-  "widgetName": "Button2"
+  "widgetId": "6khrzbg3d6",
+  "widgetName": "avaaAsiakashistoria"
 }

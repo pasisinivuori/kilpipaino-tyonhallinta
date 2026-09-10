@@ -1,0 +1,1 @@
+SELECT t.id, t.tp_numero, to_char(t.created_at, 'DD.MM.YYYY') AS pvm, t.tyyppi::text AS tyyppi, t.status::text AS status, t.aihe, t.hinta_yhteensa, (t.id = {{appsmith.URL.queryParams.id}}::uuid) AS tama FROM public.toimeksiannot t WHERE t.asiakas_id = (SELECT x.asiakas_id FROM public.toimeksiannot x WHERE x.id = {{appsmith.URL.queryParams.id}}::uuid) ORDER BY t.created_at DESC;

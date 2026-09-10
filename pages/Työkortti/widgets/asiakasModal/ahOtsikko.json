@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 167,
+  "bottomRow": 5,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -11,42 +11,43 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1rem",
+  "fontSize": "1.25rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
-  "key": "jtkjpuehdj",
-  "leftColumn": 0,
+  "key": "5op8j5ff4n",
+  "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 143,
-  "mobileLeftColumn": 0,
-  "mobileRightColumn": 4,
-  "mobileTopRow": 139,
+  "mobileBottomRow": 5,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 41,
+  "mobileTopRow": 1,
   "needsErrorInfo": false,
-  "originalBottomRow": 167,
-  "originalTopRow": 163,
+  "originalBottomRow": 9,
+  "originalTopRow": 1,
   "overflow": "NONE",
-  "parentColumnSpace": 17.28125,
-  "parentId": "0",
-  "parentRowSpace": 10,
+  "parentId": "3733scm9yd",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 18,
+  "rightColumn": 53,
   "shouldTruncate": false,
-  "text": "Asiakkaan tiedot",
+  "text": "Asiakashistoria: {{getTk.data[0].asiakas_yritys || getTk.data[0].asiakas_nimi || 'tuntematon asiakas'}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 163,
+  "topRow": 1,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "po7uycmhwg",
-  "widgetName": "Text1"
+  "widgetId": "gx1a993a4b",
+  "widgetName": "ahOtsikko"
 }
