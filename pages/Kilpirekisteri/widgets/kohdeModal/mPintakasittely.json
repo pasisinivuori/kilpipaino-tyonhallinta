@@ -41,6 +41,8 @@
   "mobileRightColumn": 3,
   "mobileTopRow": 55,
   "needsErrorInfo": false,
+  "originalBottomRow": 61,
+  "originalTopRow": 54,
   "parentColumnSpace": 23.5625,
   "parentId": "tzt5iq159q",
   "parentRowSpace": 10,
