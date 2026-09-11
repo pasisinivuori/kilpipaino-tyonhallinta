@@ -1,1 +1,1 @@
-UPDATE public.toimeksiannot SET arkistoitu = true WHERE id = {{Table1.selectedRow.id}}::uuid;
+UPDATE public.toimeksiannot SET arkistoitu = true, uusi_viesti_suljettuun_at = NULL WHERE id = {{Table1.selectedRow.id}}::uuid;

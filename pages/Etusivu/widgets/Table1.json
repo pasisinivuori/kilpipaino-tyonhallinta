@@ -46,9 +46,10 @@
     "omistaja",
     "customColumn1",
     "odottaa_meilta",
-    "saapunut_punainen"
+    "saapunut_punainen",
+    "uusi_viesti_suljettuun"
   ],
-  "columnUpdatedAt": 1786519946216,
+  "columnUpdatedAt": 1789142657601,
   "columnWidthMap": {},
   "compactMode": "SHORT",
   "customIsLoading": false,
@@ -128,6 +129,9 @@
     },
     {
       "key": "primaryColumns.created_at.cellBackground"
+    },
+    {
+      "key": "primaryColumns.uusi_viesti_suljettuun.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -543,6 +547,40 @@
       "label": "Tyyppi",
       "notation": "standard",
       "originalId": "tyyppi",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "uusi_viesti_suljettuun": {
+      "alias": "uusi_viesti_suljettuun",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "checkbox",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"uusi_viesti_suljettuun\"])) : uusi_viesti_suljettuun })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "uusi_viesti_suljettuun",
+      "index": 14,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "uusi_viesti_suljettuun",
+      "notation": "standard",
+      "originalId": "uusi_viesti_suljettuun",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",

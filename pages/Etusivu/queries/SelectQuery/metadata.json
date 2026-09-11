@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT t.id, t.tp_numero, t.tyyppi, t.status, t.omistaja, t.aihe, COALESCE(t.asiakas_nimi, t.asiakas_email) AS asiakas, t.asiakas_yritys AS yritys, t.asiakas_nimi AS yhteyshenkilo, t.vastattava_mennessa, t.yhteenveto, t.created_at, COALESCE((SELECT v.suunta = 'saapuva' FROM public.viestit v WHERE v.toimeksianto_id = t.id ORDER BY v.sent_at DESC NULLS LAST, v.created_at DESC LIMIT 1), false) AS odottaa_meilta, (t.status = 'uusi' AND now() >= public.arki_maaraaika(t.created_at, 48)) AS saapunut_punainen FROM public.toimeksiannot t WHERE t.arkistoitu = false ORDER BY t.vastattava_mennessa ASC NULLS LAST, t.created_at DESC;",
+      "body": "SELECT t.id, t.tp_numero, t.tyyppi, t.status, t.omistaja, t.aihe, COALESCE(t.asiakas_nimi, t.asiakas_email) AS asiakas, t.asiakas_yritys AS yritys, t.asiakas_nimi AS yhteyshenkilo, t.vastattava_mennessa, t.yhteenveto, t.created_at, COALESCE((SELECT v.suunta = 'saapuva' FROM public.viestit v WHERE v.toimeksianto_id = t.id ORDER BY v.sent_at DESC NULLS LAST, v.created_at DESC LIMIT 1), false) AS odottaa_meilta, (t.status = 'uusi' AND now() >= public.arki_maaraaika(t.created_at, 48)) AS saapunut_punainen, (t.uusi_viesti_suljettuun_at IS NOT NULL) AS uusi_viesti_suljettuun FROM public.toimeksiannot t WHERE t.arkistoitu = false OR t.uusi_viesti_suljettuun_at IS NOT NULL ORDER BY (t.uusi_viesti_suljettuun_at IS NOT NULL) DESC, t.vastattava_mennessa ASC NULLS LAST, t.created_at DESC;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

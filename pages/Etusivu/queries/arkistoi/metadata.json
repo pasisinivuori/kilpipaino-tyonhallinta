@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE public.toimeksiannot SET arkistoitu = true WHERE id = {{Table1.selectedRow.id}}::uuid;",
+      "body": "UPDATE public.toimeksiannot SET arkistoitu = true, uusi_viesti_suljettuun_at = NULL WHERE id = {{Table1.selectedRow.id}}::uuid;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
