@@ -1,0 +1,1 @@
+UPDATE public.toimeksiannot SET uusi_viesti_suljettuun_at = NULL WHERE id = {{Table1.triggeredRow.id}}::uuid;
