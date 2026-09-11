@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 310,
+  "bottomRow": 108,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -30,8 +30,8 @@
   "mobileRightColumn": 4,
   "mobileTopRow": 139,
   "needsErrorInfo": false,
-  "originalBottomRow": 449,
-  "originalTopRow": 445,
+  "originalBottomRow": 310,
+  "originalTopRow": 306,
   "overflow": "NONE",
   "parentColumnSpace": 17.28125,
   "parentId": "0",
@@ -43,7 +43,7 @@
   "text": "Asiakkaan tiedot",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 306,
+  "topRow": 104,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

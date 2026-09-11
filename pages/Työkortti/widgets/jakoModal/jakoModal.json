@@ -1,14 +1,14 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 405,
+  "bottomRow": 385,
   "boxShadow": "none",
   "canEscapeKeyClose": true,
   "canOutsideClickClose": true,
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 390,
+      "bottomRow": 370,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": true,
       "detachFromLayout": true,
@@ -29,7 +29,7 @@
       "leftColumn": 0,
       "maxDynamicHeight": 9000,
       "minDynamicHeight": 4,
-      "minHeight": 240,
+      "minHeight": 390,
       "minWidth": 450,
       "mobileBottomRow": 240,
       "mobileLeftColumn": 0,
@@ -57,14 +57,14 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
-  "height": 390,
+  "height": 370,
   "isCanvas": true,
   "isLoading": false,
   "key": "3li8ey8pny",
   "leftColumn": 14,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 24,
-  "minHeight": 390,
+  "minHeight": 370,
   "mobileBottomRow": 39,
   "mobileLeftColumn": 14,
   "mobileRightColumn": 38,
@@ -81,5 +81,5 @@
   "version": 2,
   "widgetId": "cps0e4t996",
   "widgetName": "jakoModal",
-  "width": 456
+  "width": 686
 }
