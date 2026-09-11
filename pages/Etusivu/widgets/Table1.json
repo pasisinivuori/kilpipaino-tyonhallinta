@@ -62,9 +62,6 @@
   "delimiter": ",",
   "dynamicBindingPathList": [
     {
-      "key": "tableData"
-    },
-    {
       "key": "accentColor"
     },
     {
@@ -132,6 +129,9 @@
     },
     {
       "key": "primaryColumns.uusi_viesti_suljettuun.computedValue"
+    },
+    {
+      "key": "tableData"
     }
   ],
   "dynamicPropertyPathList": [
@@ -730,7 +730,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 62,
   "searchKey": "",
-  "tableData": "{{(function(){var rows=MultiSelect1.selectedOptionValues.length>0?SelectQuery.data.filter(function(r){return MultiSelect1.selectedOptionValues.includes(r.status);}):SelectQuery.data;var sorted=(rows||[]).slice().sort(function(a,b){return new Date(a.created_at)-new Date(b.created_at);});return jarjestysSelect.selectedOptionValue==='asc'?sorted:sorted.reverse();})()}}",
+  "tableData": "{{(function(){var rows=MultiSelect1.selectedOptionValues.length>0?SelectQuery.data.filter(function(r){return r.uusi_viesti_suljettuun||MultiSelect1.selectedOptionValues.includes(r.status);}):SelectQuery.data;var sorted=(rows||[]).slice().sort(function(a,b){return new Date(a.created_at)-new Date(b.created_at);});var ord=jarjestysSelect.selectedOptionValue==='asc'?sorted:sorted.reverse();return ord.filter(function(r){return r.uusi_viesti_suljettuun;}).concat(ord.filter(function(r){return !r.uusi_viesti_suljettuun;}));})()}}",
   "textSize": "0.875rem",
   "topRow": 10,
   "totalRecordsCount": 0,
