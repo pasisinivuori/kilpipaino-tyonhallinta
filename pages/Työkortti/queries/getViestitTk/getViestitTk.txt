@@ -1,1 +1,7 @@
-SELECT suunta, lahettaja, aihe, body_text, sent_at FROM public.viestit WHERE toimeksianto_id = {{appsmith.URL.queryParams.id}}::uuid ORDER BY sent_at ASC;
+SELECT v.id, v.suunta, v.lahettaja, v.aihe, v.body_text, v.sent_at,
+       (v.id = (SELECT v2.id FROM public.viestit v2
+                 WHERE v2.toimeksianto_id = {{appsmith.URL.queryParams.id}}::uuid
+                 ORDER BY COALESCE(v2.sent_at, v2.created_at) ASC, v2.id ASC LIMIT 1)) AS ensimmainen
+FROM public.viestit v
+WHERE v.toimeksianto_id = {{appsmith.URL.queryParams.id}}::uuid
+ORDER BY v.sent_at ASC;

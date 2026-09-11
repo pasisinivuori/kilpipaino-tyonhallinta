@@ -1,0 +1,1 @@
+{"viesti_id":"{{Table2.triggeredRow.id}}"}

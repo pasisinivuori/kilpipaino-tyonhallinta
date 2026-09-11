@@ -1,0 +1,55 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 31,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "1rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "td5ckm57iv",
+  "leftColumn": 2,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 26,
+  "mobileLeftColumn": 2,
+  "mobileRightColumn": 18,
+  "mobileTopRow": 22,
+  "needsErrorInfo": false,
+  "originalBottomRow": 27,
+  "originalTopRow": 22,
+  "overflow": "NONE",
+  "parentColumnSpace": 6.9375,
+  "parentId": "aiqgme9c8g",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 53,
+  "shouldTruncate": false,
+  "text": "{{(function(){var d=luokitteleViesti.data||{};var k=getViestitTk.data||[];var r=Table2.triggeredRow||{};var i=k.findIndex(function(v){return v.id===r.id;});var s=i>=0?k.length-i:0;var a=[d.asiakas_yritys,d.asiakas_nimi,d.asiakas_email,d.asiakas_puhelin].filter(function(x){return x;}).join(' - ');return 'AI ehdottaa: '+(d.luokka||'?')+(d.luottamus!=null?' (luottamus '+d.luottamus+')':'')+'\\nAsiakastiedot: '+(a||'ei uusia - peritaan vanhalta tyolta')+'\\nSiirtyy '+s+' viestia uuteen; vanhalle jaa '+(k.length-s)+'.';})()}}",
+  "textAlign": "LEFT",
+  "textColor": "#231F20",
+  "topRow": 22,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "eru1eml7ma",
+  "widgetName": "jEsikatselu"
+}

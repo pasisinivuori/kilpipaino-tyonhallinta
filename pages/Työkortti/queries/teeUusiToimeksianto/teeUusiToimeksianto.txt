@@ -1,0 +1,11 @@
+SELECT public.tee_uusi_toimeksianto_viestista(
+  {{Table2.triggeredRow.id}}::uuid,
+  {{jTyyppi.selectedOptionValue}},
+  {{jYhteenveto.text}},
+  '',
+  {{luokitteleViesti.data.asiakas_yritys || ''}},
+  {{luokitteleViesti.data.asiakas_nimi || ''}},
+  {{luokitteleViesti.data.asiakas_email || ''}},
+  {{luokitteleViesti.data.asiakas_puhelin || ''}},
+  {{luokitteleViesti.data.asiakas_toimitusosoite || ''}}
+) AS tulos;

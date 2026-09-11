@@ -1,0 +1,54 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 37,
+  "boxShadow": "none",
+  "buttonColor": "#22c55e",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "b1nunycb7a",
+  "leftColumn": 2,
+  "minWidth": 120,
+  "mobileBottomRow": 32,
+  "mobileLeftColumn": 2,
+  "mobileRightColumn": 18,
+  "mobileTopRow": 28,
+  "needsErrorInfo": false,
+  "onClick": "{{teeUusiToimeksianto.run().then(r => { const x = r[0].tulos; if (!x.ok) { showAlert(x.virhe, 'error'); return; } closeModal('jakoModal'); showAlert('Luotu ' + x.tp_numero + ' (' + x.siirretyt_viestit + ' viestia siirretty)', 'success'); navigateTo('Työkortti', { id: x.toimeksianto_id }, 'SAME_WINDOW').then(() => { getTk.run(); getViestitTk.run(); getLiitteetTk.run(); getAsiakastiedot.run(); }); })}}",
+  "originalBottomRow": 33,
+  "originalTopRow": 29,
+  "parentColumnSpace": 6.9375,
+  "parentId": "aiqgme9c8g",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 18,
+  "text": "Luo toimeksianto",
+  "topRow": 33,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "r7iciwor44",
+  "widgetName": "jLuo"
+}
