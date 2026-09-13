@@ -1,0 +1,52 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 159,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "gsjt81w4zz",
+  "leftColumn": 1,
+  "minWidth": 120,
+  "mobileBottomRow": 121,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 16,
+  "mobileTopRow": 117,
+  "needsErrorInfo": false,
+  "onClick": "{{paivitaAsetukset.run().then(() => haeAsetukset.run())}}",
+  "originalBottomRow": 152,
+  "originalTopRow": 148,
+  "parentColumnSpace": 17.5625,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 17,
+  "text": "Tallenna asetukset",
+  "topRow": 155,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "3wj61wus0m",
+  "widgetName": "Button1"
+}

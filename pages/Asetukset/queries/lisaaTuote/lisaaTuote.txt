@@ -1,0 +1,1 @@
+INSERT INTO public.tuotteet (nimi, yksikko, myyntihinta, omakustannus, aktiivinen) VALUES ({{Table2.newRow?.nimi || ''}}, {{Table2.newRow?.yksikko || 'kpl'}}, {{Table2.newRow?.myyntihinta ?? 0}}, {{Table2.newRow?.omakustannus ?? 0}}, {{Table2.newRow?.aktiivinen ?? true}});

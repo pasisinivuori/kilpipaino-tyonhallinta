@@ -1,0 +1,1 @@
+SELECT id, nimi, yksikko, myyntihinta, omakustannus, aktiivinen FROM public.tuotteet ORDER BY nimi;

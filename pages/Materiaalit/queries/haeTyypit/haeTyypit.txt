@@ -1,0 +1,1 @@
+SELECT id, nimi FROM public.materiaalityypit WHERE aktiivinen ORDER BY jarjestys, nimi;

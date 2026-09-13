@@ -1,0 +1,1 @@
+DELETE FROM public.rivit WHERE id = {{Table5.triggeredRow.id}}::uuid AND lukittu = false RETURNING id;

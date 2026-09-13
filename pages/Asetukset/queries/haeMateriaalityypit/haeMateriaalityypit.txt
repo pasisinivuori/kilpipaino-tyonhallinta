@@ -1,0 +1,1 @@
+SELECT id, nimi, jarjestys, aktiivinen FROM public.materiaalityypit ORDER BY jarjestys, nimi;

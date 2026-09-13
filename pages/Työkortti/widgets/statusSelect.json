@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 17,
+  "bottomRow": 12,
   "boxShadow": "none",
   "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( getTk.data[0].status))(statusSelect.options, statusSelect.serverSideFiltering) }}",
   "dynamicBindingPathList": [
@@ -61,7 +61,7 @@
   "rightColumn": 52,
   "serverSideFiltering": false,
   "sourceData": "[{\"name\":\"Uusi\",\"code\":\"uusi\"},{\"name\":\"Tarjous lähetetty\",\"code\":\"tarjous_lahetetty\"},{\"name\":\"Hylätty\",\"code\":\"hylatty\"},{\"name\":\"Tilaus vastaanotettu\",\"code\":\"tilaus_vastaanotettu\"},{\"name\":\"Suunnittelussa\",\"code\":\"suunnittelussa\"},{\"name\":\"Tuotannossa\",\"code\":\"tuotannossa\"},{\"name\":\"Odottaa asennusta\",\"code\":\"odottaa_asennusta\"},{\"name\":\"Valmis\",\"code\":\"valmis\"},{\"name\":\"Toimitettu\",\"code\":\"toimitettu\"},{\"name\":\"Laskutettu\",\"code\":\"laskutettu\"}]",
-  "topRow": 10,
+  "topRow": 8,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "jkqd1nqn43",

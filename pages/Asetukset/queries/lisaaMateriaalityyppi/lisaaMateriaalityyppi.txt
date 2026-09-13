@@ -1,0 +1,1 @@
+INSERT INTO public.materiaalityypit (nimi, jarjestys, aktiivinen) VALUES ({{Table3.newRow?.nimi || ''}}, {{Table3.newRow?.jarjestys ?? 0}}, {{Table3.newRow?.aktiivinen ?? true}});

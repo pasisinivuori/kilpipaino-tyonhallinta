@@ -1,0 +1,1 @@
+DELETE FROM public.materiaalityypit WHERE id = {{Table3.triggeredRow.id}}::uuid AND NOT EXISTS (SELECT 1 FROM public.materiaalit m WHERE m.tyyppi_id = {{Table3.triggeredRow.id}}::uuid) RETURNING nimi;

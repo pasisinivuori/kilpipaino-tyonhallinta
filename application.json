@@ -21,7 +21,7 @@
       "isDefault": false
     },
     {
-      "id": "Materiaalitilaukset",
+      "id": "Materiaalit",
       "isDefault": false
     },
     {
@@ -34,6 +34,10 @@
     },
     {
       "id": "Kilpitilaus",
+      "isDefault": false
+    },
+    {
+      "id": "Asetukset",
       "isDefault": false
     }
   ],

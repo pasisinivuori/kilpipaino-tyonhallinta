@@ -1,0 +1,1 @@
+UPDATE public.toimeksiannot SET laskutusperuste = {{Select1.selectedOptionValue}} WHERE id = {{appsmith.URL.queryParams.id}}::uuid;

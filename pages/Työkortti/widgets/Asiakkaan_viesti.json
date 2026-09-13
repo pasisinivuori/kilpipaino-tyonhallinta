@@ -2,7 +2,7 @@
   "animateLoading": true,
   "borderColor": "#231f20",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 226,
+  "bottomRow": 45,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -31,8 +31,8 @@
   "mobileRightColumn": 11,
   "mobileTopRow": 12,
   "needsErrorInfo": false,
-  "originalBottomRow": 24,
-  "originalTopRow": 20,
+  "originalBottomRow": 45,
+  "originalTopRow": 19,
   "overflow": "NONE",
   "parentColumnSpace": 17.28125,
   "parentId": "0",
@@ -44,7 +44,7 @@
   "text": "{{getViestitTk.data.filter(v => v.suunta === 'saapuva').slice(-1)[0]?.body_text}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 20,
+  "topRow": 19,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

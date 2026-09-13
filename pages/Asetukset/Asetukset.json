@@ -1,23 +1,23 @@
 {
-  "gitSyncId": "6a6b786a4fdae71c0c5a3144_f8fc2ff9-9557-492f-a5a3-c24ab0bd641e",
+  "gitSyncId": "6a6b786a4fdae71c0c5a3144_809311aa-44d2-4cf8-9cca-1daca3f987e0",
   "unpublishedPage": {
     "isHidden": false,
     "layouts": [
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 1110,
+          "bottomRow": 1590,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
           "dynamicBindingPathList": [],
           "leftColumn": 0,
-          "minHeight": 1120,
+          "minHeight": 720,
           "parentColumnSpace": 1,
           "parentRowSpace": 1,
           "rightColumn": 1224,
           "snapColumns": 64,
-          "snapRows": 110,
+          "snapRows": 70,
           "topRow": 0,
           "type": "CANVAS_WIDGET",
           "version": 94,
@@ -26,7 +26,7 @@
         }
       }
     ],
-    "name": "Materiaalitilaukset",
-    "slug": "materiaalitilaukset"
+    "name": "Asetukset",
+    "slug": "asetukset"
   }
 }

@@ -1,0 +1,1 @@
+SELECT id::text AS arvo, nimi || CASE WHEN leveys_mm IS NOT NULL THEN ' ' || trim(to_char(leveys_mm,'FM9999')) || ' mm' ELSE '' END AS nimi FROM public.materiaalit WHERE aktiivinen ORDER BY nimi, leveys_mm;

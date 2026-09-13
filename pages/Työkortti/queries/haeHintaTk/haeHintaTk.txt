@@ -1,0 +1,1 @@
+SELECT laskutusperuste, tarjoushinta, toteumahinta, laskettu_hinta FROM public.toimeksiannon_hinta WHERE toimeksianto_id = {{appsmith.URL.queryParams.id}}::uuid;

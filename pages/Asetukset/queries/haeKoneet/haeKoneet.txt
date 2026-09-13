@@ -1,0 +1,1 @@
+SELECT id, kone, kustannus_per_tunti, kayttoaste_pros, kate_pros, asetusaika_min, vaatii_valvontaa, aktiivinen, ROUND(kustannus_per_tunti / (kayttoaste_pros/100), 2) AS tehollinen_kustannus, ROUND(kustannus_per_tunti / (kayttoaste_pros/100) / (1 - kate_pros/100), 2) AS veloitus_per_tunti FROM public.koneet ORDER BY kone;
