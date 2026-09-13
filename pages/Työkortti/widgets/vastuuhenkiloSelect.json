@@ -58,7 +58,7 @@
   "placeholderText": "Select option",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 52,
+  "rightColumn": 57,
   "serverSideFiltering": false,
   "sourceData": "[{\"name\":\"Ei vastuuhenkilöä\",\"code\":\"Ei vastuuhenkilöä\"},{\"name\":\"Pasi\",\"code\":\"Pasi\"},{\"name\":\"Jerkka\",\"code\":\"Jerkka\"}]",
   "topRow": 24,

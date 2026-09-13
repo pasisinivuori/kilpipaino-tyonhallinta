@@ -41,10 +41,11 @@
     "yksikko",
     "maara_arvio",
     "maara_toteuma",
-    "EditActions1",
-    "customColumn1"
+    "customColumn1",
+    "jarjestys",
+    "EditActions1"
   ],
-  "columnUpdatedAt": 1789325387132,
+  "columnUpdatedAt": 1789328113560,
   "columnWidthMap": {},
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -96,6 +97,9 @@
     },
     {
       "key": "primaryColumns.customColumn1.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.jarjestys.computedValue"
     }
   ],
   "dynamicPropertyPathList": [],
@@ -132,8 +136,8 @@
   "mobileTopRow": 119,
   "needsErrorInfo": false,
   "onAddNewRowSave": "{{lisaaRiviTk.run().then(() => { haeRivitTk.run(); haeHintaTk.run(); })}}",
-  "originalBottomRow": 183,
-  "originalTopRow": 155,
+  "originalBottomRow": 189,
+  "originalTopRow": 161,
   "parentColumnSpace": 17.5625,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -253,6 +257,40 @@
       "verticalAlignment": "CENTER",
       "width": 230
     },
+    "jarjestys": {
+      "alias": "jarjestys",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "number",
+      "computedValue": "{{(() => { const tableData = Table5.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"jarjestys\"])) : jarjestys })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "jarjestys",
+      "index": 8,
+      "isCellEditable": false,
+      "isCellVisible": false,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "jarjestys",
+      "notation": "standard",
+      "originalId": "jarjestys",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
     "kuvaus": {
       "alias": "kuvaus",
       "allowCellWrapping": false,
@@ -285,7 +323,7 @@
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
-      "width": 230
+      "width": 220
     },
     "leveys_mm": {
       "alias": "leveys_mm",
@@ -458,7 +496,7 @@
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
-      "width": 220
+      "width": 260
     },
     "yksikko": {
       "alias": "yksikko",
@@ -497,7 +535,7 @@
   },
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 61,
+  "rightColumn": 62,
   "searchKey": "",
   "tableData": "{{haeRivitTk.data}}",
   "textSize": "0.875rem",
