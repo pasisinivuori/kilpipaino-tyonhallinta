@@ -3,13 +3,14 @@
   "borderOpacity": 100,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": 1,
-  "bottomRow": 46,
+  "bottomRow": 49,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "dynamicBindingPathList": [
     {
       "key": "srcDoc"
     }
   ],
+  "dynamicTriggerPathList": [],
   "flexVerticalAlignment": "start",
   "isLoading": false,
   "isVisible": true,
@@ -30,7 +31,8 @@
   "rightColumn": 62,
   "source": "",
   "srcDoc": "{{'<div style=\"font-family:Arial,sans-serif;font-size:14px;padding:8px\">' + (Input5.text || '<i>Ei allekirjoitusta</i>') + '</div>'}}",
-  "topRow": 14,
+  "title": "Esikatselu",
+  "topRow": 17,
   "type": "IFRAME_WIDGET",
   "version": 1,
   "widgetId": "uzpga3fpau",
