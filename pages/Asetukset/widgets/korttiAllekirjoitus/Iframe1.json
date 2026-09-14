@@ -1,0 +1,38 @@
+{
+  "animateLoading": true,
+  "borderOpacity": 100,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": 1,
+  "bottomRow": 46,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "srcDoc"
+    }
+  ],
+  "flexVerticalAlignment": "start",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "1q19180wyj",
+  "leftColumn": 32,
+  "mobileBottomRow": 46,
+  "mobileLeftColumn": 32,
+  "mobileRightColumn": 62,
+  "mobileTopRow": 14,
+  "needsErrorInfo": false,
+  "originalBottomRow": 46,
+  "originalTopRow": 14,
+  "parentColumnSpace": 30.25,
+  "parentId": "gbw5seirbz",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 62,
+  "source": "",
+  "srcDoc": "{{'<div style=\"font-family:Arial,sans-serif;font-size:14px;padding:8px\">' + (Input5.text || '<i>Ei allekirjoitusta</i>') + '</div>'}}",
+  "topRow": 14,
+  "type": "IFRAME_WIDGET",
+  "version": 1,
+  "widgetId": "uzpga3fpau",
+  "widgetName": "Iframe1"
+}

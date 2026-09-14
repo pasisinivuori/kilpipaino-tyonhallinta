@@ -10,7 +10,7 @@
       "key": "accentColor"
     }
   ],
-  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
   "isDisabled": false,
   "isLoading": false,

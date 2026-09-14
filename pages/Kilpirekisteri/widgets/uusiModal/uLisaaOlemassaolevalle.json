@@ -4,7 +4,7 @@
   "bottomRow": 170,
   "bottomRowBeforeCollapse": 29,
   "boxShadow": "none",
-  "buttonColor": "#e0dede",
+  "buttonColor": "#E0DEDE",
   "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [

@@ -4,7 +4,7 @@
   "bottomRow": 170,
   "bottomRowBeforeCollapse": 22,
   "boxShadow": "none",
-  "buttonColor": "#e0dede",
+  "buttonColor": "#E0DEDE",
   "buttonStyle": "PRIMARY_BUTTON",
   "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
