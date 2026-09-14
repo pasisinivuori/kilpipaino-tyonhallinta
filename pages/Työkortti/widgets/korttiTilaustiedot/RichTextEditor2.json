@@ -1,0 +1,62 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 50,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "defaultText": "{{getTk.data[0].tyon_kuvaus}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "defaultText"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "flexVerticalAlignment": "start",
+  "inputType": "html",
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": "{{!['uusi','tarjous_lahetetty','hylatty'].includes((statusSelect.selectedOptionValue || getTk.data[0].status))}}",
+  "key": "u4nmr917np",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Työn kuvaus, työohjeet – mitä tehdään, määrät, mitat, materiaalit, kilpitekstit",
+  "labelWidth": 5,
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 50,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 50,
+  "mobileTopRow": 30,
+  "needsErrorInfo": false,
+  "originalBottomRow": 50,
+  "originalTopRow": 30,
+  "parentColumnSpace": 17.28125,
+  "parentId": "wdoio4h2sm",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 50,
+  "topRow": 30,
+  "type": "RICH_TEXT_EDITOR_WIDGET",
+  "version": 1,
+  "widgetId": "b9zb9ynmry",
+  "widgetName": "RichTextEditor2"
+}

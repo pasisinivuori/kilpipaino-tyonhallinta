@@ -1,0 +1,56 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignWidget": "LEFT",
+  "animateLoading": true,
+  "bottomRow": 11,
+  "boxShadow": "none",
+  "defaultSwitchState": "{{getTk.data[0].asennus_sisaltyy}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "defaultSwitchState"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "defaultSwitchState"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": "{{!['uusi','tarjous_lahetetty','hylatty'].includes((statusSelect.selectedOptionValue || getTk.data[0].status))}}",
+  "key": "pzx4d1soba",
+  "label": "Työhön sisältyy asennus",
+  "labelPosition": "Left",
+  "leftColumn": 22,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 11,
+  "mobileLeftColumn": 22,
+  "mobileRightColumn": 38,
+  "mobileTopRow": 7,
+  "needsErrorInfo": false,
+  "originalBottomRow": 11,
+  "originalTopRow": 7,
+  "parentColumnSpace": 17.28125,
+  "parentId": "wdoio4h2sm",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 38,
+  "topRow": 7,
+  "type": "SWITCH_WIDGET",
+  "version": 1,
+  "widgetId": "msdzbddebt",
+  "widgetName": "Switch1"
+}

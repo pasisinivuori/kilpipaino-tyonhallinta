@@ -1,0 +1,38 @@
+{
+  "animateLoading": true,
+  "borderOpacity": 100,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": 0,
+  "bottomRow": 58,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "srcDoc"
+    }
+  ],
+  "flexVerticalAlignment": "start",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "h6z3fpw626",
+  "leftColumn": 1,
+  "mobileBottomRow": 58,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 62,
+  "mobileTopRow": 14,
+  "needsErrorInfo": false,
+  "originalBottomRow": 58,
+  "originalTopRow": 14,
+  "parentColumnSpace": 30.25,
+  "parentId": "wom5ttosnw",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 62,
+  "source": "",
+  "srcDoc": "{{ (function (rows) {\n  var esc = function (s) {\n    return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');\n  };\n  var siisti = function (t) {\n    return String(t == null ? '' : t)\n      .replace(/\\r\\n/g, '\\n')\n      .replace(/([^\\s<]+)<mailto:[^>]*>/gi, '$1')\n      .replace(/([^\\s<]+)<https?:\\/\\/[^>]*>/gi, '$1')\n      .replace(/\\[cid:[^\\]]+\\]/gi, '[kuva viestissa]')\n      .replace(/^[ \\t]*\\*[ \\t]*\\n/gm, '• ')\n      .replace(/\\n{3,}/g, '\\n\\n');\n  };\n  var LAINAUS = [\n    /^>/,\n    /^_{10,}\\s*$/,\n    /^-{2,}\\s*(Alkuper[äa]inen viesti|Original Message)\\s*-{2,}/i,\n    /^(L[äa]hett[äa]j[äa]|From)\\s*:\\s*\\S/i,\n    /^(L[äa]hetetty|Sent)\\s*:\\s*\\S/i,\n    /^On .+ wrote:\\s*$/i,\n    /.{0,160}\\bkirjoitti:\\s*$/i,\n    /reacted to your message:\\s*$/i\n  ];\n  var jaa = function (teksti) {\n    var rivit = teksti.split('\\n');\n    var k = -1;\n    for (var i = 1; i < rivit.length; i++) {\n      for (var j = 0; j < LAINAUS.length; j++) { if (LAINAUS[j].test(rivit[i])) { k = i; break; } }\n      if (k >= 0) break;\n    }\n    var nakyva = teksti, piilo = '';\n    if (k > 0) {\n      var alku = rivit.slice(0, k).join('\\n').replace(/\\s+$/, '');\n      if (alku.replace(/\\s/g, '').length >= 20) {\n        nakyva = alku;\n        piilo = rivit.slice(k).join('\\n').replace(/^\\s+/, '');\n      }\n    }\n    if (nakyva.length > 1200) {\n      var leikkaus = nakyva.lastIndexOf('\\n', 1200);\n      if (leikkaus < 400) leikkaus = 1200;\n      piilo = nakyva.slice(leikkaus).replace(/^\\s+/, '') + (piilo ? '\\n\\n' + piilo : '');\n      nakyva = nakyva.slice(0, leikkaus);\n    }\n    return [nakyva, piilo];\n  };\n  var pvm = function (v) {\n    var d = new Date(v);\n    if (!v || isNaN(d.getTime())) return '';\n    var p = function (n) { return n < 10 ? '0' + n : '' + n; };\n    return d.getDate() + '.' + (d.getMonth() + 1) + '.' + d.getFullYear() + ' klo ' + p(d.getHours()) + '.' + p(d.getMinutes());\n  };\n  var kuka = function (osoite, lahteva) {\n    var a = String(osoite || '').trim();\n    if (!a) return lahteva ? 'Nokian Kilpipaino' : 'Tuntematon lähettäjä';\n    if (!lahteva) return a;\n    var m = a.match(/<([^>]+)>/);\n    var em = m ? m[1] : a;\n    var etu = em.split('@')[0];\n    return (etu ? etu.charAt(0).toUpperCase() + etu.slice(1) : 'Me') + ' · ' + em;\n  };\n  var lista = (rows || []).slice().sort(function (a, b) {\n    return new Date(a.sent_at || a.created_at || 0) - new Date(b.sent_at || b.created_at || 0);\n  });\n  var css = '<meta charset=\"utf-8\"><style>' +\n    'html,body{height:100%;margin:0}' + '.wrap{height:100%;box-sizing:border-box;padding:4px 4px 8px;overflow-y:auto;display:flex;flex-direction:column-reverse}' + '.wrap>.m:first-child{margin-bottom:auto}' +\n    'body{margin:0;height:100%;' +\n    'font:13.5px/1.55 -apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#1f2328;background:#fff}' +\n    '.m{flex:0 0 auto;border:1px solid #e1e4e8;border-radius:8px;margin:5px 0;overflow:hidden}' +\n    '.m.out{border-color:#c7d9f2}' +\n    '.h{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:7px 11px;background:#f4f5f7;border-bottom:1px solid #e1e4e8;font-size:12px}' +\n    '.m.out .h{background:#eaf1fb}' +\n    '.who{font-weight:600;color:#24292f;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}' +\n    '.oik{white-space:nowrap;color:#57606a}' +\n    '.tag{display:inline-block;font-size:10.5px;font-weight:600;letter-spacing:.03em;text-transform:uppercase;padding:1px 6px;border-radius:9px;background:#dde1e6;color:#424a53;margin-right:6px}' +\n    '.m.out .tag{background:#2f6fd0;color:#fff}' +\n    '.b{padding:10px 12px;white-space:pre-wrap;overflow-wrap:anywhere}' +\n    'details{margin-top:6px}' +\n    'summary{cursor:pointer;color:#2f6fd0;font-size:12px;list-style:none}' +\n    'summary::-webkit-details-marker{display:none}' +\n    'summary:before{content:\"\\\\00b7\\\\00b7\\\\00b7\";display:inline-block;background:#e7eaee;border-radius:8px;padding:0 7px;margin-right:6px;color:#57606a;line-height:1.1}' +\n    '.q{white-space:pre-wrap;overflow-wrap:anywhere;color:#6a737d;border-left:3px solid #e1e4e8;padding-left:10px;margin-top:8px;font-size:12.5px}' +\n    '.tyhja{color:#6a737d;padding:18px;text-align:center;font-style:italic}' +\n    '</style>';\n  if (!lista.length) return css + '<div class=\"tyhja\">Ei viesteja tassa ketjussa.</div>';\n  var html = '';\n  for (var i = lista.length - 1; i >= 0; i--) {\n    var v = lista[i];\n    var out = String(v.suunta) === 'lahteva';\n    var osat = jaa(siisti(v.body_text));\n    html += '<div class=\"m ' + (out ? 'out' : 'in') + '\">' +\n      '<div class=\"h\"><span class=\"who\">' + esc(kuka(v.lahettaja, out)) + '</span>' +\n      '<span class=\"oik\"><span class=\"tag\">' + (out ? 'Vastattu' : 'Saapunut') + '</span>' +\n      esc(pvm(v.sent_at || v.created_at)) + '</span></div>' +\n      '<div class=\"b\">' + esc(osat[0]) +\n      (osat[1] ? '<details><summary>Näytä loput</summary><div class=\"q\">' + esc(osat[1]) + '</div></details>' : '') +\n      '</div></div>';\n  }\n  return css + '<div class=\"wrap\">' + html + '</div>';\n})(getViestitTk.data) }}",
+  "topRow": 14,
+  "type": "IFRAME_WIDGET",
+  "version": 1,
+  "widgetId": "udqz8tunl4",
+  "widgetName": "Iframe1"
+}

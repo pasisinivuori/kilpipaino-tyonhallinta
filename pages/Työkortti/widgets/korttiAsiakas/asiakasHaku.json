@@ -1,0 +1,78 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 42,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "optionLabel"
+    },
+    {
+      "key": "optionValue"
+    },
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "av45ngh0f2",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Hae asiakas rekisteristä",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 42,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 20,
+  "mobileTopRow": 35,
+  "needsErrorInfo": false,
+  "onOptionChange": "{{ (() => { const c = hakuAsiakkaat.data.find(r => r.id === asiakasHaku.selectedOptionValue); if(!c){ return; } paivitaAsiakastiedot.run({yritys:c.yritys, nimi:c.nimi, email:c.email, puhelin:c.puhelin, osoite:c.osoite}).then(() => { getAsiakastiedot.run(); getTk.run(); }); })() }}",
+  "optionLabel": "nayttonimi",
+  "optionValue": "id",
+  "originalBottomRow": 42,
+  "originalTopRow": 35,
+  "parentColumnSpace": 17.28125,
+  "parentId": "wn9hlbvp91",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 20,
+  "serverSideFiltering": false,
+  "sourceData": "{{hakuAsiakkaat.data}}",
+  "topRow": 35,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "wntlf1qptx",
+  "widgetName": "asiakasHaku"
+}

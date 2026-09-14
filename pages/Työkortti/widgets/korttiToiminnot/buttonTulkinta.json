@@ -1,0 +1,50 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 10,
+  "boxShadow": "none",
+  "buttonColor": "#E0DEDE",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "zwird7w1ra",
+  "leftColumn": 1,
+  "minWidth": 120,
+  "mobileBottomRow": 10,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 22,
+  "mobileTopRow": 6,
+  "needsErrorInfo": false,
+  "onClick": "{{tulkitseKilpitilaus.run().then(() => showModal('vahvistusModal'))}}",
+  "originalBottomRow": 10,
+  "originalTopRow": 6,
+  "parentColumnSpace": 30.25,
+  "parentId": "w1dguk14jp",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 22,
+  "text": "Tee tilauksesta kilpitilausrivit",
+  "tooltip": "Lukee viestiketjun ja liitteet ja ehdottaa kilpitilausrivejä",
+  "topRow": 6,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "mmu6t5ppxi",
+  "widgetName": "buttonTulkinta"
+}

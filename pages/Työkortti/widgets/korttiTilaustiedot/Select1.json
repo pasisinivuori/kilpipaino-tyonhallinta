@@ -1,0 +1,75 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 21,
+  "boxShadow": "none",
+  "defaultOptionValue": "{{haeHintaTk.data[0].laskutusperuste}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "defaultOptionValue"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": "{{!['uusi','tarjous_lahetetty','hylatty'].includes((statusSelect.selectedOptionValue || getTk.data[0].status))}}",
+  "key": "or5cxs1xvk",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Laskutusperuste",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 22,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 21,
+  "mobileLeftColumn": 22,
+  "mobileRightColumn": 41,
+  "mobileTopRow": 14,
+  "needsErrorInfo": false,
+  "onOptionChange": "{{paivitaLaskutusperuste.run().then(() => haeHintaTk.run())}}",
+  "optionLabel": "nimi",
+  "optionValue": "arvo",
+  "originalBottomRow": 21,
+  "originalTopRow": 14,
+  "parentColumnSpace": 17.5625,
+  "parentId": "wdoio4h2sm",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 41,
+  "serverSideFiltering": false,
+  "sourceData": "{{[{ nimi: 'Kiinteä hinta', arvo: 'kiintea' }, { nimi: 'Toteuman mukaan', arvo: 'toteuma' }]}}",
+  "topRow": 14,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "lwsble762n",
+  "widgetName": "Select1"
+}

@@ -1,0 +1,49 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 10,
+  "boxShadow": "none",
+  "buttonColor": "#dc2626",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "egq246by6f",
+  "leftColumn": 35,
+  "minWidth": 120,
+  "mobileBottomRow": 10,
+  "mobileLeftColumn": 35,
+  "mobileRightColumn": 46,
+  "mobileTopRow": 6,
+  "needsErrorInfo": false,
+  "onClick": "{{poistaTk.run().then(() => {\n  navigateTo('Etusivu', {}, 'SAME_WINDOW');\n});}}",
+  "originalBottomRow": 10,
+  "originalTopRow": 6,
+  "parentColumnSpace": 17.28125,
+  "parentId": "w1dguk14jp",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 46,
+  "text": "Poista\n",
+  "topRow": 6,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "01ek2eggkc",
+  "widgetName": "Button1CopyCopy"
+}
