@@ -12,6 +12,9 @@
     },
     {
       "key": "isDisabled"
+    },
+    {
+      "key": "tooltip"
     }
   ],
   "dynamicPropertyPathList": [
@@ -28,7 +31,7 @@
     }
   ],
   "isDefaultClickDisabled": true,
-  "isDisabled": "{{vastuuhenkiloSelect.selectedOptionValue === 'Jerkka' || !vastausInput.text}}",
+  "isDisabled": "{{ !vastausInput.text || ['', 'Ei vastuuhenkilöä', 'Jerkka'].includes(vastuuhenkiloSelect.selectedOptionValue || '') }}",
   "isLoading": false,
   "isVisible": true,
   "key": "egq246by6f",
@@ -52,7 +55,7 @@
   "responsiveBehavior": "hug",
   "rightColumn": 63,
   "text": "Lähetä",
-  "tooltip": "Kirjoita vastaus. Jerkan nimissä ei voi vielä lähettää — Makessa ei ole hänen reittiään.",
+  "tooltip": "{{ ['', 'Ei vastuuhenkilöä'].includes(vastuuhenkiloSelect.selectedOptionValue || '') ? 'Valitse ensin vastuuhenkil'+String.fromCharCode(246)+' - viesti l'+String.fromCharCode(228)+'htee h'+String.fromCharCode(228)+'nen allekirjoituksellaan' : vastuuhenkiloSelect.selectedOptionValue === 'Jerkka' ? 'Jerkan postilaatikkoa ei ole viel'+String.fromCharCode(228)+' kytketty j'+String.fromCharCode(228)+'rjestelm'+String.fromCharCode(228)+'\"n' : !vastausInput.text ? 'Kirjoita vastausteksti' : 'L'+String.fromCharCode(228)+'het'+String.fromCharCode(228)+'\" vastaus asiakkaalle' }}",
   "topRow": 18,
   "type": "BUTTON_WIDGET",
   "version": 1,
