@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "alignWidget": "LEFT",
   "animateLoading": true,
-  "bottomRow": 248,
+  "bottomRow": 182,
   "boxShadow": "none",
   "defaultSwitchState": "{{getTk.data[0].asennus_sisaltyy}}",
   "dynamicBindingPathList": [
@@ -48,7 +48,7 @@
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 27,
-  "topRow": 244,
+  "topRow": 178,
   "type": "SWITCH_WIDGET",
   "version": 1,
   "widgetId": "msdzbddebt",

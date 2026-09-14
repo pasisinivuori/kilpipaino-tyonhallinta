@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 256,
+  "bottomRow": 190,
   "boxShadow": "none",
   "defaultOptionValue": "{{haeHintaTk.data[0].laskutusperuste}}",
   "dynamicBindingPathList": [
@@ -64,7 +64,7 @@
   "rightColumn": 41,
   "serverSideFiltering": false,
   "sourceData": "{{[{ nimi: 'Kiinteä hinta', arvo: 'kiintea' }, { nimi: 'Toteuman mukaan', arvo: 'toteuma' }]}}",
-  "topRow": 249,
+  "topRow": 183,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "lwsble762n",

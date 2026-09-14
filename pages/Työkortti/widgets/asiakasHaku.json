@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 198,
+  "bottomRow": 132,
   "boxShadow": "none",
   "defaultOptionValue": "",
   "dynamicBindingPathList": [
@@ -70,7 +70,7 @@
   "rightColumn": 11,
   "serverSideFiltering": false,
   "sourceData": "{{hakuAsiakkaat.data}}",
-  "topRow": 191,
+  "topRow": 125,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "wntlf1qptx",
