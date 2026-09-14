@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 14,
+  "bottomRow": 10,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -11,45 +11,42 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "text"
     }
   ],
   "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1rem",
-  "fontStyle": "BOLD",
+  "fontSize": "0.75rem",
+  "fontStyle": "",
   "isLoading": false,
   "isVisible": true,
-  "key": "vtxrtkg8hx",
-  "leftColumn": 32,
+  "key": "lbxktqpl6y",
+  "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 14,
-  "mobileLeftColumn": 32,
-  "mobileRightColumn": 62,
-  "mobileTopRow": 10,
+  "mobileBottomRow": 10,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 30,
+  "mobileTopRow": 7,
   "needsErrorInfo": false,
-  "originalBottomRow": 14,
-  "originalTopRow": 10,
+  "originalBottomRow": 10,
+  "originalTopRow": 7,
   "overflow": "NONE",
-  "parentColumnSpace": 17.28125,
+  "parentColumnSpace": 11.568359375,
   "parentId": "wxwoph061q",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 62,
+  "rightColumn": 30,
   "shouldTruncate": false,
-  "text": "{{moment(getTk.data[0].created_at).format('DD.MM.YYYY')}}",
+  "text": "TP-numero",
   "textAlign": "LEFT",
-  "textColor": "#231F20",
-  "topRow": 10,
+  "textColor": "#6B7280",
+  "topRow": 7,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "rfnewmunqf",
-  "widgetName": "Paivamaara"
+  "widgetId": "lb6tunc61v",
+  "widgetName": "selite_tp"
 }

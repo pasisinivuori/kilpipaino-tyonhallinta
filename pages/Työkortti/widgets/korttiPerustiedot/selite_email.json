@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 14,
+  "bottomRow": 26,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -11,45 +11,42 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "text"
     }
   ],
   "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1rem",
-  "fontStyle": "BOLD",
+  "fontSize": "0.75rem",
+  "fontStyle": "",
   "isLoading": false,
   "isVisible": true,
-  "key": "vtxrtkg8hx",
-  "leftColumn": 32,
+  "key": "lbzn6lc9up",
+  "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 14,
-  "mobileLeftColumn": 32,
+  "mobileBottomRow": 26,
+  "mobileLeftColumn": 1,
   "mobileRightColumn": 62,
-  "mobileTopRow": 10,
+  "mobileTopRow": 23,
   "needsErrorInfo": false,
-  "originalBottomRow": 14,
-  "originalTopRow": 10,
+  "originalBottomRow": 26,
+  "originalTopRow": 23,
   "overflow": "NONE",
-  "parentColumnSpace": 17.28125,
+  "parentColumnSpace": 11.568359375,
   "parentId": "wxwoph061q",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 62,
   "shouldTruncate": false,
-  "text": "{{moment(getTk.data[0].created_at).format('DD.MM.YYYY')}}",
+  "text": "Sähköposti",
   "textAlign": "LEFT",
-  "textColor": "#231F20",
-  "topRow": 10,
+  "textColor": "#6B7280",
+  "topRow": 23,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "rfnewmunqf",
-  "widgetName": "Paivamaara"
+  "widgetId": "lbjcxsm0jp",
+  "widgetName": "selite_email"
 }

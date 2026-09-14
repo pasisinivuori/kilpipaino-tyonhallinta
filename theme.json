@@ -47,10 +47,10 @@
     },
     "colors": {
       "backgroundColor": "#9CA3AF",
-      "primaryColor": "#553DE9"
+      "primaryColor": "#231F20"
     },
     "fontFamily": {
-      "appFont": "System Default"
+      "appFont": "Inter"
     }
   },
   "stylesheet": {

@@ -16,7 +16,7 @@
   "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1.25rem",
+  "fontSize": "1.5rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
