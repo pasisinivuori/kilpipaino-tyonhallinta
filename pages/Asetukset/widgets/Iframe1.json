@@ -3,7 +3,7 @@
   "borderOpacity": 100,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": 1,
-  "bottomRow": 237,
+  "bottomRow": 256,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "dynamicBindingPathList": [
     {
@@ -20,6 +20,8 @@
   "mobileRightColumn": 13,
   "mobileTopRow": 205,
   "needsErrorInfo": false,
+  "originalBottomRow": 237,
+  "originalTopRow": 205,
   "parentColumnSpace": 30.25,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -28,7 +30,7 @@
   "rightColumn": 19,
   "source": "",
   "srcDoc": "{{'<div style=\"font-family:Arial,sans-serif;font-size:14px;padding:8px\">' + (Input5.text || '<i>Ei allekirjoitusta</i>') + '</div>'}}",
-  "topRow": 205,
+  "topRow": 224,
   "type": "IFRAME_WIDGET",
   "version": 1,
   "widgetId": "uzpga3fpau",
