@@ -32,7 +32,7 @@
   "key": "xdkklwr22f",
   "labelAlignment": "left",
   "labelPosition": "Top",
-  "labelText": "Lisätiedot",
+  "labelText": "Sisäiset lisätiedot – toimitustapa, poikkeukset, huomiot (ei näy asiakkaalle)",
   "labelWidth": 5,
   "leftColumn": 2,
   "maxDynamicHeight": 9000,
