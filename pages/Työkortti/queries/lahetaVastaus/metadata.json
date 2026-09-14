@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "{\"toimeksianto_id\":\"{{appsmith.URL.queryParams.id}}\",\"body\":\"{{vastausInput.text + (haeAllekirjoitus.data && haeAllekirjoitus.data[0] && haeAllekirjoitus.data[0].allekirjoitus ? String.fromCharCode(10,10) + haeAllekirjoitus.data[0].allekirjoitus.replace(/[\\r\\n]+/g, ' ') : '')}}\",\"liitteet\":{{JSON.parse(this.params.liitteet || '[]')}}}",
+      "body": "{\"toimeksianto_id\":\"{{appsmith.URL.queryParams.id}}\",\"body\":\"{{vastausInput.text}}\",\"liitteet\":{{JSON.parse(this.params.liitteet || '[]')}}}",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {
@@ -35,7 +35,7 @@
       "queryParameters": [],
       "timeoutInMillisecond": 60000
     },
-    "confirmBeforeExecute": true,
+    "confirmBeforeExecute": false,
     "datasource": {
       "datasourceConfiguration": {
         "url": "https://hook.eu2.make.com"
