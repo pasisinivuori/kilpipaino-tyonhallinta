@@ -17,6 +17,9 @@
     },
     {
       "key": "defaultOptionValue"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -34,7 +37,7 @@
   "isFilterable": true,
   "isLoading": false,
   "isRequired": false,
-  "isVisible": true,
+  "isVisible": "{{!['uusi','tarjous_lahetetty','hylatty'].includes(getTk.data[0].status)}}",
   "key": "or5cxs1xvk",
   "labelAlignment": "left",
   "labelPosition": "Top",
@@ -53,8 +56,8 @@
   "onOptionChange": "{{paivitaLaskutusperuste.run().then(() => haeHintaTk.run())}}",
   "optionLabel": "nimi",
   "optionValue": "arvo",
-  "originalBottomRow": 194,
-  "originalTopRow": 187,
+  "originalBottomRow": 221,
+  "originalTopRow": 214,
   "parentColumnSpace": 17.5625,
   "parentId": "0",
   "parentRowSpace": 10,

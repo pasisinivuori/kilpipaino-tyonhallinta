@@ -8,6 +8,9 @@
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicPropertyPathList": [
@@ -27,7 +30,7 @@
   "isDisabled": false,
   "isLoading": false,
   "isRequired": false,
-  "isVisible": true,
+  "isVisible": "{{!['uusi','tarjous_lahetetty','hylatty'].includes(getTk.data[0].status)}}",
   "key": "fg64f62jga",
   "label": "Liitä tiedostoja työhön",
   "leftColumn": 0,
@@ -40,8 +43,8 @@
   "mobileTopRow": 209,
   "needsErrorInfo": false,
   "onFilesSelected": "{{liitaManuaaliTk.run().then(() => getLiitteetTk.run()).then(() => { showAlert(\"Liitteet tallennettu työlle\", \"success\"); resetWidget(\"FilePicker2\"); })}}",
-  "originalBottomRow": 252,
-  "originalTopRow": 248,
+  "originalBottomRow": 272,
+  "originalTopRow": 268,
   "parentColumnSpace": 17.28125,
   "parentId": "0",
   "parentRowSpace": 10,
