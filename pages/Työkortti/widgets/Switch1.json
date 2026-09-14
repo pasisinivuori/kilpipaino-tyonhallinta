@@ -28,7 +28,7 @@
   "dynamicTriggerPathList": [],
   "isDisabled": false,
   "isLoading": false,
-  "isVisible": "{{!['uusi','tarjous_lahetetty','hylatty'].includes(getTk.data[0].status)}}",
+  "isVisible": "{{!['uusi','tarjous_lahetetty','hylatty'].includes((statusSelect.selectedOptionValue || getTk.data[0].status))}}",
   "key": "pzx4d1soba",
   "label": "Työhön sisältyy asennus",
   "labelPosition": "Left",

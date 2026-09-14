@@ -36,7 +36,7 @@
   "isDisabled": false,
   "isLoading": false,
   "isRequired": false,
-  "isVisible": "{{Switch1.isSwitchedOn && !['uusi','tarjous_lahetetty','hylatty'].includes(getTk.data[0].status)}}",
+  "isVisible": "{{Switch1.isSwitchedOn && !['uusi','tarjous_lahetetty','hylatty'].includes((statusSelect.selectedOptionValue || getTk.data[0].status))}}",
   "key": "ek4mazx6xo",
   "label": "Suunniteltu asennuspäivä",
   "labelAlignment": "left",

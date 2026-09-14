@@ -31,7 +31,7 @@
   "isDisabled": false,
   "isLoading": false,
   "isRequired": false,
-  "isVisible": "{{!['uusi','tarjous_lahetetty','hylatty'].includes(getTk.data[0].status)}}",
+  "isVisible": "{{!['uusi','tarjous_lahetetty','hylatty'].includes((statusSelect.selectedOptionValue || getTk.data[0].status))}}",
   "key": "amp5v5s9rh",
   "labelAlignment": "left",
   "labelPosition": "Top",
