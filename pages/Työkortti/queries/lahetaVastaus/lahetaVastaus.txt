@@ -1,1 +1,1 @@
-{"toimeksianto_id":"{{appsmith.URL.queryParams.id}}","body":"{{vastausInput.text}}","liitteet":{{this.params.liitteet || '[]'}}}
+{"toimeksianto_id":"{{appsmith.URL.queryParams.id}}","body":"{{vastausInput.text}}","liitteet":{{JSON.parse(this.params.liitteet || '[]')}}}
