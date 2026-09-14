@@ -47,6 +47,7 @@
   "parentColumnSpace": 17.28125,
   "parentId": "0",
   "parentRowSpace": 10,
+  "placeholderText": "Lyhyt tunniste työlistalle, esim. Postilaatikkokilvet, As Oy Penttilänniitty",
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
