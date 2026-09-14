@@ -2,11 +2,9 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 222,
+  "bottomRow": 206,
   "boxShadow": "none",
-  "closeOnSelection": true,
-  "dateFormat": "YYYY-MM-DD HH:mm",
-  "datePickerType": "DATE_PICKER",
+  "defaultOptionValue": "kiintea",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -15,51 +13,55 @@
       "key": "borderRadius"
     },
     {
+      "key": "sourceData"
+    },
+    {
       "key": "isVisible"
     }
   ],
   "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
-      "key": "isVisible"
+      "key": "sourceData"
     }
   ],
   "dynamicTriggerPathList": [],
-  "firstDayOfWeek": 0,
   "isDisabled": false,
+  "isFilterable": true,
   "isLoading": false,
   "isRequired": false,
-  "isVisible": "{{RadioGroup1.selectedOptionValue === 'tilaus' && Switch2.isSwitchedOn}}",
-  "key": "oszystz42o",
-  "label": "Suunniteltu asennuspäivä",
+  "isVisible": "{{RadioGroup1.selectedOptionValue === 'tilaus'}}",
+  "key": "4b3tk39",
   "labelAlignment": "left",
   "labelPosition": "Top",
+  "labelText": "Laskutusperuste",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
   "leftColumn": 2,
-  "maxDate": "2121-12-31T18:29:00.000Z",
   "maxDynamicHeight": 9000,
-  "minDate": "1920-12-31T18:30:00.000Z",
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 222,
+  "mobileBottomRow": 206,
   "mobileLeftColumn": 2,
   "mobileRightColumn": 22,
-  "mobileTopRow": 215,
+  "mobileTopRow": 199,
   "needsErrorInfo": false,
-  "originalBottomRow": 222,
-  "originalTopRow": 215,
-  "parentColumnSpace": 17.28125,
+  "optionLabel": "nimi",
+  "optionValue": "arvo",
+  "originalBottomRow": 206,
+  "originalTopRow": 199,
+  "parentColumnSpace": 17.5625,
   "parentId": "0",
   "parentRowSpace": 10,
+  "placeholderText": "Select option",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 22,
-  "shortcuts": false,
-  "timePrecision": "minute",
-  "topRow": 215,
-  "type": "DATE_PICKER_WIDGET2",
-  "version": 2,
-  "widgetId": "800t2sjxyg",
-  "widgetName": "DatePicker2"
+  "serverSideFiltering": false,
+  "sourceData": "{{[{ nimi: 'Kiinteä hinta', arvo: 'kiintea' }, { nimi: 'Toteuman mukaan', arvo: 'toteuma' }]}}",
+  "topRow": 199,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "lpselwuf6nx",
+  "widgetName": "laskutusperusteSelect"
 }

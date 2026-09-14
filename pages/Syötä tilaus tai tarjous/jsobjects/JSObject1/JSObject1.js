@@ -2,7 +2,7 @@ export default {
   tyhjennaLomake () {
     const w = ["Input1","Input2","Input3","Input4","Input5","Select1","Input6",
       "RichTextEditor1","RichTextEditor2","FilePicker1",
-      "RichTextEditor3","RichTextEditor4","DatePicker1","Input7","CurrencyInput1",
+      "RichTextEditor3","RichTextEditor4","DatePicker1","Input7","CurrencyInput1","laskutusperusteSelect",
       "Switch2","DatePicker2","RadioGroup1"];
     w.forEach(n => resetWidget(n, true));
   },
