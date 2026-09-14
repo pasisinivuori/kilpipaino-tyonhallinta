@@ -45,7 +45,7 @@
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
   "rightColumn": 36,
-  "text": "Päivitä",
+  "text": "Tallenna muutokset",
   "topRow": 39,
   "type": "BUTTON_WIDGET",
   "version": 1,
