@@ -17,6 +17,9 @@
     },
     {
       "key": "defaultOptionValue"
+    },
+    {
+      "key": "placeholderText"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -59,7 +62,7 @@
   "parentColumnSpace": 22,
   "parentId": "vk3b05g6wj",
   "parentRowSpace": 10,
-  "placeholderText": "Select option",
+  "placeholderText": "{{ (hakuToimeksiannot.data && hakuToimeksiannot.data.length) ? 'Valitse toimeksianto' : 'Ei toimeksiantoja — luo se ensin Syötä tilaus tai tarjous -sivulla' }}",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 33,
