@@ -1,15 +1,12 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 180,
+  "bottomRow": 243,
   "boxShadow": "none",
-  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonColor": "#FDE047",
   "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
-    {
-      "key": "buttonColor"
-    },
     {
       "key": "borderRadius"
     }
@@ -23,18 +20,16 @@
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "gsjt81w4zz",
+  "key": "reajg5zber",
   "leftColumn": 1,
   "minWidth": 120,
-  "mobileBottomRow": 121,
+  "mobileBottomRow": 245,
   "mobileLeftColumn": 0,
-  "mobileRightColumn": 16,
-  "mobileTopRow": 117,
+  "mobileRightColumn": 9,
+  "mobileTopRow": 241,
   "needsErrorInfo": false,
-  "onClick": "{{paivitaAsetukset.run().then(() => haeAsetukset.run())}}",
-  "originalBottomRow": 177,
-  "originalTopRow": 173,
-  "parentColumnSpace": 17.5625,
+  "onClick": "{{paivitaAllekirjoitus.run().then(() => { haeAllekirjoitukset.run(); showAlert('Allekirjoitus tallennettu.', 'success'); })}}",
+  "parentColumnSpace": 30.25,
   "parentId": "0",
   "parentRowSpace": 10,
   "placement": "CENTER",
@@ -42,11 +37,11 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 17,
-  "text": "Tallenna asetukset",
-  "topRow": 176,
+  "rightColumn": 10,
+  "text": "Tallenna allekirjoitus",
+  "topRow": 239,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "3wj61wus0m",
-  "widgetName": "Button1"
+  "widgetId": "6fjh37cm5q",
+  "widgetName": "Button2"
 }

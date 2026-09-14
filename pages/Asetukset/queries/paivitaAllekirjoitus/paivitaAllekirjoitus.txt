@@ -1,0 +1,1 @@
+update public.kayttaja_asetukset set allekirjoitus = {{Input5.text}} where omistaja = {{Select1.selectedOptionValue}}
