@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 139,
+  "bottomRow": 171,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -24,13 +24,13 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 148,
+  "mobileBottomRow": 152,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 6,
-  "mobileTopRow": 144,
+  "mobileTopRow": 148,
   "needsErrorInfo": false,
-  "originalBottomRow": 205,
-  "originalTopRow": 201,
+  "originalBottomRow": 143,
+  "originalTopRow": 139,
   "overflow": "NONE",
   "parentColumnSpace": 17.5625,
   "parentId": "0",
@@ -42,7 +42,7 @@
   "text": "Käytettävät materiaalit",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 135,
+  "topRow": 167,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

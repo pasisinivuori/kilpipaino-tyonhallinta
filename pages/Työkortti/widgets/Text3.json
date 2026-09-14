@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 171,
+  "bottomRow": 203,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -27,13 +27,13 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 149,
+  "mobileBottomRow": 153,
   "mobileLeftColumn": 14,
   "mobileRightColumn": 30,
-  "mobileTopRow": 145,
+  "mobileTopRow": 149,
   "needsErrorInfo": false,
-  "originalBottomRow": 237,
-  "originalTopRow": 233,
+  "originalBottomRow": 175,
+  "originalTopRow": 171,
   "overflow": "NONE",
   "parentColumnSpace": 17.5625,
   "parentId": "0",
@@ -45,7 +45,7 @@
   "text": "{{ haeHintaTk.data && haeHintaTk.data.length ? 'Tarjoushinta ' + Number(haeHintaTk.data[0].tarjoushinta).toFixed(2) + ' \\u20AC   \\u00B7   Toteumahinta ' + Number(haeHintaTk.data[0].toteumahinta).toFixed(2) + ' \\u20AC   (alv 0 %)' : 'Ei hinnoiteltuja rivej\\u00E4' }}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 167,
+  "topRow": 199,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
