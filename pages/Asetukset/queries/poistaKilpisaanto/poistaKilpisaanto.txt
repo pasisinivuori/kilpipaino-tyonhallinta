@@ -1,0 +1,1 @@
+DELETE FROM kilvet.kilpisaanto WHERE id = {{Table4.triggeredRow.id}}::bigint RETURNING id;

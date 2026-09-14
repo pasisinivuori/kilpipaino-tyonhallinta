@@ -1,0 +1,1 @@
+SELECT id, kohde, saanto, COALESCE(tarkistus,'') AS tarkistus, jarjestys, aktiivinen FROM kilvet.kilpisaanto ORDER BY jarjestys, id;

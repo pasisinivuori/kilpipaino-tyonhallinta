@@ -1,0 +1,1 @@
+SELECT kohde FROM (SELECT 'kaikki' AS kohde, 0 AS j UNION SELECT DISTINCT tyyppi, 1 FROM kilvet.kilpi WHERE tyyppi IS NOT NULL AND tuotelaji = 'postilaatikkokilpi') x ORDER BY j, kohde;

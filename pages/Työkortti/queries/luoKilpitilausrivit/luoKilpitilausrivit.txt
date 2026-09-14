@@ -1,0 +1,1 @@
+SELECT kilvet.luo_rivit_tulkinnasta({{appsmith.URL.queryParams.id}}::uuid, {{ JSON.stringify((tulkitseKilpitilaus.data?.rivit || []).map(r => Object.assign({}, r, { toimitusosoite: tulkitseKilpitilaus.data?.toimitusosoite || '', maksaja: tulkitseKilpitilaus.data?.maksaja || '' }))) }}::jsonb) AS tulos;
