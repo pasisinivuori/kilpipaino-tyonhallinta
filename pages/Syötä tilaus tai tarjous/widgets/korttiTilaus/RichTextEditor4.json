@@ -1,20 +1,15 @@
 {
-  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-  "allowCurrencyChange": false,
   "animateLoading": true,
-  "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 197,
-  "boxShadow": "none",
-  "decimals": 2,
-  "defaultCurrencyCode": "EUR",
+  "bottomRow": 47,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "defaultText": "",
   "dynamicBindingPathList": [
     {
-      "key": "accentColor"
+      "key": "borderRadius"
     },
     {
-      "key": "borderRadius"
+      "key": "boxShadow"
     },
     {
       "key": "isVisible"
@@ -27,40 +22,38 @@
     }
   ],
   "dynamicTriggerPathList": [],
-  "iconAlign": "left",
+  "flexVerticalAlignment": "start",
+  "inputType": "html",
+  "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
   "isRequired": false,
   "isVisible": "{{RadioGroup1.selectedOptionValue === 'tilaus'}}",
-  "key": "k1zpppmkhn",
-  "label": "Hinta",
+  "key": "xdkklwr22f",
   "labelAlignment": "left",
   "labelPosition": "Top",
-  "labelStyle": "",
-  "labelTextSize": "0.875rem",
+  "labelText": "Sisäiset lisätiedot – toimitustapa, poikkeukset, huomiot (ei näy asiakkaalle)",
   "labelWidth": 5,
-  "leftColumn": 2,
+  "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 197,
-  "mobileLeftColumn": 2,
-  "mobileRightColumn": 22,
-  "mobileTopRow": 190,
+  "mobileBottomRow": 47,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 62,
+  "mobileTopRow": 27,
   "needsErrorInfo": false,
-  "originalBottomRow": 197,
-  "originalTopRow": 190,
+  "originalBottomRow": 47,
+  "originalTopRow": 27,
   "parentColumnSpace": 17.28125,
-  "parentId": "0",
+  "parentId": "sgbx674r47",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 22,
-  "showStepArrows": false,
-  "topRow": 190,
-  "type": "CURRENCY_INPUT_WIDGET",
+  "rightColumn": 62,
+  "topRow": 27,
+  "type": "RICH_TEXT_EDITOR_WIDGET",
   "version": 1,
-  "widgetId": "r0grz4jfcb",
-  "widgetName": "CurrencyInput1"
+  "widgetId": "139vtb59fu",
+  "widgetName": "RichTextEditor4"
 }

@@ -1,10 +1,11 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
+  "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 206,
+  "bottomRow": 55,
   "boxShadow": "none",
-  "defaultOptionValue": "kiintea",
+  "defaultText": "",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -13,55 +14,52 @@
       "key": "borderRadius"
     },
     {
-      "key": "sourceData"
-    },
-    {
       "key": "isVisible"
     }
   ],
   "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
-      "key": "sourceData"
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [],
+  "iconAlign": "left",
+  "inputType": "NUMBER",
   "isDisabled": false,
-  "isFilterable": true,
   "isLoading": false,
   "isRequired": false,
   "isVisible": "{{RadioGroup1.selectedOptionValue === 'tilaus'}}",
-  "key": "4b3tk39",
+  "key": "m8leueo374",
+  "label": "Suunnitellut työtunnit",
   "labelAlignment": "left",
   "labelPosition": "Top",
-  "labelText": "Laskutusperuste",
+  "labelStyle": "",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 2,
+  "leftColumn": 23,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 206,
-  "mobileLeftColumn": 2,
-  "mobileRightColumn": 22,
-  "mobileTopRow": 199,
+  "mobileBottomRow": 55,
+  "mobileLeftColumn": 23,
+  "mobileRightColumn": 43,
+  "mobileTopRow": 48,
   "needsErrorInfo": false,
-  "optionLabel": "nimi",
-  "optionValue": "arvo",
-  "originalBottomRow": 206,
-  "originalTopRow": 199,
-  "parentColumnSpace": 17.5625,
-  "parentId": "0",
+  "originalBottomRow": 55,
+  "originalTopRow": 48,
+  "parentColumnSpace": 17.28125,
+  "parentId": "sgbx674r47",
   "parentRowSpace": 10,
-  "placeholderText": "Select option",
   "renderMode": "CANVAS",
+  "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 22,
-  "serverSideFiltering": false,
-  "sourceData": "{{[{ nimi: 'Kiinteä hinta', arvo: 'kiintea' }, { nimi: 'Toteuman mukaan', arvo: 'toteuma' }]}}",
-  "topRow": 199,
-  "type": "SELECT_WIDGET",
-  "version": 1,
-  "widgetId": "lpselwuf6nx",
-  "widgetName": "laskutusperusteSelect"
+  "rightColumn": 43,
+  "shouldAllowAutofill": false,
+  "showStepArrows": false,
+  "topRow": 48,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2,
+  "widgetId": "wxfnsfgyc6",
+  "widgetName": "Input7"
 }

@@ -1,10 +1,13 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowCurrencyChange": false,
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 42,
+  "bottomRow": 63,
   "boxShadow": "none",
+  "decimals": 2,
+  "defaultCurrencyCode": "EUR",
   "defaultText": "",
   "dynamicBindingPathList": [
     {
@@ -12,18 +15,25 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "iconAlign": "left",
-  "inputType": "TEXT",
   "isDisabled": false,
   "isLoading": false,
   "isRequired": false,
-  "isVisible": true,
-  "key": "m8leueo374",
-  "label": "Puhelinnumero",
+  "isVisible": "{{RadioGroup1.selectedOptionValue === 'tilaus'}}",
+  "key": "k1zpppmkhn",
+  "label": "Hinta",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelStyle": "",
@@ -33,24 +43,24 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 42,
+  "mobileBottomRow": 63,
   "mobileLeftColumn": 1,
   "mobileRightColumn": 21,
-  "mobileTopRow": 35,
+  "mobileTopRow": 56,
   "needsErrorInfo": false,
-  "originalBottomRow": 42,
-  "originalTopRow": 35,
+  "originalBottomRow": 63,
+  "originalTopRow": 56,
   "parentColumnSpace": 17.28125,
-  "parentId": "0",
+  "parentId": "sgbx674r47",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
   "rightColumn": 21,
   "showStepArrows": false,
-  "topRow": 35,
-  "type": "INPUT_WIDGET_V2",
-  "version": 2,
-  "widgetId": "l8gitxnaa7",
-  "widgetName": "Input4"
+  "topRow": 56,
+  "type": "CURRENCY_INPUT_WIDGET",
+  "version": 1,
+  "widgetId": "r0grz4jfcb",
+  "widgetName": "CurrencyInput1"
 }
