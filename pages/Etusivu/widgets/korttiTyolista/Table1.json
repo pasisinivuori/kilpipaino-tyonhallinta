@@ -51,7 +51,9 @@
     "customColumn2"
   ],
   "columnUpdatedAt": 1789144906141,
-  "columnWidthMap": {},
+  "columnWidthMap": {
+    "yhteenveto": 504
+  },
   "compactMode": "SHORT",
   "customIsLoading": false,
   "customIsLoadingValue": "",
