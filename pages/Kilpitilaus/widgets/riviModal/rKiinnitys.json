@@ -1,0 +1,97 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 61,
+  "boxShadow": "none",
+  "defaultOptionValue": "{{appsmith.store.rivimuokkaus ? tilausTaulu.selectedRow.rivin_kiinnitys : ''}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultOptionValue"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "eehnqvsh6d",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Kiinnitys",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 34,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 61,
+  "mobileLeftColumn": 34,
+  "mobileRightColumn": 54,
+  "mobileTopRow": 54,
+  "needsErrorInfo": false,
+  "optionLabel": "name",
+  "optionValue": "code",
+  "originalBottomRow": 61,
+  "originalTopRow": 54,
+  "parentColumnSpace": 23.5625,
+  "parentId": "vk3b05g6wj",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 54,
+  "serverSideFiltering": false,
+  "sourceData": [
+    {
+      "code": "",
+      "name": "(ei tietoa)"
+    },
+    {
+      "code": "tarra",
+      "name": "tarra"
+    },
+    {
+      "code": "ei tarraa",
+      "name": "ei tarraa"
+    },
+    {
+      "code": "reiät",
+      "name": "reiät"
+    },
+    {
+      "code": "kehykseen",
+      "name": "kehykseen"
+    },
+    {
+      "code": "ruuvi",
+      "name": "ruuvi"
+    },
+    {
+      "code": "vhb-teippi",
+      "name": "vhb-teippi"
+    },
+    {
+      "code": "siirtokalvo",
+      "name": "siirtokalvo"
+    }
+  ],
+  "topRow": 54,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "kessyi5x4i",
+  "widgetName": "rKiinnitys"
+}
