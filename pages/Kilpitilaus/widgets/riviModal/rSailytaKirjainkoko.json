@@ -1,0 +1,50 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignWidget": "LEFT",
+  "animateLoading": true,
+  "bottomRow": 76,
+  "boxShadow": "none",
+  "defaultSwitchState": "{{appsmith.store.rivimuokkaus ? tilausTaulu.selectedRow.sailyta_kirjainkoko : ''}false{appsmith.store.rivimuokkaus ? tilausTaulu.selectedRow.sailyta_kirjainkoko : ''}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "defaultSwitchState"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "defaultSwitchState"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "8yiv13r7kf",
+  "label": "Vain iso alkukirjain",
+  "labelPosition": "Left",
+  "leftColumn": 34,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 76,
+  "mobileLeftColumn": 34,
+  "mobileRightColumn": 54,
+  "mobileTopRow": 72,
+  "needsErrorInfo": false,
+  "originalBottomRow": 76,
+  "originalTopRow": 72,
+  "parentColumnSpace": 23.5625,
+  "parentId": "vk3b05g6wj",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 54,
+  "topRow": 72,
+  "type": "SWITCH_WIDGET",
+  "version": 1,
+  "widgetId": "811sodfmet",
+  "widgetName": "rSailytaKirjainkoko"
+}
