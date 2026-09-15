@@ -197,6 +197,7 @@
   "originalTopRow": 2,
   "parentId": "e3o4huo7b1",
   "parentRowSpace": 10,
+  "primaryColumnId": "id",
   "primaryColumns": {
     "aihe": {
       "alias": "aihe",
