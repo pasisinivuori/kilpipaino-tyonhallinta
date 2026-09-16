@@ -1,0 +1,1 @@
+SELECT viive_min, alatunniste FROM public.statusilmoitus_yleinen WHERE id = 1

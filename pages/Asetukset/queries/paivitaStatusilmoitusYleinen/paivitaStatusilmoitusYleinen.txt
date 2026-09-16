@@ -1,0 +1,1 @@
+UPDATE public.statusilmoitus_yleinen SET viive_min = {{viiveInput.text}}::int, alatunniste = {{alatunnisteInput.text}}, paivitetty = now() WHERE id = 1

@@ -1,0 +1,67 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignWidget": "LEFT",
+  "animateLoading": true,
+  "bottomRow": 27,
+  "boxShadow": "none",
+  "defaultSwitchState": "{{getTk.data[0].statusilmoitukset || false}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "defaultSwitchState"
+    },
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "label"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "defaultSwitchState"
+    },
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "label"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onChange"
+    }
+  ],
+  "isDisabled": "{{!getTk.data[0].ilmoitus_vastaanottaja}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "azw49fev",
+  "label": "{{getTk.data[0].ilmoitus_vastaanottaja ? 'Lähetä statusilmoitukset asiakkaalle' : 'Statusilmoitukset – lisää ensin asiakkaan sähköposti'}}",
+  "labelPosition": "Left",
+  "leftColumn": 43,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 27,
+  "mobileLeftColumn": 43,
+  "mobileRightColumn": 62,
+  "mobileTopRow": 23,
+  "needsErrorInfo": false,
+  "onChange": "{{paivitaStatusilmoitukset.run(() => getTk.run());}}",
+  "originalBottomRow": 12,
+  "originalTopRow": 8,
+  "parentColumnSpace": 17.28125,
+  "parentId": "wdoio4h2sm",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 62,
+  "topRow": 23,
+  "type": "SWITCH_WIDGET",
+  "version": 1,
+  "widgetId": "swsiu4j2s3",
+  "widgetName": "statusilmoituksetSwitch"
+}

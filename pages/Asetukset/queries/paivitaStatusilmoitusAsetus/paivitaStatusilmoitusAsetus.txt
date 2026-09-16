@@ -1,0 +1,1 @@
+UPDATE public.statusilmoitus_asetus SET kaytossa = {{statusTaulu.updatedRow.kaytossa}}, viesti = nullif(btrim({{statusTaulu.updatedRow.viesti}}), ''), paivitetty = now() WHERE status::text = {{statusTaulu.updatedRow.status}}
