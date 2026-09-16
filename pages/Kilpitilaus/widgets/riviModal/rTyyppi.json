@@ -2,9 +2,9 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 70,
+  "bottomRow": 61,
   "boxShadow": "none",
-  "defaultOptionValue": "{{appsmith.store.rivimuokkaus ? tilausTaulu.selectedRow.rivin_kiinnitys : ''}}",
+  "defaultOptionValue": "{{appsmith.store.rivimuokkaus ? tilausTaulu.selectedRow.rivin_tyyppi : ''}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -28,25 +28,25 @@
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "eehnqvsh6d",
+  "key": "h5ojhxje",
   "labelAlignment": "left",
   "labelPosition": "Top",
-  "labelText": "Kiinnitys",
+  "labelText": "Vakiotyyppi",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
   "leftColumn": 34,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 70,
+  "mobileBottomRow": 61,
   "mobileLeftColumn": 34,
   "mobileRightColumn": 54,
-  "mobileTopRow": 63,
+  "mobileTopRow": 54,
   "needsErrorInfo": false,
   "optionLabel": "name",
   "optionValue": "code",
-  "originalBottomRow": 70,
-  "originalTopRow": 63,
+  "originalBottomRow": 61,
+  "originalTopRow": 54,
   "parentColumnSpace": 23.5625,
   "parentId": "vk3b05g6wj",
   "parentRowSpace": 10,
@@ -61,37 +61,17 @@
       "name": "(ei tietoa)"
     },
     {
-      "code": "tarra",
-      "name": "tarra"
+      "code": "Stala",
+      "name": "Stala"
     },
     {
-      "code": "ei tarraa",
-      "name": "ei tarraa"
-    },
-    {
-      "code": "reiät",
-      "name": "reiät"
-    },
-    {
-      "code": "kehykseen",
-      "name": "kehykseen"
-    },
-    {
-      "code": "ruuvi",
-      "name": "ruuvi"
-    },
-    {
-      "code": "vhb-teippi",
-      "name": "vhb-teippi"
-    },
-    {
-      "code": "siirtokalvo",
-      "name": "siirtokalvo"
+      "code": "Stala PL-2",
+      "name": "Stala PL-2"
     }
   ],
-  "topRow": 63,
+  "topRow": 54,
   "type": "SELECT_WIDGET",
   "version": 1,
-  "widgetId": "kessyi5x4i",
-  "widgetName": "rKiinnitys"
+  "widgetId": "rtyyppivenhct",
+  "widgetName": "rTyyppi"
 }

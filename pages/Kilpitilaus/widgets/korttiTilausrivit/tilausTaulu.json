@@ -69,9 +69,10 @@
     "rivin_materiaali",
     "rivin_koko",
     "rivin_kiinnitys",
-    "sailyta_kirjainkoko"
+    "sailyta_kirjainkoko",
+    "rivin_tyyppi"
   ],
-  "columnUpdatedAt": 1789464013251,
+  "columnUpdatedAt": 1789542895459,
   "columnWidthMap": {},
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -207,6 +208,9 @@
     },
     {
       "key": "primaryColumns.sailyta_kirjainkoko.computedValue"
+    },
+    {
+      "key": "primaryColumns.rivin_tyyppi.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -1025,6 +1029,40 @@
       "label": "rivin_materiaali",
       "notation": "standard",
       "originalId": "rivin_materiaali",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "rivin_tyyppi": {
+      "alias": "rivin_tyyppi",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = tilausTaulu.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"rivin_tyyppi\"])) : rivin_tyyppi })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "rivin_tyyppi",
+      "index": 38,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "rivin_tyyppi",
+      "notation": "standard",
+      "originalId": "rivin_tyyppi",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",

@@ -40,7 +40,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 63,
   "shouldTruncate": false,
-  "text": "Kilven tiedot ilman rekisteriä: täytä nämä, kun taloyhtiötä ja rekisterikilpeä ei ole — esim. jälleenmyyjän suoratilaus. Rivin oma arvo voittaa rekisterin arvon.",
+  "text": "Kilven tiedot ilman rekisteriä: täytä nämä, kun taloyhtiötä ja rekisterikilpeä ei ole — esim. jälleenmyyjän suoratilaus. Rivin oma arvo voittaa rekisterin arvon. Riittää joko Koko tai Vakiotyyppi: Stala-kilvillä ei ole mittaa, vaan muoto tulee Corelin mallikilvestä.",
   "textAlign": "LEFT",
   "textColor": "#6B7280",
   "topRow": 17,
