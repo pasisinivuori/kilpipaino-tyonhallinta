@@ -47,7 +47,7 @@
   "parentColumnSpace": 17.5625,
   "parentId": "245ygvfnsq",
   "parentRowSpace": 10,
-  "placeholderText": "Kirjoita asiakkaalle lahtevan ilmoituksen teksti.",
+  "placeholderText": "Kirjoita asiakkaalle lähtevän ilmoituksen teksti.",
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",

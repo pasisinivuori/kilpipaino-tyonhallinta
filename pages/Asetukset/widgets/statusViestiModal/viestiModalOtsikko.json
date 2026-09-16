@@ -33,7 +33,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 63,
   "shouldTruncate": false,
-  "text": "{{ 'Viesti asiakkaalle – ' + (appsmith.store.statusMuokkaus ? appsmith.store.statusMuokkaus.status : '') }}",
+  "text": "{{ 'Viesti asiakkaalle – ' + (appsmith.store.statusMuokkaus ? appsmith.store.statusMuokkaus.nimi : '') }}",
   "textAlign": "LEFT",
   "textColor": "#B4232A",
   "topRow": 1,

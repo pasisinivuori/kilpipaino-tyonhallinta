@@ -33,6 +33,7 @@
     }
   },
   "columnOrder": [
+    "status_nimi",
     "status",
     "kaytossa",
     "viesti",
@@ -42,10 +43,11 @@
   "columnUpdatedAt": 1789325524745,
   "columnWidthMap": {
     "EditActions1": 170,
-    "kaytossa": 110,
+    "kaytossa": 180,
     "muokkaa": 150,
-    "status": 190,
-    "viesti": 380
+    "status": 150,
+    "status_nimi": 185,
+    "viesti": 310
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -82,6 +84,9 @@
     },
     {
       "key": "primaryColumns.muokkaa.boxShadow"
+    },
+    {
+      "key": "primaryColumns.status_nimi.computedValue"
     }
   ],
   "dynamicPropertyPathList": [],
@@ -230,7 +235,7 @@
       "label": "Muokkaa",
       "labelColor": "#111827",
       "notation": "standard",
-      "onClick": "{{storeValue('statusMuokkaus', {status: currentRow.status, viesti: currentRow.viesti}).then(() => showModal('statusViestiModal'));}}",
+      "onClick": "{{storeValue('statusMuokkaus', {status: currentRow.status, nimi: currentRow.status_nimi, viesti: currentRow.viesti}).then(() => showModal('statusViestiModal'));}}",
       "originalId": "muokkaa",
       "sticky": "",
       "textSize": "0.875rem",
@@ -261,10 +266,44 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
+      "isVisible": false,
+      "label": "status (tekninen)",
+      "notation": "standard",
+      "originalId": "status",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 200
+    },
+    "status_nimi": {
+      "alias": "status_nimi",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{statusTaulu.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"status_nimi\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "status_nimi",
+      "index": 0,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
       "isVisible": true,
       "label": "Status",
       "notation": "standard",
-      "originalId": "status",
+      "originalId": "status_nimi",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",

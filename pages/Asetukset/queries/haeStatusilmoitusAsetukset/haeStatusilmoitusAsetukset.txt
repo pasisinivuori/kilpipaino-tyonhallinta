@@ -1,1 +1,1 @@
-SELECT status::text AS status, kaytossa, viesti FROM public.statusilmoitus_asetus ORDER BY status
+SELECT a.status::text AS status, public.status_nimi(a.status) AS status_nimi, a.kaytossa, a.viesti FROM public.statusilmoitus_asetus a ORDER BY a.status

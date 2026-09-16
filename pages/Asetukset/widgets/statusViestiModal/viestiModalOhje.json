@@ -33,7 +33,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 63,
   "shouldTruncate": false,
-  "text": "{{ 'Kayttettavissa olevat muuttujat: ' + ['tp_numero','asiakas_nimi','asiakas_yritys','aihe','omistaja','asiakkaan_viite','valmistumispaiva','asennuspaiva'].map(s => '{'+'{'+s+'}'+'}').join(', ') + '. Tyhja rivi erottaa kappaleet. Allekirjoitus lisataan automaattisesti.' }}",
+  "text": "{{ 'Käytettävissä olevat muuttujat: ' + ['tp_numero','asiakas_nimi','asiakas_yritys','aihe','omistaja','asiakkaan_viite','valmistumispaiva','asennuspaiva'].map(s => '{'+'{'+s+'}'+'}').join(', ') + '. Tyhjä rivi erottaa kappaleet. Alatunniste lisätään viestiin automaattisesti.' }}",
   "textAlign": "LEFT",
   "textColor": "#6B7280",
   "topRow": 6,
