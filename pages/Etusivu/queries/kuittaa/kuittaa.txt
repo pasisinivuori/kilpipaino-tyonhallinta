@@ -1,1 +1,1 @@
-UPDATE public.toimeksiannot SET uusi_viesti_suljettuun_at = NULL WHERE id = {{Table1.triggeredRow.id}}::uuid;
+UPDATE public.toimeksiannot SET uusi_viesti_suljettuun_at = NULL, kuitattu_ilman_vastausta_at = now() WHERE id = {{Table1.triggeredRow.id}}::uuid;

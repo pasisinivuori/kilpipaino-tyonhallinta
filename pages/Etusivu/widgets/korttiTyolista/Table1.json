@@ -52,6 +52,7 @@
   ],
   "columnUpdatedAt": 1789144906141,
   "columnWidthMap": {
+    "customColumn2": 210,
     "yhteenveto": 504
   },
   "compactMode": "SHORT",
@@ -349,7 +350,7 @@
       "borderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
       "boxShadow": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
       "buttonColor": "#22C55E",
-      "buttonLabel": "Kuitattu",
+      "buttonLabel": "Kuittaa ilman vastausta",
       "buttonStyle": "rgb(3, 179, 101)",
       "columnType": "button",
       "computedValue": "",
@@ -362,7 +363,7 @@
       "id": "customColumn2",
       "index": 10,
       "isCellEditable": false,
-      "isCellVisible": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow.uusi_viesti_suljettuun)) : currentRow.uusi_viesti_suljettuun })()}}",
+      "isCellVisible": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ((currentRow.uusi_viesti_suljettuun || currentRow.odottaa_meilta))) : (currentRow.uusi_viesti_suljettuun || currentRow.odottaa_meilta) })()}}",
       "isDerived": true,
       "isDisabled": false,
       "isDiscardVisible": true,
@@ -379,7 +380,7 @@
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
-      "width": 150
+      "width": 235
     },
     "id": {
       "alias": "id",

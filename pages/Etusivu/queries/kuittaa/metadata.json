@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE public.toimeksiannot SET uusi_viesti_suljettuun_at = NULL WHERE id = {{Table1.triggeredRow.id}}::uuid;",
+      "body": "UPDATE public.toimeksiannot SET uusi_viesti_suljettuun_at = NULL, kuitattu_ilman_vastausta_at = now() WHERE id = {{Table1.triggeredRow.id}}::uuid;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
