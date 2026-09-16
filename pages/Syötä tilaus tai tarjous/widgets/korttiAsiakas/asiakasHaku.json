@@ -34,6 +34,9 @@
   "dynamicTriggerPathList": [
     {
       "key": "onOptionChange"
+    },
+    {
+      "key": "onFilterUpdate"
     }
   ],
   "isDisabled": false,
@@ -56,6 +59,7 @@
   "mobileRightColumn": 30,
   "mobileTopRow": 7,
   "needsErrorInfo": false,
+  "onFilterUpdate": "{{hakuAsiakkaat.run()}}",
   "onOptionChange": "{{ (() => { const c = hakuAsiakkaat.data.find(r => r.id === asiakasHaku.selectedOptionValue); if(!c){ return; } Input1.setValue(c.nimi || ''); Input2.setValue(c.yritys || ''); Input3.setValue(c.email || ''); Input4.setValue(c.puhelin || ''); Input5.setValue(c.osoite || ''); })() }}",
   "optionLabel": "nayttonimi",
   "optionValue": "id",
@@ -68,7 +72,7 @@
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 30,
-  "serverSideFiltering": false,
+  "serverSideFiltering": true,
   "sourceData": "{{hakuAsiakkaat.data}}",
   "topRow": 7,
   "type": "SELECT_WIDGET",

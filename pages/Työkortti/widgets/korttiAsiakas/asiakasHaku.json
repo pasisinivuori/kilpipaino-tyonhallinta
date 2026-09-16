@@ -34,6 +34,9 @@
   "dynamicTriggerPathList": [
     {
       "key": "onOptionChange"
+    },
+    {
+      "key": "onFilterUpdate"
     }
   ],
   "isDisabled": false,
@@ -56,6 +59,7 @@
   "mobileRightColumn": 20,
   "mobileTopRow": 36,
   "needsErrorInfo": false,
+  "onFilterUpdate": "{{hakuAsiakkaat.run()}}",
   "onOptionChange": "{{ (() => { const c = hakuAsiakkaat.data.find(r => r.id === asiakasHaku.selectedOptionValue); if(!c){ return; } paivitaAsiakastiedot.run({yritys:c.yritys, nimi:c.nimi, email:c.email, puhelin:c.puhelin, osoite:c.osoite}).then(() => { getAsiakastiedot.run(); getTk.run(); }); })() }}",
   "optionLabel": "nayttonimi",
   "optionValue": "id",
@@ -68,7 +72,7 @@
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 20,
-  "serverSideFiltering": false,
+  "serverSideFiltering": true,
   "sourceData": "{{hakuAsiakkaat.data}}",
   "topRow": 36,
   "type": "SELECT_WIDGET",
