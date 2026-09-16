@@ -1,0 +1,50 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 50,
+  "boxShadow": "none",
+  "buttonColor": "#FDE047",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "jryn3o6bu0",
+  "label": "Tallenna",
+  "leftColumn": 39,
+  "minWidth": 120,
+  "mobileBottomRow": 50,
+  "mobileLeftColumn": 39,
+  "mobileRightColumn": 51,
+  "mobileTopRow": 46,
+  "needsErrorInfo": false,
+  "onClick": "{{paivitaStatusViesti.run(() => { haeStatusilmoitusAsetukset.run(); closeModal('statusViestiModal'); });}}",
+  "originalBottomRow": 28,
+  "originalTopRow": 24,
+  "parentColumnSpace": 17.5625,
+  "parentId": "245ygvfnsq",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 51,
+  "text": "Tallenna",
+  "topRow": 46,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "at7wllp1gg",
+  "widgetName": "tallennaStatusViesti"
+}

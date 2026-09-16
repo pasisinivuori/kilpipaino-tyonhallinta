@@ -36,14 +36,16 @@
     "status",
     "kaytossa",
     "viesti",
+    "muokkaa",
     "EditActions1"
   ],
   "columnUpdatedAt": 1789325524745,
   "columnWidthMap": {
-    "EditActions1": 150,
-    "kaytossa": 182,
-    "status": 200,
-    "viesti": 640
+    "EditActions1": 170,
+    "kaytossa": 110,
+    "muokkaa": 150,
+    "status": 190,
+    "viesti": 380
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -74,6 +76,12 @@
     },
     {
       "key": "primaryColumns.viesti.computedValue"
+    },
+    {
+      "key": "primaryColumns.muokkaa.borderRadius"
+    },
+    {
+      "key": "primaryColumns.muokkaa.boxShadow"
     }
   ],
   "dynamicPropertyPathList": [],
@@ -83,6 +91,9 @@
     },
     {
       "key": "primaryColumns.EditActions1.onSave"
+    },
+    {
+      "key": "primaryColumns.muokkaa.onClick"
     }
   ],
   "enableClientSideSearch": true,
@@ -189,6 +200,45 @@
       "verticalAlignment": "CENTER",
       "width": 160
     },
+    "muokkaa": {
+      "alias": "muokkaa",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "borderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "boxShadow": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
+      "buttonColor": "#FDE047",
+      "buttonLabel": "Muokkaa viestia",
+      "buttonStyle": "#FDE047",
+      "columnType": "button",
+      "computedValue": "",
+      "currencyCode": "USD",
+      "customAlias": "",
+      "decimals": 0,
+      "enableFilter": false,
+      "enableSort": false,
+      "horizontalAlignment": "LEFT",
+      "id": "muokkaa",
+      "index": 4,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Muokkaa",
+      "labelColor": "#111827",
+      "notation": "standard",
+      "onClick": "{{storeValue('statusMuokkaus', {status: currentRow.status, viesti: currentRow.viesti}).then(() => showModal('statusViestiModal'));}}",
+      "originalId": "muokkaa",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 160
+    },
     "status": {
       "alias": "status",
       "allowCellWrapping": false,
@@ -238,12 +288,12 @@
       "horizontalAlignment": "LEFT",
       "id": "viesti",
       "index": 2,
-      "isCellEditable": true,
+      "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": true,
+      "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
       "label": "Viesti asiakkaalle",

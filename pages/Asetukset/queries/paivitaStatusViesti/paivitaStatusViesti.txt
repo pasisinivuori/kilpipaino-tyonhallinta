@@ -1,0 +1,1 @@
+UPDATE public.statusilmoitus_asetus SET viesti = nullif(btrim({{statusViestiInput.text}}), ''), paivitetty = now() WHERE status::text = {{appsmith.store.statusMuokkaus.status}}
