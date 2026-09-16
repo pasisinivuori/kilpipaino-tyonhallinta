@@ -50,8 +50,9 @@
     "uusi_viesti_suljettuun",
     "customColumn2"
   ],
-  "columnUpdatedAt": 1789144906141,
+  "columnUpdatedAt": 1789537088258,
   "columnWidthMap": {
+    "customColumn1": 72,
     "customColumn2": 210,
     "yhteenveto": 504
   },
