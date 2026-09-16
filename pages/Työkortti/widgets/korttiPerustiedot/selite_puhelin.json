@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 30,
+  "bottomRow": 26,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -13,43 +13,43 @@
       "key": "borderRadius"
     },
     {
-      "key": "text"
+      "key": "isVisible"
     }
   ],
   "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1rem",
-  "fontStyle": "BOLD",
+  "fontSize": "0.75rem",
+  "fontStyle": "",
   "isLoading": false,
-  "isVisible": true,
-  "key": "t4vtgx31dh",
-  "leftColumn": 1,
+  "isVisible": "{{!!(getTk.data[0] && getTk.data[0].asiakas_puhelin)}}",
+  "key": "b33yy51lti",
+  "leftColumn": 32,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 30,
-  "mobileLeftColumn": 1,
-  "mobileRightColumn": 30,
-  "mobileTopRow": 26,
+  "mobileBottomRow": 26,
+  "mobileLeftColumn": 32,
+  "mobileRightColumn": 62,
+  "mobileTopRow": 23,
   "needsErrorInfo": false,
-  "originalBottomRow": 30,
-  "originalTopRow": 26,
+  "originalBottomRow": 26,
+  "originalTopRow": 23,
   "overflow": "NONE",
-  "parentColumnSpace": 17.28125,
+  "parentColumnSpace": 11.568359375,
   "parentId": "wxwoph061q",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 30,
+  "rightColumn": 62,
   "shouldTruncate": false,
-  "text": "{{getTk.data[0].asiakas_email}}",
+  "text": "Puhelin",
   "textAlign": "LEFT",
-  "textColor": "#231F20",
-  "topRow": 26,
+  "textColor": "#6B7280",
+  "topRow": 23,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "mk24i2476y",
-  "widgetName": "Email"
+  "widgetId": "7yndti5h7c",
+  "widgetName": "selite_puhelin"
 }

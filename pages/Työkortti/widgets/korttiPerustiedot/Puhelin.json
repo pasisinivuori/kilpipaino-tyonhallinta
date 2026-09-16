@@ -14,6 +14,9 @@
     },
     {
       "key": "text"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -22,15 +25,15 @@
   "fontSize": "1rem",
   "fontStyle": "BOLD",
   "isLoading": false,
-  "isVisible": true,
-  "key": "t4vtgx31dh",
-  "leftColumn": 1,
+  "isVisible": "{{!!(getTk.data[0] && getTk.data[0].asiakas_puhelin)}}",
+  "key": "stw27sze66",
+  "leftColumn": 32,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
   "mobileBottomRow": 30,
-  "mobileLeftColumn": 1,
-  "mobileRightColumn": 30,
+  "mobileLeftColumn": 32,
+  "mobileRightColumn": 62,
   "mobileTopRow": 26,
   "needsErrorInfo": false,
   "originalBottomRow": 30,
@@ -41,15 +44,15 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 30,
+  "rightColumn": 62,
   "shouldTruncate": false,
-  "text": "{{getTk.data[0].asiakas_email}}",
+  "text": "{{getTk.data[0].asiakas_puhelin}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 26,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "mk24i2476y",
-  "widgetName": "Email"
+  "widgetId": "du5v45s7sr",
+  "widgetName": "Puhelin"
 }
