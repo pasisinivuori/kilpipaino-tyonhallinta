@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 44,
+  "bottomRow": 72,
   "boxShadow": "none",
   "defaultText": "{{haeStatusilmoitusYleinen.data[0].alatunniste}}",
   "dynamicBindingPathList": [
@@ -52,7 +52,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 62,
   "showStepArrows": false,
-  "topRow": 37,
+  "topRow": 65,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "syfp19xi1n",

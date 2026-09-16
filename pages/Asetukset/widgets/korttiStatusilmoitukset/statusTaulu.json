@@ -5,7 +5,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 35,
+  "bottomRow": 65,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": true,
@@ -41,7 +41,7 @@
   "columnUpdatedAt": 1789325524745,
   "columnWidthMap": {
     "EditActions1": 150,
-    "kaytossa": 160,
+    "kaytossa": 182,
     "status": 200,
     "viesti": 640
   },
