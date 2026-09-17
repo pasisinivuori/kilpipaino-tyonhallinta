@@ -1,0 +1,50 @@
+{
+  "animateLoading": true,
+  "backgroundColor": "#FEE2E2",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 24,
+  "dynamicBindingPathList": [
+    {
+      "key": "text"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "0.875rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": "{{ (haeVahti.data && haeVahti.data[0] && haeVahti.data[0].tila && haeVahti.data[0].tila.kaytossa && haeVahti.data[0].tila.hiljaista_min >= haeVahti.data[0].tila.raja_min) }}",
+  "key": "cxca9q6sof",
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 24,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 19,
+  "needsErrorInfo": false,
+  "originalBottomRow": 9,
+  "originalTopRow": 5,
+  "overflow": "NONE",
+  "parentColumnSpace": 17.28125,
+  "parentId": "erp08sulu8",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 63,
+  "shouldTruncate": false,
+  "text": "{{ (haeVahti.data && haeVahti.data[0] && haeVahti.data[0].tila && haeVahti.data[0].tila.kaytossa && haeVahti.data[0].tila.hiljaista_min >= haeVahti.data[0].tila.raja_min) ? ('Huomio: ' + haeVahti.data[0].tila.selite + ' Tarkista Maken saapuvat-skenaario ja Gmailin Saapuneet.') : '' }}",
+  "textAlign": "LEFT",
+  "textColor": "#991B1B",
+  "topRow": 19,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "976sgubkl2",
+  "widgetName": "vahtiBanneri"
+}
