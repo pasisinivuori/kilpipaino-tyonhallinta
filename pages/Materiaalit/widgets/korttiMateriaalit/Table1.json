@@ -47,6 +47,7 @@
     "hinta_paivitetty",
     "muutos_pros",
     "ostokertoja",
+    "toimittaja",
     "hukka_pros",
     "kate_pros",
     "aktiivinen",
@@ -62,6 +63,7 @@
     "nimi": 230,
     "ostoeran_koko": 204,
     "ostokertoja": 100,
+    "toimittaja": 140,
     "tyyppi": 150
   },
   "customIsLoading": false,
@@ -141,6 +143,9 @@
     },
     {
       "key": "primaryColumns.ostokertoja.computedValue"
+    },
+    {
+      "key": "primaryColumns.toimittaja.computedValue"
     }
   ],
   "dynamicPropertyPathList": [],
@@ -733,6 +738,40 @@
       "validation": {},
       "verticalAlignment": "CENTER",
       "width": 100
+    },
+    "toimittaja": {
+      "alias": "toimittaja",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow.toimittaja))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "toimittaja",
+      "index": 18,
+      "isCellEditable": true,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": true,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Toimittaja",
+      "notation": "standard",
+      "originalId": "toimittaja",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 140
     },
     "tyyppi": {
       "alias": "tyyppi",
