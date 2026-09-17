@@ -59,8 +59,10 @@
     "kayttoyksikko": 162,
     "kayttoyksikon_hinta": 173,
     "muutos_pros": 165,
+    "nimi": 230,
     "ostoeran_koko": 204,
-    "ostokertoja": 100
+    "ostokertoja": 100,
+    "tyyppi": 150
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -588,7 +590,7 @@
       "label": "Materiaali",
       "notation": "standard",
       "originalId": "nimi",
-      "sticky": "",
+      "sticky": "left",
       "textColor": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
@@ -761,13 +763,13 @@
       "originalId": "tyyppi",
       "resetFilterTextOnClose": true,
       "selectOptions": "{{haeTyypit.data.map(r => ({ label: r.nimi, value: r.nimi }))}}",
-      "sticky": "",
+      "sticky": "left",
       "textColor": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
-      "width": 170
+      "width": 150
     },
     "tyyppi_id": {
       "alias": "tyyppi_id",
