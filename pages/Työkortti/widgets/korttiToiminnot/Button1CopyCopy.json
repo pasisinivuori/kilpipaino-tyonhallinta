@@ -28,7 +28,7 @@
   "mobileRightColumn": 62,
   "mobileTopRow": 13,
   "needsErrorInfo": false,
-  "onClick": "{{poistaTk.run().then(() => {\n  navigateTo('Etusivu', {}, 'SAME_WINDOW');\n});}}",
+  "onClick": "{{showModal('poistoVarmistus');}}",
   "originalBottomRow": 23,
   "originalTopRow": 19,
   "parentColumnSpace": 17.28125,

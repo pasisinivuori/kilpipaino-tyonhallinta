@@ -1,17 +1,14 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 14,
+  "bottomRow": 26,
   "boxShadow": "none",
-  "buttonColor": "#DC2626",
-  "buttonVariant": "PRIMARY",
+  "buttonColor": "#6B7280",
+  "buttonVariant": "SECONDARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "isDisabled"
     }
   ],
   "dynamicTriggerPathList": [
@@ -20,33 +17,34 @@
     }
   ],
   "isDefaultClickDisabled": true,
-  "isDisabled": "{{!(Table1.selectedRow && Table1.selectedRow.id)}}",
+  "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "egq246by6f",
-  "leftColumn": 49,
+  "key": "bgdu5rxiub",
+  "label": "Peruuta",
+  "leftColumn": 35,
   "minWidth": 120,
-  "mobileBottomRow": 14,
-  "mobileLeftColumn": 49,
-  "mobileRightColumn": 63,
-  "mobileTopRow": 10,
+  "mobileBottomRow": 26,
+  "mobileLeftColumn": 35,
+  "mobileRightColumn": 48,
+  "mobileTopRow": 22,
   "needsErrorInfo": false,
-  "onClick": "{{showModal('poistoVarmistus');}}",
-  "originalBottomRow": 14,
-  "originalTopRow": 10,
+  "onClick": "{{closeModal('poistoVarmistus');}}",
+  "originalBottomRow": 23,
+  "originalTopRow": 19,
   "parentColumnSpace": 17.28125,
-  "parentId": "e69gjncse9",
+  "parentId": "ocjucd0z57",
   "parentRowSpace": 10,
   "placement": "CENTER",
   "recaptchaType": "V3",
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 63,
-  "text": "Poista\n",
-  "topRow": 10,
+  "rightColumn": 48,
+  "text": "Peruuta",
+  "topRow": 22,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "bvkg862oqv",
-  "widgetName": "Button1CopyCopy"
+  "widgetId": "esipa408yz",
+  "widgetName": "varmistusPeruuta"
 }
