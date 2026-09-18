@@ -20,8 +20,9 @@ export default {
 			if (m) { lev = parseFloat(m[1]); kork = parseFloat(m[2]); }
 			if (!stala && !(lev > 0 && kork > 0)) { puuttuvat.push((r.taloyhtio || '?') + ' ' + (r.teksti || '')); return; }
 			let nimi = (r.teksti || '').trim();
-			const huo = (r.huoneisto || '').trim();
-			if (huo && nimi.toUpperCase().indexOf(huo.toUpperCase()) === 0) { nimi = nimi.slice(huo.length).trim(); }
+			const huoRaaka = (r.huoneisto || '').trim();
+			const huo = (r.huoneisto_kilpeen === undefined ? huoRaaka : (r.huoneisto_kilpeen || '')).trim();
+			if (huoRaaka && nimi.toUpperCase().indexOf(huoRaaka.toUpperCase()) === 0) { nimi = nimi.slice(huoRaaka.length).trim(); }
 			const kentat = [ryhma, stala ? 'Stala' : '', stala ? 0 : lev, stala ? 0 : kork, huo, nimi]
 				.map(v => String(v).replace(/\|/g, ' ').replace(/"/g, '""'));
 			lines.push('    R "' + kentat.join('|') + '"');
