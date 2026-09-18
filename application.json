@@ -21,11 +21,7 @@
       "isDefault": false
     },
     {
-      "id": "Materiaalit",
-      "isDefault": false
-    },
-    {
-      "id": "Tilastot",
+      "id": "Kalenteri",
       "isDefault": false
     },
     {
@@ -37,11 +33,15 @@
       "isDefault": false
     },
     {
-      "id": "Asetukset",
+      "id": "Tilastot",
       "isDefault": false
     },
     {
-      "id": "Kalenteri",
+      "id": "Materiaalit",
+      "isDefault": false
+    },
+    {
+      "id": "Asetukset",
       "isDefault": false
     }
   ],
