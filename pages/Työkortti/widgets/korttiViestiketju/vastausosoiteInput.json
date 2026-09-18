@@ -5,7 +5,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 14,
   "boxShadow": "none",
-  "defaultText": "{{getTk.data[0].aihe}}",
+  "defaultText": "{{getTk.data[0].vastausosoite}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -15,31 +15,34 @@
     },
     {
       "key": "defaultText"
+    },
+    {
+      "key": "placeholderText"
     }
   ],
   "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
   "iconAlign": "left",
-  "inputType": "TEXT",
+  "inputType": "EMAIL",
   "isDisabled": false,
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "6elnmh0y5h",
-  "label": "Aihe",
+  "key": "0yisavpn7y",
+  "label": "Vastausosoite (poikkeus)",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelStyle": "",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 1,
+  "leftColumn": 40,
   "maxChars": "10000",
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
   "mobileBottomRow": 14,
-  "mobileLeftColumn": 1,
-  "mobileRightColumn": 38,
+  "mobileLeftColumn": 40,
+  "mobileRightColumn": 62,
   "mobileTopRow": 7,
   "needsErrorInfo": false,
   "originalBottomRow": 14,
@@ -47,16 +50,16 @@
   "parentColumnSpace": 17.28125,
   "parentId": "wom5ttosnw",
   "parentRowSpace": 10,
-  "placeholderText": "Lyhyt tunniste työlistalle, esim. Postilaatikkokilvet, As Oy Penttilänniitty",
+  "placeholderText": "{{getTk.data[0].ilmoitus_vastaanottaja || \"ei osoitetta\"}}",
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 38,
+  "rightColumn": 62,
   "shouldAllowAutofill": false,
   "showStepArrows": false,
   "topRow": 7,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
-  "widgetId": "2oimg3ez53",
-  "widgetName": "aiheInput"
+  "widgetId": "te9j814w36",
+  "widgetName": "vastausosoiteInput"
 }
