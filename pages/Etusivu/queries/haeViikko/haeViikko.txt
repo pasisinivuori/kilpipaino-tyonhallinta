@@ -1,0 +1,5 @@
+select lahde, pvm, alkaa, otsikko, lisatieto, vari, toimeksianto_id, merkinta_id, tp_numero
+from public.kalenteri_tapahtumat
+where pvm between (date_trunc('week', current_date)::date) and (date_trunc('week', current_date)::date + 6)
+  and lahde <> 'maaraaika'
+order by pvm, alkaa nulls first, otsikko

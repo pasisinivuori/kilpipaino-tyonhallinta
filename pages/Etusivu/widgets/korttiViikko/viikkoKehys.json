@@ -1,0 +1,40 @@
+{
+  "animateLoading": true,
+  "borderOpacity": 0,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": 0,
+  "bottomRow": 25,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "srcDoc"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onMessageReceived"
+    }
+  ],
+  "flexVerticalAlignment": "start",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "80guw72999",
+  "leftColumn": 1,
+  "needsErrorInfo": false,
+  "onMessageReceived": "{{ (function(){ var m = String(viikkoKehys.message || ''); if (m.indexOf('tyo:') === 0) { navigateTo('Työkortti', {id: m.slice(4)}); } })() }}",
+  "originalBottomRow": 92,
+  "originalTopRow": 12,
+  "parentColumnSpace": 30.25,
+  "parentId": "cwojmqg2o8",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 63,
+  "source": "",
+  "srcDoc": "{{ (function(){\n  var rows = (haeViikko.data || []);\n  var mon = moment().startOf(\"isoWeek\");\n  var nimet = [\"Ma\",\"Ti\",\"Ke\",\"To\",\"Pe\",\"La\",\"Su\"];\n  var tanaan = moment().format(\"YYYY-MM-DD\");\n  var esc = function(s){ return String(s == null ? \"\" : s).replace(/&/g,\"&amp;\").replace(/</g,\"&lt;\").replace(/>/g,\"&gt;\").replace(/\"/g,\"&quot;\"); };\n  var cols = \"\";\n  for (var i = 0; i < 7; i++) {\n    var d = mon.clone().add(i, \"days\");\n    var iso = d.format(\"YYYY-MM-DD\");\n    var day = rows.filter(function(r){ return String(r.pvm).slice(0,10) === iso; });\n    var chips = day.map(function(r){\n      var id = r.toimeksianto_id || \"\";\n      var kello = r.alkaa ? String(r.alkaa).slice(0,5) + \" \" : \"\";\n      var lisa = r.lisatieto ? \"<div class=\\\"l\\\">\" + esc(r.lisatieto) + \"</div>\" : \"\";\n      return \"<div class=\\\"c\" + (id ? \" k\" : \"\") + \"\\\" style=\\\"border-left-color:\" + esc(r.vari || \"#6B7280\") + \"\\\" data-tyo=\\\"\" + esc(id) + \"\\\">\" + esc(kello + (r.otsikko || \"\")) + lisa + \"</div>\";\n    }).join(\"\");\n    if (!chips) { chips = \"<div class=\\\"e\\\">-</div>\"; }\n    cols += \"<div class=\\\"d\" + (iso === tanaan ? \" t\" : \"\") + \"\\\"><div class=\\\"h\\\">\" + nimet[i] + \" \" + d.format(\"D.M.\") + \"</div>\" + chips + \"</div>\";\n  }\n  var css = \"body{margin:0;font-family:-apple-system,Segoe UI,Roboto,Helvetica,sans-serif;font-size:11px;color:#1f2937;background:transparent}.w{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;padding:1px}.d{background:#fff;border:1px solid #e5e7eb;border-radius:6px;padding:4px;min-height:128px;overflow:hidden}.d.t{border-color:#15803D;background:#f0fdf4}.h{font-weight:600;font-size:11px;color:#6b7280;margin-bottom:4px}.d.t .h{color:#15803D}.c{border-left:3px solid #6B7280;background:#f9fafb;border-radius:3px;padding:2px 4px;margin-bottom:3px;line-height:1.25}.c.k{cursor:pointer}.c.k:hover{background:#eef2ff}.l{color:#6b7280;font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.e{color:#d1d5db;text-align:center;padding-top:10px}\";\n  var js = \"document.addEventListener(\\\"click\\\",function(e){var n=e.target.closest(\\\"[data-tyo]\\\");if(n&&n.getAttribute(\\\"data-tyo\\\")){parent.postMessage(\\\"tyo:\\\"+n.getAttribute(\\\"data-tyo\\\"),\\\"*\\\");}});\";\n  return \"<html><head><meta charset=\\\"utf-8\\\"><style>\" + css + \"</style></head><body><div class=\\\"w\\\">\" + cols + \"</div><script>\" + js + \"<\\/script></body></html>\";\n})() }}",
+  "topRow": 7,
+  "type": "IFRAME_WIDGET",
+  "version": 1,
+  "widgetId": "vtvvlqvwpe",
+  "widgetName": "viikkoKehys"
+}
