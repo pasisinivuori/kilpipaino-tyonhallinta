@@ -238,7 +238,7 @@
       "label": "Jako",
       "labelColor": "#FFFFFF",
       "notation": "standard",
-      "onClick": "{{luokitteleViesti.run().then(() => { resetWidget('jYhteenveto'); resetWidget('jTyyppi'); showModal('jakoModal'); })}}",
+      "onClick": "{{luokitteleViesti.run().then(() => { resetWidget('jYhteenveto'); resetWidget('jTyyppi'); showModal('jakoModal'); }).catch((e) => { const r = String((e && e.message) ? e.message : e); const s = /EMAXCONNSESSION|max clients reached|too many clients/i.test(r) ? 'Tietokantayhteydet loppuivat hetkeksi. Rivi\\u00e4 EI tallennettu \\u2014 yrit\\u00e4 uudelleen.' : r.split('Where:')[0].replace(/^ERROR:\\s*/, '').trim(); showAlert(s, 'error'); })}}",
       "originalId": "customColumn1",
       "sticky": "",
       "textSize": "0.875rem",
