@@ -1,0 +1,1 @@
+SELECT id::text AS id, pvm::text AS pvm, to_char(alkaa,'HH24:MI') AS alkaa, to_char(paattyy,'HH24:MI') AS paattyy, otsikko, coalesce(kuvaus,'') AS kuvaus, laji FROM public.kalenterimerkinnat WHERE id = NULLIF({{ appsmith.store.merkintaId }}, '')::uuid;

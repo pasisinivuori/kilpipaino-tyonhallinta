@@ -1,0 +1,1 @@
+INSERT INTO public.kalenterimerkinnat (pvm, alkaa, paattyy, otsikko, kuvaus, laji) VALUES ({{mPvm.formattedDate}}::date, NULLIF({{mAlkaa.text}}::text, '')::time, NULLIF({{mPaattyy.text}}::text, '')::time, {{mOtsikko.text}}, NULLIF({{mKuvaus.text}}::text, ''), {{mLaji.selectedOptionValue}});

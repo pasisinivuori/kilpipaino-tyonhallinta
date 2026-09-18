@@ -1,0 +1,57 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 38,
+  "boxShadow": "none",
+  "buttonColor": "#22C55E",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "k1ewamezns",
+  "leftColumn": 50,
+  "minWidth": 120,
+  "mobileBottomRow": 38,
+  "mobileLeftColumn": 50,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 34,
+  "needsErrorInfo": false,
+  "onClick": "{{ storeValue('poistoVahvistettu','-');  (appsmith.store.merkintaId ? paivitaMerkinta.run() : lisaaMerkinta.run()).then(() => haeKalenteri.run()).then(() => { closeModal('merkintaModal'); showAlert('Tallennettu','success'); }).catch((e) => showAlert('Toiminto epäonnistui: ' + ((e && e.message) ? e.message : e), 'error')) }}",
+  "originalBottomRow": 38,
+  "originalTopRow": 34,
+  "parentColumnSpace": 17.28125,
+  "parentId": "54wggok3gc",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 63,
+  "text": "Tallenna",
+  "topRow": 34,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "5h2eatobww",
+  "widgetName": "napTallennaMerkinta"
+}

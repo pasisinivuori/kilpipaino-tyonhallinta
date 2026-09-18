@@ -1,0 +1,1 @@
+DELETE FROM public.kalenterimerkinnat WHERE id = NULLIF({{ appsmith.store.merkintaId }}, '')::uuid;

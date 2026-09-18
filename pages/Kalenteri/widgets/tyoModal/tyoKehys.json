@@ -1,0 +1,42 @@
+{
+  "animateLoading": true,
+  "borderOpacity": 0,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": 0,
+  "bottomRow": 74,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "source"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "flexVerticalAlignment": "start",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "cwwzlq7nee",
+  "leftColumn": 1,
+  "mobileBottomRow": 69,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 1,
+  "needsErrorInfo": false,
+  "originalBottomRow": 69,
+  "originalTopRow": 1,
+  "parentColumnSpace": 30.25,
+  "parentId": "1cuzr91jj8",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 63,
+  "source": "{{ 'https://kilpipaino.appsmith.com/app/tyonhallinta/tyokortti-6a6f2badadc4847fb5c530e0?branch=master&embed=true&id=' + (appsmith.store.tyoId || '') }}",
+  "srcDoc": "",
+  "topRow": 6,
+  "type": "IFRAME_WIDGET",
+  "version": 1,
+  "widgetId": "3n13n8vda4",
+  "widgetName": "tyoKehys"
+}

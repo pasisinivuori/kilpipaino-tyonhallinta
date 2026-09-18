@@ -39,6 +39,10 @@
     {
       "id": "Asetukset",
       "isDefault": false
+    },
+    {
+      "id": "Kalenteri",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

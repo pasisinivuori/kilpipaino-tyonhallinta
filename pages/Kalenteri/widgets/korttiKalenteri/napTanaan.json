@@ -1,0 +1,57 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 6,
+  "boxShadow": "none",
+  "buttonColor": "#22C55E",
+  "buttonVariant": "SECONDARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "husjhrnu6f",
+  "leftColumn": 45,
+  "minWidth": 120,
+  "mobileBottomRow": 6,
+  "mobileLeftColumn": 45,
+  "mobileRightColumn": 53,
+  "mobileTopRow": 2,
+  "needsErrorInfo": false,
+  "onClick": "{{ storeValue('kuuAnkkuri', moment().startOf('month').format('YYYY-MM-DD')).then(() => haeKalenteri.run()) }}",
+  "originalBottomRow": 6,
+  "originalTopRow": 2,
+  "parentColumnSpace": 17.28125,
+  "parentId": "m7ef2xbyil",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 53,
+  "text": "Tänään",
+  "topRow": 2,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "0khnt1ov1z",
+  "widgetName": "napTanaan"
+}

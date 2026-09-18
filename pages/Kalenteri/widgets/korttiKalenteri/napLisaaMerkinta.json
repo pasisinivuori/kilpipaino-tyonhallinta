@@ -1,0 +1,57 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 6,
+  "boxShadow": "none",
+  "buttonColor": "#22C55E",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "13twr9qpa7",
+  "leftColumn": 54,
+  "minWidth": 120,
+  "mobileBottomRow": 6,
+  "mobileLeftColumn": 54,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 2,
+  "needsErrorInfo": false,
+  "onClick": "{{ storeValue('merkintaId','').then(() => storeValue('uusiPvm', moment().format('YYYY-MM-DD'))).then(() => { resetWidget('mPvm'); resetWidget('mAlkaa'); resetWidget('mPaattyy'); resetWidget('mOtsikko'); resetWidget('mKuvaus'); resetWidget('mLaji'); showModal('merkintaModal'); }) }}",
+  "originalBottomRow": 6,
+  "originalTopRow": 2,
+  "parentColumnSpace": 17.28125,
+  "parentId": "m7ef2xbyil",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 63,
+  "text": "Lisää merkintä",
+  "topRow": 2,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "nu87zeqeqk",
+  "widgetName": "napLisaaMerkinta"
+}
