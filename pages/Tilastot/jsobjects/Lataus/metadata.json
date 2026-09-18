@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6a6b786a4fdae71c0c5a3144_1d68b449-32fa-47da-adfe-22b7c2838d2c",
+  "id": "Tilastot_Lataus",
+  "unpublishedCollection": {
+    "name": "Lataus",
+    "pageId": "Tilastot",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

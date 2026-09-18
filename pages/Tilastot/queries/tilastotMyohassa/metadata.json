@@ -25,7 +25,7 @@
     "dynamicBindingPathList": [],
     "name": "tilastotMyohassa",
     "pageId": "Tilastot",
-    "runBehaviour": "ON_PAGE_LOAD",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": true
   }
 }
