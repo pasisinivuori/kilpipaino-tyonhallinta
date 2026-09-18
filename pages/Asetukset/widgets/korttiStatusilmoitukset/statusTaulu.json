@@ -235,7 +235,7 @@
       "label": "Muokkaa",
       "labelColor": "#111827",
       "notation": "standard",
-      "onClick": "{{storeValue('statusMuokkaus', {status: currentRow.status, nimi: currentRow.status_nimi, viesti: currentRow.viesti}).then(() => showModal('statusViestiModal'));.catch((e) => { const r = String((e && e.message) ? e.message : e); const s = /EMAXCONNSESSION|max clients reached|too many clients/i.test(r) ? 'Tietokantayhteydet loppuivat hetkeksi. Rivi\\u00e4 EI tallennettu \\u2014 yrit\\u00e4 uudelleen.' : r.split('Where:')[0].replace(/^ERROR:\\s*/, '').trim(); showAlert(s, 'error'); })}}",
+      "onClick": "{{storeValue('statusMuokkaus', {status: currentRow.status, nimi: currentRow.status_nimi, viesti: currentRow.viesti}).then(() => showModal('statusViestiModal'));}}",
       "originalId": "muokkaa",
       "sticky": "",
       "textSize": "0.875rem",
