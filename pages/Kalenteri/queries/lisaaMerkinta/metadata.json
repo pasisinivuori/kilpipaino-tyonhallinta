@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO public.kalenterimerkinnat (pvm, alkaa, paattyy, otsikko, kuvaus, laji) VALUES ({{mPvm.formattedDate}}::date, NULLIF({{mAlkaa.text}}::text, '')::time, NULLIF({{mPaattyy.text}}::text, '')::time, {{mOtsikko.text}}, NULLIF({{mKuvaus.text}}::text, ''), {{mLaji.selectedOptionValue}});",
+      "body": "insert into public.kalenterimerkinnat (pvm, alkaa, paattyy, otsikko, kuvaus, laji)\nvalues (\n  {{mPvm.formattedDate}}::date,\n  public.muotoile_kello({{mAlkaa.text}}::text),\n  public.muotoile_kello({{mPaattyy.text}}::text),\n  btrim({{mOtsikko.text}}::text),\n  nullif(btrim({{mKuvaus.text}}::text), ''),\n  coalesce(nullif({{mLaji.selectedOptionValue}}::text, ''), 'muu')\n)\nreturning id;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

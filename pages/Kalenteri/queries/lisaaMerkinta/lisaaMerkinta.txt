@@ -1,1 +1,10 @@
-INSERT INTO public.kalenterimerkinnat (pvm, alkaa, paattyy, otsikko, kuvaus, laji) VALUES ({{mPvm.formattedDate}}::date, NULLIF({{mAlkaa.text}}::text, '')::time, NULLIF({{mPaattyy.text}}::text, '')::time, {{mOtsikko.text}}, NULLIF({{mKuvaus.text}}::text, ''), {{mLaji.selectedOptionValue}});
+insert into public.kalenterimerkinnat (pvm, alkaa, paattyy, otsikko, kuvaus, laji)
+values (
+  {{mPvm.formattedDate}}::date,
+  public.muotoile_kello({{mAlkaa.text}}::text),
+  public.muotoile_kello({{mPaattyy.text}}::text),
+  btrim({{mOtsikko.text}}::text),
+  nullif(btrim({{mKuvaus.text}}::text), ''),
+  coalesce(nullif({{mLaji.selectedOptionValue}}::text, ''), 'muu')
+)
+returning id;
