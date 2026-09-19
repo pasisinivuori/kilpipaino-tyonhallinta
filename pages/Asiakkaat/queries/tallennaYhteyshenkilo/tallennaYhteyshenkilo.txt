@@ -1,0 +1,8 @@
+select (public.tallenna_yhteyshenkilo(
+         nullif({{ appsmith.store.henkilo.id || '' }}::text, '')::uuid,
+         nullif({{ hYritys.selectedOptionValue || '' }}::text, '')::uuid,
+         {{ hNimi.text }}::text,
+         {{ hEmail.text }}::text,
+         {{ hPuhelin.text }}::text,
+         {{ hOsoite.text }}::text,
+         {{ hMuistiinpanot.text }}::text)).id as id;

@@ -7,7 +7,7 @@
   "canOutsideClickClose": true,
   "children": [
     {
-      "bottomRow": 750,
+      "bottomRow": 500,
       "canExtend": false,
       "containerStyle": "none",
       "detachFromLayout": true,
@@ -16,21 +16,21 @@
       "dynamicTriggerPathList": [],
       "isLoading": false,
       "isVisible": true,
-      "key": "vp4ruazo52",
+      "key": "fakc244mvj",
       "leftColumn": 0,
       "minHeight": 430,
       "noPad": true,
       "openParentPropertyPane": false,
       "parentColumnSpace": 1,
-      "parentId": "a407fknri7",
+      "parentId": "y7o3gr7nlf",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
       "rightColumn": 0,
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "84nvpj3fz1",
-      "widgetName": "Canvas_asiakasModal"
+      "widgetId": "rbesrhenxt",
+      "widgetName": "Canvas_henkiloModal"
     }
   ],
   "detachFromLayout": true,
@@ -40,10 +40,10 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
-  "height": 750,
+  "height": 500,
   "isCanvas": true,
   "isLoading": false,
-  "key": "uen8km7rl6",
+  "key": "7ck7xy0rzu",
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 24,
@@ -64,7 +64,7 @@
   "topRow": 0,
   "type": "MODAL_WIDGET",
   "version": 2,
-  "widgetId": "a407fknri7",
-  "widgetName": "asiakasModal",
-  "width": 1000
+  "widgetId": "y7o3gr7nlf",
+  "widgetName": "henkiloModal",
+  "width": 900
 }

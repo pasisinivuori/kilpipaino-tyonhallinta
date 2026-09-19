@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a6b786a4fdae71c0c5a3144_60e66ced-4d88-4782-ab5b-742767b2b38b",
-  "id": "Asiakkaat_paivitaTaso",
+  "gitSyncId": "6a6b786a4fdae71c0c5a3144_593a4a53-7bb8-4c8e-a9d9-cf8a642c622a",
+  "id": "Asiakkaat_haeYhteyshenkilot",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "select (public.aseta_yrityksen_taso(\n          nullif({{ asiakasTaulu.updatedRow.yritys_id }}::text, '')::uuid,\n          {{ asiakasTaulu.updatedRow.taso }}::text)).id as id;",
+      "body": "select a.id, a.nimi, a.email, a.puhelin, a.osoite, a.muistiinpanot\n  from public.asiakkaat a\n where a.yritys_id = nullif({{ appsmith.store.asiakas.yritys_id || '' }}::text, '')::uuid\n order by lower(coalesce(a.nimi, a.email));",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -23,9 +23,9 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "paivitaTaso",
+    "name": "haeYhteyshenkilot",
     "pageId": "Asiakkaat",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }

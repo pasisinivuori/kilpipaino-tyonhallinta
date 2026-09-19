@@ -1,8 +1,12 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 6,
-  "dynamicBindingPathList": [],
+  "bottomRow": 44,
+  "dynamicBindingPathList": [
+    {
+      "key": "text"
+    }
+  ],
   "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
@@ -11,29 +15,29 @@
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "drm2qhzdgn",
+  "key": "6gz97liuv1",
   "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
   "needsErrorInfo": false,
-  "originalBottomRow": 6,
-  "originalTopRow": 2,
+  "originalBottomRow": 5,
+  "originalTopRow": 1,
   "overflow": "NONE",
   "parentColumnSpace": 11.568359375,
-  "parentId": "yuu1hc9fg4",
+  "parentId": "84nvpj3fz1",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 30,
+  "rightColumn": 34,
   "shouldTruncate": false,
-  "text": "Asiakkaat",
+  "text": "{{ 'Yhteyshenkilöt (' + ((haeYhteyshenkilot.data || []).length) + ')' }}",
   "textAlign": "LEFT",
   "textColor": "#B4232A",
-  "topRow": 2,
+  "topRow": 40,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "9n254zo3vd",
-  "widgetName": "otsikkoAsiakkaat"
+  "widgetId": "be4tmzoa47",
+  "widgetName": "yhTeksti"
 }

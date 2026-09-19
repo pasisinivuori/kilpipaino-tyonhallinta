@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a6b786a4fdae71c0c5a3144_60e66ced-4d88-4782-ab5b-742767b2b38b",
-  "id": "Asiakkaat_paivitaTaso",
+  "gitSyncId": "6a6b786a4fdae71c0c5a3144_9e9b1d7d-bffa-45c0-a22b-01fe2c739a2a",
+  "id": "Asiakkaat_haeYritykset",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "select (public.aseta_yrityksen_taso(\n          nullif({{ asiakasTaulu.updatedRow.yritys_id }}::text, '')::uuid,\n          {{ asiakasTaulu.updatedRow.taso }}::text)).id as id;",
+      "body": "select id, nimi from public.yritykset order by lower(nimi);",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -23,9 +23,9 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "paivitaTaso",
+    "name": "haeYritykset",
     "pageId": "Asiakkaat",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }

@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a6b786a4fdae71c0c5a3144_60e66ced-4d88-4782-ab5b-742767b2b38b",
-  "id": "Asiakkaat_paivitaTaso",
+  "gitSyncId": "6a6b786a4fdae71c0c5a3144_b6b2af28-514c-4ab5-99ac-adaf0564a587",
+  "id": "Asiakkaat_tallennaYritys",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "select (public.aseta_yrityksen_taso(\n          nullif({{ asiakasTaulu.updatedRow.yritys_id }}::text, '')::uuid,\n          {{ asiakasTaulu.updatedRow.taso }}::text)).id as id;",
+      "body": "select (public.tallenna_yritys(\n         nullif({{ appsmith.store.asiakas.yritys_id || '' }}::text, '')::uuid,\n         {{ aNimi.text }}::text,\n         {{ aYtunnus.text }}::text,\n         {{ aEmail.text }}::text,\n         {{ aPuhelin.text }}::text,\n         {{ aOsoite.text }}::text,\n         {{ aTaso.selectedOptionValue }}::text,\n         {{ aMuistiinpanot.text }}::text)).id as id;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -23,7 +23,7 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "paivitaTaso",
+    "name": "tallennaYritys",
     "pageId": "Asiakkaat",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

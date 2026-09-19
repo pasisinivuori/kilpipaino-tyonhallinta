@@ -1,4 +1,3 @@
-update public.asiakkaat
-   set taso = {{ asiakasTaulu.updatedRow.taso }}::text
- where id = nullif({{ asiakasTaulu.updatedRow.id }}::text, '')::uuid
-returning id;
+select (public.aseta_yrityksen_taso(
+          nullif({{ asiakasTaulu.updatedRow.yritys_id }}::text, '')::uuid,
+          {{ asiakasTaulu.updatedRow.taso }}::text)).id as id;

@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a6b786a4fdae71c0c5a3144_b6b2af28-514c-4ab5-99ac-adaf0564a587",
-  "id": "Asiakkaat_tallennaAsiakas",
+  "gitSyncId": "6a6b786a4fdae71c0c5a3144_171e9110-8d1f-4473-9e55-9d81b0cffe86",
+  "id": "Asiakkaat_tallennaYhteyshenkilo",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "select (public.tallenna_asiakas(\n         nullif({{ appsmith.store.asiakas.id || '' }}::text, '')::uuid,\n         {{ aNimi.text }}::text,\n         {{ aYritys.text }}::text,\n         {{ aEmail.text }}::text,\n         {{ aPuhelin.text }}::text,\n         {{ aYtunnus.text }}::text,\n         {{ aOsoite.text }}::text,\n         {{ aTaso.selectedOptionValue }}::text,\n         {{ aMuistiinpanot.text }}::text)).id as id;",
+      "body": "select (public.tallenna_yhteyshenkilo(\n         nullif({{ appsmith.store.henkilo.id || '' }}::text, '')::uuid,\n         nullif({{ hYritys.selectedOptionValue || '' }}::text, '')::uuid,\n         {{ hNimi.text }}::text,\n         {{ hEmail.text }}::text,\n         {{ hPuhelin.text }}::text,\n         {{ hOsoite.text }}::text,\n         {{ hMuistiinpanot.text }}::text)).id as id;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -23,7 +23,7 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "tallennaAsiakas",
+    "name": "tallennaYhteyshenkilo",
     "pageId": "Asiakkaat",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

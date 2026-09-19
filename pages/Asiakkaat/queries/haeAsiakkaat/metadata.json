@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "select a.id,\n       coalesce(nullif(btrim(a.yritys), ''), a.nimi) as asiakas,\n       a.nimi, a.yritys, a.email, a.puhelin, a.y_tunnus, a.osoite,\n       a.taso, t.nimi as taso_nimi, t.vari as taso_vari,\n       a.muistiinpanot, a.lahde, a.created_at, a.updated_at\n  from public.asiakkaat a\n  left join public.asiakastasot t on t.taso = a.taso\n order by lower(coalesce(nullif(btrim(a.yritys), ''), a.nimi)) nulls last;",
+      "body": "with p as (select lower(btrim(coalesce({{ asiakasTaulu.searchText }}::text, ''))) as q)\nselect l.laji, l.yritys_id, l.henkilo_id, l.asiakas, l.yhteyshenkilot, l.yhteyshenkiloita,\n       l.email, l.puhelin, l.y_tunnus, l.osoite, l.taso, l.muistiinpanot\n  from public.asiakaslista l, p\n where p.q = ''\n    or lower(l.asiakas) like '%' || p.q || '%'\n    or lower(coalesce(l.yhteyshenkilot, '')) like '%' || p.q || '%'\n    or lower(coalesce(l.email, ''))   like '%' || p.q || '%'\n    or lower(coalesce(l.puhelin, '')) like '%' || p.q || '%'\n    or lower(coalesce(l.y_tunnus, '')) like '%' || p.q || '%'\n order by lower(l.asiakas)\n limit  coalesce({{ asiakasTaulu.pageSize }}::int, 20)\noffset coalesce({{ asiakasTaulu.pageOffset }}::int, 0);",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

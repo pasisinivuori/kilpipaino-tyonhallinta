@@ -1,0 +1,4 @@
+select a.id, a.nimi, a.email, a.puhelin, a.osoite, a.muistiinpanot
+  from public.asiakkaat a
+ where a.yritys_id = nullif({{ appsmith.store.asiakas.yritys_id || '' }}::text, '')::uuid
+ order by lower(coalesce(a.nimi, a.email));
