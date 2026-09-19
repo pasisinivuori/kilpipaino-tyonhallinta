@@ -43,7 +43,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 61,
   "shouldTruncate": false,
-  "text": "Keskim. läpimenoaika: {{tilastotLapimenoaika.data[0].keskiarvo_pv || '–'}} pv ({{tilastotLapimenoaika.data[0].n}} valmista työtä)\nTyötunnit (suun. / tot.): {{tilastotTunnit.data[0].suun_ka || '–'}} / {{tilastotTunnit.data[0].tot_ka || '–'}} h",
+  "text": "Keskim. läpimenoaika: {{tilastotLapimenoaika.data[0].keskiarvo_pv || '–'}} arkipv ({{tilastotLapimenoaika.data[0].n}} valmista työtä)\nTyötunnit (suun. / tot.): {{tilastotTunnit.data[0].suun_ka || '–'}} / {{tilastotTunnit.data[0].tot_ka || '–'}} h",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 3,

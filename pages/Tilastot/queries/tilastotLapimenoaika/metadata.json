@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT round(avg(extract(epoch from (l.t1 - a.t0))/86400)::numeric, 1) AS keskiarvo_pv, count(*)::int AS n FROM (SELECT toimeksianto_id, min(created_at) AS t0 FROM public.tapahtumat WHERE uusi_status='tilaus_vastaanotettu' GROUP BY toimeksianto_id) a JOIN (SELECT toimeksianto_id, min(created_at) AS t1 FROM public.tapahtumat WHERE uusi_status IN ('valmis','toimitettu') GROUP BY toimeksianto_id) l ON l.toimeksianto_id=a.toimeksianto_id WHERE l.t1 >= a.t0;",
+      "body": "SELECT round(avg(public.arkipaivat_valissa(t0.a, t1.a)), 1) AS keskiarvo_pv,\n       count(*)::int AS n\nFROM (SELECT toimeksianto_id, min(created_at) AS a\n        FROM public.tapahtumat\n       WHERE uusi_status = 'tilaus_vastaanotettu'\n       GROUP BY toimeksianto_id) t0\nJOIN (SELECT toimeksianto_id, min(created_at) AS a\n        FROM public.tapahtumat\n       WHERE uusi_status IN ('valmis','toimitettu')\n       GROUP BY toimeksianto_id) t1\n  ON t1.toimeksianto_id = t0.toimeksianto_id\nWHERE t1.a >= t0.a;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

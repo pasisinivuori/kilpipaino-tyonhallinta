@@ -1,1 +1,12 @@
-SELECT round(avg(extract(epoch from (l.t1 - a.t0))/86400)::numeric, 1) AS keskiarvo_pv, count(*)::int AS n FROM (SELECT toimeksianto_id, min(created_at) AS t0 FROM public.tapahtumat WHERE uusi_status='tilaus_vastaanotettu' GROUP BY toimeksianto_id) a JOIN (SELECT toimeksianto_id, min(created_at) AS t1 FROM public.tapahtumat WHERE uusi_status IN ('valmis','toimitettu') GROUP BY toimeksianto_id) l ON l.toimeksianto_id=a.toimeksianto_id WHERE l.t1 >= a.t0;
+SELECT round(avg(public.arkipaivat_valissa(t0.a, t1.a)), 1) AS keskiarvo_pv,
+       count(*)::int AS n
+FROM (SELECT toimeksianto_id, min(created_at) AS a
+        FROM public.tapahtumat
+       WHERE uusi_status = 'tilaus_vastaanotettu'
+       GROUP BY toimeksianto_id) t0
+JOIN (SELECT toimeksianto_id, min(created_at) AS a
+        FROM public.tapahtumat
+       WHERE uusi_status IN ('valmis','toimitettu')
+       GROUP BY toimeksianto_id) t1
+  ON t1.toimeksianto_id = t0.toimeksianto_id
+WHERE t1.a >= t0.a;
