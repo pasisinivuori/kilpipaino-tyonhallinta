@@ -1,0 +1,10 @@
+select (public.tallenna_asiakas(
+         nullif({{ appsmith.store.asiakas.id || '' }}::text, '')::uuid,
+         {{ aNimi.text }}::text,
+         {{ aYritys.text }}::text,
+         {{ aEmail.text }}::text,
+         {{ aPuhelin.text }}::text,
+         {{ aYtunnus.text }}::text,
+         {{ aOsoite.text }}::text,
+         {{ aTaso.selectedOptionValue }}::text,
+         {{ aMuistiinpanot.text }}::text)).id as id;

@@ -1,0 +1,49 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 61,
+  "boxShadow": "none",
+  "buttonColor": "#22C55E",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "do87vv44di",
+  "leftColumn": 50,
+  "minWidth": 120,
+  "needsErrorInfo": false,
+  "onClick": "{{ tallennaAsiakas.run().then(function(){ closeModal('asiakasModal'); haeAsiakkaat.run(); showAlert('Tallennettu','success'); }).catch(function(e){ showAlert('Tallennus epäonnistui: ' + e.message,'error'); }) }}",
+  "originalBottomRow": 38,
+  "originalTopRow": 34,
+  "parentColumnSpace": 17.28125,
+  "parentId": "54w3t22rlq",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 63,
+  "text": "Tallenna",
+  "topRow": 57,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "2q3jrcz02b",
+  "widgetName": "napTallennaAsiakas"
+}

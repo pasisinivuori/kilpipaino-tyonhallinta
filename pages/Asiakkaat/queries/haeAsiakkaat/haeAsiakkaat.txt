@@ -1,0 +1,8 @@
+select a.id,
+       coalesce(nullif(btrim(a.yritys), ''), a.nimi) as asiakas,
+       a.nimi, a.yritys, a.email, a.puhelin, a.y_tunnus, a.osoite,
+       a.taso, t.nimi as taso_nimi, t.vari as taso_vari,
+       a.muistiinpanot, a.lahde, a.created_at, a.updated_at
+  from public.asiakkaat a
+  left join public.asiakastasot t on t.taso = a.taso
+ order by lower(coalesce(nullif(btrim(a.yritys), ''), a.nimi)) nulls last;

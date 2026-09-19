@@ -1,0 +1,43 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 55,
+  "dynamicBindingPathList": [
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "0.875rem",
+  "fontStyle": "BOLD",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "7638b1c99b",
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "needsErrorInfo": false,
+  "originalBottomRow": 5,
+  "originalTopRow": 1,
+  "overflow": "NONE",
+  "parentColumnSpace": 11.568359375,
+  "parentId": "54w3t22rlq",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 63,
+  "shouldTruncate": false,
+  "text": "{{ appsmith.store.asiakas.id ? ('Lähde: ' + (appsmith.store.asiakas.lahde || '–') + '   ·   Luotu: ' + (appsmith.store.asiakas.created_at ? moment(appsmith.store.asiakas.created_at).format('DD.MM.YYYY') : '–') + '   ·   Päivitetty: ' + (appsmith.store.asiakas.updated_at ? moment(appsmith.store.asiakas.updated_at).format('DD.MM.YYYY HH:mm') : '–')) : '' }}",
+  "textAlign": "LEFT",
+  "textColor": "#6B7280",
+  "topRow": 50,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "hs21q5zeih",
+  "widgetName": "mkTiedot"
+}

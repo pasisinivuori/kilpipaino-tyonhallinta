@@ -37,6 +37,10 @@
       "isDefault": false
     },
     {
+      "id": "Asiakkaat",
+      "isDefault": false
+    },
+    {
       "id": "Materiaalit",
       "isDefault": false
     },

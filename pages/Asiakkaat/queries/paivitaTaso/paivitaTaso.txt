@@ -1,0 +1,4 @@
+update public.asiakkaat
+   set taso = {{ asiakasTaulu.updatedRow.taso }}::text
+ where id = nullif({{ asiakasTaulu.updatedRow.id }}::text, '')::uuid
+returning id;
