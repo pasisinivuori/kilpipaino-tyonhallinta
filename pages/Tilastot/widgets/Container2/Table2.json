@@ -39,7 +39,13 @@
     "vastuuhenkilo"
   ],
   "columnUpdatedAt": 1788649615776,
-  "columnWidthMap": {},
+  "columnWidthMap": {
+    "asiakas": 230,
+    "myohassa_pv": 185,
+    "tp_numero": 135,
+    "valmistumispaiva": 190,
+    "vastuuhenkilo": 170
+  },
   "customIsLoading": false,
   "customIsLoadingValue": "",
   "defaultPageSize": 0,
