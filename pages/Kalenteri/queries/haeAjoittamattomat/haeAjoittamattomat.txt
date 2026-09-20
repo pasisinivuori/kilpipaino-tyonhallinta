@@ -1,0 +1,15 @@
+select t.id, t.tp_numero,
+       coalesce(nullif(btrim(t.asiakas_yritys), ''), t.asiakas_nimi, t.asiakas_email) as asiakas,
+       t.aihe,
+       case t.status::text
+         when 'tilaus_vastaanotettu' then 'Tilaus vastaanotettu'
+         when 'suunnittelussa'       then 'Suunnittelussa'
+         when 'tuotannossa'          then 'Tuotannossa'
+         else t.status::text end as status,
+       t.created_at,
+       (current_date - t.created_at::date) as odottanut_pv
+  from public.toimeksiannot t
+ where not t.arkistoitu
+   and t.valmistumispaiva is null
+   and t.status in ('tilaus_vastaanotettu','suunnittelussa','tuotannossa')
+ order by t.created_at;

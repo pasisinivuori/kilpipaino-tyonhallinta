@@ -1,0 +1,4 @@
+select to_char(pvm, 'DD.MM.') as pvm, odottaa_meita, ilman_valmistumispaivaa, myohassa, ilman_vastuuhenkiloa
+  from public.seurantamittarit
+ where pvm >= current_date - 60
+ order by pvm;

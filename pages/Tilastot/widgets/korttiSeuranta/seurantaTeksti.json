@@ -1,0 +1,42 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 8,
+  "dynamicBindingPathList": [
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "0.875rem",
+  "fontStyle": "",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "960mtjy3zm",
+  "leftColumn": 24,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "needsErrorInfo": false,
+  "originalBottomRow": 18,
+  "originalTopRow": 2,
+  "overflow": "NONE",
+  "parentColumnSpace": 15.07861328125,
+  "parentId": "fsssvqxt7c",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 63,
+  "shouldTruncate": false,
+  "text": "{{ (function(){ var d = (haeSeurantaNyt.data && haeSeurantaNyt.data[0]) || {}; return 'Odottaa meitä: ' + (d.odottaa_meita || 0) + '  ·  Ilman valmistumispäivää: ' + (d.ilman_valmistumispaivaa || 0) + '  ·  Myöhässä: ' + (d.myohassa || 0) + '  ·  Ilman vastuuhenkilöä: ' + (d.ilman_vastuuhenkiloa || 0) + '  ·  Ilman hintaa: ' + (d.ilman_hintaa || 0) + '   (avoimia yhteensä ' + (d.avoimia || 0) + ')'; })() }}",
+  "textAlign": "RIGHT",
+  "textColor": "#374151",
+  "topRow": 2,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "8e4jbw631u",
+  "widgetName": "seurantaTeksti"
+}

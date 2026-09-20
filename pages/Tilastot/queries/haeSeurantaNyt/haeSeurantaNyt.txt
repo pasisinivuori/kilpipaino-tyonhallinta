@@ -1,0 +1,15 @@
+with a as (
+  select t.id, t.status, t.valmistumispaiva, t.omistaja, t.hinta_yhteensa, t.laskettu_hinta,
+         coalesce((select v.suunta = 'saapuva' from public.viestit v
+                    where v.toimeksianto_id = t.id
+                    order by coalesce(v.sent_at, v.created_at) desc limit 1), false) as pallo_meilla
+    from public.toimeksiannot t where not t.arkistoitu)
+select count(*)::int as avoimia,
+       count(*) filter (where pallo_meilla)::int as odottaa_meita,
+       count(*) filter (where valmistumispaiva is null
+                          and status in ('tilaus_vastaanotettu','suunnittelussa','tuotannossa'))::int as ilman_valmistumispaivaa,
+       count(*) filter (where omistaja is null or btrim(omistaja) in ('', 'Ei vastuuhenkilöä'))::int as ilman_vastuuhenkiloa,
+       count(*) filter (where hinta_yhteensa is null and laskettu_hinta is null)::int as ilman_hintaa,
+       count(*) filter (where valmistumispaiva is not null and valmistumispaiva < current_date
+                          and status not in ('valmis','toimitettu','laskutettu'))::int as myohassa
+  from a;

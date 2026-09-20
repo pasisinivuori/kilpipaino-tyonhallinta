@@ -1,0 +1,117 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowScroll": false,
+  "animateLoading": true,
+  "borderRadius": "0.375rem",
+  "bottomRow": 48,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "chartData": {
+    "exbdlrzcbz": {
+      "data": "{{ (haeSeurantaTrendi.data || []).map(function(r){ return { x: r.pvm, y: Number(r.ilman_valmistumispaivaa || 0) }; }) }}",
+      "seriesName": "Ilman valmistumispäivää"
+    },
+    "flwsd9romh": {
+      "data": "{{ (haeSeurantaTrendi.data || []).map(function(r){ return { x: r.pvm, y: Number(r.myohassa || 0) }; }) }}",
+      "seriesName": "Myöhässä"
+    },
+    "jkfo8aydsm": {
+      "data": "{{ (haeSeurantaTrendi.data || []).map(function(r){ return { x: r.pvm, y: Number(r.odottaa_meita || 0) }; }) }}",
+      "seriesName": "Odottaa meitä"
+    }
+  },
+  "chartName": "Seurannan tunnusluvut",
+  "chartType": "LINE_CHART",
+  "customFusionChartConfig": {
+    "dataSource": {
+      "chart": {
+        "alignCaptionWithCanvas": 1,
+        "canvasPadding": "0",
+        "caption": "Sales Report",
+        "captionAlignment": "center",
+        "captionFontColor": "#231F20",
+        "captionFontSize": "24",
+        "captionPadding": "20",
+        "chartBottomMargin": "10",
+        "chartLeftMargin": "20",
+        "chartRightMargin": "40",
+        "chartTopMargin": "10",
+        "labelFontColor": "#716e6e",
+        "labelFontSize": "12",
+        "legendIconAlpha": "100",
+        "legendIconBgAlpha": "100",
+        "legendIconSides": "4",
+        "legendPosition": "top",
+        "theme": "fusion",
+        "xAxisName": "Product Line",
+        "xAxisNameFontColor": "#716e6e",
+        "xAxisNameFontSize": "14",
+        "yAxisName": "Revenue($)",
+        "yAxisNameFontColor": "#716e6e",
+        "yAxisNameFontSize": "14",
+        "yAxisValueFontColor": "#716e6e",
+        "yAxisValueFontSize": "12"
+      },
+      "data": [
+        {
+          "label": "Product1",
+          "value": 20000
+        },
+        {
+          "label": "Product2",
+          "value": 22000
+        },
+        {
+          "label": "Product3",
+          "value": 32000
+        }
+      ]
+    },
+    "type": "column2d"
+  },
+  "dynamicBindingPathList": [
+    {
+      "key": "chartData.jkfo8aydsm.data"
+    },
+    {
+      "key": "chartData.exbdlrzcbz.data"
+    },
+    {
+      "key": "chartData.flwsd9romh.data"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "fontFamily"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "flexVerticalAlignment": "start",
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "gz59otsw56",
+  "labelOrientation": "auto",
+  "leftColumn": 1,
+  "minWidth": 450,
+  "needsErrorInfo": true,
+  "originalBottomRow": 50,
+  "originalTopRow": 7,
+  "parentColumnSpace": 17.28125,
+  "parentId": "fsssvqxt7c",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 63,
+  "showDataPointLabel": true,
+  "topRow": 9,
+  "type": "CHART_WIDGET",
+  "version": 1,
+  "widgetId": "v5oh8maxl6",
+  "widgetName": "seurantaKaavio",
+  "xAxisName": "Päivä",
+  "yAxisName": "kpl"
+}
