@@ -42,7 +42,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{JSObject1.lahetaVastausLiitteineen().then(() => { getViestitTk.run(); getTk.run(); })}}",
+  "onClick": "{{ (function(){\n  var ennen = (getViestitTk.data || []).length;\n  return storeValue('viestiEnnen', ennen)\n    .then(function(){ return storeValue('viestiYritykset', 0); })\n    .then(function(){ return lahetaVastaus.run(); })\n    .then(function(){\n      getTk.run();\n      getViestitTk.run();\n      setInterval(function(){\n        var k = (appsmith.store.viestiYritykset || 0) + 1;\n        storeValue('viestiYritykset', k);\n        if (k >= 10) { clearInterval('viestiPoll'); }\n        getViestitTk.run().then(function(d){\n          if ((d || []).length > (appsmith.store.viestiEnnen || 0)) { clearInterval('viestiPoll'); }\n        });\n      }, 1500, 'viestiPoll');\n    })\n    .catch(function(e){ showAlert('Viestin lähetys epäonnistui: ' + ((e && e.message) ? e.message : e), 'error'); });\n})() }}",
   "originalBottomRow": 22,
   "originalTopRow": 18,
   "parentColumnSpace": 17.28125,
