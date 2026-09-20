@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 27,
+  "bottomRow": 43,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "defaultText": "",
   "dynamicBindingPathList": [
@@ -43,7 +43,7 @@
   "mobileRightColumn": 62,
   "mobileTopRow": 7,
   "needsErrorInfo": false,
-  "originalBottomRow": 27,
+  "originalBottomRow": 43,
   "originalTopRow": 7,
   "parentColumnSpace": 17.28125,
   "parentId": "sgbx674r47",

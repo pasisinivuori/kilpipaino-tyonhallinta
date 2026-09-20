@@ -1,13 +1,13 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 43,
+  "bottomRow": 320,
   "boxShadow": "none",
   "canEscapeKeyClose": true,
   "canOutsideClickClose": true,
   "children": [
     {
-      "bottomRow": 360,
+      "bottomRow": 320,
       "canExtend": false,
       "containerStyle": "none",
       "detachFromLayout": true,
@@ -40,7 +40,7 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
-  "height": 360,
+  "height": 320,
   "isCanvas": true,
   "isLoading": false,
   "key": "tmf1k0z89o",
