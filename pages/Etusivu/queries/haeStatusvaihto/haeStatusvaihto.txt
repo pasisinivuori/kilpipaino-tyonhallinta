@@ -1,0 +1,4 @@
+select tp_numero, asiakas, vanha_status, uusi_status, sama, ilmoitus_lahtee, vastaanottaja, viive_min
+  from public.statusvaihdon_esikatselu(
+        nullif({{ appsmith.store.siirto.id || '' }}::text, '')::uuid,
+        {{ appsmith.store.siirto.uusi || '' }}::text);

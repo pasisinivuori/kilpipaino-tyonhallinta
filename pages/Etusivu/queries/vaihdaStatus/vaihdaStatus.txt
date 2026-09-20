@@ -1,0 +1,3 @@
+select (public.vaihda_status(
+         nullif({{ appsmith.store.siirto.id || '' }}::text, '')::uuid,
+         {{ appsmith.store.siirto.uusi || '' }}::text)).tp_numero as tp_numero;

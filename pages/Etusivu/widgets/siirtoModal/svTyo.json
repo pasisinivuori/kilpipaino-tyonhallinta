@@ -1,0 +1,43 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 11,
+  "dynamicBindingPathList": [
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "1rem",
+  "fontStyle": "BOLD",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "79if8sri4u",
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "needsErrorInfo": false,
+  "originalBottomRow": 5,
+  "originalTopRow": 1,
+  "overflow": "NONE",
+  "parentColumnSpace": 11.568359375,
+  "parentId": "iyju4t95ka",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 63,
+  "shouldTruncate": false,
+  "text": "{{ ((haeStatusvaihto.data && haeStatusvaihto.data[0]) || {}).tp_numero ? (((haeStatusvaihto.data && haeStatusvaihto.data[0]) || {}).tp_numero + '  ·  ' + (((haeStatusvaihto.data && haeStatusvaihto.data[0]) || {}).asiakas || '')) : '' }}",
+  "textAlign": "LEFT",
+  "textColor": "#111827",
+  "topRow": 7,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "xfe9w72and",
+  "widgetName": "svTyo"
+}
