@@ -53,11 +53,12 @@
     "statusilmoitukset",
     "ilmoitus_jonossa"
   ],
-  "columnUpdatedAt": 1789589195837,
+  "columnUpdatedAt": 1789939406907,
   "columnWidthMap": {
     "customColumn1": 72,
     "customColumn2": 210,
     "customColumn3": 48,
+    "tp_numero": 140,
     "yhteenveto": 456
   },
   "compactMode": "SHORT",
@@ -691,7 +692,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": false,
+      "isVisible": true,
       "label": "TP-numero",
       "notation": "standard",
       "originalId": "tp_numero",
@@ -912,7 +913,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 62,
   "searchKey": "",
-  "tableData": "{{ (function(rivit){ return (Switch2.isSwitchedOn && Array.isArray(rivit)) ? rivit.filter(function(r){ return r && r.odottaa_meilta; }) : rivit; })((function(){var rows=MultiSelect1.selectedOptionValues.length>0?SelectQuery.data.filter(function(r){return r.uusi_viesti_suljettuun||MultiSelect1.selectedOptionValues.includes(r.status);}):SelectQuery.data;var sorted=(rows||[]).slice().sort(function(a,b){return new Date(a.created_at)-new Date(b.created_at);});var ord=jarjestysSelect.selectedOptionValue==='asc'?sorted:sorted.reverse();return ord.filter(function(r){return r.uusi_viesti_suljettuun;}).concat(ord.filter(function(r){return !r.uusi_viesti_suljettuun;}));})()) }}",
+  "tableData": "{{ (jarjestysSelect.selectedOptionValue === 'kiire')\n   ? (SelectQuery.data || []).slice().sort(function(a, b){\n       var ta = (a.kiire_taso == null ? 9 : Number(a.kiire_taso));\n       var tb = (b.kiire_taso == null ? 9 : Number(b.kiire_taso));\n       if (ta !== tb) { return ta - tb; }\n       var oa = Number(a.kiire_odotus || 0), ob = Number(b.kiire_odotus || 0);\n       if (oa !== ob) { return ob - oa; }\n       return new Date(a.created_at) - new Date(b.created_at);\n     })\n   : ( (function(rivit){ return (Switch2.isSwitchedOn && Array.isArray(rivit)) ? rivit.filter(function(r){ return r && r.odottaa_meilta; }) : rivit; })((function(){var rows=MultiSelect1.selectedOptionValues.length>0?SelectQuery.data.filter(function(r){return r.uusi_viesti_suljettuun||MultiSelect1.selectedOptionValues.includes(r.status);}):SelectQuery.data;var sorted=(rows||[]).slice().sort(function(a,b){return new Date(a.created_at)-new Date(b.created_at);});var ord=jarjestysSelect.selectedOptionValue==='asc'?sorted:sorted.reverse();return ord.filter(function(r){return r.uusi_viesti_suljettuun;}).concat(ord.filter(function(r){return !r.uusi_viesti_suljettuun;}));})()) ) }}",
   "textSize": "0.875rem",
   "topRow": 2,
   "totalRecordsCount": 0,

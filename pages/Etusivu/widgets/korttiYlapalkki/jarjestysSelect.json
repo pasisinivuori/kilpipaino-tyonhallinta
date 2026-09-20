@@ -52,7 +52,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 31,
   "serverSideFiltering": false,
-  "sourceData": "[{\"name\":\"Uusimmasta vanhimpaan\",\"code\":\"desc\"},{\"name\":\"Vanhimmasta uusimpaan\",\"code\":\"asc\"}]",
+  "sourceData": "[{\"name\":\"Kiireellisyysjärjestys\",\"code\":\"kiire\"},{\"name\":\"Uusimmasta vanhimpaan\",\"code\":\"desc\"},{\"name\":\"Vanhimmasta uusimpaan\",\"code\":\"asc\"}]",
   "topRow": 13,
   "type": "SELECT_WIDGET",
   "version": 1,
