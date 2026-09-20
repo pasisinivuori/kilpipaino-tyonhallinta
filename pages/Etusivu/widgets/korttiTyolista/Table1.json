@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 68,
+  "bottomRow": 76,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": true,
@@ -163,6 +163,9 @@
     },
     {
       "key": "primaryColumns.customColumn3.cellBackground"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicPropertyPathList": [
@@ -200,7 +203,7 @@
   "inlineEditingSaveOption": "ROW_LEVEL",
   "isLoading": false,
   "isSortable": true,
-  "isVisible": true,
+  "isVisible": "{{ !nakymaSwitch.isSwitchedOn }}",
   "isVisibleDownload": true,
   "isVisibleFilters": false,
   "isVisiblePagination": true,
@@ -915,7 +918,7 @@
   "searchKey": "",
   "tableData": "{{ (jarjestysSelect.selectedOptionValue === 'kiire')\n   ? (SelectQuery.data || []).slice().sort(function(a, b){\n       var ta = (a.kiire_taso == null ? 9 : Number(a.kiire_taso));\n       var tb = (b.kiire_taso == null ? 9 : Number(b.kiire_taso));\n       if (ta !== tb) { return ta - tb; }\n       var oa = Number(a.kiire_odotus || 0), ob = Number(b.kiire_odotus || 0);\n       if (oa !== ob) { return ob - oa; }\n       return new Date(a.created_at) - new Date(b.created_at);\n     })\n   : ( (function(rivit){ return (Switch2.isSwitchedOn && Array.isArray(rivit)) ? rivit.filter(function(r){ return r && r.odottaa_meilta; }) : rivit; })((function(){var rows=MultiSelect1.selectedOptionValues.length>0?SelectQuery.data.filter(function(r){return r.uusi_viesti_suljettuun||MultiSelect1.selectedOptionValues.includes(r.status);}):SelectQuery.data;var sorted=(rows||[]).slice().sort(function(a,b){return new Date(a.created_at)-new Date(b.created_at);});var ord=jarjestysSelect.selectedOptionValue==='asc'?sorted:sorted.reverse();return ord.filter(function(r){return r.uusi_viesti_suljettuun;}).concat(ord.filter(function(r){return !r.uusi_viesti_suljettuun;}));})()) ) }}",
   "textSize": "0.875rem",
-  "topRow": 2,
+  "topRow": 8,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,

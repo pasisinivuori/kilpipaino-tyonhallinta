@@ -1,0 +1,44 @@
+{
+  "animateLoading": true,
+  "borderOpacity": 0,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": 0,
+  "bottomRow": 76,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "srcDoc"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onMessageReceived"
+    }
+  ],
+  "flexVerticalAlignment": "start",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": "{{ nakymaSwitch.isSwitchedOn }}",
+  "key": "8b8rxa4xgn",
+  "leftColumn": 1,
+  "needsErrorInfo": false,
+  "onMessageReceived": "{{ (function(){ var m = String(kanbanKehys.message || ''); if (m.indexOf('tyo:') === 0) { navigateTo('Työkortti', {id: m.slice(4)}); } })() }}",
+  "originalBottomRow": 92,
+  "originalTopRow": 12,
+  "parentColumnSpace": 30.25,
+  "parentId": "e3o4huo7b1",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 62,
+  "source": "",
+  "srcDoc": "{{ (function(){\n  var rows = (SelectQuery.data || []);\n  var sarakkeet = [\n    [\"uusi\",\"Uusi\"], [\"tarjous_lahetetty\",\"Tarjous lähetetty\"], [\"tilaus_vastaanotettu\",\"Tilaus vastaanotettu\"],\n    [\"suunnittelussa\",\"Suunnittelussa\"], [\"tuotannossa\",\"Tuotannossa\"], [\"odottaa_asennusta\",\"Odottaa asennusta\"],\n    [\"valmis\",\"Valmis\"], [\"toimitettu\",\"Toimitettu\"], [\"laskutettu\",\"Laskutettu\"]\n  ];\n  var varit = { 0: \"#B4232A\", 1: \"#DC2626\", 2: \"#B45309\", 3: \"#1D4ED8\" };\n  var esc = function(s){ return String(s == null ? \"\" : s).replace(/&/g,\"&amp;\").replace(/</g,\"&lt;\").replace(/>/g,\"&gt;\").replace(/\"/g,\"&quot;\"); };\n  var jono = rows.slice().sort(function(a,b){\n    var ta = (a.kiire_taso == null ? 9 : Number(a.kiire_taso)), tb = (b.kiire_taso == null ? 9 : Number(b.kiire_taso));\n    if (ta !== tb) { return ta - tb; }\n    return Number(b.kiire_odotus || 0) - Number(a.kiire_odotus || 0);\n  });\n  var html = \"\";\n  for (var i = 0; i < sarakkeet.length; i++) {\n    var koodi = sarakkeet[i][0], nimi = sarakkeet[i][1];\n    var omat = jono.filter(function(r){ return r.status === koodi; });\n    var kortit = omat.map(function(r){\n      var vari = varit[r.kiire_taso] || \"#9CA3AF\";\n      var merkit = [];\n      if (r.uusi_viesti_suljettuun) { merkit.push(\"Uusi viesti\"); }\n      else if (r.odottaa_meilta) { merkit.push(\"Odottaa meitä\"); }\n      if (r.valmistumispaiva) { merkit.push(\"Valmis \" + moment(r.valmistumispaiva).format(\"D.M.\")); }\n      if (r.omistaja && r.omistaja !== \"Ei vastuuhenkilöä\") { merkit.push(r.omistaja); }\n      var m = merkit.length ? \"<div class=\\\"m\\\">\" + esc(merkit.join(\" · \")) + \"</div>\" : \"\";\n      return \"<div class=\\\"c\\\" style=\\\"border-left-color:\" + vari + \"\\\" data-id=\\\"\" + esc(r.id) + \"\\\">\"\n           + \"<div class=\\\"t\\\">\" + esc(r.tp_numero) + \"</div>\"\n           + \"<div class=\\\"y\\\">\" + esc(r.yritys || r.asiakas || \"\") + \"</div>\"\n           + \"<div class=\\\"a\\\">\" + esc(r.aihe || \"\") + \"</div>\" + m + \"</div>\";\n    }).join(\"\");\n    if (!kortit) { kortit = \"<div class=\\\"e\\\">–</div>\"; }\n    html += \"<div class=\\\"col\\\"><div class=\\\"h\\\"><span>\" + nimi + \"</span><span class=\\\"n\\\">\" + omat.length + \"</span></div><div class=\\\"list\\\">\" + kortit + \"</div></div>\";\n  }\n  var css = \"html,body{height:100%;margin:0;overflow:hidden}body{font-family:-apple-system,Segoe UI,Roboto,Helvetica,sans-serif;font-size:12px;color:#1f2937;background:transparent}.w{display:flex;gap:8px;padding:2px;height:100%;box-sizing:border-box;overflow-x:auto;overflow-y:hidden}.col{flex:0 0 236px;display:flex;flex-direction:column;background:#f3f4f6;border-radius:8px;padding:6px;box-sizing:border-box;height:100%;overflow:hidden}.h{font-weight:600;font-size:12px;color:#374151;padding:2px 4px 6px;display:flex;justify-content:space-between;align-items:baseline;flex:0 0 auto}.n{color:#6b7280;font-weight:600}.list{overflow-y:auto;flex:1 1 auto;min-height:0}.c{background:#fff;border:1px solid #e5e7eb;border-left:4px solid #9CA3AF;border-radius:6px;padding:6px 8px;margin-bottom:6px;cursor:pointer}.c:hover{border-color:#9ca3af;background:#f9fafb}.t{font-weight:600;font-size:12px}.y{color:#374151;font-size:11px;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.a{color:#6b7280;font-size:11px;margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.m{font-size:10px;color:#6b7280;margin-top:4px}.e{color:#c7cbd1;text-align:center;padding:10px 0;font-size:11px}\";\n  var js = \"document.addEventListener(\\\"click\\\",function(e){var n=e.target.closest(\\\"[data-id]\\\");if(n){parent.postMessage(\\\"tyo:\\\"+n.getAttribute(\\\"data-id\\\"),\\\"*\\\");}});\";\n  return \"<html><head><meta charset=\\\"utf-8\\\"><style>\" + css + \"</style></head><body><div class=\\\"w\\\">\" + html + \"</div><script>\" + js + \"<\\/script></body></html>\";\n})() }}",
+  "topRow": 8,
+  "type": "IFRAME_WIDGET",
+  "version": 1,
+  "widgetId": "2e88vewvtx",
+  "widgetName": "kanbanKehys"
+}
