@@ -2,21 +2,21 @@ SELECT t.id, t.tp_numero, t.tyyppi, t.status, t.omistaja, t.aihe, COALESCE(t.asi
      , t.valmistumispaiva
      , CASE
          WHEN t.uusi_viesti_suljettuun_at IS NOT NULL THEN 0
-         WHEN t.valmistumispaiva IS NOT NULL AND t.valmistumispaiva < current_date AND t.status NOT IN ('valmis','toimitettu','laskutettu') THEN 1
+         WHEN t.valmistumispaiva IS NOT NULL AND t.valmistumispaiva < public.tanaan() AND t.status NOT IN ('valmis','toimitettu','laskutettu') THEN 1
          WHEN COALESCE((SELECT v3.suunta = 'saapuva' FROM public.viestit v3 WHERE v3.toimeksianto_id = t.id ORDER BY COALESCE(v3.sent_at, v3.created_at) DESC LIMIT 1), false) THEN 2
-         WHEN t.valmistumispaiva IS NOT NULL AND t.valmistumispaiva <= current_date + 2 AND t.status NOT IN ('valmis','toimitettu','laskutettu') THEN 3
+         WHEN t.valmistumispaiva IS NOT NULL AND t.valmistumispaiva <= public.tanaan() + 2 AND t.status NOT IN ('valmis','toimitettu','laskutettu') THEN 3
          ELSE 4
        END AS kiire_taso
      , CASE
          WHEN t.uusi_viesti_suljettuun_at IS NOT NULL
            THEN EXTRACT(epoch FROM (now() - t.uusi_viesti_suljettuun_at))/3600
-         WHEN t.valmistumispaiva IS NOT NULL AND t.valmistumispaiva < current_date AND t.status NOT IN ('valmis','toimitettu','laskutettu')
-           THEN (current_date - t.valmistumispaiva) * 24.0
+         WHEN t.valmistumispaiva IS NOT NULL AND t.valmistumispaiva < public.tanaan() AND t.status NOT IN ('valmis','toimitettu','laskutettu')
+           THEN (public.tanaan() - t.valmistumispaiva) * 24.0
          WHEN COALESCE((SELECT v3.suunta = 'saapuva' FROM public.viestit v3 WHERE v3.toimeksianto_id = t.id ORDER BY COALESCE(v3.sent_at, v3.created_at) DESC LIMIT 1), false)
            THEN GREATEST(COALESCE(EXTRACT(epoch FROM (now() - (SELECT max(COALESCE(v4.sent_at, v4.created_at)) FROM public.viestit v4 WHERE v4.toimeksianto_id = t.id AND v4.suunta = 'saapuva')))/3600, 0),
                          COALESCE(EXTRACT(epoch FROM (now() - t.vastattava_mennessa))/3600, 0))
-         WHEN t.valmistumispaiva IS NOT NULL AND t.valmistumispaiva <= current_date + 2 AND t.status NOT IN ('valmis','toimitettu','laskutettu')
-           THEN (2 - (t.valmistumispaiva - current_date)) * 24.0
+         WHEN t.valmistumispaiva IS NOT NULL AND t.valmistumispaiva <= public.tanaan() + 2 AND t.status NOT IN ('valmis','toimitettu','laskutettu')
+           THEN (2 - (t.valmistumispaiva - public.tanaan())) * 24.0
          ELSE 0
        END AS kiire_odotus
      FROM public.toimeksiannot t LEFT JOIN LATERAL (SELECT 1 AS on_jonossa FROM public.statusilmoitus_jono q WHERE q.toimeksianto_id = t.id AND q.tila = 'odottaa' LIMIT 1) j ON true WHERE (CASE WHEN {{Switch1.isSwitchedOn}} = true

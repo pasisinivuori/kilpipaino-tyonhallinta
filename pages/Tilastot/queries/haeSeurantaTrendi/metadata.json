@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "select to_char(pvm, 'DD.MM.') as pvm, odottaa_meita, ilman_valmistumispaivaa, myohassa, ilman_vastuuhenkiloa\n  from public.seurantamittarit\n where pvm >= current_date - 60\n order by pvm;",
+      "body": "select to_char(pvm, 'DD.MM.') as pvm, odottaa_meita, ilman_valmistumispaivaa, myohassa, ilman_vastuuhenkiloa\n  from public.seurantamittarit\n where pvm >= public.tanaan() - 60\n order by pvm;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

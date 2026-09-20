@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT tp_numero, COALESCE(NULLIF(btrim(asiakas_yritys),''), NULLIF(btrim(asiakas_nimi),''), asiakas_email, '') AS asiakas, to_char(asennuspaiva, 'DD.MM.YYYY') AS asennuspaiva, COALESCE(NULLIF(btrim(omistaja),''),'') AS vastuuhenkilo FROM public.toimeksiannot WHERE arkistoitu=false AND asennus_sisaltyy=true AND asennuspaiva IS NOT NULL AND asennuspaiva >= current_date ORDER BY asennuspaiva ASC;",
+      "body": "SELECT tp_numero, COALESCE(NULLIF(btrim(asiakas_yritys),''), NULLIF(btrim(asiakas_nimi),''), asiakas_email, '') AS asiakas, to_char(asennuspaiva, 'DD.MM.YYYY') AS asennuspaiva, COALESCE(NULLIF(btrim(omistaja),''),'') AS vastuuhenkilo FROM public.toimeksiannot WHERE arkistoitu=false AND asennus_sisaltyy=true AND asennuspaiva IS NOT NULL AND asennuspaiva >= public.tanaan() ORDER BY asennuspaiva ASC;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

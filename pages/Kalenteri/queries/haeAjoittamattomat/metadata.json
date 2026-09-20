@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "select t.id, t.tp_numero,\n       coalesce(nullif(btrim(t.asiakas_yritys), ''), t.asiakas_nimi, t.asiakas_email) as asiakas,\n       t.aihe,\n       case t.status::text\n         when 'tilaus_vastaanotettu' then 'Tilaus vastaanotettu'\n         when 'suunnittelussa'       then 'Suunnittelussa'\n         when 'tuotannossa'          then 'Tuotannossa'\n         else t.status::text end as status,\n       t.created_at,\n       (current_date - t.created_at::date) as odottanut_pv\n  from public.toimeksiannot t\n where not t.arkistoitu\n   and t.valmistumispaiva is null\n   and t.status in ('tilaus_vastaanotettu','suunnittelussa','tuotannossa')\n order by t.created_at;",
+      "body": "select t.id, t.tp_numero,\n       coalesce(nullif(btrim(t.asiakas_yritys), ''), t.asiakas_nimi, t.asiakas_email) as asiakas,\n       t.aihe,\n       case t.status::text\n         when 'tilaus_vastaanotettu' then 'Tilaus vastaanotettu'\n         when 'suunnittelussa'       then 'Suunnittelussa'\n         when 'tuotannossa'          then 'Tuotannossa'\n         else t.status::text end as status,\n       t.created_at,\n       (public.tanaan() - t.created_at::date) as odottanut_pv\n  from public.toimeksiannot t\n where not t.arkistoitu\n   and t.valmistumispaiva is null\n   and t.status in ('tilaus_vastaanotettu','suunnittelussa','tuotannossa')\n order by t.created_at;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

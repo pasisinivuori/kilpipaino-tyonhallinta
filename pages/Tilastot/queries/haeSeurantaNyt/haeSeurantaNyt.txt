@@ -10,6 +10,6 @@ select count(*)::int as avoimia,
                           and status in ('tilaus_vastaanotettu','suunnittelussa','tuotannossa'))::int as ilman_valmistumispaivaa,
        count(*) filter (where omistaja is null or btrim(omistaja) in ('', 'Ei vastuuhenkilöä'))::int as ilman_vastuuhenkiloa,
        count(*) filter (where hinta_yhteensa is null and laskettu_hinta is null)::int as ilman_hintaa,
-       count(*) filter (where valmistumispaiva is not null and valmistumispaiva < current_date
+       count(*) filter (where valmistumispaiva is not null and valmistumispaiva < public.tanaan()
                           and status not in ('valmis','toimitettu','laskutettu'))::int as myohassa
   from a;

@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "select lahde, pvm, alkaa, otsikko, lisatieto, vari, toimeksianto_id, merkinta_id, tp_numero\nfrom public.kalenteri_tapahtumat\nwhere pvm between (date_trunc('week', current_date)::date) and (date_trunc('week', current_date)::date + 6)\n  and lahde <> 'maaraaika'\norder by pvm, alkaa nulls first, otsikko",
+      "body": "select lahde, pvm, alkaa, otsikko, lisatieto, vari, toimeksianto_id, merkinta_id, tp_numero\nfrom public.kalenteri_tapahtumat\nwhere pvm between (date_trunc('week', public.tanaan())::date) and (date_trunc('week', public.tanaan())::date + 6)\n  and lahde <> 'maaraaika'\norder by pvm, alkaa nulls first, otsikko",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

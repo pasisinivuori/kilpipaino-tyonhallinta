@@ -7,7 +7,7 @@ select t.id, t.tp_numero,
          when 'tuotannossa'          then 'Tuotannossa'
          else t.status::text end as status,
        t.created_at,
-       (current_date - t.created_at::date) as odottanut_pv
+       (public.tanaan() - t.created_at::date) as odottanut_pv
   from public.toimeksiannot t
  where not t.arkistoitu
    and t.valmistumispaiva is null
