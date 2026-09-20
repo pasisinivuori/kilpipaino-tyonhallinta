@@ -5,7 +5,7 @@
   "bottomRow": 14,
   "boxShadow": "none",
   "closeOnSelection": true,
-  "dateFormat": "YYYY-MM-DD",
+  "dateFormat": "DD.MM.YYYY",
   "datePickerType": "DATE_PICKER",
   "defaultDate": "{{ moment().format('YYYY-MM-DD') }}",
   "dynamicBindingPathList": [
@@ -51,7 +51,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 30,
   "shortcuts": false,
-  "timePrecision": "minute",
+  "timePrecision": "None",
   "topRow": 7,
   "type": "DATE_PICKER_WIDGET2",
   "version": 2,

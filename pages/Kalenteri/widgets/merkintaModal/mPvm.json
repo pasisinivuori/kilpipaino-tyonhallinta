@@ -5,7 +5,7 @@
   "bottomRow": 13,
   "boxShadow": "none",
   "closeOnSelection": true,
-  "dateFormat": "YYYY-MM-DD",
+  "dateFormat": "DD.MM.YYYY",
   "datePickerType": "DATE_PICKER",
   "defaultDate": "{{ appsmith.store.merkintaId ? ((haeMerkinta.data && haeMerkinta.data[0]) || {}).pvm : (appsmith.store.uusiPvm || moment().format('YYYY-MM-DD')) }}",
   "dynamicBindingPathList": [
@@ -60,7 +60,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 22,
   "shortcuts": false,
-  "timePrecision": "minute",
+  "timePrecision": "None",
   "topRow": 6,
   "type": "DATE_PICKER_WIDGET2",
   "version": 2,

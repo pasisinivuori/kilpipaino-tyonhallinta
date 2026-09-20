@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "update public.toimeksiannot\n   set valmistumispaiva = nullif({{ ajPvm.formattedDate }}::text, '')::date\n where id = nullif({{ appsmith.store.ajTyo.id || '' }}::text, '')::uuid\nreturning id, tp_numero, valmistumispaiva;",
+      "body": "update public.toimeksiannot\n   set valmistumispaiva = nullif({{ (ajPvm.selectedDate ? moment(ajPvm.selectedDate).format('YYYY-MM-DD') : '') }}::text, '')::date\n where id = nullif({{ appsmith.store.ajTyo.id || '' }}::text, '')::uuid\nreturning id, tp_numero, valmistumispaiva;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

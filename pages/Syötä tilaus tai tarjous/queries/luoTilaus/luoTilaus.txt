@@ -5,6 +5,6 @@ VALUES
    {{Input1.text || null}}, {{Input2.text || null}}, {{Input3.text || null}}, {{Input4.text || null}}, {{Input5.text || null}},
    {{Select1.selectedOptionValue}}, {{Input6.text || null}},
    {{RichTextEditor3.text || null}}, {{RichTextEditor4.text || null}},
-   {{DatePicker1.formattedDate || null}}, {{Input7.text || null}}, {{CurrencyInput1.value || null}}, {{laskutusperusteSelect.selectedOptionValue || 'kiintea'}},
-   {{Switch2.isSwitchedOn}}, {{Switch2.isSwitchedOn ? (DatePicker2.formattedDate || null) : null}}, nullif({{asiakkaanViite.text}}, ''))
+   {{(DatePicker1.selectedDate ? moment(DatePicker1.selectedDate).format('YYYY-MM-DD') : '') || null}}, {{Input7.text || null}}, {{CurrencyInput1.value || null}}, {{laskutusperusteSelect.selectedOptionValue || 'kiintea'}},
+   {{Switch2.isSwitchedOn}}, {{Switch2.isSwitchedOn ? ((DatePicker2.selectedDate ? moment(DatePicker2.selectedDate).format('YYYY-MM-DD') : '') || null) : null}}, nullif({{asiakkaanViite.text}}, ''))
 RETURNING id, tp_numero;

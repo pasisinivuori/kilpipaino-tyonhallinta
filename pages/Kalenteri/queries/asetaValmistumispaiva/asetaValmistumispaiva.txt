@@ -1,4 +1,4 @@
 update public.toimeksiannot
-   set valmistumispaiva = nullif({{ ajPvm.formattedDate }}::text, '')::date
+   set valmistumispaiva = nullif({{ (ajPvm.selectedDate ? moment(ajPvm.selectedDate).format('YYYY-MM-DD') : '') }}::text, '')::date
  where id = nullif({{ appsmith.store.ajTyo.id || '' }}::text, '')::uuid
 returning id, tp_numero, valmistumispaiva;

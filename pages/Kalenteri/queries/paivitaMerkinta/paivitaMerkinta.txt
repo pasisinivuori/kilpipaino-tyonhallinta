@@ -1,5 +1,5 @@
 update public.kalenterimerkinnat set
-  pvm     = {{mPvm.formattedDate}}::date,
+  pvm     = {{(mPvm.selectedDate ? moment(mPvm.selectedDate).format('YYYY-MM-DD') : '')}}::date,
   alkaa   = public.muotoile_kello({{mAlkaa.text}}::text),
   paattyy = public.muotoile_kello({{mPaattyy.text}}::text),
   otsikko = btrim({{mOtsikko.text}}::text),

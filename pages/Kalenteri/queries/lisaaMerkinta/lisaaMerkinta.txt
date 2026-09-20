@@ -1,6 +1,6 @@
 insert into public.kalenterimerkinnat (pvm, alkaa, paattyy, otsikko, kuvaus, laji)
 values (
-  {{mPvm.formattedDate}}::date,
+  {{(mPvm.selectedDate ? moment(mPvm.selectedDate).format('YYYY-MM-DD') : '')}}::date,
   public.muotoile_kello({{mAlkaa.text}}::text),
   public.muotoile_kello({{mPaattyy.text}}::text),
   btrim({{mOtsikko.text}}::text),

@@ -5,7 +5,7 @@
   "bottomRow": 14,
   "boxShadow": "none",
   "closeOnSelection": true,
-  "dateFormat": "YYYY-MM-DD HH:mm",
+  "dateFormat": "DD.MM.YYYY",
   "datePickerType": "DATE_PICKER",
   "defaultDate": "{{getTk.data[0].valmistumispaiva}}",
   "dynamicBindingPathList": [
@@ -16,10 +16,10 @@
       "key": "borderRadius"
     },
     {
-      "key": "defaultDate"
+      "key": "isVisible"
     },
     {
-      "key": "isVisible"
+      "key": "defaultDate"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -63,7 +63,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 20,
   "shortcuts": false,
-  "timePrecision": "minute",
+  "timePrecision": "None",
   "topRow": 7,
   "type": "DATE_PICKER_WIDGET2",
   "version": 2,

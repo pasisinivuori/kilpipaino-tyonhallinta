@@ -5,7 +5,7 @@
   "bottomRow": 72,
   "boxShadow": "none",
   "closeOnSelection": true,
-  "dateFormat": "YYYY-MM-DD HH:mm",
+  "dateFormat": "DD.MM.YYYY",
   "datePickerType": "DATE_PICKER",
   "defaultDate": "",
   "dynamicBindingPathList": [
@@ -60,7 +60,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 21,
   "shortcuts": false,
-  "timePrecision": "minute",
+  "timePrecision": "None",
   "topRow": 65,
   "type": "DATE_PICKER_WIDGET2",
   "version": 2,
