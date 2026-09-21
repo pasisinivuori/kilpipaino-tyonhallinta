@@ -1,0 +1,61 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 85,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "isDisabled": false,
+  "isFilterable": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "ivpvd2buwd",
+  "label": "Yritys",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Onko tämä kaksoiskappale? Yhdistä tämä yritys yritykseen:",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 85,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 40,
+  "mobileTopRow": 78,
+  "needsErrorInfo": false,
+  "onOptionChange": "{{ storeValue('yhdistaVahvista', null) }}",
+  "optionLabel": "nimi",
+  "optionValue": "id",
+  "options": "{{ (haeLajit.data || []).map(l => ({ label: l.nimi, value: l.laji })) }}",
+  "originalBottomRow": 85,
+  "originalTopRow": 78,
+  "parentColumnSpace": 17.28125,
+  "parentId": "84nvpj3fz1",
+  "parentRowSpace": 10,
+  "placeholderText": "Hae säilytettävä yritys",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 40,
+  "serverSideFiltering": false,
+  "sourceData": "{{ haeYritykset.data || [] }}",
+  "topRow": 78,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "owvudjjgjm",
+  "widgetName": "yhdistaKohde"
+}

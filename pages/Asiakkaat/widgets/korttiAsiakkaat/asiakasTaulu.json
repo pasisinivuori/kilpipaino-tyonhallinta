@@ -373,7 +373,7 @@
       "isVisible": true,
       "label": "Asiakaskortti",
       "notation": "standard",
-      "onClick": "{{ storeValue('asiakas', currentRow).then(function(){ if (currentRow.laji === 'yritys') { resetWidget('aNimi'); resetWidget('aYtunnus'); resetWidget('aEmail'); resetWidget('aPuhelin'); resetWidget('aOsoite'); resetWidget('aMuistiinpanot'); resetWidget('aTaso'); haeYhteyshenkilot.run(); showModal('asiakasModal'); } else { storeValue('henkilo', { id: currentRow.henkilo_id, nimi: currentRow.asiakas, email: currentRow.email, puhelin: currentRow.puhelin, osoite: currentRow.osoite, muistiinpanot: currentRow.muistiinpanot, yritys_id: '' }).then(function(){ resetWidget('hNimi'); resetWidget('hEmail'); resetWidget('hPuhelin'); resetWidget('hOsoite'); resetWidget('hMuistiinpanot'); resetWidget('hYritys'); showModal('henkiloModal'); }); } }) }}",
+      "onClick": "{{ storeValue('asiakas', currentRow).then(function(){ storeValue('yhdistaVahvista', null); resetWidget('yhdistaKohde'); if (currentRow.laji === 'yritys') { resetWidget('aNimi'); resetWidget('aYtunnus'); resetWidget('aEmail'); resetWidget('aPuhelin'); resetWidget('aOsoite'); resetWidget('aMuistiinpanot'); resetWidget('aTaso'); haeYhteyshenkilot.run(); showModal('asiakasModal'); } else { storeValue('henkilo', { id: currentRow.henkilo_id, nimi: currentRow.asiakas, email: currentRow.email, puhelin: currentRow.puhelin, osoite: currentRow.osoite, muistiinpanot: currentRow.muistiinpanot, yritys_id: '' }).then(function(){ resetWidget('hNimi'); resetWidget('hEmail'); resetWidget('hPuhelin'); resetWidget('hOsoite'); resetWidget('hMuistiinpanot'); resetWidget('hYritys'); showModal('henkiloModal'); }); } }) }}",
       "originalId": "kortti",
       "sticky": "",
       "textSize": "0.875rem",

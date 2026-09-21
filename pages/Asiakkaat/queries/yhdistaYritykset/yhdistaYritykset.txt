@@ -1,0 +1,1 @@
+select public.yhdista_yritykset({{ (appsmith.store.asiakas || {}).yritys_id }}::uuid, {{ yhdistaKohde.selectedOptionValue }}::uuid)::text as tulos;
