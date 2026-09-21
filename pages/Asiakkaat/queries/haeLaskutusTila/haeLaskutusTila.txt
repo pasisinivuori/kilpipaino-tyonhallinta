@@ -1,0 +1,8 @@
+select to_char(public.laskutus_viimeisin_kk() - interval '11 months', 'MM/YYYY') as alku_kk,
+       to_char(public.laskutus_viimeisin_kk(), 'MM/YYYY') as loppu_kk,
+       (select count(*) from public.laskut)::int as laskuja,
+       to_char((select min(laskun_pvm) from public.laskut), 'DD.MM.YYYY') as ensimmainen,
+       to_char((select max(laskun_pvm) from public.laskut), 'DD.MM.YYYY') as viimeisin,
+       to_char((select max(tuotu_at) from public.laskut) at time zone 'Europe/Helsinki', 'DD.MM.YYYY HH24:MI') as tuotu,
+       (select count(*) from public.laskutusnimet where tila = 'tarkistettava')::int as tarkistettavia,
+       (select bool_or(vertailu_mahdollinen) from public.yritysten_myynti) as trendi_kaytossa;

@@ -1,0 +1,1 @@
+select id::text as id, taso, taso_lukittu from public.vapauta_yrityksen_taso({{ (appsmith.store.asiakas || {}).yritys_id }}::uuid);

@@ -1,0 +1,1 @@
+select public.tuo_laskut({{ JSON.stringify((laskuTiedosto.files[0] || {}).data || []) }}::jsonb)::text as tulos;

@@ -1,0 +1,57 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 11,
+  "boxShadow": "none",
+  "buttonColor": "#B45309",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "text"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": "{{ ((((haeLaskutusTila.data || [])[0]) || {}).tarkistettavia || 0) > 0 }}",
+  "key": "4c0n6d5oo2",
+  "leftColumn": 49,
+  "minWidth": 120,
+  "mobileBottomRow": 11,
+  "mobileLeftColumn": 49,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 7,
+  "needsErrorInfo": false,
+  "onClick": "{{ haeTarkistettavat.run().then(function(){ showModal('tarkistusModal'); }) }}",
+  "originalBottomRow": 11,
+  "originalTopRow": 7,
+  "parentColumnSpace": 17.28125,
+  "parentId": "yuu1hc9fg4",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 63,
+  "text": "{{ 'Tarkista nimet (' + ((((haeLaskutusTila.data || [])[0]) || {}).tarkistettavia || 0) + ')' }}",
+  "topRow": 7,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "5byvns8e5c",
+  "widgetName": "napTarkistettavat"
+}

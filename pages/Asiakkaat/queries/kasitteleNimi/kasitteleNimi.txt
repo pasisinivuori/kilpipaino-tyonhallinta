@@ -1,0 +1,5 @@
+select nimi, tila from public.kasittele_laskutusnimi(
+  {{ appsmith.store.knNimi }}::text,
+  {{ appsmith.store.knToiminto }}::text,
+  NULLIF({{ appsmith.store.knYritys || '' }}::text, '')::uuid,
+  NULLIF({{ appsmith.store.knUusiNimi || '' }}::text, ''));

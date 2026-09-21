@@ -1,0 +1,54 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 37,
+  "boxShadow": "none",
+  "buttonColor": "#22C55E",
+  "buttonVariant": "SECONDARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": "{{ !!((appsmith.store.asiakas || {}).taso_lukittu) }}",
+  "key": "dymioqiqsf",
+  "leftColumn": 47,
+  "minWidth": 120,
+  "mobileBottomRow": 37,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 32,
+  "needsErrorInfo": false,
+  "onClick": "{{ vapautaTaso.run().then(function(d){ var r = (d || [])[0] || {}; return storeValue('asiakas', Object.assign({}, appsmith.store.asiakas, { taso: r.taso, taso_lukittu: r.taso_lukittu })); }).then(function(){ resetWidget('aTaso'); haeAsiakkaat.run(); showAlert('Taso lasketaan taas automaattisesti myynnin perusteella.', 'success'); }).catch(function(e){ showAlert('Lukituksen purku epäonnistui: ' + ((e && e.message) ? e.message : e), 'error'); }) }}",
+  "originalBottomRow": 37,
+  "originalTopRow": 32,
+  "parentColumnSpace": 17.28125,
+  "parentId": "84nvpj3fz1",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 63,
+  "text": "Palauta automaattinen taso",
+  "topRow": 32,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "jjow7xrtzh",
+  "widgetName": "napVapautaTaso"
+}

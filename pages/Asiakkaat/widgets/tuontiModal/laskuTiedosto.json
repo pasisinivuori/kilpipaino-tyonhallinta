@@ -1,0 +1,51 @@
+{
+  "allowedFileTypes": [
+    ".csv",
+    "text/csv"
+  ],
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 22,
+  "boxShadow": "none",
+  "buttonColor": "#E0DEDE",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [],
+  "dynamicTyping": false,
+  "fileDataType": "Array",
+  "files": [],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "2h4lt2bilk",
+  "label": "Valitse CSV-tiedosto",
+  "leftColumn": 1,
+  "maxFileSize": 10,
+  "maxNumFiles": 1,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 22,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "originalBottomRow": 22,
+  "originalTopRow": 18,
+  "parentColumnSpace": 17.28125,
+  "parentId": "kfs94i8rqg",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 22,
+  "selectedFiles": [],
+  "topRow": 18,
+  "type": "FILE_PICKER_WIDGET_V2",
+  "version": 1,
+  "widgetId": "prf77r4cbx",
+  "widgetName": "laskuTiedosto"
+}

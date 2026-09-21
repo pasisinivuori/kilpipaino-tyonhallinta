@@ -1,0 +1,54 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 70,
+  "boxShadow": "none",
+  "buttonColor": "#22C55E",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{ !(tarkTaulu.selectedRow && tarkTaulu.selectedRow.nimi) || !tarkYritys.selectedOptionValue }}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "ggepyngxuq",
+  "leftColumn": 42,
+  "minWidth": 120,
+  "mobileBottomRow": 70,
+  "mobileLeftColumn": 42,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 65,
+  "needsErrorInfo": false,
+  "onClick": "{{ storeValue('knNimi', tarkTaulu.selectedRow.nimi).then(function(){ return storeValue('knToiminto', 'yhdista'); }).then(function(){ return storeValue('knYritys', tarkYritys.selectedOptionValue); }).then(function(){ return storeValue('knUusiNimi', ''); }).then(function(){ return kasitteleNimi.run(); }).then(function(){ haeTarkistettavat.run(); haeLaskutusTila.run(); haeAsiakkaat.run(); haeAsiakkaatMaara.run(); showAlert('Yhdistetty valittuun yritykseen', 'success'); }).catch(function(e){ showAlert('Virhe: ' + ((e && e.message) ? e.message : e), 'error'); }) }}",
+  "originalBottomRow": 70,
+  "originalTopRow": 65,
+  "parentColumnSpace": 17.28125,
+  "parentId": "p5qs1qhl2p",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 63,
+  "text": "Yhdistä valittuun",
+  "topRow": 65,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "vulcjiiswv",
+  "widgetName": "napYhdistaValittuun"
+}

@@ -1,0 +1,5 @@
+select nimi, laskuja, round(myynti_kaikki)::int as myynti, to_char(viimeisin_lasku, 'DD.MM.YYYY') as viimeisin,
+       ehdotus_yritys_id::text as ehdotus_id, ehdotus_nimi, round(coalesce(ehdotus_samankaltaisuus, 0) * 100)::int as osuvuus,
+       yritysmuoto, katkaistu
+  from public.laskutusnimet_tarkistettavat
+ order by myynti_kaikki desc, nimi;
