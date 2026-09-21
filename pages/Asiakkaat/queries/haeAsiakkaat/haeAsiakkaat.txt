@@ -1,14 +1,16 @@
 with p as (select lower(btrim(coalesce({{ asiakasTaulu.searchText }}::text, ''))) as q)
 select l.laji, l.yritys_id, l.henkilo_id, l.asiakas, l.yhteyshenkilot, l.yhteyshenkiloita,
        l.email, l.puhelin, l.y_tunnus, l.osoite, l.taso, l.muistiinpanot,
-       l.myynti_12kk, l.trendi, l.trendi_pct, l.laskuja_12kk, l.viimeisin_lasku, l.taso_lukittu
+       l.myynti_12kk, l.trendi, l.trendi_pct, l.laskuja_12kk, l.viimeisin_lasku, l.taso_lukittu,
+       l.myynti_edell_12kk, l.vuosimuutos_pct, l.asiakastila
   from public.asiakaslista l, p
- where p.q = ''
+ where (p.q = ''
     or lower(l.asiakas) like '%' || p.q || '%'
     or lower(coalesce(l.yhteyshenkilot, '')) like '%' || p.q || '%'
     or lower(coalesce(l.email, ''))   like '%' || p.q || '%'
     or lower(coalesce(l.puhelin, '')) like '%' || p.q || '%'
-    or lower(coalesce(l.y_tunnus, '')) like '%' || p.q || '%'
- order by l.myynti_12kk desc nulls last, lower(l.asiakas)
+    or lower(coalesce(l.y_tunnus, '')) like '%' || p.q || '%')
+   and (coalesce({{ tilaSuodatin.selectedOptionValue || 'kaikki' }}::text, 'kaikki') = 'kaikki' or l.asiakastila = {{ tilaSuodatin.selectedOptionValue || 'kaikki' }}::text)
+ order by l.myynti_12kk desc nulls last, l.myynti_edell_12kk desc nulls last, lower(l.asiakas)
  limit  coalesce({{ asiakasTaulu.pageSize }}::int, 20)
 offset coalesce({{ asiakasTaulu.pageOffset }}::int, 0);

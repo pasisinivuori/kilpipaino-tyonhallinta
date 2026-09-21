@@ -36,7 +36,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 48,
   "shouldTruncate": false,
-  "text": "{{ (function(t){ if (!t || !t.laskuja) return 'Laskutustietoja ei ole vielä tuotu. Tuo Fivaldin laskulista CSV-tiedostona.'; return 'Myynti 12 kk = ' + t.alku_kk + '–' + t.loppu_kk + ' (veroton) · ' + t.laskuja + ' laskua ' + t.ensimmainen + '–' + t.viimeisin + ' · tuotu ' + t.tuotu + (t.trendi_kaytossa ? ' · Trendi: 12 kk nyt vs. 12 kk kolme kuukautta sitten' : ' · Trendi tulee näkyviin, kun laskutusta on 15 kk'); })(haeLaskutusTila.data && haeLaskutusTila.data[0]) }}",
+  "text": "{{ (function(t){ if (!t || !t.laskuja) return 'Laskutustietoja ei ole vielä tuotu. Tuo Fivaldin laskulista CSV-tiedostona.'; return 'Myynti 12 kk = ' + t.alku_kk + '–' + t.loppu_kk + ' (veroton)' + (t.vuosi_kaytossa ? ' · vertailu ' + t.edell_alku_kk + '–' + t.edell_loppu_kk : '') + (t.trendi_kaytossa ? ' · trendi = 12 kk nyt vs. 3 kk sitten' : '') + ' · ' + t.laskuja + ' laskua ' + t.ensimmainen + '–' + t.viimeisin + ' · tuotu ' + t.tuotu; })(haeLaskutusTila.data && haeLaskutusTila.data[0]) }}",
   "textAlign": "LEFT",
   "textColor": "#4B5563",
   "topRow": 7,

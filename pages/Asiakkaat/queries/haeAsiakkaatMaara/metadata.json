@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "with p as (select lower(btrim(coalesce({{ asiakasTaulu.searchText }}::text, ''))) as q)\nselect count(*)::int as lkm\n  from public.asiakaslista l, p\n where p.q = ''\n    or lower(l.asiakas) like '%' || p.q || '%'\n    or lower(coalesce(l.yhteyshenkilot, '')) like '%' || p.q || '%'\n    or lower(coalesce(l.email, ''))   like '%' || p.q || '%'\n    or lower(coalesce(l.puhelin, '')) like '%' || p.q || '%'\n    or lower(coalesce(l.y_tunnus, '')) like '%' || p.q || '%'\n;",
+      "body": "with p as (select lower(btrim(coalesce({{ asiakasTaulu.searchText }}::text, ''))) as q)\nselect count(*)::int as lkm\n  from public.asiakaslista l, p\n where (p.q = ''\n    or lower(l.asiakas) like '%' || p.q || '%'\n    or lower(coalesce(l.yhteyshenkilot, '')) like '%' || p.q || '%'\n    or lower(coalesce(l.email, ''))   like '%' || p.q || '%'\n    or lower(coalesce(l.puhelin, '')) like '%' || p.q || '%'\n    or lower(coalesce(l.y_tunnus, '')) like '%' || p.q || '%')\n   and (coalesce({{ tilaSuodatin.selectedOptionValue || 'kaikki' }}::text, 'kaikki') = 'kaikki' or l.asiakastila = {{ tilaSuodatin.selectedOptionValue || 'kaikki' }}::text);",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

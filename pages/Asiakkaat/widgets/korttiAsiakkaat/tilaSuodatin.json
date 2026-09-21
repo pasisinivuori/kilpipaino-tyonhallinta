@@ -1,0 +1,91 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 6,
+  "boxShadow": "none",
+  "defaultOptionValue": "kaikki",
+  "dynamicBindingPathList": [],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "isDisabled": false,
+  "isFilterable": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "hok3d24irc",
+  "label": "",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 15,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 6,
+  "mobileLeftColumn": 15,
+  "mobileRightColumn": 32,
+  "mobileTopRow": 2,
+  "needsErrorInfo": false,
+  "onOptionChange": "{{ resetWidget('asiakasTaulu', true).then(function(){ haeAsiakkaat.run(); haeAsiakkaatMaara.run(); }) }}",
+  "optionLabel": "label",
+  "optionValue": "value",
+  "options": [
+    {
+      "label": "Kaikki asiakkaat",
+      "value": "kaikki"
+    },
+    {
+      "label": "Aktiiviset (ostanut 12 kk)",
+      "value": "aktiivinen"
+    },
+    {
+      "label": "Menetetyt (toistuva, ei ostoja 12 kk)",
+      "value": "menetetty"
+    },
+    {
+      "label": "Kertaostajat (ei ostoja 12 kk)",
+      "value": "kertaostaja"
+    }
+  ],
+  "originalBottomRow": 6,
+  "originalTopRow": 2,
+  "parentColumnSpace": 17.28125,
+  "parentId": "yuu1hc9fg4",
+  "parentRowSpace": 10,
+  "placeholderText": "Näytä",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 32,
+  "serverSideFiltering": false,
+  "sourceData": [
+    {
+      "label": "Kaikki asiakkaat",
+      "value": "kaikki"
+    },
+    {
+      "label": "Aktiiviset (ostanut 12 kk)",
+      "value": "aktiivinen"
+    },
+    {
+      "label": "Menetetyt (toistuva, ei ostoja 12 kk)",
+      "value": "menetetty"
+    },
+    {
+      "label": "Kertaostajat (ei ostoja 12 kk)",
+      "value": "kertaostaja"
+    }
+  ],
+  "topRow": 2,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "n76d5cgrjz",
+  "widgetName": "tilaSuodatin"
+}

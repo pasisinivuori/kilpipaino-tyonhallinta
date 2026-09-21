@@ -1,10 +1,10 @@
 with p as (select lower(btrim(coalesce({{ asiakasTaulu.searchText }}::text, ''))) as q)
 select count(*)::int as lkm
   from public.asiakaslista l, p
- where p.q = ''
+ where (p.q = ''
     or lower(l.asiakas) like '%' || p.q || '%'
     or lower(coalesce(l.yhteyshenkilot, '')) like '%' || p.q || '%'
     or lower(coalesce(l.email, ''))   like '%' || p.q || '%'
     or lower(coalesce(l.puhelin, '')) like '%' || p.q || '%'
-    or lower(coalesce(l.y_tunnus, '')) like '%' || p.q || '%'
-;
+    or lower(coalesce(l.y_tunnus, '')) like '%' || p.q || '%')
+   and (coalesce({{ tilaSuodatin.selectedOptionValue || 'kaikki' }}::text, 'kaikki') = 'kaikki' or l.asiakastila = {{ tilaSuodatin.selectedOptionValue || 'kaikki' }}::text);
