@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 45,
+  "bottomRow": 43,
   "dynamicBindingPathList": [
     {
       "key": "text"
@@ -21,12 +21,12 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 45,
+  "mobileBottomRow": 43,
   "mobileLeftColumn": 1,
   "mobileRightColumn": 63,
   "mobileTopRow": 39,
   "needsErrorInfo": false,
-  "originalBottomRow": 45,
+  "originalBottomRow": 43,
   "originalTopRow": 39,
   "overflow": "NONE",
   "parentColumnSpace": 11.568359375,
@@ -36,7 +36,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 63,
   "shouldTruncate": false,
-  "text": "{{ (function(a){ if (!a || a.laji !== 'yritys') return ''; var lukko = a.taso_lukittu ? ' · Taso asetettu käsin 🔒' : ' · Taso lasketaan myynnistä automaattisesti'; if (a.myynti_12kk == null) return 'Ei laskutusta tuoduissa tiedoissa.' + (a.taso_lukittu ? ' Taso asetettu käsin 🔒' : ''); var e = function(n){ return Math.round(Number(n || 0)).toLocaleString('fi-FI') + ' €'; }; var s = 'Myynti 12 kk: ' + e(a.myynti_12kk) + ' (' + (a.laskuja_12kk || 0) + ' laskua)'; if (a.myynti_edell_12kk != null) s += ' · edell. 12 kk ' + e(a.myynti_edell_12kk) + (a.vuosimuutos_pct != null ? ' (' + (a.vuosimuutos_pct > 0 ? '+' : '') + a.vuosimuutos_pct + ' %)' : ''); if (a.viimeisin_lasku) s += ' · viimeisin lasku ' + moment(a.viimeisin_lasku).format('DD.MM.YYYY'); if (a.asiakastila === 'menetetty') s += ' · MENETETTY: toistuva asiakas, ei ostoja 12 kk'; else if (a.asiakastila === 'kertaostaja') s += ' · kertaostaja'; else if (a.trendi && a.trendi_pct != null) s += ' · 3 kk trendi ' + (a.trendi_pct > 0 ? '+' : '') + a.trendi_pct + ' %'; return s + lukko; })(appsmith.store.asiakas) }}",
+  "text": "{{ (function(a){ if (!a || a.laji !== 'yritys') return ''; var t = a.asiakastila === 'menetetty' ? 'Asiakastila: MENETETTY – toistuva asiakas, ei ostoja 12 kk' : (a.asiakastila === 'kertaostaja' ? 'Asiakastila: kertaostaja – ei ostoja 12 kk' : (a.asiakastila === 'aktiivinen' ? 'Asiakastila: aktiivinen' : 'Ei laskutusta tuoduissa tiedoissa')); return t + (a.taso_lukittu ? ' · Taso asetettu käsin 🔒' : ' · Taso lasketaan myynnistä automaattisesti'); })(appsmith.store.asiakas) }}",
   "textAlign": "LEFT",
   "textColor": "#374151",
   "topRow": 39,

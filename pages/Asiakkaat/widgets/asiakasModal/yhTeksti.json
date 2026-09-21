@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 50,
+  "bottomRow": 69,
   "dynamicBindingPathList": [
     {
       "key": "text"
@@ -21,8 +21,8 @@
   "minDynamicHeight": 4,
   "minWidth": 450,
   "needsErrorInfo": false,
-  "originalBottomRow": 11,
-  "originalTopRow": 7,
+  "originalBottomRow": 30,
+  "originalTopRow": 26,
   "overflow": "NONE",
   "parentColumnSpace": 11.568359375,
   "parentId": "84nvpj3fz1",
@@ -34,7 +34,7 @@
   "text": "{{ 'Yhteyshenkilöt (' + ((haeYhteyshenkilot.data || []).length) + ')' }}",
   "textAlign": "LEFT",
   "textColor": "#B4232A",
-  "topRow": 46,
+  "topRow": 65,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

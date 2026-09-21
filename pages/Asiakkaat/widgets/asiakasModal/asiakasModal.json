@@ -1,13 +1,13 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 64,
+  "bottomRow": 83,
   "boxShadow": "none",
   "canEscapeKeyClose": true,
   "canOutsideClickClose": true,
   "children": [
     {
-      "bottomRow": 960,
+      "bottomRow": 1150,
       "canExtend": false,
       "containerStyle": "none",
       "detachFromLayout": true,
@@ -18,7 +18,7 @@
       "isVisible": true,
       "key": "vp4ruazo52",
       "leftColumn": 0,
-      "minHeight": 640,
+      "minHeight": 830,
       "noPad": true,
       "openParentPropertyPane": false,
       "parentColumnSpace": 1,
@@ -40,7 +40,7 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
-  "height": 960,
+  "height": 1150,
   "isCanvas": true,
   "isLoading": false,
   "key": "uen8km7rl6",

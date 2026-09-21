@@ -1,0 +1,18 @@
+with a as (select public.laskutus_viimeisin_kk() kk, (select date_trunc('month', min(laskun_pvm))::date from public.laskut) alku),
+r as (select l.laskun_pvm, l.veroton from public.laskut l join public.laskutusnimet n on n.nimi = l.asiakasnimi and n.tila = 'yhdistetty' where n.yritys_id = {{ (appsmith.store.asiakas || {}).yritys_id }}::uuid)
+select to_char(a.alku,'MM/YYYY') data_alku, to_char(a.kk,'MM/YYYY') data_loppu,
+  to_char(a.kk - interval '2 months','MM/YYYY') kk3_alku,
+  coalesce(sum(r.veroton),0)::float kokonais,
+  count(r.veroton) filter (where r.veroton > 0)::int laskuja,
+  count(r.veroton) filter (where r.veroton < 0)::int hyvityksia,
+  coalesce(sum(r.veroton) filter (where r.laskun_pvm >= a.kk - interval '11 months' and r.laskun_pvm < a.kk + interval '1 month'),0)::float m12,
+  count(r.veroton) filter (where r.veroton > 0 and r.laskun_pvm >= a.kk - interval '11 months' and r.laskun_pvm < a.kk + interval '1 month')::int l12,
+  coalesce(sum(r.veroton) filter (where r.laskun_pvm >= a.kk - interval '2 months' and r.laskun_pvm < a.kk + interval '1 month'),0)::float m3,
+  count(r.veroton) filter (where r.veroton > 0 and r.laskun_pvm >= a.kk - interval '2 months' and r.laskun_pvm < a.kk + interval '1 month')::int l3,
+  (case when a.alku <= (a.kk - interval '14 months')::date then coalesce(sum(r.veroton) filter (where r.laskun_pvm >= a.kk - interval '14 months' and r.laskun_pvm < a.kk - interval '11 months'),0) end)::float m3_edv,
+  round(sum(r.veroton) / nullif(count(r.veroton) filter (where r.veroton > 0), 0))::float keskilasku,
+  round(sum(r.veroton) filter (where r.laskun_pvm >= a.kk - interval '11 months' and r.laskun_pvm < a.kk + interval '1 month') / nullif(count(r.veroton) filter (where r.veroton > 0 and r.laskun_pvm >= a.kk - interval '11 months' and r.laskun_pvm < a.kk + interval '1 month'), 0))::float keskilasku_12kk,
+  to_char(min(r.laskun_pvm),'DD.MM.YYYY') ensimmainen, to_char(max(r.laskun_pvm),'DD.MM.YYYY') viimeisin,
+  max(m.trendi) trendi, max(m.trendi_pct) trendi_pct, max(m.vuosimuutos_pct) vuosimuutos_pct, max(m.myynti_edell_12kk)::float e12, max(m.asiakastila) asiakastila
+from a left join r on true left join public.yritysten_myynti m on m.yritys_id = {{ (appsmith.store.asiakas || {}).yritys_id }}::uuid
+group by a.kk, a.alku;

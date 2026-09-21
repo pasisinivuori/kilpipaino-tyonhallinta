@@ -1,0 +1,41 @@
+{
+  "animateLoading": true,
+  "borderOpacity": 0,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": 0,
+  "bottomRow": 66,
+  "boxShadow": "none",
+  "dynamicBindingPathList": [
+    {
+      "key": "srcDoc"
+    }
+  ],
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [],
+  "flexVerticalAlignment": "start",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "l330lao485",
+  "leftColumn": 1,
+  "mobileBottomRow": 66,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 44,
+  "needsErrorInfo": false,
+  "originalBottomRow": 66,
+  "originalTopRow": 44,
+  "parentColumnSpace": 30.25,
+  "parentId": "84nvpj3fz1",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 63,
+  "source": "",
+  "srcDoc": "{{ (function(d, a){\n  if (!a || a.laji !== 'yritys') return '';\n  var st = '<style>body{margin:0;font-family:Inter,-apple-system,\"Segoe UI\",sans-serif;} .g{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;} .t{background:#F3F4F6;border-radius:6px;padding:8px 10px;} .l{font-size:11px;color:#6B7280;} .v{font-size:17px;font-weight:600;margin-top:2px;} .s{font-size:11px;color:#6B7280;margin-top:1px;} .f{font-size:11px;color:#6B7280;margin-top:6px;} p{font-size:13px;color:#6B7280;}</style>';\n  if (haeYrityksenMyynti.isLoading || !d) return '<html><head>' + st + '</head><body><p>Ladataan myyntilukuja…</p></body></html>';\n  if (!d.laskuja && !d.hyvityksia) return '<html><head>' + st + '</head><body><p>Ei laskutusta tuoduissa tiedoissa (' + d.data_alku + '–' + d.data_loppu + ').</p></body></html>';\n  var e = function(n){ return n == null ? '–' : Math.round(Number(n)).toLocaleString('fi-FI') + ' €'; };\n  var pc = function(p){ if (p == null) return { t: '–', c: '#6B7280' }; var s = p > 200 ? 'yli +200 %' : ((p > 0 ? '+' : '') + p + ' %'); return { t: s, c: p > 10 ? '#15803D' : (p < -10 ? '#B91C1C' : '#374151') }; };\n  var p3 = (d.m3_edv != null && Number(d.m3_edv) > 0) ? Math.round((Number(d.m3) / Number(d.m3_edv) - 1) * 100) : null;\n  var tr = pc(d.trendi_pct), vv = pc(d.vuosimuutos_pct), q = pc(p3);\n  if (d.trendi === 'uusi') tr = { t: (Number(d.e12 || 0) > 0 ? 'Palannut' : 'Uusi'), c: '#15803D' };\n  if (d.asiakastila === 'menetetty') tr = { t: 'Menetetty', c: '#B91C1C' };\n  if (d.m3_edv != null && Number(d.m3_edv) <= 0 && Number(d.m3) > 0) q = { t: 'Uusi', c: '#15803D' };\n  if (d.m3_edv != null && Number(d.m3_edv) <= 0 && Number(d.m3) <= 0) q = { t: '–', c: '#6B7280' };\n  var tile = function(l, v, s, c){ return '<div class=\"t\"><div class=\"l\">' + l + '</div><div class=\"v\" style=\"color:' + (c || '#111827') + '\">' + v + '</div><div class=\"s\">' + (s || '&nbsp;') + '</div></div>'; };\n  return '<html><head>' + st + '</head><body><div class=\"g\">'\n    + tile('Kokonaismyynti', e(d.kokonais), d.data_alku + '–' + d.data_loppu)\n    + tile('Myynti 12 kk', e(d.m12), d.l12 + ' laskua')\n    + tile('Myynti 3 kk', e(d.m3), d.kk3_alku + '–' + d.data_loppu + ' · ' + d.l3 + ' laskua')\n    + tile('Laskuja yhteensä', String(d.laskuja), d.hyvityksia ? ('lisäksi ' + d.hyvityksia + ' hyvitystä') : '')\n    + tile('Keskimääräinen lasku', e(d.keskilasku), '12 kk: ' + e(d.keskilasku_12kk))\n    + tile('Vs. edell. 12 kk', vv.t, 'edell. 12 kk ' + e(d.e12), vv.c)\n    + tile('Trendi', tr.t, '12 kk nyt vs. 3 kk sitten', tr.c)\n    + tile('3 kk vs. vuosi sitten', q.t, 'sama jakso v. sitten ' + e(d.m3_edv), q.c)\n    + '</div><div class=\"f\">Ensimmäinen lasku ' + (d.ensimmainen || '–') + ' · viimeisin ' + (d.viimeisin || '–') + ' · kaikki luvut verottomia</div></body></html>';\n})((haeYrityksenMyynti.data || [])[0], appsmith.store.asiakas) }}",
+  "topRow": 44,
+  "type": "IFRAME_WIDGET",
+  "version": 1,
+  "widgetId": "ot7s7mcxyn",
+  "widgetName": "myyntiKortti"
+}
