@@ -1,4 +1,4 @@
-SELECT v.id, v.suunta, v.lahettaja, v.aihe, v.body_text, to_char(v.sent_at at time zone 'Europe/Helsinki', 'DD.MM.YYYY HH24:MI') AS sent_at,
+SELECT v.id, v.suunta, v.lahettaja, v.aihe, v.body_text, v.sent_at, to_char(v.sent_at at time zone 'Europe/Helsinki', 'DD.MM.YYYY HH24:MI') AS sent_at_fi,
        (v.id = (SELECT v2.id FROM public.viestit v2
                  WHERE v2.toimeksianto_id = {{appsmith.URL.queryParams.id}}::uuid
                  ORDER BY COALESCE(v2.sent_at, v2.created_at) ASC, v2.id ASC LIMIT 1)) AS ensimmainen
