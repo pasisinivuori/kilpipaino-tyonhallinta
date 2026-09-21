@@ -1,0 +1,41 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 17,
+  "dynamicBindingPathList": [
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "0.875rem",
+  "fontStyle": "",
+  "isLoading": false,
+  "isVisible": true,
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "needsErrorInfo": false,
+  "originalBottomRow": 18,
+  "originalTopRow": 2,
+  "overflow": "NONE",
+  "parentColumnSpace": 15.07861328125,
+  "parentId": "pa5pqj8457",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 63,
+  "shouldTruncate": false,
+  "text": "{{ (function(){ var d = haeTyonKoko.data || []; if (!d.length) { return ''; } var n = d[d.length-1]; var e = d.length > 12 ? d[d.length-13] : null; function p(v){ return (v == null) ? '–' : v.toFixed(1).replace('.', ',') + ' %'; } function eu(v){ return (v == null) ? '–' : Math.round(v).toLocaleString('fi-FI') + ' €'; } function ve(v){ return e ? ' <span style=\"color:#716e6e\">(vuotta aiemmin ' + v + ')</span>' : ''; } return 'Liukuva 12 kk ' + n.alku + '–' + n.kk + ' · pikkutyön raja ' + Math.round(n.raja) + ' € · ' + n.laskuja.toLocaleString('fi-FI') + ' laskua<br/>' + '<b>Pikkutöitä ' + p(n.pienia_pct) + ' laskuista</b>' + ve(e ? p(e.pienia_pct) : '') + ' · ' + p(n.pienten_myynti_pct) + ' myynnistä' + ve(e ? p(e.pienten_myynti_pct) : '') + '<br/>' + '<b>Mediaanilasku ' + eu(n.mediaani) + '</b>' + ve(e ? eu(e.mediaani) : '') + ' · keskiarvo ' + eu(n.keskiarvo) + ve(e ? eu(e.keskiarvo) : '') + '<br/><span style=\"color:#716e6e\">Tavoitteen suunta: pikkutöiden osuus alas, mediaani ylös. Hyvitykset eivät ole mukana.</span>'; })() }}",
+  "textAlign": "LEFT",
+  "textColor": "#374151",
+  "topRow": 8,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "u3zananf2v",
+  "widgetName": "tyonKokoTeksti"
+}

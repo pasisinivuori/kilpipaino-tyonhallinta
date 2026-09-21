@@ -1,0 +1,10 @@
+select to_char(jakso_loppu_kk, 'MM/YYYY') as kk,
+       to_char(jakso_alku_kk, 'MM/YYYY') as alku,
+       raja::float as raja,
+       laskuja, pienia,
+       pienia_pct::float as pienia_pct,
+       pienten_myynti_pct::float as pienten_myynti_pct,
+       mediaani::float as mediaani,
+       keskiarvo::float as keskiarvo
+from public.tyon_koko_kehitys
+order by jakso_loppu_kk;
