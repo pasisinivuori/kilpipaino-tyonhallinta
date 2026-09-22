@@ -23,7 +23,7 @@
   "fontStyle": "",
   "isLoading": false,
   "isVisible": "{{ !nakymaSwitch.isSwitchedOn }}",
-  "leftColumn": 24,
+  "leftColumn": 38,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,

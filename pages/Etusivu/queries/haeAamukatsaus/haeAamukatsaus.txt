@@ -1,0 +1,3 @@
+select ryhma, ryhma_jarjestys, kiireellisyys, id, tp_numero, otsikko, lisatieto
+from public.aamukatsaus()
+order by ryhma_jarjestys, kiireellisyys, tp_numero;
