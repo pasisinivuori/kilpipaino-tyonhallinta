@@ -1,0 +1,54 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 7,
+  "dynamicBindingPathList": [
+    {
+      "key": "isVisible"
+    },
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "0.75rem",
+  "fontStyle": "",
+  "isLoading": false,
+  "isVisible": "{{ !nakymaSwitch.isSwitchedOn }}",
+  "leftColumn": 24,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 9,
+  "mobileLeftColumn": 14,
+  "mobileRightColumn": 28,
+  "mobileTopRow": 5,
+  "needsErrorInfo": false,
+  "originalBottomRow": 7,
+  "originalTopRow": 2,
+  "overflow": "NONE",
+  "parentColumnSpace": 17.28125,
+  "parentId": "e3o4huo7b1",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 63,
+  "shouldTruncate": false,
+  "text": "✉️ uusi viesti · ⏳ odottaa meiltä · ⏰ myöhässä · 🔴 vastaamatta yli 48 h · 🔔 statusilmoitukset päällä",
+  "textAlign": "RIGHT",
+  "textColor": "#6B7280",
+  "topRow": 2,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "6n5bwelrtr",
+  "widgetName": "merkkienSelite"
+}

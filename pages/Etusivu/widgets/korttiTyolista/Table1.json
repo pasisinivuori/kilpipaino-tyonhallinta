@@ -61,7 +61,7 @@
     "kiire_taso",
     "kiire_odotus"
   ],
-  "columnUpdatedAt": 1790103749221,
+  "columnUpdatedAt": 1790104243132,
   "columnWidthMap": {
     "customColumn1": 92,
     "customColumn2": 200,
@@ -554,7 +554,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "{{ (Table1.processedTableData || []).map(function(currentRow, currentIndex) { return currentRow.odottaa_meilta ? '#FEFCE8' : (currentIndex % 2 === 1 ? '#F8FAFC' : ''); }) }}",
       "columnType": "html",
-      "computedValue": "{{ (Table1.processedTableData || []).map(function(currentRow, currentIndex) { var nimet = {uusi:'Uusi',tarjous_lahetetty:'Tarjous lähetetty',hylatty:'Hylätty',tilaus_vastaanotettu:'Tilaus vastaanotettu',suunnittelussa:'Suunnittelussa',tuotannossa:'Tuotannossa',odottaa_asennusta:'Odottaa asennusta',valmis:'Valmis',toimitettu:'Toimitettu',laskutettu:'Laskutettu'};var varit = {uusi:['#FEE2E2','#991B1B'],tarjous_lahetetty:['#FDE68A','#92400E'],tilaus_vastaanotettu:['#FDE68A','#92400E'],hylatty:['#F3F4F6','#6B7280'],suunnittelussa:['#E0E7FF','#3730A3'],tuotannossa:['#DBEAFE','#1E40AF'],odottaa_asennusta:['#E0F2FE','#075985'],valmis:['#DCFCE7','#166534'],toimitettu:['#DCFCE7','#166534'],laskutettu:['#E5E7EB','#374151']}; var s = currentRow.status; var v = varit[s] || ['#F3F4F6','#374151']; var n = nimet[s] || s || ''; return '<span style=\"display:inline-block;padding:2px 10px;border-radius:9999px;border:1px solid rgba(0,0,0,.08);background:' + v[0] + ';color:' + v[1] + ';font-size:12px;font-weight:600;white-space:nowrap\">' + n + '</span>'; }) }}",
+      "computedValue": "{{ (Table1.processedTableData || []).map(function(currentRow, currentIndex) { var nimet = {uusi:'Uusi',tarjous_lahetetty:'Tarjous lähetetty',hylatty:'Hylätty',tilaus_vastaanotettu:'Tilaus vastaanotettu',suunnittelussa:'Suunnittelussa',tuotannossa:'Tuotannossa',odottaa_asennusta:'Odottaa asennusta',valmis:'Valmis',toimitettu:'Toimitettu',laskutettu:'Laskutettu'};var varit = {uusi:['#FEE2E2','#991B1B'],tarjous_lahetetty:['#EDE9FE','#5B21B6'],tilaus_vastaanotettu:['#CCFBF1','#115E59'],hylatty:['#F3F4F6','#6B7280'],suunnittelussa:['#E0E7FF','#3730A3'],tuotannossa:['#DBEAFE','#1E40AF'],odottaa_asennusta:['#E0F2FE','#075985'],valmis:['#DCFCE7','#166534'],toimitettu:['#DCFCE7','#166534'],laskutettu:['#E5E7EB','#374151']}; var s = currentRow.status; var v = varit[s] || ['#F3F4F6','#374151']; var n = nimet[s] || s || ''; return '<span style=\"display:inline-block;padding:2px 10px;border-radius:9999px;border:1px solid rgba(0,0,0,.08);background:' + v[0] + ';color:' + v[1] + ';font-size:12px;font-weight:600;white-space:nowrap\">' + n + '</span>'; }) }}",
       "currencyCode": "USD",
       "customAlias": "",
       "decimals": 0,
