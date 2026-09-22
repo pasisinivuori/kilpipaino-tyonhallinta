@@ -40,7 +40,6 @@
     "yhteyshenkilo",
     "customColumn7",
     "customColumn8",
-    "customColumn1",
     "customColumn2",
     "valmistumispaiva",
     "id",
@@ -61,14 +60,13 @@
     "kiire_taso",
     "kiire_odotus"
   ],
-  "columnUpdatedAt": 1790104243132,
+  "columnUpdatedAt": 1790107184204,
   "columnWidthMap": {
-    "customColumn1": 92,
     "customColumn2": 200,
     "customColumn3": 48,
     "customColumn4": 96,
     "customColumn5": 170,
-    "customColumn6": 560,
+    "customColumn6": 620,
     "customColumn7": 130,
     "customColumn8": 150,
     "tp_numero": 142,
@@ -125,15 +123,6 @@
     },
     {
       "key": "primaryColumns.omistaja.computedValue"
-    },
-    {
-      "key": "primaryColumns.customColumn1.buttonColor"
-    },
-    {
-      "key": "primaryColumns.customColumn1.borderRadius"
-    },
-    {
-      "key": "primaryColumns.customColumn1.boxShadow"
     },
     {
       "key": "primaryColumns.odottaa_meilta.computedValue"
@@ -235,9 +224,6 @@
       "key": "primaryColumns.valmistumispaiva.cellBackground"
     },
     {
-      "key": "primaryColumns.customColumn1.cellBackground"
-    },
-    {
       "key": "primaryColumns.customColumn2.cellBackground"
     }
   ],
@@ -263,10 +249,10 @@
   ],
   "dynamicTriggerPathList": [
     {
-      "key": "primaryColumns.customColumn1.onClick"
+      "key": "primaryColumns.customColumn2.onClick"
     },
     {
-      "key": "primaryColumns.customColumn2.onClick"
+      "key": "onRowSelected"
     }
   ],
   "enableClientSideSearch": true,
@@ -290,6 +276,7 @@
   "mobileRightColumn": 62,
   "mobileTopRow": 2,
   "needsErrorInfo": false,
+  "onRowSelected": "{{ (function(){ var tyo = Table1.selectedRow; if (!tyo || !tyo.id) { return; } return resetWidget('Table1', false).then(function(){ return navigateTo('Työkortti', {id: tyo.id}); }); })() }}",
   "originalBottomRow": 68,
   "originalTopRow": 2,
   "parentId": "e3o4huo7b1",
@@ -392,46 +379,6 @@
       "originalId": "created_at",
       "sticky": "",
       "textColor": "",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
-    "customColumn1": {
-      "alias": "Avaa",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "borderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
-      "boxShadow": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
-      "buttonColor": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
-      "buttonLabel": "Avaa",
-      "buttonStyle": "rgb(3, 179, 101)",
-      "cellBackground": "{{ (Table1.processedTableData || []).map(function(currentRow, currentIndex) { return currentRow.odottaa_meilta ? '#FEFCE8' : (currentIndex % 2 === 1 ? '#F8FAFC' : ''); }) }}",
-      "columnType": "button",
-      "computedValue": "",
-      "currencyCode": "USD",
-      "customAlias": "",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "horizontalAlignment": "LEFT",
-      "id": "customColumn1",
-      "index": 10,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": true,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "Avaa",
-      "labelColor": "#FFFFFF",
-      "notation": "standard",
-      "onClick": "{{navigateTo('Työkortti', {id: currentRow.id})}}",
-      "originalId": "customColumn1",
-      "sticky": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
