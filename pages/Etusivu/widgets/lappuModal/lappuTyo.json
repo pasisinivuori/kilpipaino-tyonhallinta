@@ -1,0 +1,67 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 31,
+  "boxShadow": "none",
+  "defaultOptionValue": "{{ (appsmith.store.lappu && appsmith.store.lappu.toimeksianto_id) ? String(appsmith.store.lappu.toimeksianto_id) : '' }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "defaultOptionValue"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "label": "Liitä työhön (valinnainen)",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Liitä työhön (valinnainen)",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 33,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 22,
+  "mobileRightColumn": 41,
+  "mobileTopRow": 15,
+  "needsErrorInfo": false,
+  "optionLabel": "nimi",
+  "optionValue": "arvo",
+  "originalBottomRow": 22,
+  "originalTopRow": 15,
+  "parentColumnSpace": 17.5625,
+  "parentId": "lmmue8d9sf1iui3hb",
+  "parentRowSpace": 10,
+  "placeholderText": "Ei liitosta",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 63,
+  "serverSideFiltering": false,
+  "sourceData": "{{ (SelectQuery.data || []).filter(function(r){ return r && r.id; }).map(function(r){ return {nimi: String(r.tp_numero || '') + ' · ' + String(r.aihe || ''), arvo: String(r.id)}; }) }}",
+  "topRow": 23,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "lmmue8d9sf5jk9v3a",
+  "widgetName": "lappuTyo"
+}

@@ -1,0 +1,2 @@
+update public.muistilaput set arkistoitu = true, paivitetty = now()
+where id = {{appsmith.store.lappu.id}}::uuid

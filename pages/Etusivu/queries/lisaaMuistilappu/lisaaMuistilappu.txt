@@ -1,0 +1,8 @@
+insert into public.muistilaput (teksti, tekija, muistutus_pvm, toimeksianto_id, kiinnitetty)
+values (
+  {{lappuTeksti.text}},
+  public.lappu_tekija({{appsmith.user.email}}),
+  to_date(nullif({{lappuPvm.formattedDate}}::text, ''), 'DD.MM.YYYY'),
+  nullif({{lappuTyo.selectedOptionValue}}::text, '')::uuid,
+  coalesce(nullif({{lappuKiinnitys.isSwitchedOn}}::text, '')::boolean, false)
+)

@@ -1,0 +1,44 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignWidget": "LEFT",
+  "animateLoading": true,
+  "bottomRow": 37,
+  "boxShadow": "none",
+  "defaultSwitchState": "{{ !!(appsmith.store.lappu && appsmith.store.lappu.kiinnitetty) }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "defaultSwitchState"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "label": "Kiinnitä kärkeen",
+  "labelPosition": "Left",
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 19,
+  "mobileLeftColumn": 33,
+  "mobileRightColumn": 46,
+  "mobileTopRow": 15,
+  "needsErrorInfo": false,
+  "originalBottomRow": 19,
+  "originalTopRow": 15,
+  "parentColumnSpace": 17.5625,
+  "parentId": "lmmue8d9sf1iui3hb",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 30,
+  "topRow": 33,
+  "type": "SWITCH_WIDGET",
+  "version": 1,
+  "widgetId": "lmmue8d9sf6o9fkqu",
+  "widgetName": "lappuKiinnitys"
+}

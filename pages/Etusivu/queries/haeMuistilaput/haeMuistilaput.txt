@@ -1,0 +1,3 @@
+select id, teksti, tekija, vari, muistutus_pvm, to_char(muistutus_pvm,'DD.MM.YYYY') as muistutus, toimeksianto_id, tp_numero, kiinnitetty, myohassa, to_char(luotu,'DD.MM.YYYY') as luotu_pvm
+from public.muistilaput_nakyma
+order by kiinnitetty desc, luotu desc

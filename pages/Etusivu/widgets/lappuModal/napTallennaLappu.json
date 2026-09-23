@@ -1,0 +1,52 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 43,
+  "boxShadow": "none",
+  "buttonColor": "#FDE047",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{ !lappuTeksti.text }}",
+  "isLoading": false,
+  "isVisible": true,
+  "leftColumn": 49,
+  "minWidth": 120,
+  "needsErrorInfo": false,
+  "onClick": "{{ ((appsmith.store.lappu && appsmith.store.lappu.id) ? paivitaMuistilappu.run() : lisaaMuistilappu.run()).then(function(){ return haeMuistilaput.run(); }).then(function(){ return closeModal('lappuModal'); }) }}",
+  "originalBottomRow": 38,
+  "originalTopRow": 34,
+  "parentColumnSpace": 17.28125,
+  "parentId": "lmmue8d9sf1iui3hb",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 63,
+  "text": "Tallenna",
+  "topRow": 39,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "lmmue8d9sf8qzecex",
+  "widgetName": "napTallennaLappu"
+}

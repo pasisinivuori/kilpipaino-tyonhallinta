@@ -1,0 +1,7 @@
+update public.muistilaput set
+  teksti = {{lappuTeksti.text}},
+  muistutus_pvm = to_date(nullif({{lappuPvm.formattedDate}}::text, ''), 'DD.MM.YYYY'),
+  toimeksianto_id = nullif({{lappuTyo.selectedOptionValue}}::text, '')::uuid,
+  kiinnitetty = coalesce(nullif({{lappuKiinnitys.isSwitchedOn}}::text, '')::boolean, false),
+  paivitetty = now()
+where id = {{appsmith.store.lappu.id}}::uuid
