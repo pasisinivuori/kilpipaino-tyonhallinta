@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 27,
+  "bottomRow": 26,
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
@@ -27,7 +27,7 @@
   "mobileRightColumn": 40,
   "mobileTopRow": 2,
   "needsErrorInfo": false,
-  "originalBottomRow": 27,
+  "originalBottomRow": 26,
   "originalTopRow": 19,
   "overflow": "NONE",
   "parentColumnSpace": 11.568359375,
@@ -37,7 +37,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 62,
   "shouldTruncate": false,
-  "text": "{{ (function(){ var a = tKohde.selectedOptionValue; if (!a) { return 'Valitse kohde, niin kilven tiedot tulevat rekisteristä.'; } var k = (hakuKohteetT.data || []).filter(function(x){ return x.avain === a; })[0]; if (!k) { return ''; } if (!k.kilpi_id) { return 'Kohteella ei ole postilaatikkokilpeä rekisterissä — käytä alla olevaa käsinkirjausta.'; } var osat = [k.tyyppi, k.koko, k.vari, k.materiaali, k.kiinnitys, k.pintakasittely].filter(function(x){ return x; }); var t = 'Rekisteri: ' + osat.join(' · '); if (k.kilpia > 1) { t += '   (kohteella ' + k.kilpia + ' eri kilpeä — varmista että valitsit oikean)'; } if (k.tarkistettava) { t += '   HUOM: kilpi on merkitty tarkistettavaksi: ' + (k.tarkistuksen_syy || ''); } return t; })() }}",
+  "text": "{{ (function(){ var a = tKohde.selectedOptionValue; if (!a) { return 'Valitse kohde, niin kilven tiedot haetaan rekisteristä — tai'; } var k = (hakuKohteetT.data || []).filter(function(x){ return x.avain === a; })[0]; if (!k) { return ''; } if (!k.kilpi_id) { return 'Kohteella ei ole postilaatikkokilpeä rekisterissä — tai'; } var osat = [k.tyyppi, k.koko, k.vari, k.materiaali, k.kiinnitys, k.pintakasittely].filter(function(x){ return x; }); var t = 'Rekisteri: ' + osat.join(' · '); if (k.kilpia > 1) { t += '   (kohteella ' + k.kilpia + ' eri kilpeä — varmista että valitsit oikean)'; } if (k.tarkistettava) { t += '   HUOM: kilpi on merkitty tarkistettavaksi: ' + (k.tarkistuksen_syy || ''); } return t; })() }}",
   "textAlign": "LEFT",
   "textColor": "#374151",
   "topRow": 19,

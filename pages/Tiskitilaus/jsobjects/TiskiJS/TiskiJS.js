@@ -83,7 +83,7 @@ export default {
     await storeValue('tiskiLiitteet', []);
     await storeValue('tiskiRivit', []);
     await storeValue('kohdeHaettu', false);
-    await Promise.all([resetWidget('tAihe'), resetWidget('tNimi'), resetWidget('tYritys'), resetWidget('tEmail'), resetWidget('tPuh'), resetWidget('tOsoite'), resetWidget('tKuvaus'), resetWidget('tSisainen'), resetWidget('tPvm'), resetWidget('tHinta'), resetWidget('tViite'), resetWidget('tAsennus'), resetWidget('tAsennusPvm'), resetWidget('tLiitteet'), resetWidget('tHaku'), resetWidget('tLaskutus'), resetWidget('tTyyppi'), resetWidget('tKohde'), resetWidget('tKilpiTeksti'), resetWidget('tHuoneisto'), resetWidget('tMaksaja'), resetWidget('tLaskutusviite')]);
+    await Promise.all([resetWidget('tAihe'), resetWidget('tNimi'), resetWidget('tYritys'), resetWidget('tEmail'), resetWidget('tPuh'), resetWidget('tOsoite'), resetWidget('tKuvaus'), resetWidget('tSisainen'), resetWidget('tPvm'), resetWidget('tHinta'), resetWidget('tViite'), resetWidget('tAsennus'), resetWidget('tAsennusPvm'), resetWidget('tLiitteet'), resetWidget('tHaku'), resetWidget('tLaskutus'), resetWidget('tTyyppi'), resetWidget('tKohde'), resetWidget('tKilpiTeksti'), resetWidget('tHuoneisto'), resetWidget('tMaksaja'), resetWidget('tLaskutusviite'), resetWidget('tKilpiSisainen')]);
     closeModal('valmisModal');
   }
 }

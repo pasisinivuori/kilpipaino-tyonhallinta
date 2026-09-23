@@ -5,7 +5,7 @@ VALUES
    {{tNimi.text || null}}, {{tYritys.text || null}}, {{tEmail.text || null}}, {{tPuh.text || null}}, {{tOsoite.text || null}},
    {{tVastuu.selectedOptionValue}}, {{tAihe.text || null}},
    nullif(replace(coalesce({{tKuvaus.text}}, ''), chr(10), '<br>'), ''),
-   nullif(replace(coalesce({{tSisainen.text}}, ''), chr(10), '<br>'), ''),
+   nullif(replace(coalesce({{ tTyyppi.selectedOptionValue === 'kilpitilaus' ? tKilpiSisainen.text : tSisainen.text }}, ''), chr(10), '<br>'), ''),
    {{(tPvm.selectedDate ? moment(tPvm.selectedDate).format('YYYY-MM-DD') : '') || null}},
    {{tHinta.value || null}}, {{tLaskutus.selectedOptionValue || 'kiintea'}},
    {{tAsennus.isSwitchedOn}}, {{tAsennus.isSwitchedOn ? ((tAsennusPvm.selectedDate ? moment(tAsennusPvm.selectedDate).format('YYYY-MM-DD') : '') || null) : null}},
