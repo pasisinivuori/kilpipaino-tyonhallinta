@@ -1,0 +1,45 @@
+{
+  "animateLoading": true,
+  "borderRadius": "0.5rem",
+  "bottomRow": 79,
+  "boxShadow": "none",
+  "buttonColor": "#22C55E",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{ !kmTeksti.text }}",
+  "isLoading": false,
+  "isVisible": true,
+  "leftColumn": 49,
+  "minWidth": 120,
+  "needsErrorInfo": false,
+  "onClick": "{{ TiskiJS.lisaaKasin() }}",
+  "originalBottomRow": 79,
+  "originalTopRow": 73,
+  "parentColumnSpace": 17.28125,
+  "parentId": "ktmueblk9sdniai0",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 63,
+  "text": "Lisää listalle",
+  "topRow": 73,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "ktmueblk9spwunxp",
+  "widgetName": "napKmLisaa"
+}

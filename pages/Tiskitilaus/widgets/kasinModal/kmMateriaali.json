@@ -1,0 +1,63 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 48,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isFilterable": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Materiaali",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 33,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 64,
+  "mobileLeftColumn": 23,
+  "mobileRightColumn": 43,
+  "mobileTopRow": 57,
+  "needsErrorInfo": false,
+  "optionLabel": "nimi",
+  "optionValue": "arvo",
+  "originalBottomRow": 48,
+  "originalTopRow": 39,
+  "parentColumnSpace": 17.5625,
+  "parentId": "ktmueblk9sdniai0",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 63,
+  "serverSideFiltering": false,
+  "sourceData": "{{ [{nimi:'muovi', arvo:'muovi'}, {nimi:'alumiini', arvo:'alumiini'}, {nimi:'messinki', arvo:'messinki'}, {nimi:'dymo-nauha', arvo:'dymo-nauha'}, {nimi:'teippikirjaimet', arvo:'teippikirjaimet'}, {nimi:'tarra', arvo:'tarra'}, {nimi:'pahvi', arvo:'pahvi'}] }}",
+  "topRow": 39,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "ktmueblk9skzklmi",
+  "widgetName": "kmMateriaali"
+}

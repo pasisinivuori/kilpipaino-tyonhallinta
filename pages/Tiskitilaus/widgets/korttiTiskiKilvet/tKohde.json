@@ -1,48 +1,63 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-  "alignment": "left",
   "animateLoading": true,
-  "bottomRow": 15,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 17,
   "boxShadow": "none",
-  "defaultOptionValue": "tilaus",
+  "defaultOptionValue": "",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
     }
   ],
   "dynamicHeight": "FIXED",
-  "dynamicPropertyPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
   "dynamicTriggerPathList": [],
-  "flexVerticalAlignment": "start",
   "isDisabled": false,
-  "isInline": true,
+  "isFilterable": true,
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "label": "Tyyppi",
   "labelAlignment": "left",
   "labelPosition": "Top",
+  "labelText": "Hae kohde nimellä tai osoitteella",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
   "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
-  "mobileBottomRow": 13,
+  "minWidth": 450,
+  "mobileBottomRow": 14,
   "mobileLeftColumn": 1,
   "mobileRightColumn": 30,
   "mobileTopRow": 7,
   "needsErrorInfo": false,
-  "options": "[{\"label\":\"Tarjous\",\"value\":\"tarjouspyynto\"},{\"label\":\"Tilaus\",\"value\":\"tilaus\"},{\"label\":\"Postilaatikkokilvet\",\"value\":\"kilpitilaus\"}]",
-  "originalBottomRow": 15,
+  "optionLabel": "nayttonimi",
+  "optionValue": "avain",
+  "originalBottomRow": 17,
   "originalTopRow": 8,
   "parentColumnSpace": 17.28125,
-  "parentId": "tkmueal9bq1dljvjm",
+  "parentId": "ktmuebkm5e1a5jzy",
   "parentRowSpace": 10,
+  "placeholderText": "Esim. As Oy Amalfi tai Niemenvainionkatu",
   "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
   "rightColumn": 62,
+  "serverSideFiltering": false,
+  "sourceData": "{{hakuKohteetT.data}}",
   "topRow": 8,
-  "type": "RADIO_GROUP_WIDGET",
+  "type": "SELECT_WIDGET",
   "version": 1,
-  "widgetId": "tkmueal9br1f7qaq2",
-  "widgetName": "tTyyppi"
+  "widgetId": "ktmuebkm5e3bow4g",
+  "widgetName": "tKohde"
 }

@@ -1,19 +1,12 @@
 {
   "animateLoading": true,
   "borderRadius": "0.5rem",
-  "bottomRow": 16,
+  "bottomRow": 36,
   "boxShadow": "none",
-  "buttonColor": "#22C55E",
+  "buttonColor": "#E0DEDE",
   "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
-  "dynamicBindingPathList": [
-    {
-      "key": "text"
-    },
-    {
-      "key": "isDisabled"
-    }
-  ],
+  "dynamicBindingPathList": [],
   "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [
     {
@@ -21,7 +14,7 @@
     }
   ],
   "isDefaultClickDisabled": true,
-  "isDisabled": "{{ tTyyppi.selectedOptionValue === 'kilpitilaus' ? !(appsmith.store.tiskiRivit || []).length : !tAihe.text }}",
+  "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
   "leftColumn": 1,
@@ -31,11 +24,11 @@
   "mobileRightColumn": 15,
   "mobileTopRow": 74,
   "needsErrorInfo": false,
-  "onClick": "{{ TiskiJS.tallenna() }}",
-  "originalBottomRow": 16,
-  "originalTopRow": 6,
+  "onClick": "{{ showModal('kasinModal') }}",
+  "originalBottomRow": 36,
+  "originalTopRow": 29,
   "parentColumnSpace": 17.28125,
-  "parentId": "tkmueal9br2c1ah2h",
+  "parentId": "ktmuebkm5e1a5jzy",
   "parentRowSpace": 10,
   "placement": "CENTER",
   "recaptchaType": "V3",
@@ -43,10 +36,10 @@
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
   "rightColumn": 62,
-  "text": "{{ tTyyppi.selectedOptionValue === 'tilaus' ? 'Tallenna tilaus' : (tTyyppi.selectedOptionValue === 'kilpitilaus' ? 'Tallenna kilpitilaus' : 'Tallenna tarjouspyyntö') }}",
-  "topRow": 6,
+  "text": "Kohde ei ole rekisterissä – kirjaa kilpi käsin",
+  "topRow": 29,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "tkmueal9br2ekybir",
-  "widgetName": "napTiskiTallenna"
+  "widgetId": "ktmuebkm5e52yuo3",
+  "widgetName": "napKasinKilpi"
 }

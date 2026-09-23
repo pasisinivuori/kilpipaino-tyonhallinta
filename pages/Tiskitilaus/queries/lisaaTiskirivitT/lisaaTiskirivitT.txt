@@ -1,0 +1,1 @@
+select kilvet.lisaa_tiskirivit({{this.params.tid}}::uuid, {{this.params.rivit}}::jsonb) as tulos

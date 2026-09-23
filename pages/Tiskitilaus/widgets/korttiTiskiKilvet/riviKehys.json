@@ -1,0 +1,40 @@
+{
+  "animateLoading": true,
+  "borderOpacity": 0,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": 0,
+  "bottomRow": 86,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "srcDoc"
+    }
+  ],
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onMessageReceived"
+    }
+  ],
+  "flexVerticalAlignment": "start",
+  "isLoading": false,
+  "isVisible": true,
+  "leftColumn": 1,
+  "needsErrorInfo": false,
+  "onMessageReceived": "{{ (function(){ var m = String(riviKehys.message || '').split('|')[0]; if (m.indexOf('poistaRivi:') === 0) { var i = parseInt(m.slice(11), 10); var arr = (appsmith.store.tiskiRivit || []).slice(); arr.splice(i, 1); return storeValue('tiskiRivit', arr); } })() }}",
+  "originalBottomRow": 86,
+  "originalTopRow": 59,
+  "parentColumnSpace": 30.25,
+  "parentId": "ktmuebkm5e1a5jzy",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 62,
+  "source": "",
+  "srcDoc": "{{ (function(){\n var rivit = appsmith.store.tiskiRivit || [];\n var CSS = \"html,body{margin:0;height:100%;background:#FFFFFF;font-family:Inter,system-ui,sans-serif;overflow-y:auto}table{width:100%;border-collapse:collapse;font-size:14px}td{padding:9px 8px;border-bottom:1px solid #EEF0F2;vertical-align:top}td.n{width:28px;color:#9CA3AF}td.x{width:34px;text-align:center}.nimi{font-weight:700;color:#1F2937}.alle{color:#6B7280;font-size:12px;margin-top:2px}.poista{display:inline-block;width:26px;height:26px;line-height:24px;border-radius:50%;background:#F3F4F6;color:#4B5563;cursor:pointer;font-size:16px}.poista:hover{background:#FEE2E2;color:#991B1B}.tyhja{padding:26px 16px;color:#6B7280;font-size:14px;text-align:center}\";\n var JS = \"document.addEventListener(\\\"click\\\",function(e){var x=e.target.closest(\\\".poista\\\");if(x){parent.postMessage(\\\"poistaRivi:\\\"+x.getAttribute(\\\"data-i\\\")+\\\"|\\\"+Date.now(),\\\"*\\\");}});\";\n function esc(s){ return String(s == null ? \"\" : s).replace(/&/g,\"&amp;\").replace(/</g,\"&lt;\").replace(/>/g,\"&gt;\").replace(/\"/g,\"&quot;\"); }\n var body = rivit.map(function(r, i){\n  var alle = [r.kohde_nimi, [r.tyyppi, r.koko, r.vari, r.materiaali, r.kiinnitys].filter(function(x){return x;}).join(\" · \")].filter(function(x){return x;}).join(\"  —  \");\n  return \"<tr><td class=\\\"n\\\">\" + (i + 1) + \"</td><td><div class=\\\"nimi\\\">\" + esc(r.teksti) + (r.huoneisto ? \" <span class=\\\"alle\\\">(\" + esc(r.huoneisto) + \")</span>\" : \"\") + \"</div><div class=\\\"alle\\\">\" + esc(alle) + \"</div></td><td class=\\\"x\\\"><span class=\\\"poista\\\" data-i=\\\"\" + i + \"\\\">&times;</span></td></tr>\";\n }).join(\"\");\n if (!rivit.length) { body = \"<tr><td class=\\\"tyhja\\\" colspan=\\\"3\\\">Ei viel\\u00e4 kilpi\\u00e4 listalla.</td></tr>\"; }\n return \"<html><head><meta charset=\\\"utf-8\\\"><style>\" + CSS + \"</style></head><body><table>\" + body + \"</table><script>\" + JS + \"<\\/script></body></html>\";\n})() }}",
+  "topRow": 59,
+  "type": "IFRAME_WIDGET",
+  "version": 1,
+  "widgetId": "ktmuebkm5e9ztoub",
+  "widgetName": "riviKehys"
+}

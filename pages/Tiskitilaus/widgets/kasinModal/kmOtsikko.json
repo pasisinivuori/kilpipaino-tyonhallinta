@@ -1,10 +1,10 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 30,
+  "bottomRow": 8,
   "dynamicBindingPathList": [
     {
-      "key": "text"
+      "key": "borderRadius"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -13,31 +13,34 @@
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
   "fontSize": "1.25rem",
   "fontStyle": "BOLD",
-  "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
   "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
+  "mobileBottomRow": 6,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 40,
+  "mobileTopRow": 2,
   "needsErrorInfo": false,
-  "originalBottomRow": 30,
-  "originalTopRow": 11,
+  "originalBottomRow": 8,
+  "originalTopRow": 2,
   "overflow": "NONE",
   "parentColumnSpace": 11.568359375,
-  "parentId": "tkmueal9bs2ky6uig",
+  "parentId": "ktmueblk9sdniai0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 63,
   "shouldTruncate": false,
-  "text": "{{ (function(){ var t = appsmith.store.tiskiValmis || {}; var rivit = []; rivit.push(t.tp_numero || ''); if (t.asiakas) { rivit.push(t.asiakas); } if (t.kilpia) { rivit.push(t.kilpia + ' kilpeä tilausjonoon'); } rivit.push(t.liitteita ? t.liitteita + ' liitettä tallennettu' : 'Ei liitteitä'); return rivit.join('\\n'); })() }}",
+  "text": "Kilpi ilman rekisterikohdetta",
   "textAlign": "LEFT",
-  "textColor": "#111827",
-  "topRow": 11,
+  "textColor": "#B4232A",
+  "topRow": 2,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "tkmueal9bs2mekm6z",
-  "widgetName": "vTiedot"
+  "widgetId": "ktmueblk9sefg78v",
+  "widgetName": "kmOtsikko"
 }

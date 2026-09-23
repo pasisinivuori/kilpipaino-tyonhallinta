@@ -1,0 +1,63 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 37,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isFilterable": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Kilpityyppi",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 64,
+  "mobileLeftColumn": 23,
+  "mobileRightColumn": 43,
+  "mobileTopRow": 57,
+  "needsErrorInfo": false,
+  "optionLabel": "nimi",
+  "optionValue": "arvo",
+  "originalBottomRow": 37,
+  "originalTopRow": 28,
+  "parentColumnSpace": 17.5625,
+  "parentId": "ktmueblk9sdniai0",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 31,
+  "serverSideFiltering": false,
+  "sourceData": "{{ [{nimi:'Stala (PL-3)', arvo:'T:Stala'}, {nimi:'Stala PL-2', arvo:'T:Stala PL-2'}, {nimi:'SR / Sarvis / Orthex — 176x26 mm', arvo:'K:176x26 mm'}, {nimi:'Uusi SR — 208x18 mm', arvo:'K:208x18 mm'}, {nimi:'Bobi — 265x24 mm', arvo:'K:265x24 mm'}, {nimi:'Citybox — 185x24 mm', arvo:'K:185x24 mm'}, {nimi:'Muu — kirjoita koko viereen', arvo:'M:'}] }}",
+  "topRow": 28,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "ktmueblk9sh67uo3",
+  "widgetName": "kmTyyppi"
+}

@@ -1,0 +1,3 @@
+select avain, nayttonimi, taloyhtio_id, taloyhtio, osoitteet, paaosoite, kilpi_id, tyyppi, koko, vari, materiaali, kiinnitys, pintakasittely, kilpia, tarkistettava, tarkistuksen_syy
+from kilvet.tiski_kohde_nakyma
+order by taloyhtio

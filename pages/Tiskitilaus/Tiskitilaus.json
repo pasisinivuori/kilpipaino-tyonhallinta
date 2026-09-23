@@ -11,6 +11,7 @@
           "containerStyle": "none",
           "detachFromLayout": true,
           "dynamicBindingPathList": [],
+          "dynamicPropertyPathList": [],
           "dynamicTriggerPathList": [],
           "leftColumn": 0,
           "minHeight": 1292,
