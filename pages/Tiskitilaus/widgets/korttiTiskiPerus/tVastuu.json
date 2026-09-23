@@ -4,7 +4,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 26,
   "boxShadow": "none",
-  "defaultOptionValue": "Pasi",
+  "defaultOptionValue": "Ei vastuuhenkilöä",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
