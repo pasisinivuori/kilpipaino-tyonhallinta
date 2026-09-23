@@ -9,8 +9,7 @@ export default {
       if (kilpi && !tAihe.text) { await tAihe.setValue('Postilaatikkokilvet · ' + (rivit[0].kohde_nimi || '')); }
       if (!tAihe.text) { showAlert('Kirjoita aihe', 'warning'); return; }
       const kuvat = appsmith.store.tiskiKuvat || [];
-      const tiedostot = tLiitteet.files || [];
-      const liitteet = kuvat.concat(tiedostot);
+        const liitteet = kuvat;
       const vastaus = tarjous ? await luoTarjousT.run() : await luoTilausT.run();
       const r = Array.isArray(vastaus) ? vastaus[0] : vastaus;
       if (!r || !r.id) { showAlert('Tallennus epäonnistui', 'error'); return; }
@@ -83,7 +82,7 @@ export default {
     await storeValue('tiskiLiitteet', []);
     await storeValue('tiskiRivit', []);
     await storeValue('kohdeHaettu', false);
-    await Promise.all([resetWidget('tAihe'), resetWidget('tNimi'), resetWidget('tYritys'), resetWidget('tEmail'), resetWidget('tPuh'), resetWidget('tOsoite'), resetWidget('tKuvaus'), resetWidget('tSisainen'), resetWidget('tPvm'), resetWidget('tHinta'), resetWidget('tViite'), resetWidget('tAsennus'), resetWidget('tAsennusPvm'), resetWidget('tLiitteet'), resetWidget('tHaku'), resetWidget('tLaskutus'), resetWidget('tTyyppi'), resetWidget('tKohde'), resetWidget('tKilpiTeksti'), resetWidget('tHuoneisto'), resetWidget('tMaksaja'), resetWidget('tLaskutusviite'), resetWidget('tKilpiSisainen')]);
+    await Promise.all([resetWidget('tAihe'), resetWidget('tNimi'), resetWidget('tYritys'), resetWidget('tEmail'), resetWidget('tPuh'), resetWidget('tOsoite'), resetWidget('tKuvaus'), resetWidget('tSisainen'), resetWidget('tPvm'), resetWidget('tHinta'), resetWidget('tViite'), resetWidget('tAsennus'), resetWidget('tAsennusPvm'), resetWidget('tHaku'), resetWidget('tLaskutus'), resetWidget('tTyyppi'), resetWidget('tKohde'), resetWidget('tKilpiTeksti'), resetWidget('tHuoneisto'), resetWidget('tMaksaja'), resetWidget('tLaskutusviite'), resetWidget('tKilpiSisainen')]);
     closeModal('valmisModal');
   }
 }

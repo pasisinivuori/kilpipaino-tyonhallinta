@@ -35,7 +35,7 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 30,
+  "rightColumn": 62,
   "text": "Ota kuva tai piirrä",
   "topRow": 8,
   "type": "BUTTON_WIDGET",
