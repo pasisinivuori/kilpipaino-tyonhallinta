@@ -1,0 +1,8 @@
+select r.otsikko,
+       r.teksti,
+       to_char(r.luotu_at at time zone 'Europe/Helsinki', 'DD.MM.YYYY HH24:MI') as luotu,
+       (select jsonb_object_agg(t.tp_numero, t.id)
+          from public.toimeksiannot t
+         where t.tp_numero is not null) as tp_linkit
+  from (select 1) x
+  left join lateral (select * from public.raportti order by luotu_at desc limit 1) r on true

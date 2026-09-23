@@ -1,0 +1,40 @@
+{
+  "animateLoading": true,
+  "borderOpacity": 0,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": 0,
+  "bottomRow": 52,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "srcDoc"
+    }
+  ],
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [],
+  "flexVerticalAlignment": "start",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "leftColumn": 1,
+  "mobileBottomRow": 52,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 1,
+  "needsErrorInfo": false,
+  "originalBottomRow": 60,
+  "originalTopRow": 1,
+  "parentColumnSpace": 30.25,
+  "parentId": "zptqfvs6nk",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 63,
+  "source": "",
+  "srcDoc": "{{ (function(){\n  var css = \"*{box-sizing:border-box}body{margin:0;padding:18px 22px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#1F2937;background:#fff;line-height:1.55;font-size:14px}h1{font-size:19px;margin:0 0 4px;color:#B4232A}.aika{color:#6B7280;font-size:12px;margin:0 0 16px}h2{font-size:15px;margin:20px 0 8px;color:#111827;border-bottom:1px solid #E5E7EB;padding-bottom:4px}p{margin:8px 0}ol,ul{margin:8px 0;padding-left:22px}li{margin:6px 0}a{color:#B4232A;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(180,35,42,.35)}a:hover{background:#FEF2F2}strong{font-weight:650}.tyhja{color:#6B7280;font-style:italic}\";\n  var kortti = \"https://kilpipaino.appsmith.com/app/tyonhallinta/tyokortti-6a6f2badadc4847fb5c530e0?branch=master&id=\";\n  var d = (haeAamuraportti.data && haeAamuraportti.data[0]) || {};\n  var ots = d.otsikko || 'Aamuraportti';\n  var txt = d.teksti || '';\n  var map = d.tp_linkit || {};\n  function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }\n  function muotoile(s){ s = esc(s); s = s.replace(/\\*\\*(.+?)\\*\\*/g,'<strong>$1</strong>');\n    s = s.replace(/TP-\\d{4}-\\d{4}/g, function(tp){ var id = map[tp];\n      return id ? ('<a href=\"' + kortti + id + '\" target=\"_blank\" rel=\"noopener\" title=\"Avaa työkortti uuteen välilehteen\">' + tp + '</a>') : tp; }); return s; }\n  var html = '';\n  if (!txt) { html = '<p class=\"tyhja\">Aamuraporttia ei ole vielä luotu. Raportti kirjoitetaan arkiaamuisin klo 7.00.</p>'; }\n  else {\n    var rivit = txt.split(/\\r?\\n/), lista = null, out = [];\n    for (var i=0;i<rivit.length;i++){ var r = rivit[i].trim();\n      if (!r) { if(lista){out.push('</'+lista+'>');lista=null;} continue; }\n      var h = r.match(/^#{1,4}\\s+(.*)$/);\n      if (h) { if(lista){out.push('</'+lista+'>');lista=null;} out.push('<h2>'+muotoile(h[1])+'</h2>'); continue; }\n      var num = r.match(/^\\d+[.)]\\s+(.*)$/);\n      if (num) { if(lista!=='ol'){ if(lista)out.push('</'+lista+'>'); out.push('<ol>'); lista='ol'; } out.push('<li>'+muotoile(num[1])+'</li>'); continue; }\n      var bul = r.match(/^[-*\\u2022]\\s+(.*)$/);\n      if (bul) { if(lista!=='ul'){ if(lista)out.push('</'+lista+'>'); out.push('<ul>'); lista='ul'; } out.push('<li>'+muotoile(bul[1])+'</li>'); continue; }\n      if(lista){out.push('</'+lista+'>');lista=null;}\n      out.push('<p>'+muotoile(r)+'</p>');\n    }\n    if(lista) out.push('</'+lista+'>');\n    html = out.join('');\n  }\n  var aika = d.luotu ? ('<p class=\"aika\">Koottu ' + esc(d.luotu) + ' · työnumerosta pääsee työkortille</p>') : '';\n  return '<!doctype html><html><head><meta charset=\"utf-8\"><base target=\"_blank\"><style>' + css + '</style></head><body><h1>' + esc(ots) + '</h1>' + aika + html + '</body></html>';\n})() }}",
+  "topRow": 1,
+  "type": "IFRAME_WIDGET",
+  "version": 1,
+  "widgetId": "wzq1ygjque1",
+  "widgetName": "raporttiKehys"
+}
