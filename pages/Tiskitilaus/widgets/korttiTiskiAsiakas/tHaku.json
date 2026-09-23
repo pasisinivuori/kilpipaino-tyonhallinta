@@ -28,6 +28,9 @@
   "dynamicTriggerPathList": [
     {
       "key": "onOptionChange"
+    },
+    {
+      "key": "onFilterUpdate"
     }
   ],
   "isDisabled": false,
@@ -49,6 +52,7 @@
   "mobileRightColumn": 30,
   "mobileTopRow": 7,
   "needsErrorInfo": false,
+  "onFilterUpdate": "{{ hakuAsiakkaatT.run() }}",
   "onOptionChange": "{{ (function(){ const c=(hakuAsiakkaatT.data||[]).find(r=>r.id===tHaku.selectedOptionValue); if(!c){return;} return Promise.all([tNimi.setValue(c.nimi||''), tYritys.setValue(c.yritys||''), tEmail.setValue(c.email||''), tPuh.setValue(c.puhelin||''), tOsoite.setValue(c.osoite||'')]); })() }}",
   "optionLabel": "nayttonimi",
   "optionValue": "id",

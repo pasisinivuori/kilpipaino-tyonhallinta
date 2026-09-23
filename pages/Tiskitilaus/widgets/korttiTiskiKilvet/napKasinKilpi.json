@@ -6,7 +6,11 @@
   "buttonColor": "#E0DEDE",
   "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
-  "dynamicBindingPathList": [],
+  "dynamicBindingPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
   "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [
     {
@@ -16,7 +20,7 @@
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": "{{ (function(){ var a = tKohde.selectedOptionValue; if (a) { var k = (hakuKohteetT.data || []).filter(function(x){ return x.avain === a; })[0]; return !!(k && !k.kilpi_id); } return !!appsmith.store.kohdeHaettu || !!(tKohde.filterText || '').trim(); })() }}",
   "leftColumn": 1,
   "minWidth": 120,
   "mobileBottomRow": 78,

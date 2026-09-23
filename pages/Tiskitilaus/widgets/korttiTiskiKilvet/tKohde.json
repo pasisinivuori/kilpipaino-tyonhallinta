@@ -22,7 +22,14 @@
       "key": "sourceData"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onFilterUpdate"
+    },
+    {
+      "key": "onOptionChange"
+    }
+  ],
   "isDisabled": false,
   "isFilterable": true,
   "isLoading": false,
@@ -42,6 +49,8 @@
   "mobileRightColumn": 30,
   "mobileTopRow": 7,
   "needsErrorInfo": false,
+  "onFilterUpdate": "{{ storeValue('kohdeHaettu', true) }}",
+  "onOptionChange": "{{ storeValue('kohdeHaettu', false) }}",
   "optionLabel": "nayttonimi",
   "optionValue": "avain",
   "originalBottomRow": 17,
