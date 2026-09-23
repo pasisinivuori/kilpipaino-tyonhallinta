@@ -1,0 +1,35 @@
+{
+  "animateLoading": true,
+  "borderOpacity": 0,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": "0",
+  "bottomRow": 24,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "srcDoc"
+    }
+  ],
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [],
+  "flexVerticalAlignment": "start",
+  "isLoading": false,
+  "isVisible": true,
+  "leftColumn": 1,
+  "needsErrorInfo": false,
+  "originalBottomRow": 24,
+  "originalTopRow": 8,
+  "parentColumnSpace": 30.25,
+  "parentId": "wy852v1nt0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 62,
+  "source": "",
+  "srcDoc": "{{ (function(){\n var kuvat = (haeKuvaLiitteet.data && haeKuvaLiitteet.data.kuvat) || [];\n if (!kuvat.length) { return \"<html><head><meta charset=\\\"utf-8\\\"></head><body style=\\\"margin:0;background:#FFFFFF\\\"></body></html>\"; }\n var CSS = \"html,body{margin:0;height:100%;background:#FFFFFF;font-family:Inter,system-ui,sans-serif;overflow-x:auto;overflow-y:hidden}.rivi{display:flex;gap:12px;padding:4px 2px 8px;align-items:flex-start}a.kuva{display:block;width:120px;text-decoration:none;color:#374151;flex:0 0 auto}a.kuva img{width:120px;height:96px;object-fit:cover;border:1px solid #E3E5E8;border-radius:8px;display:block;background:#F9FAFB}a.kuva:hover img{border-color:#9CA3AF;box-shadow:0 2px 8px rgba(0,0,0,.15)}a.kuva span{display:block;font-size:11px;margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}\";\n function esc(s){ return String(s == null ? \"\" : s).replace(/&/g,\"&amp;\").replace(/</g,\"&lt;\").replace(/>/g,\"&gt;\").replace(/\"/g,\"&quot;\"); }\n var html = kuvat.map(function(k){ return '<a class=\"kuva\" href=\"' + esc(k.url) + '\" target=\"_blank\" rel=\"noopener\" title=\"' + esc(k.nimi) + '\"><img src=\"' + esc(k.url) + '\" alt=\"\"><span>' + esc(k.nimi) + '</span></a>'; }).join(\"\");\n return \"<html><head><meta charset=\\\"utf-8\\\"><style>\" + CSS + \"</style></head><body><div class=\\\"rivi\\\">\" + html + \"</div></body></html>\";\n})() }}",
+  "topRow": 8,
+  "type": "IFRAME_WIDGET",
+  "version": 1,
+  "widgetId": "kvmueedqwa0aybaz",
+  "widgetName": "kuvaKehys"
+}
