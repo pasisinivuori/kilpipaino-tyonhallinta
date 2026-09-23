@@ -10,9 +10,6 @@
   "dynamicPropertyPathList": [
     {
       "key": "onClick"
-    },
-    {
-      "key": "isDisabled"
     }
   ],
   "dynamicTriggerPathList": [
@@ -20,14 +17,20 @@
       "key": "onClick"
     }
   ],
+  "iconAlign": "left",
+  "iconName": "cog",
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "leftColumn": 45,
-  "minWidth": 120,
+  "leftColumn": 59,
+  "minWidth": 40,
+  "mobileBottomRow": 6,
+  "mobileLeftColumn": 59,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 2,
   "needsErrorInfo": false,
-  "onClick": "{{ storeValue('lappu', {}).then(function(){ return Promise.all([resetWidget('lappuTeksti'), resetWidget('lappuPvm'), resetWidget('lappuTyo'), resetWidget('lappuKiinnitys')]); }).then(function(){ return showModal('lappuModal'); }) }}",
+  "onClick": "{{ haeLappuAsetukset.run().then(function(){ return resetWidget('laArkistointiPv'); }).then(function(){ return showModal('lappuAsetusModal'); }) }}",
   "originalBottomRow": 6,
   "originalTopRow": 2,
   "parentColumnSpace": 17.28125,
@@ -38,11 +41,12 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 58,
-  "text": "+ Uusi lappu",
+  "rightColumn": 63,
+  "text": "",
+  "tooltip": "Muistilappujen asetukset",
   "topRow": 2,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "lpmue8cm0o4xupq1k",
-  "widgetName": "napUusiLappu"
+  "widgetId": "wd3zglsynu1",
+  "widgetName": "napLappuAsetukset"
 }

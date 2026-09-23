@@ -1,0 +1,5 @@
+update public.asetukset
+   set lappu_arkistointi_pv = greatest(1, least(365, coalesce(nullif({{laArkistointiPv.text}}::text, '')::int, 30))),
+       updated_at = now()
+ where id = 1
+returning lappu_arkistointi_pv

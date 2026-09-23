@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "0.5rem",
-  "bottomRow": 6,
+  "bottomRow": 30,
   "boxShadow": "none",
   "buttonColor": "#E0DEDE",
   "buttonVariant": "PRIMARY",
@@ -10,9 +10,6 @@
   "dynamicPropertyPathList": [
     {
       "key": "onClick"
-    },
-    {
-      "key": "isDisabled"
     }
   ],
   "dynamicTriggerPathList": [
@@ -24,25 +21,29 @@
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "leftColumn": 45,
-  "minWidth": 120,
+  "leftColumn": 33,
+  "minWidth": 100,
+  "mobileBottomRow": 30,
+  "mobileLeftColumn": 33,
+  "mobileRightColumn": 46,
+  "mobileTopRow": 25,
   "needsErrorInfo": false,
-  "onClick": "{{ storeValue('lappu', {}).then(function(){ return Promise.all([resetWidget('lappuTeksti'), resetWidget('lappuPvm'), resetWidget('lappuTyo'), resetWidget('lappuKiinnitys')]); }).then(function(){ return showModal('lappuModal'); }) }}",
+  "onClick": "{{ closeModal('lappuAsetusModal') }}",
   "originalBottomRow": 6,
   "originalTopRow": 2,
   "parentColumnSpace": 17.28125,
-  "parentId": "lpmue8cm0o1ozc6e0",
+  "parentId": "wyvkftrepi3",
   "parentRowSpace": 10,
   "placement": "CENTER",
   "recaptchaType": "V3",
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 58,
-  "text": "+ Uusi lappu",
-  "topRow": 2,
+  "rightColumn": 46,
+  "text": "Peruuta",
+  "topRow": 25,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "lpmue8cm0o4xupq1k",
-  "widgetName": "napUusiLappu"
+  "widgetId": "wnh9z71c06v",
+  "widgetName": "napPeruAsetukset"
 }

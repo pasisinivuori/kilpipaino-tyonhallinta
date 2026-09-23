@@ -1,0 +1,61 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "autoFocus": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 23,
+  "boxShadow": "none",
+  "defaultText": "{{ haeLappuAsetukset.data && haeLappuAsetukset.data[0] ? haeLappuAsetukset.data[0].lappu_arkistointi_pv : 30 }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
+  "iconAlign": "left",
+  "inputType": "NUMBER",
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": true,
+  "isVisible": true,
+  "label": "Arkistoi laput (päivää)",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 1,
+  "maxChars": "10000",
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 23,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 26,
+  "mobileTopRow": 15,
+  "needsErrorInfo": false,
+  "originalBottomRow": 17,
+  "originalTopRow": 7,
+  "parentColumnSpace": 17.28125,
+  "parentId": "wyvkftrepi3",
+  "parentRowSpace": 10,
+  "placeholderText": "30",
+  "renderMode": "CANVAS",
+  "resetOnSubmit": true,
+  "responsiveBehavior": "fill",
+  "rightColumn": 26,
+  "shouldAllowAutofill": false,
+  "showStepArrows": true,
+  "topRow": 15,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2,
+  "widgetId": "w313f82bhhn",
+  "widgetName": "laArkistointiPv"
+}
