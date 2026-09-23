@@ -1,0 +1,4 @@
+{
+  "toimeksianto_id": "{{this.params.toimeksianto_id}}",
+  "files": {{ appsmith.store.tiskiLiitteet || [] }}
+}

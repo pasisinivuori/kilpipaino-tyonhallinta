@@ -1,0 +1,41 @@
+{
+  "animateLoading": true,
+  "borderRadius": "0.5rem",
+  "bottomRow": 41,
+  "boxShadow": "none",
+  "buttonColor": "#22C55E",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [],
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "leftColumn": 1,
+  "minWidth": 120,
+  "needsErrorInfo": false,
+  "onClick": "{{ TiskiJS.uusi() }}",
+  "originalBottomRow": 41,
+  "originalTopRow": 33,
+  "parentColumnSpace": 17.28125,
+  "parentId": "tkmueal9bs2ky6uig",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 63,
+  "text": "Uusi tilaus",
+  "topRow": 33,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "tkmueal9bs2nu331y",
+  "widgetName": "napUusiTilaus"
+}

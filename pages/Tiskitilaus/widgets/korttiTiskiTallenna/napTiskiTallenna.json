@@ -1,0 +1,52 @@
+{
+  "animateLoading": true,
+  "borderRadius": "0.5rem",
+  "bottomRow": 16,
+  "boxShadow": "none",
+  "buttonColor": "#22C55E",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "text"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{ !tAihe.text }}",
+  "isLoading": false,
+  "isVisible": true,
+  "leftColumn": 1,
+  "minWidth": 120,
+  "mobileBottomRow": 78,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 15,
+  "mobileTopRow": 74,
+  "needsErrorInfo": false,
+  "onClick": "{{ TiskiJS.tallenna() }}",
+  "originalBottomRow": 16,
+  "originalTopRow": 6,
+  "parentColumnSpace": 17.28125,
+  "parentId": "tkmueal9br2c1ah2h",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 62,
+  "text": "{{ tTyyppi.selectedOptionValue === 'tilaus' ? 'Tallenna tilaus' : 'Tallenna tarjouspyyntö' }}",
+  "topRow": 6,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "tkmueal9br2ekybir",
+  "widgetName": "napTiskiTallenna"
+}

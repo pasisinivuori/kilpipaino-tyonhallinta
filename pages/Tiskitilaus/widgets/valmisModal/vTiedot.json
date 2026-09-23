@@ -1,0 +1,43 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 30,
+  "dynamicBindingPathList": [
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "1.25rem",
+  "fontStyle": "BOLD",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "needsErrorInfo": false,
+  "originalBottomRow": 30,
+  "originalTopRow": 11,
+  "overflow": "NONE",
+  "parentColumnSpace": 11.568359375,
+  "parentId": "tkmueal9bs2ky6uig",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 63,
+  "shouldTruncate": false,
+  "text": "{{ (function(){ var t = appsmith.store.tiskiValmis || {}; return (t.tp_numero || '') + '\\n' + (t.asiakas || '') + '\\n' + (t.liitteita ? t.liitteita + ' liitettä tallennettu' : 'Ei liitteitä'); })() }}",
+  "textAlign": "LEFT",
+  "textColor": "#111827",
+  "topRow": 11,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "tkmueal9bs2mekm6z",
+  "widgetName": "vTiedot"
+}

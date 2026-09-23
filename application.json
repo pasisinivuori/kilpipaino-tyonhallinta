@@ -47,6 +47,10 @@
     {
       "id": "Asetukset",
       "isDefault": false
+    },
+    {
+      "id": "Tiskitilaus",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

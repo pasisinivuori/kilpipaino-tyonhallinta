@@ -1,0 +1,9 @@
+INSERT INTO public.toimeksiannot
+  (tyyppi, status, asiakas_nimi, asiakas_yritys, asiakas_email, asiakas_puhelin, asiakas_toimitusosoite, omistaja, aihe, tyon_kuvaus, tilaus_lisatiedot)
+VALUES
+  ('tarjouspyynto', 'uusi',
+   {{tNimi.text || null}}, {{tYritys.text || null}}, {{tEmail.text || null}}, {{tPuh.text || null}}, {{tOsoite.text || null}},
+   {{tVastuu.selectedOptionValue}}, {{tAihe.text || null}},
+   nullif(replace(coalesce({{tKuvaus.text}}, ''), chr(10), '<br>'), ''),
+   nullif(replace(coalesce({{tSisainen.text}}, ''), chr(10), '<br>'), ''))
+RETURNING id, tp_numero;
