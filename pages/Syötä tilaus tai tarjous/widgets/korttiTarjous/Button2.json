@@ -12,6 +12,9 @@
     },
     {
       "key": "isVisible"
+    },
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicPropertyPathList": [
@@ -28,7 +31,7 @@
     }
   ],
   "isDefaultClickDisabled": true,
-  "isDisabled": false,
+  "isDisabled": "{{ (Select1.selectedOptionValue || \"Ei vastuuhenkilöä\") === \"Ei vastuuhenkilöä\" }}",
   "isLoading": false,
   "isVisible": "{{RadioGroup1.selectedOptionValue === 'tarjouspyynto'}}",
   "key": "hnqpzowff7",
@@ -52,6 +55,7 @@
   "responsiveBehavior": "hug",
   "rightColumn": 47,
   "text": "Lähetä",
+  "tooltip": "Valitse vastuuhenkilö ennen lähettämistä",
   "topRow": 65,
   "type": "BUTTON_WIDGET",
   "version": 1,

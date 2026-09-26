@@ -1,1 +1,2 @@
-{"toimeksianto_id":"{{Table1.selectedRow.id}}","body":"{{vastausInput.text}}"}
+{
+  "kayttaja": "{{appsmith.user.email}}","toimeksianto_id":"{{Table1.selectedRow.id}}","body":"{{vastausInput.text}}"}

@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "{\"toimeksianto_id\":\"{{Table1.selectedRow.id}}\",\"body\":\"{{vastausInput.text}}\"}",
+      "body": "{\n  \"kayttaja\": \"{{appsmith.user.email}}\",\"toimeksianto_id\":\"{{Table1.selectedRow.id}}\",\"body\":\"{{vastausInput.text}}\"}",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {

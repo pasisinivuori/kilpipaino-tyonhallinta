@@ -1,4 +1,5 @@
 {
+  "kayttaja": "{{appsmith.user.email}}",
   "toimeksianto_id": "{{this.params.tid}}",
   "body": "{{this.params.body}}",
   "liitteet": {{this.params.liitteet}}

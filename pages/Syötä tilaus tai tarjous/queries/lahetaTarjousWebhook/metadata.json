@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "{\n  \"toimeksianto_id\": \"{{this.params.tid}}\",\n  \"body\": \"{{this.params.body}}\",\n  \"liitteet\": {{this.params.liitteet}}\n}",
+      "body": "{\n  \"kayttaja\": \"{{appsmith.user.email}}\",\n  \"toimeksianto_id\": \"{{this.params.tid}}\",\n  \"body\": \"{{this.params.body}}\",\n  \"liitteet\": {{this.params.liitteet}}\n}",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {
