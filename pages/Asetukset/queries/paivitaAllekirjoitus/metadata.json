@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "update public.kayttaja_asetukset set allekirjoitus = {{Input5.text}} where omistaja = {{Select1.selectedOptionValue}}",
+      "body": "update public.kayttaja_asetukset set allekirjoitus = {{Input5.text}}, paivitetty = now() where omistaja = public.lappu_tekija({{appsmith.user.email}})",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

@@ -1,1 +1,1 @@
-select omistaja, allekirjoitus from public.kayttaja_asetukset order by omistaja
+select omistaja, allekirjoitus from public.kayttaja_asetukset where omistaja = public.lappu_tekija({{appsmith.user.email}})
