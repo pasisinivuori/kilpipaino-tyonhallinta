@@ -14,6 +14,9 @@
     },
     {
       "key": "defaultOptionValue"
+    },
+    {
+      "key": "sourceData"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -60,7 +63,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 62,
   "serverSideFiltering": false,
-  "sourceData": "[{\"name\":\"Ei vastuuhenkilöä\",\"code\":\"Ei vastuuhenkilöä\"},{\"name\":\"Pasi\",\"code\":\"Pasi\"},{\"name\":\"Jerkka\",\"code\":\"Jerkka\"}]",
+  "sourceData": "{{ haeVastuuhenkilot.data }}",
   "topRow": 31,
   "type": "SELECT_WIDGET",
   "version": 1,
