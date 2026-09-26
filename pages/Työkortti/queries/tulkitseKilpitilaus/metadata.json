@@ -51,7 +51,7 @@
     ],
     "name": "tulkitseKilpitilaus",
     "pageId": "Työkortti",
-    "runBehaviour": "AUTOMATIC",
-    "userSetOnLoad": false
+    "runBehaviour": "MANUAL",
+    "userSetOnLoad": true
   }
 }
