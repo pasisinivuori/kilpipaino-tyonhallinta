@@ -1,0 +1,72 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 20,
+  "boxShadow": "none",
+  "defaultOptionValue": "{{ appsmith.store.vastuuSuodatin || 'KAIKKI' }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "defaultOptionValue"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "isDisabled": false,
+  "isFilterable": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "vsk3n8p1az",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Vastuuhenkilö",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 33,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 20,
+  "mobileLeftColumn": 33,
+  "mobileRightColumn": 47,
+  "mobileTopRow": 13,
+  "needsErrorInfo": false,
+  "onOptionChange": "{{ storeValue('vastuuSuodatin', vastuuSelect.selectedOptionValue); }}",
+  "optionLabel": "name",
+  "optionValue": "code",
+  "originalBottomRow": 20,
+  "originalTopRow": 13,
+  "parentColumnSpace": 17.28125,
+  "parentId": "erp08sulu8",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 47,
+  "serverSideFiltering": false,
+  "sourceData": "{{ [{ name: 'Kaikki työt', code: 'KAIKKI' }].concat(haeVastuuhenkilot.data || []) }}",
+  "topRow": 13,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "vs9k2m4xq7",
+  "widgetName": "vastuuSelect"
+}

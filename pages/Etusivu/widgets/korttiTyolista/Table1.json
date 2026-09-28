@@ -1217,7 +1217,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 62,
   "searchKey": "",
-  "tableData": "{{ (jarjestysSelect.selectedOptionValue === 'kiire')\n   ? (SelectQuery.data || []).slice().sort(function(a, b){\n       var ta = (a.kiire_taso == null ? 9 : Number(a.kiire_taso));\n       var tb = (b.kiire_taso == null ? 9 : Number(b.kiire_taso));\n       if (ta !== tb) { return ta - tb; }\n       var oa = Number(a.kiire_odotus || 0), ob = Number(b.kiire_odotus || 0);\n       if (oa !== ob) { return ob - oa; }\n       return new Date(a.created_at) - new Date(b.created_at);\n     })\n   : ( (function(rivit){ return (Switch2.isSwitchedOn && Array.isArray(rivit)) ? rivit.filter(function(r){ return r && r.odottaa_meilta; }) : rivit; })((function(){var rows=MultiSelect1.selectedOptionValues.length>0?SelectQuery.data.filter(function(r){return r.uusi_viesti_suljettuun||MultiSelect1.selectedOptionValues.includes(r.status);}):SelectQuery.data;var sorted=(rows||[]).slice().sort(function(a,b){return new Date(a.created_at)-new Date(b.created_at);});var ord=jarjestysSelect.selectedOptionValue==='asc'?sorted:sorted.reverse();return ord.filter(function(r){return r.uusi_viesti_suljettuun;}).concat(ord.filter(function(r){return !r.uusi_viesti_suljettuun;}));})()) ) }}",
+  "tableData": "{{ Suodatus.rivit() }}",
   "textSize": "0.875rem",
   "topRow": 8,
   "totalRecordsCount": 0,
