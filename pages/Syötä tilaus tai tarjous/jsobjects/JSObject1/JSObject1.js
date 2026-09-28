@@ -30,7 +30,7 @@ export default {
     }
     const liitteet = await getLiitteetTarjous.run({ id: id });
     await lahetaTarjousWebhook.run({ tid: id, body: RichTextEditor1.text, liitteet: liitteet || [] });
-    showAlert("Tarjous " + tp + " lähetetty (lähtee jos vastuuhenkilö = Pasi).", "success");
+    showAlert("Tarjous " + tp + " lähetetty.", "success");
     this.tyhjennaLomake();
   },
   async tallennaTilaus () {
