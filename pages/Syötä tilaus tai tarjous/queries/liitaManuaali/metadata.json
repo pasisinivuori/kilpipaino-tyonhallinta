@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "{\n  \"toimeksianto_id\": \"{{this.params.toimeksianto_id}}\",\n  \"files\": {{FilePicker1.files}}\n}",
+      "body": "{\n  \"toimeksianto_id\": \"{{this.params.toimeksianto_id}}\",\n  \"files\": {{this.params.files}}\n}",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {
