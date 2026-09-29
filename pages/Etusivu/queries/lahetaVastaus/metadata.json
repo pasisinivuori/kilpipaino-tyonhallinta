@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "{\n  \"kayttaja\": \"{{appsmith.user.email}}\",\"toimeksianto_id\":\"{{Table1.selectedRow.id}}\",\"body\":\"{{vastausInput.text}}\"}",
+      "body": "{\n  \"kayttaja\": \"{{appsmith.user.email}}\",\"toimeksianto_id\":\"{{Table1.selectedRow.id}}\",\"body\":\"{{vastausInput.text}}\",\"vastaanottajat\":[],\"kopiot\":[]}",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {
@@ -35,7 +35,7 @@
       "queryParameters": [],
       "timeoutInMillisecond": 60000
     },
-    "confirmBeforeExecute": true,
+    "confirmBeforeExecute": false,
     "datasource": {
       "datasourceConfiguration": {
         "url": "https://hook.eu2.make.com"

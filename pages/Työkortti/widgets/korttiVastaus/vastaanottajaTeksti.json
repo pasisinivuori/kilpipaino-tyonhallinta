@@ -46,7 +46,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 62,
   "shouldTruncate": false,
-  "text": "{{(() => { const d = getTk.data && getTk.data[0]; if (!d) return \"\"; const v = d.ilmoitus_vastaanottaja; if (!v) return \"Ei vastaanottajaa - tarkista osoite\"; return \"Lähetetään: \" + v + (d.ilmoitus_lahde === \"vastausosoite\" ? \" (poikkeusosoite)\" : \"\"); })()}}",
+  "text": "{{ (function(){ var d = getTk.data && getTk.data[0]; if (!d) return ''; var lista = (function(s){return (s||'').split(/[;,]/).map(function(x){return x.trim();}).filter(function(x){return x.indexOf('@')>0;});}); var to = lista(vastaanottajatInput.text); var cc = lista(kopiotInput.text); var lisa = (d.ilmoitus_lahde === 'vastausosoite') ? ' Poikkeusosoite käytössä.' : ''; if (to.length === 0) { return 'Ei vastaanottajaa - kirjoita osoite alle.' + lisa; } return 'Lähtee ' + to.length + ' vastaanottajalle' + (cc.length ? ' ja ' + cc.length + ' kopiolle' : '') + '.' + lisa; })() }}",
   "textAlign": "RIGHT",
   "textColor": "{{(getTk.data && getTk.data[0] && getTk.data[0].ilmoitus_vastaanottaja) ? \"#6B7280\" : \"#B91C1C\"}}",
   "topRow": 2,
