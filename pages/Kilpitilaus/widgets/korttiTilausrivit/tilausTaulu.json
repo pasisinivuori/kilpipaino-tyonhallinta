@@ -54,6 +54,7 @@
     "malli_tiedosto",
     "tilattu_koko",
     "koko_poikkeaa",
+    "rekisteriRistiriita",
     "toimitusosoite",
     "maksaja",
     "tila",
@@ -215,6 +216,9 @@
     },
     {
       "key": "primaryColumns.huoneisto_kilpeen.computedValue"
+    },
+    {
+      "key": "primaryColumns.rekisteriRistiriita.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -972,6 +976,40 @@
       "validation": {},
       "verticalAlignment": "CENTER",
       "width": 150
+    },
+    "rekisteriRistiriita": {
+      "alias": "rekisteriRistiriita",
+      "allowCellWrapping": true,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const td = tilausTaulu.processedTableData || []; return td.map(r => r[\"rekisteri_poikkeaa\"] ? (\"TARKISTA: tehdään \" + (r[\"rivin_tyyppi\"] || r[\"rivin_koko\"] || \"?\") + \", rekisterissä \" + (r[\"rekisterin_tyyppi\"] || r[\"rekisterin_koko\"] || \"ei tietoa\")) : \"\"); })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "rekisteriRistiriita",
+      "index": 23,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Ristiriita rekisterin kanssa",
+      "notation": "standard",
+      "originalId": "rekisteriRistiriita",
+      "sticky": "",
+      "textColor": "#B91C1C",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 260
     },
     "rivin_kiinnitys": {
       "alias": "rivin_kiinnitys",

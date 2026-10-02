@@ -1,2 +1,2 @@
 {
-  "kayttaja": "{{appsmith.user.email}}","toimeksianto_id":"{{Table1.selectedRow.id}}","body":"{{vastausInput.text}}","vastaanottajat":[],"kopiot":[]}
+  "kayttaja": "{{appsmith.user.email}}","toimeksianto_id":"{{Table1.selectedRow.id}}","body":"{{vastausInput.text}}","vastaanottajat":"[]","kopiot":"[]"}

@@ -58,9 +58,10 @@
     "statusilmoitukset",
     "ilmoitus_jonossa",
     "kiire_taso",
-    "kiire_odotus"
+    "kiire_odotus",
+    "viim_saapuva_at"
   ],
-  "columnUpdatedAt": 1790107184204,
+  "columnUpdatedAt": 1790848336992,
   "columnWidthMap": {
     "customColumn2": 200,
     "customColumn3": 48,
@@ -225,6 +226,9 @@
     },
     {
       "key": "primaryColumns.customColumn2.cellBackground"
+    },
+    {
+      "key": "primaryColumns.viim_saapuva_at.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -1102,6 +1106,40 @@
       "label": "Vastattava",
       "notation": "standard",
       "originalId": "vastattava_mennessa",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "viim_saapuva_at": {
+      "alias": "viim_saapuva_at",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"viim_saapuva_at\"])) : viim_saapuva_at })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "viim_saapuva_at",
+      "index": 18,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "viim_saapuva_at",
+      "notation": "standard",
+      "originalId": "viim_saapuva_at",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",

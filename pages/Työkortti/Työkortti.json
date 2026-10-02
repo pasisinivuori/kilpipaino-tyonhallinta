@@ -5,13 +5,13 @@
     "layouts": [
       {
         "dsl": {
-          "bottomRow": 4700,
+          "bottomRow": 6240,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
           "dynamicBindingPathList": [],
           "leftColumn": 0,
-          "minHeight": 750,
+          "minHeight": 1900,
           "parentColumnSpace": 1,
           "parentRowSpace": 1,
           "rightColumn": 1224,

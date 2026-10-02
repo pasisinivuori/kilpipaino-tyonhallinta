@@ -3,6 +3,6 @@
   "toimeksianto_id": "{{this.params.tid}}",
   "body": "{{this.params.body}}",
   "liitteet": {{this.params.liitteet}},
-  "vastaanottajat": {{(function(s){return (s||'').split(/[;,]/).map(function(x){return x.trim();}).filter(function(x){return x.indexOf('@')>0;});})(tarjousVastaanottajat.text)}},
-  "kopiot": {{(function(s){return (s||'').split(/[;,]/).map(function(x){return x.trim();}).filter(function(x){return x.indexOf('@')>0;});})(tarjousKopiot.text)}}
+  "vastaanottajat": "{{JSON.stringify((function(s){return (s||'').split(/[;,]/).map(function(x){return x.trim();}).filter(function(x){return x.indexOf('@')>0;});})(tarjousVastaanottajat.text))}}",
+  "kopiot": "{{JSON.stringify((function(s){return (s||'').split(/[;,]/).map(function(x){return x.trim();}).filter(function(x){return x.indexOf('@')>0;});})(tarjousKopiot.text))}}"
 }

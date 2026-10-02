@@ -40,8 +40,22 @@ export default {
 			return new Date(a.created_at) - new Date(b.created_at);
 		});
 	}
-	const sorted = rivit.slice().sort((a, b) => new Date(a.created_at) - new Date(b.created_at));
-	const ord = jarj === 'asc' ? sorted : sorted.reverse();
+	let ord;
+	if (jarj === 'viesti') {
+		// Uusin asiakkaalta saapunut viesti ylimmaksi, kuten sahkopostissa.
+		// Tyot joilla ei ole yhtaan saapunutta viestia menevat loppuun.
+		const aika = (r) => { const v = r && r.viim_saapuva_at; return v ? new Date(v).getTime() : null; };
+		ord = rivit.slice().sort((a, b) => {
+			const ta = aika(a), tb = aika(b);
+			if (ta === null && tb === null) { return new Date(b.created_at) - new Date(a.created_at); }
+			if (ta === null) { return 1; }
+			if (tb === null) { return -1; }
+			return tb - ta;
+		});
+	} else {
+		const sorted = rivit.slice().sort((a, b) => new Date(a.created_at) - new Date(b.created_at));
+		ord = jarj === 'asc' ? sorted : sorted.reverse();
+	}
 
 	// 5) Uudet viestit suljettuihin töihin nousevat kärkeen
 	return ord.filter(r => r.uusi_viesti_suljettuun).concat(ord.filter(r => !r.uusi_viesti_suljettuun));

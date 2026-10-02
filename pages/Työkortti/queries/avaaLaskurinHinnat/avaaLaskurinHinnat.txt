@@ -1,0 +1,1 @@
+SELECT public.avaa_rivit(NULLIF({{appsmith.URL.queryParams.id || ''}}, '')::uuid) AS r;

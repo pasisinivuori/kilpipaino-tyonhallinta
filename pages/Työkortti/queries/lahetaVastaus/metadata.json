@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "{\n  \"kayttaja\": \"{{appsmith.user.email}}\",\"toimeksianto_id\":\"{{appsmith.URL.queryParams.id}}\",\"body\":\"{{vastausInput.text}}\",\"liitteet\":{{JSON.parse(this.params.liitteet || '[]')}},\"vastaanottajat\":{{(function(s){return (s||'').split(/[;,]/).map(function(x){return x.trim();}).filter(function(x){return x.indexOf('@')>0;});})(vastaanottajatInput.text)}},\"kopiot\":{{(function(s){return (s||'').split(/[;,]/).map(function(x){return x.trim();}).filter(function(x){return x.indexOf('@')>0;});})(kopiotInput.text)}}}",
+      "body": "{\n  \"kayttaja\": \"{{appsmith.user.email}}\",\"toimeksianto_id\":\"{{appsmith.URL.queryParams.id}}\",\"body\":\"{{vastausInput.text}}\",\"liitteet\":{{JSON.parse(this.params.liitteet || '[]')}},\"vastaanottajat\":\"{{JSON.stringify((function(s){return (s||'').split(/[;,]/).map(function(x){return x.trim();}).filter(function(x){return x.indexOf('@')>0;});})(vastaanottajatInput.text))}}\",\"kopiot\":\"{{JSON.stringify((function(s){return (s||'').split(/[;,]/).map(function(x){return x.trim();}).filter(function(x){return x.indexOf('@')>0;});})(kopiotInput.text))}}\"}",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {

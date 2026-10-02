@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE public.koneet SET kone = COALESCE({{Table1.updatedRow?.kone}}::text, kone), kustannus_per_tunti = COALESCE({{Table1.updatedRow?.kustannus_per_tunti}}::numeric, kustannus_per_tunti), kayttoaste_pros = COALESCE({{Table1.updatedRow?.kayttoaste_pros}}::numeric, kayttoaste_pros), kate_pros = COALESCE({{Table1.updatedRow?.kate_pros}}::numeric, kate_pros), asetusaika_min = COALESCE({{Table1.updatedRow?.asetusaika_min}}::numeric, asetusaika_min), vaatii_valvontaa = COALESCE({{Table1.updatedRow?.vaatii_valvontaa}}::boolean, vaatii_valvontaa), aktiivinen = COALESCE({{Table1.updatedRow?.aktiivinen}}::boolean, aktiivinen) WHERE id = {{Table1.updatedRow?.id}}::uuid;",
+      "body": "UPDATE public.koneet SET kone = COALESCE({{Table1.updatedRow?.kone}}::text, kone), kustannus_per_tunti = COALESCE({{Table1.updatedRow?.kustannus_per_tunti}}::numeric, kustannus_per_tunti), kustannus_per_m = COALESCE({{Table1.updatedRow?.kustannus_per_m}}::numeric, kustannus_per_m), kustannus_per_m2 = COALESCE({{Table1.updatedRow?.kustannus_per_m2}}::numeric, kustannus_per_m2), kayttoaste_pros = COALESCE({{Table1.updatedRow?.kayttoaste_pros}}::numeric, kayttoaste_pros), kate_pros = COALESCE({{Table1.updatedRow?.kate_pros}}::numeric, kate_pros), asetusaika_min = COALESCE({{Table1.updatedRow?.asetusaika_min}}::numeric, asetusaika_min), vaatii_valvontaa = COALESCE({{Table1.updatedRow?.vaatii_valvontaa}}::boolean, vaatii_valvontaa), aktiivinen = COALESCE({{Table1.updatedRow?.aktiivinen}}::boolean, aktiivinen) WHERE id = {{Table1.updatedRow?.id}}::uuid;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

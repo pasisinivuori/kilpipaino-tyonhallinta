@@ -1,1 +1,1 @@
-SELECT tuntiveloitus, tunnin_kustannus, tyon_oletuskate_pros, oletus_hukka_pros, pikkutyon_raja FROM public.asetukset WHERE id = 1;
+SELECT tuntiveloitus, tunnin_kustannus, tyon_oletuskate_pros, oletus_hukka_pros, pikkutyon_raja, rullan_reunavara_mm, kappalevali_mm FROM public.asetukset WHERE id = 1;

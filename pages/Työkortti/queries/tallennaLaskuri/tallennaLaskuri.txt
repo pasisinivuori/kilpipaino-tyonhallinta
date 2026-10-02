@@ -1,0 +1,8 @@
+SELECT CASE WHEN {{hinnoittelu.model.ulos?.ok === true && hinnoittelu.model.ulos?.tid === appsmith.URL.queryParams.id}}::boolean
+ THEN public.tallenna_laskurin_rivit(
+  NULLIF({{appsmith.URL.queryParams.id || ''}}, '')::uuid, NULL,
+  {{JSON.stringify(hinnoittelu.model.ulos?.rivit || [])}}::jsonb,
+  {{hinnoittelu.model.ulos?.paivitaHinta === true}}::boolean,
+  NULLIF({{String(hinnoittelu.model.ulos?.tarjous ?? '')}}, '')::numeric,
+  {{hinnoittelu.model.ulos?.perus || ''}})
+ END AS r;
