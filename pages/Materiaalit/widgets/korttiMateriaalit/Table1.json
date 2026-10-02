@@ -53,16 +53,18 @@
     "k_tulostin",
     "k_laminaattori",
     "k_tasoleikkuri",
+    "k_jyrsinta",
     "k_rullaleikkuri",
     "k_laser",
     "k_prassi",
     "aktiivinen",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1789679839161,
+  "columnUpdatedAt": 1790967154979,
   "columnWidthMap": {
     "hankintahinta": 183,
     "hinta_paivitetty": 165,
+    "k_jyrsinta": 135,
     "k_laminaattori": 135,
     "k_laser": 135,
     "k_prassi": 135,
@@ -176,6 +178,9 @@
     },
     {
       "key": "primaryColumns.k_prassi.computedValue"
+    },
+    {
+      "key": "primaryColumns.k_jyrsinta.computedValue"
     }
   ],
   "dynamicPropertyPathList": [],
@@ -185,6 +190,30 @@
     },
     {
       "key": "onAddNewRowSave"
+    },
+    {
+      "key": "primaryColumns.k_tulostin.onCheckChange"
+    },
+    {
+      "key": "primaryColumns.k_laminaattori.onCheckChange"
+    },
+    {
+      "key": "primaryColumns.k_tasoleikkuri.onCheckChange"
+    },
+    {
+      "key": "primaryColumns.k_jyrsinta.onCheckChange"
+    },
+    {
+      "key": "primaryColumns.k_rullaleikkuri.onCheckChange"
+    },
+    {
+      "key": "primaryColumns.k_laser.onCheckChange"
+    },
+    {
+      "key": "primaryColumns.k_prassi.onCheckChange"
+    },
+    {
+      "key": "primaryColumns.aktiivinen.onCheckChange"
     }
   ],
   "enableClientSideSearch": true,
@@ -233,7 +262,7 @@
       "enableFilter": true,
       "enableSort": true,
       "id": "EditActions1",
-      "index": 24,
+      "index": 25,
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": true,
@@ -271,7 +300,7 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "aktiivinen",
-      "index": 23,
+      "index": 24,
       "isCellEditable": true,
       "isCellVisible": true,
       "isDerived": false,
@@ -282,6 +311,7 @@
       "isVisible": true,
       "label": "Aktiivinen",
       "notation": "standard",
+      "onCheckChange": "{{(Table1.updatedRow && Table1.updatedRow.id) ? paivitaMateriaali.run().then(() => paivitaMateriaalinKoneet.run()).then(() => haeMateriaalit.run()).catch((e) => { const r = String((e && e.message) ? e.message : e); const s = /EMAXCONNSESSION|max clients reached|too many clients/i.test(r) ? 'Tietokantayhteydet loppuivat hetkeksi. Rivi\\u00e4 EI tallennettu \\u2014 yrit\\u00e4 uudelleen.' : r.split('Where:')[0].replace(/^ERROR:\\s*/, '').trim(); showAlert(s, 'error'); }) : null}}",
       "originalId": "aktiivinen",
       "sticky": "",
       "textColor": "",
@@ -429,6 +459,41 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
+    "k_jyrsinta": {
+      "alias": "k_jyrsinta",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "checkbox",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"k_jyrsinta\"])) : [] })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": false,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "k_jyrsinta",
+      "index": 20,
+      "isCellEditable": true,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": true,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Jyrsintä",
+      "notation": "standard",
+      "onCheckChange": "{{(Table1.updatedRow && Table1.updatedRow.id) ? paivitaMateriaali.run().then(() => paivitaMateriaalinKoneet.run()).then(() => haeMateriaalit.run()).catch((e) => { const r = String((e && e.message) ? e.message : e); const s = /EMAXCONNSESSION|max clients reached|too many clients/i.test(r) ? 'Tietokantayhteydet loppuivat hetkeksi. Rivi\\u00e4 EI tallennettu \\u2014 yrit\\u00e4 uudelleen.' : r.split('Where:')[0].replace(/^ERROR:\\s*/, '').trim(); showAlert(s, 'error'); }) : null}}",
+      "originalId": "k_jyrsinta",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 135
+    },
     "k_laminaattori": {
       "alias": "k_laminaattori",
       "allowCellWrapping": false,
@@ -454,6 +519,7 @@
       "isVisible": true,
       "label": "Laminaattori",
       "notation": "standard",
+      "onCheckChange": "{{(Table1.updatedRow && Table1.updatedRow.id) ? paivitaMateriaali.run().then(() => paivitaMateriaalinKoneet.run()).then(() => haeMateriaalit.run()).catch((e) => { const r = String((e && e.message) ? e.message : e); const s = /EMAXCONNSESSION|max clients reached|too many clients/i.test(r) ? 'Tietokantayhteydet loppuivat hetkeksi. Rivi\\u00e4 EI tallennettu \\u2014 yrit\\u00e4 uudelleen.' : r.split('Where:')[0].replace(/^ERROR:\\s*/, '').trim(); showAlert(s, 'error'); }) : null}}",
       "originalId": "k_laminaattori",
       "sticky": "",
       "textColor": "",
@@ -477,7 +543,7 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "k_laser",
-      "index": 21,
+      "index": 22,
       "isCellEditable": true,
       "isCellVisible": true,
       "isDerived": false,
@@ -488,6 +554,7 @@
       "isVisible": true,
       "label": "Laser",
       "notation": "standard",
+      "onCheckChange": "{{(Table1.updatedRow && Table1.updatedRow.id) ? paivitaMateriaali.run().then(() => paivitaMateriaalinKoneet.run()).then(() => haeMateriaalit.run()).catch((e) => { const r = String((e && e.message) ? e.message : e); const s = /EMAXCONNSESSION|max clients reached|too many clients/i.test(r) ? 'Tietokantayhteydet loppuivat hetkeksi. Rivi\\u00e4 EI tallennettu \\u2014 yrit\\u00e4 uudelleen.' : r.split('Where:')[0].replace(/^ERROR:\\s*/, '').trim(); showAlert(s, 'error'); }) : null}}",
       "originalId": "k_laser",
       "sticky": "",
       "textColor": "",
@@ -511,7 +578,7 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "k_prassi",
-      "index": 22,
+      "index": 23,
       "isCellEditable": true,
       "isCellVisible": true,
       "isDerived": false,
@@ -522,6 +589,7 @@
       "isVisible": true,
       "label": "Prässi",
       "notation": "standard",
+      "onCheckChange": "{{(Table1.updatedRow && Table1.updatedRow.id) ? paivitaMateriaali.run().then(() => paivitaMateriaalinKoneet.run()).then(() => haeMateriaalit.run()).catch((e) => { const r = String((e && e.message) ? e.message : e); const s = /EMAXCONNSESSION|max clients reached|too many clients/i.test(r) ? 'Tietokantayhteydet loppuivat hetkeksi. Rivi\\u00e4 EI tallennettu \\u2014 yrit\\u00e4 uudelleen.' : r.split('Where:')[0].replace(/^ERROR:\\s*/, '').trim(); showAlert(s, 'error'); }) : null}}",
       "originalId": "k_prassi",
       "sticky": "",
       "textColor": "",
@@ -545,7 +613,7 @@
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
       "id": "k_rullaleikkuri",
-      "index": 20,
+      "index": 21,
       "isCellEditable": true,
       "isCellVisible": true,
       "isDerived": false,
@@ -556,6 +624,7 @@
       "isVisible": true,
       "label": "Rullaleikkuri",
       "notation": "standard",
+      "onCheckChange": "{{(Table1.updatedRow && Table1.updatedRow.id) ? paivitaMateriaali.run().then(() => paivitaMateriaalinKoneet.run()).then(() => haeMateriaalit.run()).catch((e) => { const r = String((e && e.message) ? e.message : e); const s = /EMAXCONNSESSION|max clients reached|too many clients/i.test(r) ? 'Tietokantayhteydet loppuivat hetkeksi. Rivi\\u00e4 EI tallennettu \\u2014 yrit\\u00e4 uudelleen.' : r.split('Where:')[0].replace(/^ERROR:\\s*/, '').trim(); showAlert(s, 'error'); }) : null}}",
       "originalId": "k_rullaleikkuri",
       "sticky": "",
       "textColor": "",
@@ -588,8 +657,9 @@
       "isEditable": true,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "Tasoleikkuri",
+      "label": "Tasoleikk. (tarra)",
       "notation": "standard",
+      "onCheckChange": "{{(Table1.updatedRow && Table1.updatedRow.id) ? paivitaMateriaali.run().then(() => paivitaMateriaalinKoneet.run()).then(() => haeMateriaalit.run()).catch((e) => { const r = String((e && e.message) ? e.message : e); const s = /EMAXCONNSESSION|max clients reached|too many clients/i.test(r) ? 'Tietokantayhteydet loppuivat hetkeksi. Rivi\\u00e4 EI tallennettu \\u2014 yrit\\u00e4 uudelleen.' : r.split('Where:')[0].replace(/^ERROR:\\s*/, '').trim(); showAlert(s, 'error'); }) : null}}",
       "originalId": "k_tasoleikkuri",
       "sticky": "",
       "textColor": "",
@@ -624,6 +694,7 @@
       "isVisible": true,
       "label": "Tulostin",
       "notation": "standard",
+      "onCheckChange": "{{(Table1.updatedRow && Table1.updatedRow.id) ? paivitaMateriaali.run().then(() => paivitaMateriaalinKoneet.run()).then(() => haeMateriaalit.run()).catch((e) => { const r = String((e && e.message) ? e.message : e); const s = /EMAXCONNSESSION|max clients reached|too many clients/i.test(r) ? 'Tietokantayhteydet loppuivat hetkeksi. Rivi\\u00e4 EI tallennettu \\u2014 yrit\\u00e4 uudelleen.' : r.split('Where:')[0].replace(/^ERROR:\\s*/, '').trim(); showAlert(s, 'error'); }) : null}}",
       "originalId": "k_tulostin",
       "sticky": "",
       "textColor": "",

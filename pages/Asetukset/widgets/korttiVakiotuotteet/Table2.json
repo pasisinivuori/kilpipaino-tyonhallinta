@@ -94,6 +94,9 @@
     },
     {
       "key": "onAddNewRowSave"
+    },
+    {
+      "key": "primaryColumns.aktiivinen.onCheckChange"
     }
   ],
   "enableClientSideSearch": true,
@@ -191,6 +194,7 @@
       "isVisible": true,
       "label": "Aktiivinen",
       "notation": "standard",
+      "onCheckChange": "{{(Table2.updatedRow && Table2.updatedRow.id) ? paivitaTuote.run().then(() => haeTuotteet.run()).catch((e) => { const r = String((e && e.message) ? e.message : e); const s = /EMAXCONNSESSION|max clients reached|too many clients/i.test(r) ? 'Tietokantayhteydet loppuivat hetkeksi. Rivi\\u00e4 EI tallennettu \\u2014 yrit\\u00e4 uudelleen.' : r.split('Where:')[0].replace(/^ERROR:\\s*/, '').trim(); showAlert(s, 'error'); }) : null}}",
       "originalId": "aktiivinen",
       "sticky": "",
       "textColor": "",

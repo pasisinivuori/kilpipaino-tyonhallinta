@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT id, kone, kustannus_per_tunti, kustannus_per_m, kustannus_per_m2, kayttoaste_pros, kate_pros, asetusaika_min, vaatii_valvontaa, aktiivinen, ROUND(kustannus_per_tunti / (kayttoaste_pros/100), 2) AS tehollinen_kustannus, ROUND(kustannus_per_tunti / (kayttoaste_pros/100) / (1 - kate_pros/100), 2) AS veloitus_per_tunti FROM public.koneet ORDER BY kone;",
+      "body": "SELECT id, kone, kustannus_per_tunti, kustannus_per_m, kustannus_per_m2, leikkuunopeus_mm_s, kappaleaika_s, kayttoaste_pros, kate_pros, asetusaika_min, vaatii_valvontaa, aktiivinen, ROUND(kustannus_per_tunti / (kayttoaste_pros/100), 2) AS tehollinen_kustannus, ROUND(kustannus_per_tunti / (kayttoaste_pros/100) / (1 - kate_pros/100), 2) AS veloitus_per_tunti FROM public.koneet ORDER BY kone;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
