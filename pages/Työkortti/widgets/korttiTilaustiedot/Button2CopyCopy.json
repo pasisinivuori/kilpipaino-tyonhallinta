@@ -39,7 +39,7 @@
   "mobileRightColumn": 31,
   "mobileTopRow": 73,
   "needsErrorInfo": false,
-  "onClick": "{{paivitaTilaus.run().then(() => getTk.run()).then(() => showAlert('Tilaustiedot tallennettu', 'success'))}}",
+  "onClick": "{{paivitaTilaus.run().then(() => Promise.all([getTk.run(), haeLaskuri.run()])).then(() => showAlert('Tilaustiedot tallennettu', 'success'))}}",
   "originalBottomRow": 77,
   "originalTopRow": 73,
   "parentColumnSpace": 17.28125,

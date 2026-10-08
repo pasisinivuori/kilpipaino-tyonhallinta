@@ -29,7 +29,7 @@
     ],
     "name": "haeRivitTk",
     "pageId": "Työkortti",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

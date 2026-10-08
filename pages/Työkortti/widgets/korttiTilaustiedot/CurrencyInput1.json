@@ -8,7 +8,7 @@
   "boxShadow": "none",
   "decimals": 2,
   "defaultCurrencyCode": "EUR",
-  "defaultText": "{{getTk.data[0].hinta_yhteensa}}",
+  "defaultText": "{{(() => { const d = (haeLaskuri.data && haeLaskuri.data[0]) ? haeLaskuri.data[0].d : null; const oma = (d && d.tyo) ? d.tyo.tarjous : (getTk.data && getTk.data[0] ? getTk.data[0].hinta_yhteensa : null); if (oma !== null && oma !== undefined && oma !== '') return oma; if (!d) return ''; const k = (d.tyo && d.tyo.perus === 'toteuma') ? 'h_hintat' : 'h_hinta'; const s = (d.rivit || []).reduce((a, r) => a + Math.round(Number(r[k] || 0) * 100) / 100, 0); return s > 0 ? Math.round(Math.round(s * 100) / 10) / 10 : ''; })()}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
