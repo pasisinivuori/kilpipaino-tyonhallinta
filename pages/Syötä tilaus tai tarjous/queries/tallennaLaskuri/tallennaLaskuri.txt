@@ -1,0 +1,7 @@
+SELECT CASE WHEN {{korttiLaskuri.model.ulos?.ok === true && korttiLaskuri.model.ulos?.tid === appsmith.store.laskuriLuonnos}}::boolean
+ THEN public.tallenna_laskurin_rivit(
+  NULL, NULLIF({{appsmith.store.laskuriLuonnos || ''}}, '')::uuid,
+  {{JSON.stringify(korttiLaskuri.model.ulos?.rivit || [])}}::jsonb,
+  false, NULL, NULL,
+  {{JSON.stringify(korttiLaskuri.model.ulos?.osat ?? null)}}::jsonb)
+ END AS r;

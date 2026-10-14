@@ -1,0 +1,1 @@
+SELECT public.kiinnita_laskuri(NULLIF({{this.params.avain || ''}}, '')::uuid, {{this.params.id}}::uuid) AS r;

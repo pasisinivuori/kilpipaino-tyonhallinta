@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO public.toimeksiannot\n  (tyyppi, status, asiakas_nimi, asiakas_yritys, asiakas_email, asiakas_puhelin, asiakas_toimitusosoite, omistaja, aihe, vastaus_luonnos, tilaus_lisatiedot)\nVALUES\n  ('tarjouspyynto', 'uusi',\n   {{Input1.text || null}}, {{Input2.text || null}}, {{Input3.text || null}}, {{Input4.text || null}}, {{Input5.text || null}},\n   {{Select1.selectedOptionValue}}, {{Input6.text || null}},\n   {{RichTextEditor1.text || null}}, {{RichTextEditor2.text || null}})\nRETURNING id, tp_numero;",
+      "body": "INSERT INTO public.toimeksiannot\n  (tyyppi, status, asiakas_nimi, asiakas_yritys, asiakas_email, asiakas_puhelin, asiakas_toimitusosoite, omistaja, aihe, vastaus_luonnos, tilaus_lisatiedot, hinta_yhteensa, laskutusperuste)\nVALUES\n  ('tarjouspyynto', 'uusi',\n   {{Input1.text || null}}, {{Input2.text || null}}, {{Input3.text || null}}, {{Input4.text || null}}, {{Input5.text || null}},\n   {{Select1.selectedOptionValue}}, {{Input6.text || null}},\n   {{RichTextEditor1.text || null}}, {{RichTextEditor2.text || null}},\n   {{(() => { const u = korttiLaskuri.model.ulos; const t = (u && u.tid === appsmith.store.laskuriLuonnos) ? parseFloat(u.tarjous) : NaN; return isNaN(t) ? null : t; })()}},\n   {{(korttiLaskuri.model.ulos?.tid === appsmith.store.laskuriLuonnos && korttiLaskuri.model.ulos?.perus) || 'kiintea'}})\nRETURNING id, tp_numero;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
