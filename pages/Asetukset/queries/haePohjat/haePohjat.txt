@@ -1,0 +1,5 @@
+SELECT jsonb_build_object(
+ 'haettu', extract(epoch from clock_timestamp()),
+ 'pohjat', public.laskuripohjat_json(true),
+ 'materiaalit', (SELECT coalesce(jsonb_agg(jsonb_build_object('id',m.id,'n',m.nimi,'t',mt.nimi,'ky',m.kayttoyksikko,'lev',m.leveys_mm,'akt',m.aktiivinen) ORDER BY mt.jarjestys NULLS LAST, mt.nimi NULLS LAST, m.nimi, m.leveys_mm NULLS FIRST),'[]'::jsonb) FROM public.materiaalit m LEFT JOIN public.materiaalityypit mt ON mt.id = m.tyyppi_id)
+) AS d;

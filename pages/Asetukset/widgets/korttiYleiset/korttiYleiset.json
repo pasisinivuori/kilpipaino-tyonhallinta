@@ -9,7 +9,7 @@
   "children": [
     {
       "borderRadius": "0.75rem",
-      "bottomRow": 480,
+      "bottomRow": 550,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": false,
       "containerStyle": "none",

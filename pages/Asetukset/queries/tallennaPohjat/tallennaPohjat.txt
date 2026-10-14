@@ -1,0 +1,1 @@
+SELECT public.tallenna_laskuripohjat({{JSON.stringify(pohjaeditori.model.ulos || [])}}::jsonb) AS r;
