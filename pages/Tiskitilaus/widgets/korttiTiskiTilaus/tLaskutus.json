@@ -54,7 +54,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 62,
   "serverSideFiltering": false,
-  "sourceData": "{{ [{ nimi: 'Kiinteä hinta', arvo: 'kiintea' }, { nimi: 'Toteuman mukaan', arvo: 'toteuma' }] }}",
+  "sourceData": "{{ [{ nimi: 'Kiinteä hinta', arvo: 'kiintea' }, { nimi: 'Toteutuneen mukaan', arvo: 'toteuma' }] }}",
   "topRow": 30,
   "type": "SELECT_WIDGET",
   "version": 1,
