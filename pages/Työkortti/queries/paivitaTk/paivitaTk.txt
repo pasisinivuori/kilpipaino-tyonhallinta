@@ -1,1 +1,5 @@
-UPDATE public.toimeksiannot SET status = {{statusSelect.selectedOptionValue}}::toimeksianto_status, omistaja = {{vastuuhenkiloSelect.selectedOptionValue}} WHERE id = {{appsmith.URL.queryParams.id}}::uuid;
+-- Tyhjä valinta ei koskaan tyhjennä tilaa tai vastuuhenkilöä (28.10.2026)
+UPDATE public.toimeksiannot
+   SET status = coalesce(nullif({{statusSelect.selectedOptionValue}}, '')::toimeksianto_status, status),
+       omistaja = coalesce(nullif(btrim({{vastuuhenkiloSelect.selectedOptionValue}}), ''), omistaja)
+ WHERE id = {{appsmith.URL.queryParams.id}}::uuid;

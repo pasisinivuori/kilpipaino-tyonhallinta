@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE public.toimeksiannot SET status = {{statusSelect.selectedOptionValue}}::toimeksianto_status, omistaja = {{vastuuhenkiloSelect.selectedOptionValue}} WHERE id = {{appsmith.URL.queryParams.id}}::uuid;",
+      "body": "-- Tyhjä valinta ei koskaan tyhjennä tilaa tai vastuuhenkilöä (28.10.2026)\nUPDATE public.toimeksiannot\n   SET status = coalesce(nullif({{statusSelect.selectedOptionValue}}, '')::toimeksianto_status, status),\n       omistaja = coalesce(nullif(btrim({{vastuuhenkiloSelect.selectedOptionValue}}), ''), omistaja)\n WHERE id = {{appsmith.URL.queryParams.id}}::uuid;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
