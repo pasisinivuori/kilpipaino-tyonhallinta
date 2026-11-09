@@ -1,0 +1,2 @@
+-- Kuittaa laskutusvalmiiksi hintalaskurista (9.11.2026)
+UPDATE public.toimeksiannot SET status = 'valmis_laskutettavaksi' WHERE id = {{appsmith.URL.queryParams.id}}::uuid AND status IN ('tuotannossa','odottaa_asennusta','valmis','toimitettu') RETURNING id;
