@@ -3,20 +3,20 @@ SELECT t.id, t.tp_numero, t.tyyppi, t.status, t.omistaja, t.aihe, COALESCE(t.asi
      , (SELECT max(COALESCE(v5.sent_at, v5.created_at)) FROM public.viestit v5 WHERE v5.toimeksianto_id = t.id AND v5.suunta = 'saapuva') AS viim_saapuva_at
      , CASE
          WHEN t.uusi_viesti_suljettuun_at IS NOT NULL THEN 0
-         WHEN t.valmistumispaiva IS NOT NULL AND t.valmistumispaiva < public.tanaan() AND t.status NOT IN ('valmis','toimitettu','laskutettu') THEN 1
+         WHEN t.valmistumispaiva IS NOT NULL AND t.valmistumispaiva < public.tanaan() AND t.status NOT IN ('valmis','valmis_laskutettavaksi','toimitettu','laskutettu') THEN 1
          WHEN COALESCE((SELECT v3.suunta = 'saapuva' FROM public.viestit v3 WHERE v3.toimeksianto_id = t.id ORDER BY COALESCE(v3.sent_at, v3.created_at) DESC LIMIT 1), false) THEN 2
-         WHEN t.valmistumispaiva IS NOT NULL AND t.valmistumispaiva <= public.tanaan() + 2 AND t.status NOT IN ('valmis','toimitettu','laskutettu') THEN 3
+         WHEN t.valmistumispaiva IS NOT NULL AND t.valmistumispaiva <= public.tanaan() + 2 AND t.status NOT IN ('valmis','valmis_laskutettavaksi','toimitettu','laskutettu') THEN 3
          ELSE 4
        END AS kiire_taso
      , CASE
          WHEN t.uusi_viesti_suljettuun_at IS NOT NULL
            THEN EXTRACT(epoch FROM (now() - t.uusi_viesti_suljettuun_at))/3600
-         WHEN t.valmistumispaiva IS NOT NULL AND t.valmistumispaiva < public.tanaan() AND t.status NOT IN ('valmis','toimitettu','laskutettu')
+         WHEN t.valmistumispaiva IS NOT NULL AND t.valmistumispaiva < public.tanaan() AND t.status NOT IN ('valmis','valmis_laskutettavaksi','toimitettu','laskutettu')
            THEN (public.tanaan() - t.valmistumispaiva) * 24.0
          WHEN COALESCE((SELECT v3.suunta = 'saapuva' FROM public.viestit v3 WHERE v3.toimeksianto_id = t.id ORDER BY COALESCE(v3.sent_at, v3.created_at) DESC LIMIT 1), false)
            THEN GREATEST(COALESCE(EXTRACT(epoch FROM (now() - (SELECT max(COALESCE(v4.sent_at, v4.created_at)) FROM public.viestit v4 WHERE v4.toimeksianto_id = t.id AND v4.suunta = 'saapuva')))/3600, 0),
                          COALESCE(EXTRACT(epoch FROM (now() - t.vastattava_mennessa))/3600, 0))
-         WHEN t.valmistumispaiva IS NOT NULL AND t.valmistumispaiva <= public.tanaan() + 2 AND t.status NOT IN ('valmis','toimitettu','laskutettu')
+         WHEN t.valmistumispaiva IS NOT NULL AND t.valmistumispaiva <= public.tanaan() + 2 AND t.status NOT IN ('valmis','valmis_laskutettavaksi','toimitettu','laskutettu')
            THEN (2 - (t.valmistumispaiva - public.tanaan())) * 24.0
          ELSE 0
        END AS kiire_odotus
