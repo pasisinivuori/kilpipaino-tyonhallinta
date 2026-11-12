@@ -231,6 +231,7 @@
       "key": "primaryColumns.viim_saapuva_at.computedValue"
     }
   ],
+  "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "tableData"

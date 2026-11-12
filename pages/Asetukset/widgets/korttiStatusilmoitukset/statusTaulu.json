@@ -89,6 +89,7 @@
       "key": "primaryColumns.status_nimi.computedValue"
     }
   ],
+  "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [
     {

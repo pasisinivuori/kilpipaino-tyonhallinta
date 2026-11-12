@@ -81,6 +81,7 @@
       "key": "primaryColumns.muistiinpanot.computedValue"
     }
   ],
+  "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "tableData"

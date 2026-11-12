@@ -99,6 +99,7 @@
       "key": "primaryColumns.katkaistu.computedValue"
     }
   ],
+  "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [
     {

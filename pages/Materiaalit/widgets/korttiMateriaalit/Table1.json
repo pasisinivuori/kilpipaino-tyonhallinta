@@ -183,6 +183,7 @@
       "key": "primaryColumns.k_jyrsinta.computedValue"
     }
   ],
+  "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [
     {

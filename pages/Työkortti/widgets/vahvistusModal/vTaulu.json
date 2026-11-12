@@ -85,6 +85,7 @@
       "key": "primaryColumns.muistiinpano.computedValue"
     }
   ],
+  "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [],
   "enableClientSideSearch": true,

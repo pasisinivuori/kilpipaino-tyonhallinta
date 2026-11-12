@@ -102,6 +102,7 @@
       "key": "primaryColumns.sent_at_fi.computedValue"
     }
   ],
+  "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "tableData"

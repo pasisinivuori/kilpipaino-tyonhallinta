@@ -81,6 +81,7 @@
       "key": "primaryColumns.paaosoite.computedValue"
     }
   ],
+  "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "tableData"

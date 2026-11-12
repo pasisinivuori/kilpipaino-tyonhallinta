@@ -97,6 +97,7 @@
       "key": "primaryColumns.EditActions1.isDiscardDisabled"
     }
   ],
+  "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "tableData"

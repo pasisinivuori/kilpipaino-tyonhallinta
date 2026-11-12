@@ -78,6 +78,7 @@
       "key": "primaryColumns.aktiivinen.computedValue"
     }
   ],
+  "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [
     {

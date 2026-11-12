@@ -179,6 +179,7 @@
       "key": "primaryColumns.asiakastila.computedValue"
     }
   ],
+  "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [
     {

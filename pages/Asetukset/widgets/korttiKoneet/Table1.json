@@ -137,6 +137,7 @@
       "key": "primaryColumns.kappaleaika_s.computedValue"
     }
   ],
+  "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "primaryColumns.EditActions1.isSaveDisabled"

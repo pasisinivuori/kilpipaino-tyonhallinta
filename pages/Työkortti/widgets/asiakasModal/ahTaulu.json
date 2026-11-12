@@ -89,6 +89,7 @@
       "key": "primaryColumns.tama.computedValue"
     }
   ],
+  "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "tableData"

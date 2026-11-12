@@ -221,6 +221,7 @@
       "key": "primaryColumns.rekisteriRistiriita.computedValue"
     }
   ],
+  "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "tableData"

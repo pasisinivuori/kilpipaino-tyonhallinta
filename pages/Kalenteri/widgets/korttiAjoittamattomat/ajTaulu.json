@@ -86,6 +86,7 @@
       "key": "primaryColumns.created_at.computedValue"
     }
   ],
+  "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "tableData"

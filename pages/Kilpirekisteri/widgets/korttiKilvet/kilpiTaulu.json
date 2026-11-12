@@ -145,6 +145,7 @@
       "key": "primaryColumns.tarkistettava.computedValue"
     }
   ],
+  "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "tableData"
