@@ -20,6 +20,9 @@
     },
     {
       "key": "defaultDate"
+    },
+    {
+      "key": "label"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -29,16 +32,23 @@
     },
     {
       "key": "defaultDate"
+    },
+    {
+      "key": "onDateSelected"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onDateSelected"
+    }
+  ],
   "firstDayOfWeek": 1,
   "isDisabled": false,
   "isLoading": false,
   "isRequired": false,
   "isVisible": "{{Switch1.isSwitchedOn && !['uusi','tarjous_lahetetty','hylatty'].includes((statusSelect.selectedOptionValue || getTk.data[0].status))}}",
   "key": "ek4mazx6xo",
-  "label": "Suunniteltu asennuspäivä",
+  "label": "{{ appsmith.store.pvmTallennettu === 'asennus' ? '✓ Päivämäärä tallennettu' : 'Suunniteltu asennuspäivä' }}",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelTextSize": "0.875rem",
@@ -54,6 +64,7 @@
   "mobileRightColumn": 60,
   "mobileTopRow": 7,
   "needsErrorInfo": false,
+  "onDateSelected": "{{paivitaAsennuspaiva.run().then(() => { storeValue('pvmTallennettu', 'asennus', false); setTimeout(() => { if (appsmith.store.pvmTallennettu === 'asennus') storeValue('pvmTallennettu', '', false); }, 4000); }).catch(() => showAlert('Asennuspäivän tallennus epäonnistui', 'error'))}}",
   "originalBottomRow": 14,
   "originalTopRow": 7,
   "parentColumnSpace": 17.28125,

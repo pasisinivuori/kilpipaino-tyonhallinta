@@ -1,0 +1,2 @@
+-- Valmistumispaiva tallentuu heti kalenterivalinnasta (16.11.2026)
+UPDATE public.toimeksiannot SET valmistumispaiva = {{(DatePicker1.selectedDate ? moment(DatePicker1.selectedDate).format('YYYY-MM-DD') : '') || null}} WHERE id = {{appsmith.URL.queryParams.id}}::uuid;
