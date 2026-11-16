@@ -33,7 +33,7 @@
   "mobileRightColumn": 15,
   "mobileTopRow": 68,
   "needsErrorInfo": false,
-  "onClick": "{{luonnosteleVastaus.run().then(r => storeValue('vastausLuonnos', r.luonnos))}}",
+  "onClick": "{{luonnosteleVastaus.run().then(r => storeValue('vastausLuonnos', { tid: appsmith.URL.queryParams.id, teksti: r.luonnos }, false))}}",
   "originalBottomRow": 72,
   "originalTopRow": 68,
   "parentColumnSpace": 17.28125,

@@ -33,7 +33,7 @@
   "mobileRightColumn": 31,
   "mobileTopRow": 68,
   "needsErrorInfo": false,
-  "onClick": "{{Promise.all([paivitaTk.run(), tallennaLuonnos.run(), paivitaAihe.run(), paivitaVastausosoite.run()]).then(() => getTk.run()).then(() => showAlert('Tallennettu', 'success')).catch((e) => { const raaka = String((e && e.message) ? e.message : e); const siisti = raaka.split('Where:')[0].replace(/^ERROR:\\s*/, '').trim(); showAlert('Tallennus epäonnistui: ' + siisti, 'error'); })}}",
+  "onClick": "{{Promise.all([paivitaTk.run(), tallennaLuonnos.run(), paivitaAihe.run(), paivitaVastausosoite.run()]).then(() => storeValue('vastausLuonnos', null, false)).then(() => getTk.run()).then(() => showAlert('Tallennettu', 'success')).catch((e) => { const raaka = String((e && e.message) ? e.message : e); const siisti = raaka.split('Where:')[0].replace(/^ERROR:\\s*/, '').trim(); showAlert('Tallennus epäonnistui: ' + siisti, 'error'); })}}",
   "originalBottomRow": 72,
   "originalTopRow": 68,
   "parentColumnSpace": 17.28125,
