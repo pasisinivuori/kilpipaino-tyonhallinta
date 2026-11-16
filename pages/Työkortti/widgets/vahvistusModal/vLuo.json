@@ -37,7 +37,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{luoKilpitilausrivit.run().then(r => { const t = r && r[0] && r[0].tulos; if (t && t.ok) { showAlert('Luotu ' + t.luodut + ' riviä: ' + t.valmis + ' valmista, ' + t.odottaa_tietoja + ' odottaa tietoja' + (t.status_tuotantoon ? '. Työ siirretty tilaan Tuotannossa.' : ''), 'success'); closeModal('vahvistusModal'); getTk.run(); } else { showAlert('Rivejä ei luotu: ' + ((t && t.virhe) || 'tuntematon virhe'), 'warning'); } })}}",
+  "onClick": "{{luoKilpitilausrivit.run().then(r => { const t = r && r[0] && r[0].tulos; if (t && t.ok) { showAlert('Luotu ' + t.luodut + ' riviä: ' + t.valmis + ' valmista, ' + t.odottaa_tietoja + ' odottaa tietoja' + (t.status_tuotantoon ? '. Työ siirretty tilaan Tuotannossa.' : ''), 'success'); closeModal('vahvistusModal'); getTk.run(); haeLaskuri.run(); } else { showAlert('Rivejä ei luotu: ' + ((t && t.virhe) || 'tuntematon virhe'), 'warning'); } })}}",
   "originalBottomRow": 66,
   "originalTopRow": 62,
   "parentId": "lr41qakdm6",
