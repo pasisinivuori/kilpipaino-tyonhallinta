@@ -2,7 +2,7 @@
   "allowedFileTypes": [],
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 95,
+  "bottomRow": 105,
   "boxShadow": "none",
   "buttonColor": "#E0DEDE",
   "dynamicBindingPathList": [
@@ -47,7 +47,7 @@
   "responsiveBehavior": "hug",
   "rightColumn": 15,
   "selectedFiles": [],
-  "topRow": 91,
+  "topRow": 101,
   "type": "FILE_PICKER_WIDGET_V2",
   "version": 1,
   "widgetId": "fp2tilaus1",

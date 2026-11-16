@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 80,
+  "bottomRow": 90,
   "boxShadow": "none",
   "defaultText": "",
   "dynamicBindingPathList": [
@@ -57,7 +57,7 @@
   "rightColumn": 62,
   "shouldAllowAutofill": false,
   "showStepArrows": false,
-  "topRow": 73,
+  "topRow": 83,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "9y6mmqc1wt",
