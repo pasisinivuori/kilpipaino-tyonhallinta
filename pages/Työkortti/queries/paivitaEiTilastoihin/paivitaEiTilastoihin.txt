@@ -1,0 +1,2 @@
+-- Ei tilastoihin -valinta Tyokortilta (16.11.2026)
+UPDATE public.toimeksiannot SET ei_tilastoihin = {{eiTilastoihinSwitch.isSwitchedOn === true}} WHERE id = {{appsmith.URL.queryParams.id}}::uuid RETURNING ei_tilastoihin;

@@ -1,0 +1,56 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignWidget": "LEFT",
+  "animateLoading": true,
+  "bottomRow": 27,
+  "boxShadow": "none",
+  "defaultSwitchState": "{{ !!(getTk.data && getTk.data[0] && getTk.data[0].ei_tilastoihin) }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "defaultSwitchState"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "defaultSwitchState"
+    },
+    {
+      "key": "onChange"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onChange"
+    }
+  ],
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "af7c48jcll",
+  "label": "Ei tilastoihin",
+  "labelPosition": "Left",
+  "leftColumn": 44,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 27,
+  "mobileLeftColumn": 44,
+  "mobileRightColumn": 56,
+  "mobileTopRow": 23,
+  "needsErrorInfo": false,
+  "onChange": "{{paivitaEiTilastoihin.run().then(() => getTk.run()).then(() => showAlert(eiTilastoihinSwitch.isSwitchedOn ? 'Työ jätetään pois tilastoista' : 'Työ lasketaan taas tilastoihin', 'success')).catch(() => { showAlert('Tallennus epäonnistui', 'error'); getTk.run(); })}}",
+  "parentColumnSpace": 15.888671875,
+  "parentId": "wdoio4h2sm",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 56,
+  "topRow": 23,
+  "type": "SWITCH_WIDGET",
+  "version": 1,
+  "widgetId": "xlu8l9by38",
+  "widgetName": "eiTilastoihinSwitch"
+}
