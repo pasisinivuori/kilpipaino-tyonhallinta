@@ -30,7 +30,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 62,
   "source": "",
-  "srcDoc": "{{ (function(){ var t = Input5.text || \"\"; if (!t.trim()) { return \"<div style=\\\"font-family:Arial,sans-serif;font-size:14px;padding:8px;color:#9CA3AF\\\"><i>Ei allekirjoitusta</i></div>\"; } var h = t.replace(/&/g,\"&amp;\").replace(/</g,\"&lt;\").replace(/>/g,\"&gt;\").replace(/\\r\\n|\\r|\\n/g,\"<br>\"); return \"<div style=\\\"font-family:Arial,sans-serif;font-size:14px;padding:8px\\\">\" + h + \"</div>\"; })() }}",
+  "srcDoc": "{{ (function(){ var t = (allekirjoitusInput.text || \"\").replace(/\\r?\\n/g, \"\"); if (!t.replace(/<[^>]*>|&nbsp;|\\s/g, \"\")) { return \"<div style=\\\"font-family:Arial,sans-serif;font-size:14px;padding:8px;color:#9CA3AF\\\"><i>Ei allekirjoitusta</i></div>\"; } return \"<div style=\\\"font-family:Arial,sans-serif;font-size:14px;padding:8px\\\">\" + t + \"</div>\"; })() }}",
   "title": "Esikatselu",
   "topRow": 10,
   "type": "IFRAME_WIDGET",
