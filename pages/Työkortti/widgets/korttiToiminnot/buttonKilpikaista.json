@@ -45,7 +45,7 @@
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
   "rightColumn": 62,
-  "text": "Kilpikaista-käsittely",
+  "text": "Käsittele Kilpikaistalla",
   "tooltip": "Analysoi työn viestit ja liitteet Kilpikaistassa ja tallentaa kilvet tälle työlle",
   "topRow": 23,
   "type": "BUTTON_WIDGET",
