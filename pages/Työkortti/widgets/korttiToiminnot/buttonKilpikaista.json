@@ -9,11 +9,20 @@
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    },
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicPropertyPathList": [
     {
       "key": "onClick"
+    },
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicTriggerPathList": [
@@ -22,7 +31,7 @@
     }
   ],
   "isDefaultClickDisabled": true,
-  "isDisabled": false,
+  "isDisabled": "{{ !!(getTk.data && getTk.data[0] && getTk.data[0].kilpikaista_kasitelty) }}",
   "isLoading": false,
   "isVisible": true,
   "key": "zwird7w1ra",
@@ -45,7 +54,7 @@
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
   "rightColumn": 62,
-  "text": "Käsittele Kilpikaistalla",
+  "text": "{{ (getTk.data && getTk.data[0] && getTk.data[0].kilpikaista_kasitelty) ? '✓ Käsitelty Kilpikaistalla' : 'Käsittele Kilpikaistalla' }}",
   "tooltip": "Analysoi työn viestit ja liitteet Kilpikaistassa ja tallentaa kilvet tälle työlle",
   "topRow": 23,
   "type": "BUTTON_WIDGET",

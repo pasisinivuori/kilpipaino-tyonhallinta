@@ -9,6 +9,17 @@
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicTriggerPathList": [
@@ -17,7 +28,7 @@
     }
   ],
   "isDefaultClickDisabled": true,
-  "isDisabled": false,
+  "isDisabled": "{{ !!(getTk.data && getTk.data[0] && getTk.data[0].postilaatikkokilvet_tehty) }}",
   "isLoading": false,
   "isVisible": true,
   "key": "zwird7w1ra",
@@ -40,7 +51,7 @@
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
   "rightColumn": 62,
-  "text": "Tee tilauksesta postilaatikkokilvet",
+  "text": "{{ (getTk.data && getTk.data[0] && getTk.data[0].postilaatikkokilvet_tehty) ? '✓ Postilaatikkokilvet tehty' : 'Tee tilauksesta postilaatikkokilvet' }}",
   "tooltip": "Lukee viestiketjun ja liitteet ja ehdottaa kilpitilausrivejä",
   "topRow": 18,
   "type": "BUTTON_WIDGET",
