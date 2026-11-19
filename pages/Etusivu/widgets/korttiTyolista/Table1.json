@@ -250,6 +250,9 @@
     },
     {
       "key": "primaryColumns.customColumn2.isCellVisible"
+    },
+    {
+      "key": "onRowSelected"
     }
   ],
   "dynamicTriggerPathList": [
@@ -281,7 +284,7 @@
   "mobileRightColumn": 62,
   "mobileTopRow": 2,
   "needsErrorInfo": false,
-  "onRowSelected": "{{ (function(){ var tyo = Table1.selectedRow; if (!tyo || !tyo.id) { return; } return resetWidget('Table1', false).then(function(){ return navigateTo('Työkortti', {id: tyo.id}); }); })() }}",
+  "onRowSelected": "{{ (function(){ var tyo = Table1.selectedRow; if (!tyo || !tyo.id) { return; } return Table1.setSelectedRowIndex(-1).then(function(){ return navigateTo('Työkortti', {id: tyo.id}); }); })() }}",
   "originalBottomRow": 68,
   "originalTopRow": 2,
   "parentId": "e3o4huo7b1",
