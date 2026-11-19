@@ -1,0 +1,55 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 27,
+  "boxShadow": "none",
+  "buttonColor": "#E0DEDE",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "zwird7w1ra",
+  "leftColumn": 1,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 62,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{luoKilpikaistaLinkki.run().then(r => navigateTo('https://kilpipaino.fi/kilpikaista/?kasittely=' + r[0].token, {}, 'NEW_WINDOW')).catch(e => showAlert('Kilpikaista-linkkiä ei voitu luoda: ' + e.message, 'error'))}}",
+  "originalBottomRow": 11,
+  "originalTopRow": 7,
+  "parentColumnSpace": 30.25,
+  "parentId": "w1dguk14jp",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 62,
+  "text": "Kilpikaista-käsittely",
+  "tooltip": "Analysoi työn viestit ja liitteet Kilpikaistassa ja tallentaa kilvet tälle työlle",
+  "topRow": 23,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "lmxbvesvea",
+  "widgetName": "buttonKilpikaista"
+}

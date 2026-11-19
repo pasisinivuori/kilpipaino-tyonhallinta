@@ -1,0 +1,1 @@
+select public.kilpikaista_kasittelylinkki({{appsmith.URL.queryParams.id}}::uuid, {{appsmith.user.email}}) as token;
