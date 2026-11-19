@@ -1,0 +1,2 @@
+-- Vastuuhenkilon vaihto tyolistan valikosta (19.11.2026)
+UPDATE public.toimeksiannot SET omistaja = {{this.params.omistaja}} WHERE id = {{this.params.id}}::uuid AND nullif(btrim({{this.params.omistaja}}), '') IS NOT NULL RETURNING tp_numero, omistaja;

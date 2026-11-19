@@ -229,6 +229,21 @@
     },
     {
       "key": "primaryColumns.viim_saapuva_at.computedValue"
+    },
+    {
+      "key": "primaryColumns.customColumn8.menuColor"
+    },
+    {
+      "key": "primaryColumns.customColumn8.boxShadow"
+    },
+    {
+      "key": "primaryColumns.customColumn8.menuButtonLabel"
+    },
+    {
+      "key": "primaryColumns.customColumn8.sourceData"
+    },
+    {
+      "key": "primaryColumns.customColumn8.configureMenuItems.config.label"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -253,6 +268,12 @@
     },
     {
       "key": "onRowSelected"
+    },
+    {
+      "key": "primaryColumns.customColumn8.configureMenuItems.config.onClick"
+    },
+    {
+      "key": "primaryColumns.customColumn8.menuColor"
     }
   ],
   "dynamicTriggerPathList": [
@@ -261,6 +282,9 @@
     },
     {
       "key": "onRowSelected"
+    },
+    {
+      "key": "primaryColumns.customColumn8.configureMenuItems.config.onClick"
     }
   ],
   "enableClientSideSearch": true,
@@ -612,9 +636,22 @@
       "alias": "Vastuuhenkilö",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
+      "borderRadius": "1.5rem",
+      "boxShadow": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
       "cellBackground": "{{ (Table1.processedTableData || []).map(function(currentRow, currentIndex) { return currentRow.odottaa_meilta ? '#FEFCE8' : (currentIndex % 2 === 1 ? '#F8FAFC' : ''); }) }}",
-      "columnType": "html",
+      "columnType": "menuButton",
       "computedValue": "{{ (Table1.processedTableData || []).map(function(currentRow, currentIndex) { function esc(s){ return String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); } var o = currentRow.omistaja; if (!o || o === 'Ei vastuuhenkilöä') { return '<span style=\"display:inline-block;padding:2px 8px;border-radius:9999px;background:#FEE2E2;color:#991B1B;font-size:12px;white-space:nowrap\">Ei vastuuhenkilöä</span>'; } return '<span style=\"color:#111827\">' + esc(o) + '</span>'; }) }}",
+      "configureMenuItems": {
+        "config": {
+          "id": "config",
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "{{Table1.processedTableData.map((currentRow, currentRowIndex) => {\n        let primaryColumnData = [];\n\n        if (Table1.primaryColumns.customColumn8.sourceData[currentRowIndex].length) {\n          primaryColumnData = Table1.primaryColumns.customColumn8.sourceData[currentRowIndex];\n        } else if (Table1.primaryColumns.customColumn8.sourceData.length) {\n          primaryColumnData = Table1.primaryColumns.customColumn8.sourceData;\n        }\n\n        return primaryColumnData.map((currentItem, currentIndex) => currentItem.name);});}}",
+          "onClick": "{{(function(){ const id = Table1.triggeredRow.id; const uusi = currentItem.code; return paivitaVastuuTyolista.run({ id: id, omistaja: uusi }).then((r) => { if (!r || !r.length) { throw new Error('ei paivitetty'); } showAlert(['Vastuuhenkilö vaihdettu: ', uusi].join(''), 'success'); return SelectQuery.run(); }).catch(() => showAlert('Vastuuhenkilön vaihto epäonnistui', 'error')); })()}}"
+        },
+        "id": "config",
+        "label": "Configure menu items"
+      },
       "currencyCode": "USD",
       "customAlias": "",
       "decimals": 0,
@@ -622,6 +659,7 @@
       "enableSort": true,
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
+      "iconAlign": "right",
       "id": "customColumn8",
       "index": 8,
       "isCellEditable": false,
@@ -633,8 +671,14 @@
       "isSaveVisible": true,
       "isVisible": true,
       "label": "Vastuuhenkilö",
+      "menuButtonLabel": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow.omistaja || 'Ei vastuuhenkilöä')) : currentRow.omistaja || 'Ei vastuuhenkilöä' })()}}",
+      "menuButtoniconName": "chevron-down",
+      "menuColor": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( (currentRow.omistaja && currentRow.omistaja !== 'Ei vastuuhenkilöä') ? '#374151' : '#B91C1C' )) :  (currentRow.omistaja && currentRow.omistaja !== 'Ei vastuuhenkilöä') ? '#374151' : '#B91C1C'  })()}}",
+      "menuItemsSource": "DYNAMIC",
+      "menuVariant": "SECONDARY",
       "notation": "standard",
       "originalId": "customColumn8",
+      "sourceData": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (haeVastuuhenkilot.data || [])) : haeVastuuhenkilot.data || [] })()}}",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
