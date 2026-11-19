@@ -3,7 +3,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 66,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
-  "defaultText": "{{ (function(s){ s = (s || '').replace(/\\r/g,''); if (!s.trim()) return ''; if (/<(p|br|div|span|strong|em|b|i|u|a|ul|ol|li)\\b/i.test(s)) return s; return s.split(/\\n\\s*\\n/).map(function(p){ return '<p>' + p.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\\n/g,'<br>') + '</p>'; }).join(''); })((function(){ var s = appsmith.store.vastausLuonnos; if (s && typeof s === 'object' && s.tid === appsmith.URL.queryParams.id) return s.teksti; var t = getTk.data && getTk.data[0]; return (t && t.vastaus_luonnos) || ''; })()) }}",
+  "defaultText": "{{ (function(s){ s = (s || '').replace(/\\r/g,''); if (!s.trim()) return ''; if (/<(p|br|div|span|strong|em|b|i|u|a|ul|ol|li)\\b/i.test(s)) return s; return s.split(/\\n\\s*\\n/).map(function(p){ return '<p>' + p.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\\n/g,'<br>') + '</p>'; }).join(''); })((function(){ var s = appsmith.store.vastausLuonnos; if (s && typeof s === 'object' && s.tid === appsmith.URL.queryParams.id) return s.teksti; return ''; })()) }}",
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
