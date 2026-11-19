@@ -64,9 +64,9 @@
   "columnUpdatedAt": 1790848336992,
   "columnWidthMap": {
     "customColumn2": 200,
-    "customColumn3": 48,
+    "customColumn3": 60,
     "customColumn4": 96,
-    "customColumn5": 170,
+    "customColumn5": 240,
     "customColumn6": 620,
     "customColumn7": 130,
     "customColumn8": 150,
@@ -247,6 +247,21 @@
     },
     {
       "key": "primaryColumns.customColumn8.menuVariant"
+    },
+    {
+      "key": "primaryColumns.customColumn5.menuColor"
+    },
+    {
+      "key": "primaryColumns.customColumn5.boxShadow"
+    },
+    {
+      "key": "primaryColumns.customColumn5.menuButtonLabel"
+    },
+    {
+      "key": "primaryColumns.customColumn5.sourceData"
+    },
+    {
+      "key": "primaryColumns.customColumn5.configureMenuItems.config.label"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -280,6 +295,12 @@
     },
     {
       "key": "primaryColumns.customColumn8.menuVariant"
+    },
+    {
+      "key": "primaryColumns.customColumn5.configureMenuItems.config.onClick"
+    },
+    {
+      "key": "primaryColumns.customColumn5.menuColor"
     }
   ],
   "dynamicTriggerPathList": [
@@ -291,6 +312,9 @@
     },
     {
       "key": "primaryColumns.customColumn8.configureMenuItems.config.onClick"
+    },
+    {
+      "key": "primaryColumns.customColumn5.configureMenuItems.config.onClick"
     }
   ],
   "enableClientSideSearch": true,
@@ -537,9 +561,22 @@
       "alias": "Tila",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
+      "borderRadius": "1.5rem",
+      "boxShadow": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
       "cellBackground": "{{ (Table1.processedTableData || []).map(function(currentRow, currentIndex) { return currentRow.odottaa_meilta ? '#FEFCE8' : (currentIndex % 2 === 1 ? '#F8FAFC' : ''); }) }}",
-      "columnType": "html",
+      "columnType": "menuButton",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( (function(){ var nimet = {uusi:'Uusi',tarjous_lahetetty:'Tarjous lähetetty',hylatty:'Hylätty',tilaus_vastaanotettu:'Tilaus vastaanotettu',suunnittelussa:'Suunnittelussa',tuotannossa:'Tuotannossa',odottaa_asennusta:'Odottaa asennusta',valmis:'Valmis',valmis_laskutettavaksi:'Valmis laskutettavaksi',toimitettu:'Toimitettu',laskutettu:'Laskutettu'}; var varit = {uusi:['#FEE2E2','#991B1B'],tarjous_lahetetty:['#EDE9FE','#5B21B6'],tilaus_vastaanotettu:['#CCFBF1','#115E59'],hylatty:['#F3F4F6','#6B7280'],suunnittelussa:['#E0E7FF','#3730A3'],tuotannossa:['#DBEAFE','#1E40AF'],odottaa_asennusta:['#E0F2FE','#075985'],valmis:['#DCFCE7','#166534'],valmis_laskutettavaksi:['#FEF3C7','#92400E'],toimitettu:['#DCFCE7','#166534'],laskutettu:['#E5E7EB','#374151']}; var s = currentRow.status; var v = varit[s] || ['#F3F4F6','#374151']; var n = nimet[s] || s || ''; return ['<span style=\"display:inline-block;padding:2px 10px;border-radius:9999px;border:1px solid rgba(0,0,0,.08);background:', v[0], ';color:', v[1], ';font-size:12px;font-weight:600;white-space:nowrap\">', n, '</span>'].join(''); })() )) :  (function(){ var nimet = {uusi:'Uusi',tarjous_lahetetty:'Tarjous lähetetty',hylatty:'Hylätty',tilaus_vastaanotettu:'Tilaus vastaanotettu',suunnittelussa:'Suunnittelussa',tuotannossa:'Tuotannossa',odottaa_asennusta:'Odottaa asennusta',valmis:'Valmis',valmis_laskutettavaksi:'Valmis laskutettavaksi',toimitettu:'Toimitettu',laskutettu:'Laskutettu'}; var varit = {uusi:['#FEE2E2','#991B1B'],tarjous_lahetetty:['#EDE9FE','#5B21B6'],tilaus_vastaanotettu:['#CCFBF1','#115E59'],hylatty:['#F3F4F6','#6B7280'],suunnittelussa:['#E0E7FF','#3730A3'],tuotannossa:['#DBEAFE','#1E40AF'],odottaa_asennusta:['#E0F2FE','#075985'],valmis:['#DCFCE7','#166534'],valmis_laskutettavaksi:['#FEF3C7','#92400E'],toimitettu:['#DCFCE7','#166534'],laskutettu:['#E5E7EB','#374151']}; var s = currentRow.status; var v = varit[s] || ['#F3F4F6','#374151']; var n = nimet[s] || s || ''; return ['<span style=\"display:inline-block;padding:2px 10px;border-radius:9999px;border:1px solid rgba(0,0,0,.08);background:', v[0], ';color:', v[1], ';font-size:12px;font-weight:600;white-space:nowrap\">', n, '</span>'].join(''); })()  })()}}",
+      "configureMenuItems": {
+        "config": {
+          "id": "config",
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "{{Table1.processedTableData.map((currentRow, currentRowIndex) => {\n        let primaryColumnData = [];\n\n        if (Table1.primaryColumns.customColumn5.sourceData[currentRowIndex].length) {\n          primaryColumnData = Table1.primaryColumns.customColumn5.sourceData[currentRowIndex];\n        } else if (Table1.primaryColumns.customColumn5.sourceData.length) {\n          primaryColumnData = Table1.primaryColumns.customColumn5.sourceData;\n        }\n\n        return primaryColumnData.map((currentItem, currentIndex) => currentItem.name);});}}",
+          "onClick": "{{(function(){ const id = Table1.triggeredRow.id; const uusi = currentItem.code; return storeValue('siirto', { id: id, uusi: uusi }).then(function(){ return haeStatusvaihto.run(); }).then(function(d){ var r = (d && d[0]) || {}; if (r.sama) { showAlert('Työ on jo tässä tilassa', 'warning'); return; } showModal('siirtoModal'); }).catch(function(){ showAlert('Statuksen vaihdon tarkistus epäonnistui', 'error'); }); })()}}"
+        },
+        "id": "config",
+        "label": "Configure menu items"
+      },
       "currencyCode": "USD",
       "customAlias": "",
       "decimals": 0,
@@ -547,6 +584,7 @@
       "enableSort": true,
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
+      "iconAlign": "right",
       "id": "customColumn5",
       "index": 2,
       "isCellEditable": false,
@@ -558,8 +596,13 @@
       "isSaveVisible": true,
       "isVisible": true,
       "label": "Tila",
+      "menuButtonLabel": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( ({uusi:'Uusi',tarjous_lahetetty:'Tarjous lähetetty',hylatty:'Hylätty',tilaus_vastaanotettu:'Tilaus vastaanotettu',suunnittelussa:'Suunnittelussa',tuotannossa:'Tuotannossa',odottaa_asennusta:'Odottaa asennusta',valmis:'Valmis',valmis_laskutettavaksi:'Valmis laskutettavaksi',toimitettu:'Toimitettu',laskutettu:'Laskutettu'})[currentRow.status] || currentRow.status )) :  ({uusi:'Uusi',tarjous_lahetetty:'Tarjous lähetetty',hylatty:'Hylätty',tilaus_vastaanotettu:'Tilaus vastaanotettu',suunnittelussa:'Suunnittelussa',tuotannossa:'Tuotannossa',odottaa_asennusta:'Odottaa asennusta',valmis:'Valmis',valmis_laskutettavaksi:'Valmis laskutettavaksi',toimitettu:'Toimitettu',laskutettu:'Laskutettu'})[currentRow.status] || currentRow.status  })()}}",
+      "menuButtoniconName": "chevron-down",
+      "menuColor": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( ({uusi:'#FEE2E2',tarjous_lahetetty:'#EDE9FE',tilaus_vastaanotettu:'#CCFBF1',hylatty:'#F3F4F6',suunnittelussa:'#E0E7FF',tuotannossa:'#DBEAFE',odottaa_asennusta:'#E0F2FE',valmis:'#DCFCE7',valmis_laskutettavaksi:'#FEF3C7',toimitettu:'#DCFCE7',laskutettu:'#E5E7EB'})[currentRow.status] || '#F3F4F6' )) :  ({uusi:'#FEE2E2',tarjous_lahetetty:'#EDE9FE',tilaus_vastaanotettu:'#CCFBF1',hylatty:'#F3F4F6',suunnittelussa:'#E0E7FF',tuotannossa:'#DBEAFE',odottaa_asennusta:'#E0F2FE',valmis:'#DCFCE7',valmis_laskutettavaksi:'#FEF3C7',toimitettu:'#DCFCE7',laskutettu:'#E5E7EB'})[currentRow.status] || '#F3F4F6'  })()}}",
+      "menuItemsSource": "DYNAMIC",
       "notation": "standard",
       "originalId": "customColumn5",
+      "sourceData": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( [{name:'Uusi',code:'uusi'},{name:'Tarjous lähetetty',code:'tarjous_lahetetty'},{name:'Hylätty',code:'hylatty'},{name:'Tilaus vastaanotettu',code:'tilaus_vastaanotettu'},{name:'Suunnittelussa',code:'suunnittelussa'},{name:'Tuotannossa',code:'tuotannossa'},{name:'Odottaa asennusta',code:'odottaa_asennusta'},{name:'Valmis',code:'valmis'},{name:'Valmis laskutettavaksi',code:'valmis_laskutettavaksi'},{name:'Toimitettu',code:'toimitettu'},{name:'Laskutettu',code:'laskutettu'}] )) :  [{name:'Uusi',code:'uusi'},{name:'Tarjous lähetetty',code:'tarjous_lahetetty'},{name:'Hylätty',code:'hylatty'},{name:'Tilaus vastaanotettu',code:'tilaus_vastaanotettu'},{name:'Suunnittelussa',code:'suunnittelussa'},{name:'Tuotannossa',code:'tuotannossa'},{name:'Odottaa asennusta',code:'odottaa_asennusta'},{name:'Valmis',code:'valmis'},{name:'Valmis laskutettavaksi',code:'valmis_laskutettavaksi'},{name:'Toimitettu',code:'toimitettu'},{name:'Laskutettu',code:'laskutettu'}]  })()}}",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
