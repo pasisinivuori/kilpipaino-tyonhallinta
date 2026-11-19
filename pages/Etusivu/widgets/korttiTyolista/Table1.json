@@ -244,6 +244,9 @@
     },
     {
       "key": "primaryColumns.customColumn8.configureMenuItems.config.label"
+    },
+    {
+      "key": "primaryColumns.customColumn8.menuVariant"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -274,6 +277,9 @@
     },
     {
       "key": "primaryColumns.customColumn8.menuColor"
+    },
+    {
+      "key": "primaryColumns.customColumn8.menuVariant"
     }
   ],
   "dynamicTriggerPathList": [
@@ -673,9 +679,9 @@
       "label": "Vastuuhenkilö",
       "menuButtonLabel": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow.omistaja || 'Ei vastuuhenkilöä')) : currentRow.omistaja || 'Ei vastuuhenkilöä' })()}}",
       "menuButtoniconName": "chevron-down",
-      "menuColor": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( (currentRow.omistaja && currentRow.omistaja !== 'Ei vastuuhenkilöä') ? '#374151' : '#B91C1C' )) :  (currentRow.omistaja && currentRow.omistaja !== 'Ei vastuuhenkilöä') ? '#374151' : '#B91C1C'  })()}}",
+      "menuColor": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( (currentRow.omistaja && currentRow.omistaja !== 'Ei vastuuhenkilöä') ? (((haeVastuuhenkilot.data || []).find(function(v){ return v.code === currentRow.omistaja; }) || {}).vari || '#E5E7EB') : '#B91C1C' )) :  (currentRow.omistaja && currentRow.omistaja !== 'Ei vastuuhenkilöä') ? (((haeVastuuhenkilot.data || []).find(function(v){ return v.code === currentRow.omistaja; }) || {}).vari || '#E5E7EB') : '#B91C1C'  })()}}",
       "menuItemsSource": "DYNAMIC",
-      "menuVariant": "SECONDARY",
+      "menuVariant": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( (currentRow.omistaja && currentRow.omistaja !== 'Ei vastuuhenkilöä') ? 'PRIMARY' : 'SECONDARY' )) :  (currentRow.omistaja && currentRow.omistaja !== 'Ei vastuuhenkilöä') ? 'PRIMARY' : 'SECONDARY'  })()}}",
       "notation": "standard",
       "originalId": "customColumn8",
       "sourceData": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (haeVastuuhenkilot.data || [])) : haeVastuuhenkilot.data || [] })()}}",

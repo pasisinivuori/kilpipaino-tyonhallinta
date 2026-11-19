@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "select nimi as name, nimi as code from ( select 'Ei vastuuhenkilöä' as nimi, 0 as jarj union all select omistaja, 1 from public.kayttaja_asetukset ) t order by jarj, nimi",
+      "body": "select nimi as name, nimi as code, vari from ( select 'Ei vastuuhenkilöä' as nimi, 0 as jarj, '#FEE2E2' as vari union all select omistaja, 1, coalesce(nullif(btrim(lappu_vari), ''), '#E5E7EB') from public.kayttaja_asetukset ) t order by jarj, nimi",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,6 +22,7 @@
       "name": "Supabase",
       "pluginId": "postgres-plugin"
     },
+    "dynamicBindingPathList": [],
     "name": "haeVastuuhenkilot",
     "pageId": "Etusivu",
     "runBehaviour": "AUTOMATIC",
