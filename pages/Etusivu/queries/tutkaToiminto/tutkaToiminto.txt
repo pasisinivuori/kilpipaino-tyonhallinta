@@ -1,0 +1,12 @@
+-- Työtutka: kaikki tallennukset yhdellä kyselyllä (tyyppi: vaihdaStatus | paiva | kuittaa | muistutettu)
+with p as (select {{ this.params.tyyppi || '' }}::text as t, nullif({{ this.params.id || '' }}::text, '')::uuid as id, nullif({{ this.params.uusi || '' }}::text, '') as uusi,
+                  nullif({{ this.params.kentta || '' }}::text, '') as kentta, nullif({{ this.params.pvm || '' }}::text, '')::date as pvm, nullif({{ this.params.kuka || '' }}::text, '') as kuka),
+s as (select (public.vaihda_status(p.id, p.uusi)).tp_numero as tp from p where p.t = 'vaihdaStatus'),
+d as (update public.toimeksiannot x set valmistumispaiva = case when p.kentta = 'valmistumispaiva' then p.pvm else x.valmistumispaiva end,
+             asennuspaiva = case when p.kentta = 'asennuspaiva' then p.pvm else x.asennuspaiva end
+        from p where p.t = 'paiva' and x.id = p.id returning x.tp_numero),
+k as (update public.toimeksiannot x set uusi_viesti_suljettuun_at = null, kuitattu_ilman_vastausta_at = now()
+        from p where p.t = 'kuittaa' and x.id = p.id returning x.tp_numero),
+m as (insert into public.tapahtumat (toimeksianto_id, tyyppi, kuka, tiedot)
+        select p.id, 'muistutettu_muuten', p.kuka, jsonb_build_object('lahde', 'tyotutka') from p where p.t = 'muistutettu' returning toimeksianto_id)
+select (select count(*) from s) + (select count(*) from d) + (select count(*) from k) + (select count(*) from m) as muutettu;

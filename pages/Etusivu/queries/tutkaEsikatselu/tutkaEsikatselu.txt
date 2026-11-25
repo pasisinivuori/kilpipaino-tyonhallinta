@@ -1,0 +1,3 @@
+-- Työtutka: statusvaihdon esikatselu (lähteekö asiakkaalle statusilmoitus), sama kuin työjonon siirtoModal
+select tp_numero, asiakas, vanha_status, uusi_status, sama, ilmoitus_lahtee, vastaanottaja, viive_min
+  from public.statusvaihdon_esikatselu(nullif({{ this.params.id || '' }}::text, '')::uuid, {{ this.params.uusi || '' }}::text);

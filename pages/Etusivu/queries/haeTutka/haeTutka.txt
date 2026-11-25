@@ -1,0 +1,24 @@
+-- Työtutka (Etusivun Tutka-näkymä) 25.11.2026: avoimet työt kiireen laskentaan. Aikaleimat Suomen aikaan.
+with t as (
+ select x.*,
+  (select max(coalesce(v.sent_at, v.created_at)) from public.viestit v where v.toimeksianto_id = x.id and v.suunta = 'saapuva') as saapuva_ts,
+  greatest((select max(coalesce(v.sent_at, v.created_at)) from public.viestit v where v.toimeksianto_id = x.id and v.suunta = 'lahteva'),
+           (select max(e.created_at) from public.tapahtumat e where e.toimeksianto_id = x.id and e.tyyppi = 'muistutettu_muuten')) as lahteva_ts,
+  coalesce((select max(e.created_at) from public.tapahtumat e where e.toimeksianto_id = x.id and e.uusi_status = x.status), x.created_at) as status_ts
+ from public.toimeksiannot x
+ where not coalesce(x.arkistoitu, false) and x.status::text not in ('laskutettu', 'hylatty'))
+select json_build_object(
+ 'nyt', to_char(now() at time zone 'Europe/Helsinki', 'YYYY-MM-DD"T"HH24:MI:SS'),
+ 'mina', (select omistaja from public.kayttaja_asetukset where lower(email) = lower({{appsmith.user.email || ''}}) limit 1),
+ 'varit', (select json_object_agg(omistaja, coalesce(nullif(btrim(lappu_vari), ''), '#E5E7EB')) from public.kayttaja_asetukset),
+ 'tyot', coalesce((select json_agg(json_build_array(
+   tp_numero, coalesce(nullif(asiakas_yritys, ''), asiakas_nimi, ''), coalesce(aihe, ''), status, coalesce(nullif(btrim(omistaja), ''), 'Ei vastuuhenkilöä'),
+   valmistumispaiva, asennuspaiva, round(coalesce(hinta_yhteensa, laskettu_hinta, 0)),
+   to_char(created_at at time zone 'Europe/Helsinki', 'YYYY-MM-DD"T"HH24:MI:SS'),
+   to_char(saapuva_ts at time zone 'Europe/Helsinki', 'YYYY-MM-DD"T"HH24:MI:SS'),
+   to_char(lahteva_ts at time zone 'Europe/Helsinki', 'YYYY-MM-DD"T"HH24:MI:SS'),
+   to_char(status_ts at time zone 'Europe/Helsinki', 'YYYY-MM-DD"T"HH24:MI:SS'),
+   huomio_taso, coalesce(huomio, ''),
+   to_char(kuitattu_ilman_vastausta_at at time zone 'Europe/Helsinki', 'YYYY-MM-DD"T"HH24:MI:SS'),
+   id) order by tp_numero) from t), '[]'::json)
+) as d;

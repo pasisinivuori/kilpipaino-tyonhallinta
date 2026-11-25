@@ -2,7 +2,7 @@ export default {
 	kaynnistaAutomaattipaivitys: async () => {
 		clearInterval("etusivuPoll");
 		setInterval(async () => {
-			await SelectQuery.run();
+			if (appsmith.store.etusivuNakyma === 'tutka') { await haeTutka.run(); } else { await SelectQuery.run(); }
 			await haeMuistilaput.run();
 			await storeValue("etusivuPaivitetty", moment().format("HH:mm:ss"));
 		}, 60000, "etusivuPoll");

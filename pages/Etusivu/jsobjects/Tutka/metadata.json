@@ -1,0 +1,16 @@
+{
+  "gitSyncId": "6a6b786a4fdae71c0c5a3144_4440c4ca-6ed1-4d9c-a1e7-ea6bfe9f12c9",
+  "id": "Etusivu_Tutka",
+  "unpublishedCollection": {
+    "name": "Tutka",
+    "pageId": "Etusivu",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "viimeisin",
+        "value": "null"
+      }
+    ]
+  }
+}

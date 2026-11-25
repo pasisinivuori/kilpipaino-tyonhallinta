@@ -13,6 +13,11 @@
       "key": "isVisible"
     }
   ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
   "dynamicTriggerPathList": [
     {
       "key": "onMessageReceived"
@@ -21,7 +26,7 @@
   "flexVerticalAlignment": "start",
   "isDisabled": false,
   "isLoading": false,
-  "isVisible": "{{ nakymaSwitch.isSwitchedOn }}",
+  "isVisible": "{{ appsmith.store.etusivuNakyma === 'kanban' }}",
   "key": "8b8rxa4xgn",
   "leftColumn": 1,
   "needsErrorInfo": false,

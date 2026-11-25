@@ -17,12 +17,17 @@
     }
   ],
   "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
   "fontSize": "0.75rem",
   "fontStyle": "",
   "isLoading": false,
-  "isVisible": "{{ !nakymaSwitch.isSwitchedOn }}",
+  "isVisible": "{{ appsmith.store.etusivuNakyma !== 'kanban' }}",
   "leftColumn": 38,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,

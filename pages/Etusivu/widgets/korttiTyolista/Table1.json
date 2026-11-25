@@ -301,6 +301,9 @@
     },
     {
       "key": "primaryColumns.customColumn5.menuColor"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [
@@ -324,7 +327,7 @@
   "inlineEditingSaveOption": "ROW_LEVEL",
   "isLoading": false,
   "isSortable": true,
-  "isVisible": "{{ !nakymaSwitch.isSwitchedOn }}",
+  "isVisible": "{{ appsmith.store.etusivuNakyma !== 'kanban' }}",
   "isVisibleDownload": true,
   "isVisibleFilters": false,
   "isVisiblePagination": true,
